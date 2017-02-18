@@ -1,4 +1,4 @@
-package com.abn.dsalgos;
+package com.abn.dsalgos.ds;
 
 import com.abn.dsalgos.exceptions.EmptyLinkedListException;
 import org.testng.Assert;

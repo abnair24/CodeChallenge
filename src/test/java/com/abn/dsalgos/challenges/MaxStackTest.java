@@ -1,6 +1,5 @@
-package challenges;
+package com.abn.dsalgos.challenges;
 
-import com.abn.dsalgos.challenges.MaxStack;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
