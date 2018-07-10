@@ -1,4 +1,4 @@
-package com.abn.dsalgos.ds;
+package com.abn.dsalgos.sortAlgos;
 
 /**
  * Created by aswathyn on 18/02/17.

@@ -1,5 +1,6 @@
 package com.abn.dsalgos.ds;
 
+import com.abn.dsalgos.sortAlgos.QuickSort;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

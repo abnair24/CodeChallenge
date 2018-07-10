@@ -1,4 +1,4 @@
-package com.abn.dsalgos.ds;
+package com.abn.dsalgos.sortAlgos;
 
 import java.lang.reflect.Array;
 
