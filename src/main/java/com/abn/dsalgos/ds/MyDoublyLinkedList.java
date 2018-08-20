@@ -4,9 +4,6 @@ import com.abn.dsalgos.exceptions.EmptyLinkedListException;
 import com.abn.dsalgos.utils.DoubleLinkNode;
 import java.util.NoSuchElementException;
 
-/**
- * Created by aswathyn on 17/02/17.
- */
 public class MyDoublyLinkedList<T> {
 
     private DoubleLinkNode<T> first;
