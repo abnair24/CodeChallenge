@@ -1,20 +1,17 @@
-package com.abn.dsalgos.ds;
+package com.abn.dsalgos.challenges;
 
 import com.abn.dsalgos.utils.LinkNode;
 
 import java.util.HashSet;
 import java.util.NoSuchElementException;
 
-/**
- * Created by aswathyn on 15/02/17.
- */
-public class MyLinkedList<T> {
+public class RemoveDuplicateLinkedList<T> {
 
     private LinkNode<T> first;
     private LinkNode<T> last;
     private int size;
 
-    public MyLinkedList() {
+    public RemoveDuplicateLinkedList() {
         first =null;
         last = null;
         size=0;
@@ -70,7 +67,7 @@ public class MyLinkedList<T> {
                     current = current.next;
                 }
             }
-    }
+        }
         return current.data;
     }
 
@@ -116,9 +113,9 @@ public class MyLinkedList<T> {
         }
     }
 
-    public int size() {
-        return size;
-    }
+    /*
+    Helper methode to fetch first node from linkedlist . Used for removeDuplicates method to get handle of first method
+     */
 
     public LinkNode getFirstNode() {
         LinkNode<T> temp = first;
@@ -137,6 +134,13 @@ public class MyLinkedList<T> {
         }
     }
 
+    public int size() {
+        return size;
+    }
+
+    /*
+    Method to remove duplicates from a linked list. Need to pass first node or head node when method is called.
+     */
     public void removeDuplicate(LinkNode n){
 
         LinkNode<T> previous = null;

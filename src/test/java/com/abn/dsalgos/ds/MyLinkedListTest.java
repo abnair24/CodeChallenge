@@ -117,6 +117,19 @@ public class MyLinkedListTest {
         linkedList.find(35);
     }
 
+    @Test
+    public void removeDuplicatesTest() throws Exception {
+        linkedList.insertFirst(10);
+        linkedList.insertFirst(20);
+        linkedList.insertFirst(30);
+        linkedList.insertFirst(10);
+        linkedList.insertFirst(50);
+        linkedList.insertFirst(30);
+        linkedList.removeDuplicate(linkedList.getFirstNode());
+        linkedList.print();
+
+    }
+
 
 
 }
