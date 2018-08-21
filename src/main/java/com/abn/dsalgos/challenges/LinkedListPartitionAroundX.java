@@ -2,16 +2,15 @@ package com.abn.dsalgos.challenges;
 
 import com.abn.dsalgos.utils.LinkNode;
 
-import java.util.HashSet;
 import java.util.NoSuchElementException;
 
-public class RemoveDuplicateLinkedList<T> {
+public class LinkedListPartitionAroundX<T> {
 
     private LinkNode<T> first;
     private LinkNode<T> last;
     private int size;
 
-    public RemoveDuplicateLinkedList() {
+    public LinkedListPartitionAroundX() {
         first =null;
         last = null;
         size=0;
@@ -113,46 +112,27 @@ public class RemoveDuplicateLinkedList<T> {
         }
     }
 
-    /*
-    Helper methode to fetch first node from linkedlist . Used for removeDuplicates method to get handle of first method
-     */
+    public void partition(LinkNode node, int x) {
+        LinkNode head = node;
+        LinkNode tail = node;
 
-    public LinkNode getFirstNode() {
-        LinkNode<T> temp = first;
-        if(temp == null ){
-            throw new NoSuchElementException();
-        } else {
-            return temp;
+        while(node!=null) {
+            LinkNode next = node.next;
+            if((int) node.data < x) {
+                head = node;
+            } else {
+                tail.next = node;
+                tail = node;
+            }
+            node = next;
         }
+        tail.next = null;
     }
 
     public void print() {
         LinkNode n = first;
         while (n != null) {
             System.out.print(n.data + " ");
-            n = n.next;
-        }
-    }
-
-    public int size() {
-        return size;
-    }
-
-    /*
-    Method to remove duplicates from a linked list. Need to pass first node or head node when method is called.
-     O(N) solution
-     */
-    public void removeDuplicate(LinkNode n){
-
-        LinkNode<T> previous = null;
-        HashSet<T> set = new HashSet<>();
-        while(n!=null) {
-            if(set.contains(n.data)) {
-                previous.next = n.next;
-            } else {
-                set.add((T) n.data);
-                previous =n;
-            }
             n = n.next;
         }
     }

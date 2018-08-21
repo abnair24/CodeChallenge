@@ -1,17 +1,17 @@
 package com.abn.dsalgos.challenges;
 
 import com.abn.dsalgos.utils.LinkNode;
+import sun.awt.image.ImageWatched;
 
-import java.util.HashSet;
 import java.util.NoSuchElementException;
 
-public class RemoveDuplicateLinkedList<T> {
+public class KthFromLastLinkedList<T> {
 
     private LinkNode<T> first;
     private LinkNode<T> last;
     private int size;
 
-    public RemoveDuplicateLinkedList() {
+    public KthFromLastLinkedList() {
         first =null;
         last = null;
         size=0;
@@ -114,47 +114,26 @@ public class RemoveDuplicateLinkedList<T> {
     }
 
     /*
-    Helper methode to fetch first node from linkedlist . Used for removeDuplicates method to get handle of first method
+    O(n) time and O(1) space.
      */
+    public T findKthFromLast(int k) {
+        LinkNode<T> p1 = first;
+        LinkNode<T> p2 = first;
 
-    public LinkNode getFirstNode() {
-        LinkNode<T> temp = first;
-        if(temp == null ){
-            throw new NoSuchElementException();
-        } else {
-            return temp;
-        }
-    }
-
-    public void print() {
-        LinkNode n = first;
-        while (n != null) {
-            System.out.print(n.data + " ");
-            n = n.next;
-        }
-    }
-
-    public int size() {
-        return size;
-    }
-
-    /*
-    Method to remove duplicates from a linked list. Need to pass first node or head node when method is called.
-     O(N) solution
-     */
-    public void removeDuplicate(LinkNode n){
-
-        LinkNode<T> previous = null;
-        HashSet<T> set = new HashSet<>();
-        while(n!=null) {
-            if(set.contains(n.data)) {
-                previous.next = n.next;
+        for(int i =0; i<k;i++) {
+            if(p1==null) {
+                return null;
             } else {
-                set.add((T) n.data);
-                previous =n;
+                p1 = p1.next;
             }
-            n = n.next;
         }
+
+        while(p1!=null) {
+            p1 = p1.next;
+            p2 = p2.next;
+        }
+
+        return p2.data;
     }
 
 }
