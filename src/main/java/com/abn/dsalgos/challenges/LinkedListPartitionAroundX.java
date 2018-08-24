@@ -1,6 +1,7 @@
 package com.abn.dsalgos.challenges;
 
 import com.abn.dsalgos.utils.LinkNode;
+import sun.awt.image.ImageWatched;
 
 import java.util.NoSuchElementException;
 
@@ -112,21 +113,53 @@ public class LinkedListPartitionAroundX<T> {
         }
     }
 
-    public void partition(LinkNode node, int x) {
-        LinkNode head = node;
-        LinkNode tail = node;
+    /*
+    Logic : Create two seperate pointers: one for adding lower values and other for higher values:
+    Merge after looping through all.
+     */
+    public void partition(LinkNode node, int k) {
+        LinkNode head = null;
+        LinkNode tail =null;
+        LinkNode headPtr =null;
+        LinkNode tailPtr = null;
 
         while(node!=null) {
-            LinkNode next = node.next;
-            if((int) node.data < x) {
-                head = node;
+            LinkNode current = node;
+            if ((int) node.data < k) {
+                if (headPtr == null) {
+                    head = current;
+                    headPtr = head;
+                } else {
+                    headPtr.next = current;
+                    headPtr = current;
+                }
             } else {
-                tail.next = node;
-                tail = node;
+                if (tailPtr == null) {
+                    tail = current;
+                    tailPtr = tail;
+                } else {
+                    tail.next = current;
+                    tail = current;
+                }
             }
-            node = next;
+
+            node = node.next;
         }
-        tail.next = null;
+
+        /*
+        In case when values are all higher than partition, so headptr will be always null.
+         */
+        if(headPtr==null) {
+            head = tailPtr;
+        } else {
+            headPtr.next = tailPtr;
+        }
+
+        LinkNode n = head;
+        while (n != null) {
+            System.out.print(n.data + " ");
+            n = n.next;
+        }
     }
 
     public void print() {
@@ -137,4 +170,12 @@ public class LinkedListPartitionAroundX<T> {
         }
     }
 
+    public LinkNode getFirstNode() {
+        LinkNode<T> temp = first;
+        if(temp == null ){
+            throw new NoSuchElementException();
+        } else {
+            return temp;
+        }
+    }
 }
