@@ -1,4 +1,4 @@
-package com.abn.dsalgos.ds;
+package com.abn.dsalgos.challenges;
 
 import com.abn.dsalgos.challenges.LinkedListSum;
 import org.testng.Assert;
