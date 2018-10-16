@@ -1,4 +1,4 @@
-package com.abn.dsalgos.ds;
+package com.abn.dsalgos.ds.queue;
 
 import com.abn.dsalgos.exceptions.EmptyQException;
 import com.abn.dsalgos.exceptions.EmptyStackException;

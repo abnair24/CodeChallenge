@@ -1,6 +1,5 @@
 package com.abn.dsalgos.challenges;
 
-import com.abn.dsalgos.ds.MyLinkedList;
 import com.abn.dsalgos.utils.LinkNode;
 
 import java.util.NoSuchElementException;

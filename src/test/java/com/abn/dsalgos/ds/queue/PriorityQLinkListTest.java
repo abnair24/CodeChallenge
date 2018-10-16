@@ -1,4 +1,4 @@
-package com.abn.dsalgos.ds;
+package com.abn.dsalgos.ds.queue;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;

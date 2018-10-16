@@ -1,11 +1,11 @@
-package com.abn.dsalgos.ds;
+package com.abn.dsalgos.ds.linkedList;
 
+import com.abn.dsalgos.ds.linkedList.MyDoublyLinkedList;
 import com.abn.dsalgos.exceptions.EmptyLinkedListException;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.LinkedList;
 import java.util.NoSuchElementException;
 
 /**

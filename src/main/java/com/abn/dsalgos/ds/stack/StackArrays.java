@@ -1,4 +1,4 @@
-package com.abn.dsalgos.ds;
+package com.abn.dsalgos.ds.stack;
 
 import java.util.Arrays;
 

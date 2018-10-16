@@ -1,5 +1,6 @@
-package com.abn.dsalgos.ds;
+package com.abn.dsalgos.ds.linkedList;
 
+import com.abn.dsalgos.ds.linkedList.MyLinkedList;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

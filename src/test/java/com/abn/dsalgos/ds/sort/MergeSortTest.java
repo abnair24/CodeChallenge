@@ -1,4 +1,4 @@
-package com.abn.dsalgos.ds;
+package com.abn.dsalgos.ds.sort;
 
 import com.abn.dsalgos.sortAlgos.MergeSort;
 import org.testng.annotations.BeforeMethod;

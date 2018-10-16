@@ -1,7 +1,6 @@
-package com.abn.dsalgos.ds;
+package com.abn.dsalgos.ds.linkedList;
 
 import com.abn.dsalgos.utils.LinkNode;
-import sun.awt.image.ImageWatched;
 
 public class MyCircularLinkedList<T> {
 

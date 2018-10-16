@@ -1,4 +1,4 @@
-package com.abn.dsalgos.ds;
+package com.abn.dsalgos.ds.linkedList;
 
 import com.abn.dsalgos.exceptions.EmptyLinkedListException;
 import com.abn.dsalgos.utils.DoubleLinkNode;

@@ -1,5 +1,6 @@
-package com.abn.dsalgos.ds;
+package com.abn.dsalgos.ds.stack;
 
+import com.abn.dsalgos.exceptions.EmptyStackException;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -7,27 +8,26 @@ import org.testng.annotations.Test;
 /**
  * Created by aswathyn on 14/02/17.
  */
-public class StackArraysTest {
+public class StackLinkListTest {
 
-
-    private StackArrays<Object> stack;
+    private StackLinkList<Object> stack;
     private static final Object OBJECT_A = new Object();
     private static final Object OBJECT_B = new Object();
 
     @BeforeMethod
     public void setup() throws Exception {
-        stack = new StackArrays<Object>();
+        stack = new StackLinkList<>();
     }
 
     @Test
     public void pushTwoObjectsTest() {
         pushObjects(OBJECT_A,OBJECT_B);
-        Assert.assertEquals(2,stack.getSize());
+        Assert.assertEquals(2,stack.size());
     }
 
     @Test
     public void stackSizeTest() {
-        Assert.assertEquals(0,stack.getSize());
+        Assert.assertEquals(0,stack.size());
     }
 
     @Test
@@ -49,16 +49,16 @@ public class StackArraysTest {
         Assert.assertEquals(OBJECT_B, stack.peek());
     }
 
-    @Test(expectedExceptions = ArrayIndexOutOfBoundsException.class)
+    @Test(expectedExceptions = EmptyStackException.class)
     public void peekOnEmptyStackTest() throws Exception {
         stack.peek();
     }
 
-    @Test(expectedExceptions = ArrayIndexOutOfBoundsException.class)
+    @Test(expectedExceptions = EmptyStackException.class)
     public void popEmptyStackTest() throws Exception {
         stack.push(OBJECT_A);
         stack.pop();
-        Assert.assertEquals(0,stack.getSize());
+        Assert.assertEquals(0,stack.size());
         stack.pop();
     }
 
@@ -67,7 +67,4 @@ public class StackArraysTest {
             stack.push(object);
         }
     }
-
-
-
 }

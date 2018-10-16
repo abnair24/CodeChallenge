@@ -1,12 +1,13 @@
-package com.abn.dsalgos.ds;
+package com.abn.dsalgos.ds.linkedList;
 
+import com.abn.dsalgos.ds.linkedList.MyCircularLinkedList;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class CircularLinkedListTest {
 
-    private MyCircularLinkedList<Integer>myCircularLinkedList;
+    private MyCircularLinkedList<Integer> myCircularLinkedList;
 
     @BeforeMethod
     public void setup() throws Exception  {

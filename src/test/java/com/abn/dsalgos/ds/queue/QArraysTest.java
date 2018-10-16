@@ -1,5 +1,6 @@
-package com.abn.dsalgos.ds;
+package com.abn.dsalgos.ds.queue;
 
+import com.abn.dsalgos.ds.queue.QArrays;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
