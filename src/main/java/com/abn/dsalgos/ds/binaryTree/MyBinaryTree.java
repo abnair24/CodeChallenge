@@ -19,4 +19,24 @@ public class MyBinaryTree<T> {
         System.out.println(node.data);
         inOrder(node.right);
     }
+
+    public void preOrder(MyTreeNode node) {
+        if(node == null) {
+            return;
+        }
+
+        System.out.println(node.data);
+        preOrder(node.left);
+        preOrder(node.right);
+    }
+
+    public void postOrder(MyTreeNode node) {
+        if(node == null) {
+            return;
+        }
+
+        postOrder(node.left);
+        postOrder(node.right);
+        System.out.println(node.data);
+    }
 }
