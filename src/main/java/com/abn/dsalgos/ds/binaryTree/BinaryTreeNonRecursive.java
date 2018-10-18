@@ -52,6 +52,27 @@ public class BinaryTreeNonRecursive<T> {
     public void postOrder(MyTreeNode node) {
         Stack<MyTreeNode> stack = new Stack<>();
 
+        while(true) {
+            while(root!=null) {
+                stack.push(root);
+                root = root.left;
+            }
 
+            if(stack.isEmpty()){
+                return;
+            }
+
+            MyTreeNode temp = stack.peek().right;
+            if(temp == null) {
+               temp = stack.pop();
+               System.out.println(temp.data);
+               while(!stack.isEmpty() && temp == stack.peek().right) {
+                   temp = stack.pop();
+                   System.out.println(temp.data);
+               }
+            } else {
+                root = temp;
+            }
+        }
     }
 }
