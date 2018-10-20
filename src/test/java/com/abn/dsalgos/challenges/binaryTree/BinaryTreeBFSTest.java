@@ -1,11 +1,12 @@
-package com.abn.dsalgos.challenges;
+package com.abn.dsalgos.challenges.binaryTree;
 
+import com.abn.dsalgos.challenges.BinaryTreeBFS;
 import com.abn.dsalgos.utils.MyTreeNode;
 import org.testng.annotations.Test;
 
 public class BinaryTreeBFSTest {
 
-    private BinaryTreeBFS<Integer>binaryTreeBFS = new BinaryTreeBFS<>();
+    private BinaryTreeBFS<Integer> binaryTreeBFS = new BinaryTreeBFS<>();
 
     @Test
     public void test() throws Exception {

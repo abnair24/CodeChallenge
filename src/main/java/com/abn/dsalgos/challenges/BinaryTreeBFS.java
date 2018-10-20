@@ -7,7 +7,7 @@ import java.util.Queue;
 
 public class BinaryTreeBFS<T> {
 
-    MyTreeNode root;
+    public MyTreeNode root;
 
     public BinaryTreeBFS() {
         root = null;

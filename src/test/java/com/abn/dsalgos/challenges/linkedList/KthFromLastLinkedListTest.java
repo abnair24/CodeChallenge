@@ -1,5 +1,6 @@
-package com.abn.dsalgos.challenges;
+package com.abn.dsalgos.challenges.linkedList;
 
+import com.abn.dsalgos.challenges.KthFromLastLinkedList;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

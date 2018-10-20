@@ -17,17 +17,17 @@ public class BinaryTreeNonRecursive<T> {
         Stack<MyTreeNode> stack = new Stack<>();
 
         while(true) {
-            while(root !=null){
-                stack.push(root);
-                root = root.left;
+            while(node !=null){
+                stack.push(node);
+                node = node.left;
             }
 
             if(stack.isEmpty()) {
                 return;
             }
-            root = stack.pop();
-            System.out.println(root.data);
-            root = root.right;
+            node = stack.pop();
+            System.out.println(node.data);
+            node = node.right;
         }
     }
 
@@ -35,18 +35,18 @@ public class BinaryTreeNonRecursive<T> {
         Stack<MyTreeNode> stack = new Stack<>();
 
         while(true) {
-            while(root!=null) {
-                System.out.println(root.data);
-                stack.push(root);
-                root = root.left;
+            while(node!=null) {
+                System.out.println(node.data);
+                stack.push(node);
+                node = node.left;
             }
 
             if(stack.isEmpty()){
                 return;
             }
 
-            root = stack.pop();
-            root = root.right;
+            node = stack.pop();
+            node = node.right;
         }
     }
 
@@ -54,9 +54,9 @@ public class BinaryTreeNonRecursive<T> {
         Stack<MyTreeNode> stack = new Stack<>();
 
         while(true) {
-            while(root!=null) {
-                stack.push(root);
-                root = root.left;
+            while(node!=null) {
+                stack.push(node);
+                node = node.left;
             }
 
             if(stack.isEmpty()){
@@ -87,7 +87,7 @@ public class BinaryTreeNonRecursive<T> {
                 System.out.println(temp.data);
             }
             if(!stack.isEmpty()) {
-                root = stack.peek().right;
+                node = stack.peek().right;
             }
         }
     }
