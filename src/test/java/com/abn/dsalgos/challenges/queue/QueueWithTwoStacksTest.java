@@ -1,6 +1,5 @@
 package com.abn.dsalgos.challenges.queue;
 
-import com.abn.dsalgos.challenges.QueueWithTwoStacks;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

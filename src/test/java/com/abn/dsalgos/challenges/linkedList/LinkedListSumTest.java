@@ -1,6 +1,5 @@
 package com.abn.dsalgos.challenges.linkedList;
 
-import com.abn.dsalgos.challenges.LinkedListSum;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

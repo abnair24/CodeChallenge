@@ -1,6 +1,5 @@
 package com.abn.dsalgos.challenges.stack;
 
-import com.abn.dsalgos.challenges.SortStack;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

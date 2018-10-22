@@ -1,6 +1,5 @@
 package com.abn.dsalgos.challenges.linkedList;
 
-import com.abn.dsalgos.challenges.LinkedListPalindrome;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

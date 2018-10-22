@@ -1,4 +1,4 @@
-package com.abn.dsalgos.challenges;
+package com.abn.dsalgos.challenges.stack;
 
 import java.util.Stack;
 
