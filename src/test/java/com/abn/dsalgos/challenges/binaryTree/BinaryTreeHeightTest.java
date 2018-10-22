@@ -36,4 +36,17 @@ public class BinaryTreeHeightTest {
         binaryTreeHeight.root.right.right.right.left.left.right.right.left = new MyTreeNode(13);
         Assert.assertEquals(binaryTreeHeight.height(binaryTreeHeight.root),9);
     }
+
+    @Test
+    public void testRecursive() throws Exception {
+        binaryTreeHeight.root = new MyTreeNode(1);
+        binaryTreeHeight.root.left = new MyTreeNode(2);
+        binaryTreeHeight.root.right = new MyTreeNode(3);
+        binaryTreeHeight.root.left.left = new MyTreeNode(4);
+        binaryTreeHeight.root.left.right = new MyTreeNode(5);
+        binaryTreeHeight.root.left.right.left = new MyTreeNode(6);
+        Assert.assertEquals(binaryTreeHeight.heightRecursive(binaryTreeHeight.root),4);
+    }
+
+
 }

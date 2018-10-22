@@ -40,4 +40,12 @@ public class BinaryTreeHeight<T> {
         }
         return height;
     }
+
+    public int heightRecursive(MyTreeNode node) {
+        if(node == null) {
+            return 0;
+        } else {
+            return (Math.max(heightRecursive(node.left),heightRecursive(node.right)) + 1);
+        }
+    }
 }

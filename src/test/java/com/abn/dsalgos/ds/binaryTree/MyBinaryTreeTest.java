@@ -42,4 +42,18 @@ public class MyBinaryTreeTest {
 
         myBinaryTree.postOrder(myBinaryTree.root);
     }
+
+    @Test
+    public void inorderTest() throws Exception {
+        myBinaryTree.root = new MyTreeNode(10);
+        myBinaryTree.root.left = new MyTreeNode(5);
+        myBinaryTree.root.right = new MyTreeNode(15);
+        myBinaryTree.root.left.left = new MyTreeNode(10);
+        myBinaryTree.root.left.right = new MyTreeNode(12);
+        myBinaryTree.root.left.right.left = new MyTreeNode(6);
+        myBinaryTree.root.right.right = new MyTreeNode(8);
+        myBinaryTree.root.right.right.left = new MyTreeNode(5);
+
+        myBinaryTree.inOrder(myBinaryTree.root);
+    }
 }

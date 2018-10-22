@@ -55,4 +55,15 @@ public class BinaryTreeNonRecursiveTest {
 
         binaryTreeNonRecursive.postOrder(binaryTreeNonRecursive.root);
     }
+
+    @Test
+    public void postOrderTest2() throws Exception {
+        binaryTreeNonRecursive.root = new MyTreeNode(1);
+        binaryTreeNonRecursive.root.left = new MyTreeNode(2);
+        binaryTreeNonRecursive.root.right = new MyTreeNode(3);
+        binaryTreeNonRecursive.root.left.left = new MyTreeNode( 4);
+        binaryTreeNonRecursive.root.left.right = new MyTreeNode(5);
+        binaryTreeNonRecursive.root.left.right.right = new MyTreeNode(6);
+        binaryTreeNonRecursive.postOrder(binaryTreeNonRecursive.root);
+    }
 }
