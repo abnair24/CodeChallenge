@@ -2,10 +2,6 @@ package com.abn.dsalgos.challenges.stack;
 
 import java.util.Stack;
 
-/**
- * Created by aswathyn on 18/02/17.
- */
-
 class Wrapper{
     int data;
     int maxData;
