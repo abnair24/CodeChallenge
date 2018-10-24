@@ -5,11 +5,11 @@ import com.abn.dsalgos.utils.MyTreeNode;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BinaryTreeMaxElement<T> {
+public class BinaryTreeMinMaxElement<T> {
 
     public MyTreeNode<T> root;
 
-    public BinaryTreeMaxElement() {
+    public BinaryTreeMinMaxElement() {
         root = null;
     }
 

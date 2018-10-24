@@ -6,31 +6,31 @@ import org.testng.annotations.Test;
 
 public class BinaryTreeMinMaxElementTest {
 
-    BinaryTreeMaxElement binaryTreeMaxElement = new BinaryTreeMaxElement();
+    BinaryTreeMinMaxElement binaryTreeMinMaxElement = new BinaryTreeMinMaxElement();
 
     @Test
     public void maxTest() throws Exception {
-        binaryTreeMaxElement.root = new MyTreeNode(10);
-        binaryTreeMaxElement.root.left = new MyTreeNode(20);
-        binaryTreeMaxElement.root.right = new MyTreeNode(6);
-        binaryTreeMaxElement.root.left.left = new MyTreeNode(21);
-        binaryTreeMaxElement.root.left.right = new MyTreeNode(8);
-        binaryTreeMaxElement.root.right.right = new MyTreeNode(30);
-        binaryTreeMaxElement.root.right.right.right = new MyTreeNode(7);
+        binaryTreeMinMaxElement.root = new MyTreeNode(10);
+        binaryTreeMinMaxElement.root.left = new MyTreeNode(20);
+        binaryTreeMinMaxElement.root.right = new MyTreeNode(6);
+        binaryTreeMinMaxElement.root.left.left = new MyTreeNode(21);
+        binaryTreeMinMaxElement.root.left.right = new MyTreeNode(8);
+        binaryTreeMinMaxElement.root.right.right = new MyTreeNode(30);
+        binaryTreeMinMaxElement.root.right.right.right = new MyTreeNode(7);
 
-        Assert.assertEquals(binaryTreeMaxElement.maxNode(binaryTreeMaxElement.root),30);
+        Assert.assertEquals(binaryTreeMinMaxElement.maxNode(binaryTreeMinMaxElement.root),30);
     }
 
     @Test
     public void minTest() throws Exception {
-        binaryTreeMaxElement.root = new MyTreeNode(10);
-        binaryTreeMaxElement.root.left = new MyTreeNode(20);
-        binaryTreeMaxElement.root.right = new MyTreeNode(6);
-        binaryTreeMaxElement.root.left.left = new MyTreeNode(21);
-        binaryTreeMaxElement.root.left.right = new MyTreeNode(8);
-        binaryTreeMaxElement.root.right.right = new MyTreeNode(30);
-        binaryTreeMaxElement.root.right.right.right = new MyTreeNode(7);
+        binaryTreeMinMaxElement.root = new MyTreeNode(10);
+        binaryTreeMinMaxElement.root.left = new MyTreeNode(20);
+        binaryTreeMinMaxElement.root.right = new MyTreeNode(6);
+        binaryTreeMinMaxElement.root.left.left = new MyTreeNode(21);
+        binaryTreeMinMaxElement.root.left.right = new MyTreeNode(8);
+        binaryTreeMinMaxElement.root.right.right = new MyTreeNode(30);
+        binaryTreeMinMaxElement.root.right.right.right = new MyTreeNode(7);
 
-        Assert.assertEquals(binaryTreeMaxElement.minNode(binaryTreeMaxElement.root), 6);
+        Assert.assertEquals(binaryTreeMinMaxElement.minNode(binaryTreeMinMaxElement.root), 6);
     }
 }
