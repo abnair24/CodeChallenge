@@ -4,15 +4,12 @@ import com.abn.dsalgos.challenges.queue.QueueWithTwoStacks;
 import com.abn.dsalgos.utils.MyTreeNode;
 import sun.awt.image.ImageWatched;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 public class BTtoLinkedListAtDepth {
 
     public MyTreeNode root;
-    ArrayList<LinkedList<MyTreeNode>> arrayList = new ArrayList<>();
+    List<LinkedList<MyTreeNode>> arrayList = new ArrayList<>();
 
     public BTtoLinkedListAtDepth() {
         root = null;
@@ -52,7 +49,7 @@ public class BTtoLinkedListAtDepth {
         displayArrayList(arrayList);
     }
 
-    private void displayArrayList(ArrayList<LinkedList<MyTreeNode>> array) {
+    private void displayArrayList(List<LinkedList<MyTreeNode>> array) {
         Iterator iterator = array.iterator();
         while(iterator.hasNext()) {
             LinkedList list = (LinkedList) iterator.next();
@@ -63,6 +60,41 @@ public class BTtoLinkedListAtDepth {
             }
             System.out.println();
         }
+    }
 
+    /*
+    Better approach without using queue
+    Instead of queue, create a temp linked list to store nodes at each level.
+     */
+
+    public void binaryTreeLinkedList(MyTreeNode node) {
+
+        List<LinkedList<MyTreeNode>>lists = new ArrayList<>();
+
+        LinkedList<MyTreeNode> linkedList = new LinkedList<>();
+
+        if(node != null) {
+            linkedList.add(node);
+        }
+
+        while(linkedList.size() > 0) {
+            lists.add(linkedList);
+
+            LinkedList<MyTreeNode> temp = linkedList;
+
+            linkedList = new LinkedList<>();
+
+            for(MyTreeNode t : temp) {
+                if(t.left != null) {
+                    linkedList.add(t.left);
+                }
+
+                if(t.right != null) {
+                    linkedList.add(t.right);
+                }
+            }
+        }
+
+        displayArrayList(lists);
     }
 }
