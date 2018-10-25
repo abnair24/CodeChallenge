@@ -5,6 +5,10 @@ import com.abn.dsalgos.utils.MyTreeNode;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/*
+    Find the height of a BT
+ */
+
 public class BinaryTreeHeight<T> {
 
     public MyTreeNode root;

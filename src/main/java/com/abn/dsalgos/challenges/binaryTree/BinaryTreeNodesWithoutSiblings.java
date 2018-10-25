@@ -11,6 +11,7 @@ import java.util.Queue;
 
 Note: sibling node is the node which has the same parent, so you need to print the nodes who is a single child of his parent.
  */
+
 public class BinaryTreeNodesWithoutSiblings<T> {
     public MyTreeNode<T> root;
 

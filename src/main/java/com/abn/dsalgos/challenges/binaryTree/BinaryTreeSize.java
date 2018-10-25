@@ -5,6 +5,10 @@ import com.abn.dsalgos.utils.MyTreeNode;
 import java.util.LinkedList;
 import java.util.Queue;
 
+
+    /*
+     Find the size of a Binary Tree. (Size = number of nodes)
+     */
 public class BinaryTreeSize<T> {
 
     MyTreeNode root;

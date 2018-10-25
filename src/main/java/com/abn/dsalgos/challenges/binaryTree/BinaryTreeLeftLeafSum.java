@@ -5,6 +5,10 @@ import com.abn.dsalgos.utils.MyTreeNode;
 import java.util.Stack;
 
 
+/*
+    Find the sum of all the left leaf nodes (node which doesnt have children)
+ */
+
 public class BinaryTreeLeftLeafSum<T> {
     public MyTreeNode root = null;
     private int sum =0;

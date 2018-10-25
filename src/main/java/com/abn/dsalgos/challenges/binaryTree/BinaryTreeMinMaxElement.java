@@ -5,6 +5,11 @@ import com.abn.dsalgos.utils.MyTreeNode;
 import java.util.LinkedList;
 import java.util.Queue;
 
+
+/*
+    Find the minimum and maximum nodes in a binary tree.
+
+ */
 public class BinaryTreeMinMaxElement<T> {
 
     public MyTreeNode<T> root;
