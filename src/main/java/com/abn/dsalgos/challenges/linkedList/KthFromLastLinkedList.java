@@ -1,8 +1,6 @@
 package com.abn.dsalgos.challenges.linkedList;
 
 import com.abn.dsalgos.utils.LinkNode;
-import sun.awt.image.ImageWatched;
-
 import java.util.NoSuchElementException;
 
 public class KthFromLastLinkedList<T> {
@@ -37,7 +35,6 @@ public class KthFromLastLinkedList<T> {
         }
         last = newLink;
         size ++;
-
     }
 
     public boolean isEmpty() {
