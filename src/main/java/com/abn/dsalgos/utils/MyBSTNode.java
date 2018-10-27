@@ -1,14 +1,12 @@
 package com.abn.dsalgos.utils;
 
-public class MyTreeNode<T> {
+public class MyBSTNode<T extends Comparable<T>> {
 
-    public MyTreeNode left, right;
+    public MyBSTNode left,right;
     public T data;
 
-    public MyTreeNode(T data) {
+    public MyBSTNode(T data) {
         this.data = data;
         left = right = null;
     }
-
-
 }
