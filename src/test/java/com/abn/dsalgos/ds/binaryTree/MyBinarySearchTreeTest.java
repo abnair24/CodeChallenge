@@ -34,7 +34,7 @@ public class MyBinarySearchTreeTest {
         myBinarySearchTree.insertNode(new MyBSTNode<Integer>(7));
 
         Assert.assertTrue(myBinarySearchTree.search(new MyBSTNode<Integer>(4)));
-        //.assertFalse(myBinarySearchTree.search(new MyBSTNode<Integer>(9)));
+        Assert.assertFalse(myBinarySearchTree.search(new MyBSTNode<Integer>(9)));
     }
 
     @Test
@@ -56,17 +56,7 @@ public class MyBinarySearchTreeTest {
 
         myBinarySearchTree.display(myBinarySearchTree.root);
         System.out.println();
-        Assert.assertTrue(myBinarySearchTree.delete(new MyBSTNode<Integer>(65))));
+        Assert.assertTrue(myBinarySearchTree.delete(new MyBSTNode<Integer>(65)));
         myBinarySearchTree.display(myBinarySearchTree.root);
-
-
-
-
-
-
-
-
-
-
     }
 }
