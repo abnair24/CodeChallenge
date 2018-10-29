@@ -69,6 +69,9 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
         MyBSTNode<T> parent = null;
         boolean isNodePresent = false;
 
+        /*
+        Search for node
+         */
         while (temp != null) {
             if (node.data.compareTo(temp.data) == 0) {
                 isNodePresent = true;
@@ -87,6 +90,9 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
         if (!isNodePresent || temp == null) {
             return false;
         } else {
+            /*
+            If node to delete has only right child, connect parent to right child.
+             */
             if (temp.left == null) {
                 if (parent.left == temp) {
                     parent.left = temp.right;
@@ -94,6 +100,9 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
                     parent.right = temp.right;
                 }
                 return true;
+                /*
+                If node to delete has only left child, connect parent to left child.
+                 */
             } else if (temp.right == null) {
                 if (parent.left == temp) {
                     parent.left = temp.left;
@@ -101,6 +110,11 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
                     parent.right = temp.left;
                 }
                 return true;
+
+                /*
+                If node to delete has both childs, and if right child left is not null, find the lowest possible
+                value from right left children. Replace value with node.
+                 */
             } else if (temp.left != null && temp.right != null) {
 
                 temp = getSuccessorNode(temp);
@@ -111,6 +125,9 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
         return false;
     }
 
+    /*
+    Helper method to find lowest inorder successor to replace the node to be deleted.
+     */
     private MyBSTNode<T> getSuccessorNode(MyBSTNode<T> n) {
         MyBSTNode<T> successorParent = n.right;
         MyBSTNode<T> successor = successorParent.left;
