@@ -34,6 +34,39 @@ public class MyBinarySearchTreeTest {
         myBinarySearchTree.insertNode(new MyBSTNode<Integer>(7));
 
         Assert.assertTrue(myBinarySearchTree.search(new MyBSTNode<Integer>(4)));
-        Assert.assertFalse(myBinarySearchTree.search(new MyBSTNode<Integer>(9)));
+        //.assertFalse(myBinarySearchTree.search(new MyBSTNode<Integer>(9)));
+    }
+
+    @Test
+    public void deleteTest() throws Exception {
+        myBinarySearchTree.insertNode(new MyBSTNode<Integer>(44));
+        myBinarySearchTree.insertNode(new MyBSTNode<Integer>(17));
+        myBinarySearchTree.insertNode(new MyBSTNode<Integer>(32));
+        myBinarySearchTree.insertNode(new MyBSTNode<Integer>(28));
+        myBinarySearchTree.insertNode(new MyBSTNode<Integer>(88));
+        myBinarySearchTree.insertNode(new MyBSTNode<Integer>(29));
+        myBinarySearchTree.insertNode(new MyBSTNode<Integer>(97));
+        myBinarySearchTree.insertNode(new MyBSTNode<Integer>(65));
+        myBinarySearchTree.insertNode(new MyBSTNode<Integer>(54));
+        myBinarySearchTree.insertNode(new MyBSTNode<Integer>(82));
+        myBinarySearchTree.insertNode(new MyBSTNode<Integer>(76));
+        myBinarySearchTree.insertNode(new MyBSTNode<Integer>(75));
+        myBinarySearchTree.insertNode(new MyBSTNode<Integer>(80));
+        myBinarySearchTree.insertNode(new MyBSTNode<Integer>(78));
+
+        myBinarySearchTree.display(myBinarySearchTree.root);
+        System.out.println();
+        Assert.assertTrue(myBinarySearchTree.delete(new MyBSTNode<Integer>(65))));
+        myBinarySearchTree.display(myBinarySearchTree.root);
+
+
+
+
+
+
+
+
+
+
     }
 }

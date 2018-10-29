@@ -42,25 +42,99 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
 
     public boolean search(MyBSTNode<T> node) {
         MyBSTNode<T> temp = root;
+        MyBSTNode<T> parent = null;
 
         while(temp!=null){
+
             if(node.data.compareTo(temp.data) == 0){
+                System.out.println("parent :"+ parent.data);
                 return true;
             }
             if(node.data.compareTo(temp.data) > 0) {
+                parent = temp;
                 temp = temp.right;
             }
             if(node.data.compareTo(temp.data) < 0) {
+                parent = temp;
                 temp = temp.left;
+            }
+        }
+
+        return false;
+    }
+
+    public boolean delete(MyBSTNode<T> node) {
+
+        MyBSTNode<T> temp = root;
+        MyBSTNode<T> parent = null;
+        boolean isNodePresent = false;
+
+        while (temp != null) {
+            if (node.data.compareTo(temp.data) == 0) {
+                isNodePresent = true;
+                break;
+            }
+            if (node.data.compareTo(temp.data) > 0) {
+                parent = temp;
+                temp = temp.right;
+            }
+            if (node.data.compareTo(temp.data) < 0) {
+                parent = temp;
+                temp = temp.left;
+            }
+        }
+
+        if (!isNodePresent || temp == null) {
+            return false;
+        } else {
+            if (temp.left == null) {
+                if (parent.left == temp) {
+                    parent.left = temp.right;
+                } else {
+                    parent.right = temp.right;
+                }
+                return true;
+            } else if (temp.right == null) {
+                if (parent.left == temp) {
+                    parent.left = temp.left;
+                } else {
+                    parent.right = temp.left;
+                }
+                return true;
+            } else if (temp.left != null && temp.right != null) {
+
+                temp = getSuccessorNode(temp);
+
+                return true;
             }
         }
         return false;
     }
 
+    private MyBSTNode<T> getSuccessorNode(MyBSTNode<T> n) {
+        MyBSTNode<T> successorParent = n.right;
+        MyBSTNode<T> successor = successorParent.left;
+
+        if(successor != null) {
+            while (successor.left != null) {
+                successorParent = successor;
+                successor = successor.left;
+            }
+
+            n.data = successor.data;
+            successorParent.left = successor.left;
+        } else {
+            n.data = successorParent.data;
+            n.right = successorParent.right;
+        }
+        return n;
+    }
+
+
     public void display(MyBSTNode<T> node) {
         if(node != null) {
             display(node.left);
-            System.out.println(node.data);
+            System.out.print(node.data + " ");
             display(node.right);
         }
     }
