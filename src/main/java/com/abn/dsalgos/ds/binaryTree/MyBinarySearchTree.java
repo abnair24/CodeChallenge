@@ -10,7 +10,6 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
         root = null;
     }
 
-
     public void insertNode(MyBSTNode<T> node) {
         if (root == null) {
             root = node;
@@ -137,7 +136,6 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
                 successorParent = successor;
                 successor = successor.left;
             }
-
             n.data = successor.data;
             successorParent.left = successor.left;
         } else {

@@ -1,17 +1,23 @@
 package com.abn.dsalgos.challenges.linkedList;
 
-import com.abn.dsalgos.utils.LinkNode;
 
-import java.util.HashSet;
+import com.abn.dsalgos.utils.LinkNode;
 import java.util.NoSuchElementException;
 
-public class RemoveDuplicateLinkedList<T> {
+/*
+Given a singly linked list of integers l and an integer k,
+remove all elements from list l that have a value equal to k.
+
+For l = [3, 1, 2, 3, 4, 5] and k = 3, the output should be
+removeKFromList(l, k) = [1, 2, 4, 5];
+ */
+public class LinkedListRemoveAllKvalue<T> {
 
     private LinkNode<T> first;
     private LinkNode<T> last;
     private int size;
 
-    public RemoveDuplicateLinkedList() {
+    public LinkedListRemoveAllKvalue() {
         first =null;
         last = null;
         size=0;
@@ -114,7 +120,8 @@ public class RemoveDuplicateLinkedList<T> {
     }
 
     /*
-    Helper methode to fetch first node from linkedlist . Used for removeDuplicates method to get handle of first method
+    Helper methode to fetch first node from linkedlist .
+    Used for removeDuplicates method to get handle of first method
      */
 
     public LinkNode getFirstNode() {
@@ -142,18 +149,22 @@ public class RemoveDuplicateLinkedList<T> {
     Method to remove duplicates from a linked list. Need to pass first node or head node when method is called.
      O(N) solution
      */
-    public void removeDuplicate(LinkNode n){
+    public void removeKValues(LinkNode head, T k){
 
-        LinkNode<T> previous = null;
-        HashSet<T> set = new HashSet<>();
-        while(n!=null) {
-            if(set.contains(n.data)) {
-                previous.next = n.next;
+        LinkNode<T> previous = head;
+        LinkNode<T> current = head;
+
+        while(current != null) {
+            if (current.data == k) {
+                if (current == first) {
+                    first = first.next;
+                } else {
+                    previous.next = current.next;
+                }
             } else {
-                set.add((T) n.data);
-                previous =n;
+                previous = current;
             }
-            n = n.next;
+            current = current.next;
         }
     }
 }

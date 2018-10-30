@@ -77,7 +77,7 @@ public class MyLinkedListTest {
         linkedList.insertFirst(20);
         linkedList.insertFirst(40);
         linkedList.insertFirst(45);
-        Assert.assertEquals(20,linkedList.delete(20));
+        Assert.assertEquals(10,linkedList.delete(10));
     }
 
     @Test(expectedExceptions = NoSuchElementException.class)
