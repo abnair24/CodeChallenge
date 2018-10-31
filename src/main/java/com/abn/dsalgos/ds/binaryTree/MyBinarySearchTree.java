@@ -128,23 +128,25 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
     Helper method to find lowest inorder successor to replace the node to be deleted.
      */
     private MyBSTNode<T> getSuccessorNode(MyBSTNode<T> n) {
-        MyBSTNode<T> successorParent = n.right;
-        MyBSTNode<T> successor = successorParent.left;
 
-        if(successor != null) {
-            while (successor.left != null) {
-                successorParent = successor;
+        MyBSTNode<T> successor = n.right;
+        MyBSTNode<T> current = successor;
+        MyBSTNode<T> parent = n.right;
+
+        if(successor.right != null && successor.left == null) {
+            n.data = successor.data;
+            n.right = successor.right;
+        } else {
+            while(successor.left !=  null) {
+                parent = successor;
                 successor = successor.left;
             }
             n.data = successor.data;
-            successorParent.left = successor.left;
-        } else {
-            n.data = successorParent.data;
-            n.right = successorParent.right;
+            parent.left = successor.right;
         }
+
         return n;
     }
-
 
     public void display(MyBSTNode<T> node) {
         if(node != null) {
