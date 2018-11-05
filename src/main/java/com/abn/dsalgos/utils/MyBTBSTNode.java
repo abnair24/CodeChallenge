@@ -10,7 +10,7 @@ public class MyBTBSTNode<T extends Comparable<T>> {
     public MyBTBSTNode(T data) {
         this.data = data;
         left = right = null;
-        min = new Integer(Integer.MIN_VALUE);
-        max = new Integer(Integer.MAX_VALUE);
+        min = Integer.MIN_VALUE;
+        max = Integer.MAX_VALUE;
     }
 }

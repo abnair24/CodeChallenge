@@ -21,4 +21,17 @@ public class BinaryTreeIsBSTTest {
 
         System.out.println(binaryTreeIsBST.isBST(binaryTreeIsBST.root,Integer.MIN_VALUE,Integer.MAX_VALUE));
     }
+
+    @Test
+    public void test1() throws Exception {
+        binaryTreeIsBST.root = new MyBSTNode<>(30);
+        binaryTreeIsBST.root.left = new MyBSTNode(5);
+        binaryTreeIsBST.root.right = new MyBSTNode(40);
+        binaryTreeIsBST.root.right.left = new MyBSTNode(10);
+        binaryTreeIsBST.root.right.right = new MyBSTNode(50 );
+
+        System.out.println(binaryTreeIsBST.isBST(binaryTreeIsBST.root,Integer.MIN_VALUE,Integer.MAX_VALUE));
+    }
+
+
 }

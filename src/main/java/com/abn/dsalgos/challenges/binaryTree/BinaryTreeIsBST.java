@@ -24,14 +24,15 @@ public class BinaryTreeIsBST<T extends Comparable<T>> {
 
             if (root.data.compareTo(max) > 0 || root.data.compareTo(min) < 0) {
                 return false;
+            } else {
+
+                System.out.println("Root : " + root.data + " min: " + min + " max: " + max);
+
+                boolean isLeftTreeBST = isBST(root.left, min, root.data);
+                boolean isRightTreeBST = isBST(root.right, root.data, max);
+
+                return isLeftTreeBST && isRightTreeBST;
             }
-
-            System.out.println("Root : " + root.data + " min: " + min + " max: " + max);
-
-            boolean isLeftTreeBST = isBST(root.left, min, root.data);
-            boolean isRightTreeBST = isBST(root.right, root.data, max);
-
-            return isLeftTreeBST && isRightTreeBST;
         }
     }
 }
