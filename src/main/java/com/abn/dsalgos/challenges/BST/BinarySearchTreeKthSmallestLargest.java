@@ -4,11 +4,15 @@ import com.abn.dsalgos.utils.MyBSTNode;
 
 import java.util.Stack;
 
-public class BinarySearchTreeKthSmallest<T extends Comparable<T>> {
+/*
+Find the kth smallest or largest number in a BST
+ */
+
+public class BinarySearchTreeKthSmallestLargest<T extends Comparable<T>> {
 
     MyBSTNode<T> root;
 
-    public BinarySearchTreeKthSmallest() {
+    public BinarySearchTreeKthSmallestLargest() {
         root = null;
     }
 
@@ -40,6 +44,11 @@ public class BinarySearchTreeKthSmallest<T extends Comparable<T>> {
             }
         }
     }
+
+    /*
+    Traverse tree in-order. While popping out from stack, decrement the k value.
+    Return node value when k becomes zero
+     */
 
     public T kthSmallest(MyBSTNode<T> root,int k) {
         Stack<MyBSTNode<T>> stack = new Stack<>();
@@ -74,4 +83,32 @@ public class BinarySearchTreeKthSmallest<T extends Comparable<T>> {
             display(node.right);
         }
     }
+
+    public T kthLargest(MyBSTNode<T> root, int k) {
+        Stack<MyBSTNode<T>>stack = new Stack<>();
+
+        MyBSTNode<T> temp = root;
+        int num = k;
+
+        while(true) {
+            while(temp != null) {
+                stack.add(temp);
+                temp = temp.right;
+            }
+
+            if(stack.isEmpty()) {
+                return null;
+            }
+
+            temp = stack.pop();
+            num --;
+
+            if(num == 0) {
+                return temp.data;
+            }
+
+            temp = temp.left;
+        }
+    }
+
 }
