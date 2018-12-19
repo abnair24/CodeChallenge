@@ -131,6 +131,7 @@ public class ReverseLinkedListIterative<T> {
             System.out.print(n.data + " ");
             n = n.next;
         }
+        System.out.println();
     }
 
     public void reverseLinkedList() {
@@ -148,6 +149,55 @@ public class ReverseLinkedListIterative<T> {
             currentNode = nextNode;
         }
         first = prevNode;
+        print();
+    }
+
+    public void reverseInBlocks(LinkNode<T> node ,int k) {
+
+        LinkNode<T> current = node;
+        LinkNode<T> prevNode = null;
+        LinkNode<T> nextNode = null;
+        LinkNode<T> tailNode = null;
+        LinkNode <T> tempTail = null;
+
+        int blockSize = k;
+
+        int size =0;
+        int t = 0;
+        int i =0;
+
+
+        while(node != null) {
+            size ++;
+            node = node.next;
+        }
+
+        while (i++ < size/k) {
+            tailNode = current;
+            while (blockSize-- > 0) {
+                nextNode = current.next;
+                current.next = prevNode;
+                prevNode = current;
+                current = nextNode;
+                t++;
+            }
+
+            blockSize = k;
+
+            if(t == k) {
+               first = prevNode;
+               tempTail = tailNode;
+            }
+
+            tempTail.next = prevNode;
+
+            if(t== size) {
+               tailNode.next = null;
+            } else {
+                tempTail = tailNode;
+                tailNode.next = current;
+            }
+        }
         print();
     }
 }
