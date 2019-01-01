@@ -1,15 +1,16 @@
 package com.abn.dsalgos.challenges.linkedList;
 
 import com.abn.dsalgos.utils.LinkNode;
+
 import java.util.NoSuchElementException;
 
-public class KthFromLastLinkedList<T> {
+public class ReverseInKGroup<T> {
 
     private LinkNode<T> first;
     private LinkNode<T> last;
     private int size;
 
-    public KthFromLastLinkedList() {
+    public ReverseInKGroup() {
         first =null;
         last = null;
         size=0;
@@ -35,6 +36,7 @@ public class KthFromLastLinkedList<T> {
         }
         last = newLink;
         size ++;
+
     }
 
     public boolean isEmpty() {
@@ -110,26 +112,90 @@ public class KthFromLastLinkedList<T> {
         }
     }
 
-    /*
-    O(n) time and O(1) space.
-     */
-    public T findKthFromLast(int k) {
-        LinkNode<T> p1 = first;
-        LinkNode<T> p2 = first;
+    public int size() {
+        return size;
+    }
 
-        for(int i =0; i<k;i++) {
-            if(p1==null) {
-                return null;
+    public LinkNode getFirstNode() {
+        LinkNode<T> temp = first;
+        if(temp == null ){
+            throw new NoSuchElementException();
+        } else {
+            return temp;
+        }
+    }
+
+    public void print() {
+        LinkNode n = first;
+        while (n != null) {
+            System.out.print(n.data + " ");
+            n = n.next;
+        }
+        System.out.println();
+    }
+
+    /*
+    Given a linked list l, reverse its nodes k at a time and return the modified list.
+    k is a positive integer that is less than or equal to the length of l. If the number
+    of nodes in the linked list is not a multiple of k, then the nodes that are left out at
+    the end should remain as-is.
+
+    You may not alter the values in the nodes - only the nodes themselves can be changed.
+
+    For l = [1, 2, 3, 4, 5] and k = 2, the output should be
+
+    reverseNodesInKGroups(l, k) = [2, 1, 4, 3, 5];
+
+    */
+
+
+    public void reverseInBlocks(LinkNode<T> node ,int k) {
+
+        LinkNode<T> current = node;
+        LinkNode<T> prevNode = null;
+        LinkNode<T> nextNode = null;
+        LinkNode<T> tailNode = null;
+        LinkNode <T> tempTail = null;
+
+        int blockSize = k;
+
+        int size =0;
+        int t = 0;
+        int i =0;
+
+
+        while(node != null) {
+            size ++;
+            node = node.next;
+        }
+
+        while (i++ < size/k) {
+            tailNode = current;
+            while (blockSize-- > 0) {
+                nextNode = current.next;
+                current.next = prevNode;
+                prevNode = current;
+                current = nextNode;
+                t++;
+            }
+
+            blockSize = k;
+
+            if(t == k) {
+                first = prevNode;
+                tempTail = tailNode;
+            }
+
+            tempTail.next = prevNode;
+
+            if(t== size) {
+                tailNode.next = null;
             } else {
-                p1 = p1.next;
+                tempTail = tailNode;
+                tailNode.next = current;
             }
         }
-
-        while(p1!=null) {
-            p1 = p1.next;
-            p2 = p2.next;
-        }
-
-        return p2.data;
+        print();
     }
 }
+

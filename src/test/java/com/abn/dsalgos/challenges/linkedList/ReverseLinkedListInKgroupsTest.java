@@ -6,11 +6,11 @@ import org.testng.annotations.Test;
 
 public class ReverseLinkedListInKgroupsTest {
 
-    private ReverseLinkedListIterative<Integer> reverseLinkedListIterative;
+    private ReverseInKGroup<Integer> reverseLinkedListIterative;
 
     @BeforeMethod
     public void setup() throws Exception {
-        reverseLinkedListIterative = new ReverseLinkedListIterative<>();
+        reverseLinkedListIterative = new ReverseInKGroup<>();
     }
 
     @Test
