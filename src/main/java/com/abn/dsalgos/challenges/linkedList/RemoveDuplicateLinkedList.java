@@ -155,5 +155,6 @@ public class RemoveDuplicateLinkedList<T> {
             }
             n = n.next;
         }
+        print();
     }
 }
