@@ -25,12 +25,12 @@ public class BinaryTreeLeftView<T> {
         queue.add(node);
 
         while(!queue.isEmpty()) {
-            int i =0;
+            int i =1;
             nodeCount= queue.size();
 
             while( i < nodeCount) {
                 MyTreeNode<T> current = queue.poll();
-                if(i==0) {
+                if(i==1) {
                     System.out.println(current.data);
                 }
 
@@ -45,5 +45,26 @@ public class BinaryTreeLeftView<T> {
             }
         }
 
+    }
+
+    public void rightView(MyTreeNode<T> node) {
+        Queue<MyTreeNode<T>> queue = new LinkedList<>();
+        if(node == null) return;
+
+        queue.add(node);
+        while(!queue.isEmpty()) {
+            int i = 1;
+            nodeCount = queue.size();
+            while(i <= nodeCount) {
+                MyTreeNode<T> current = queue.poll();
+                if(i == nodeCount ) System.out.println(current.data);
+
+                if(current.left != null) queue.add(current.left);
+
+                if(current.right != null) queue.add(current.right);
+
+                i++;
+            }
+        }
     }
 }
