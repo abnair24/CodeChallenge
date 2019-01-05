@@ -35,4 +35,19 @@
         * [In order successor](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/BST/InOrderSuccessor.java)
         * [Kth smallest and largest element](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/BST/BinarySearchTreeKthSmallestLargest.java)
         * [Delete an array of nodes](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/BST/BinarySearchTreeArrayOfNodesDeletion.java)
-           
+    
+   5. Binary Tree
+        * [Binary tree to Linked list](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/binaryTree/BTtoLinkedListAtDepth.java)
+        * [Binary tree breadth first search](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/binaryTree/BinaryTreeBFS.java)
+        * [Binary tree print all nodes](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/binaryTree/BinaryTreeFullNodes.java)
+        * [Binary tree height](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/binaryTree/BinaryTreeHeight.java)
+        * [Is Binary tree a BST](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/binaryTree/BinaryTreeIsBST.java)
+        * [Is binary tree balanced](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/binaryTree/BinaryTreeIsBalanced.java)
+        * [Binary tree left lead sum](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/binaryTree/BinaryTreeLeftLeafSum.java)
+        * [Binary tree left view](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/binaryTree/BinaryTreeLeftView.java)
+        * [Binary tree lowest common ancestor](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/binaryTree/BinaryTreeLowestCommonAncestor.java)
+        * [Binary tree minimum and maximum](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/binaryTree/BinaryTreeMinMaxElement.java)
+        * [Binary tree path from root to node](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/binaryTree/BinaryTreePathFromRootToNode2.java)
+        * [Binary tree root to leaf path with given sum](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/binaryTree/BinaryTreeRootToLeafSumPath.java)
+        * [Binary tree size](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/binaryTree/BinaryTreeSize.java)
+        * [Minimal Binary tree](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/binaryTree/MinimalBST.java)
