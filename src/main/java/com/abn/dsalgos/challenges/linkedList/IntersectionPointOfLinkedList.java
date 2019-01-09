@@ -1,6 +1,7 @@
 package com.abn.dsalgos.challenges.linkedList;
 
 import com.abn.dsalgos.utils.LinkNode;
+import sun.awt.image.ImageWatched;
 
 import java.util.NoSuchElementException;
 
@@ -165,5 +166,28 @@ public class IntersectionPointOfLinkedList<T> {
             }
         }
         return null;
+    }
+
+
+    /*
+    Efficient solution: Traverse A and B, if tailA is reached, point to headB, and on reaching tailB point to headA
+    Now when both equals, return
+     */
+
+    public LinkNode<T> findIntersection2(LinkNode<T> nodeA, LinkNode<T> nodeB) {
+
+        if(nodeA== null || nodeB == null) {
+            return null;
+        }
+
+        LinkNode<T> headA = nodeA;
+        LinkNode<T> headB = nodeB;
+
+        while(headA != headB) {
+            headA = headA == null ? headB: headA.next;
+            headB = headB == null ? headA: headB.next;
+        }
+
+        return headA;
     }
 }
