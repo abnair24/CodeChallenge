@@ -11,14 +11,14 @@ public class ReverseLinkedListIterative<T> {
     private int size;
 
     public ReverseLinkedListIterative() {
-        first =null;
+        first = null;
         last = null;
-        size=0;
+        size = 0;
     }
 
     public void insertFirst(T value) {
         LinkNode<T> newLink = new LinkNode<>(value);
-        if(isEmpty()) {
+        if (isEmpty()) {
             last = newLink;
         } else {
             newLink.next = first;
@@ -28,14 +28,14 @@ public class ReverseLinkedListIterative<T> {
     }
 
     public void insertLast(T value) {
-        LinkNode <T> newLink = new LinkNode<>(value);
-        if(isEmpty()) {
+        LinkNode<T> newLink = new LinkNode<>(value);
+        if (isEmpty()) {
             first = newLink;
         } else {
             last.next = newLink;
         }
         last = newLink;
-        size ++;
+        size++;
 
     }
 
@@ -44,7 +44,7 @@ public class ReverseLinkedListIterative<T> {
     }
 
     public T deleteFirst() throws Exception {
-        if(isEmpty()){
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
             LinkNode<T> temp = first;
@@ -74,7 +74,7 @@ public class ReverseLinkedListIterative<T> {
 
         LinkNode<T> current = first;
         LinkNode<T> prev = first;
-        if(isEmpty()) {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
             while (current.data != value) {
@@ -96,7 +96,7 @@ public class ReverseLinkedListIterative<T> {
 
     public T getFirst() {
         LinkNode<T> temp = first;
-        if(temp == null){
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp.data;
@@ -105,7 +105,7 @@ public class ReverseLinkedListIterative<T> {
 
     public T getLast() {
         LinkNode<T> temp = last;
-        if(temp == null) {
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp.data;
@@ -118,7 +118,7 @@ public class ReverseLinkedListIterative<T> {
 
     public LinkNode getFirstNode() {
         LinkNode<T> temp = first;
-        if(temp == null ){
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp;
@@ -139,7 +139,7 @@ public class ReverseLinkedListIterative<T> {
         LinkNode<T> prevNode = null;
         LinkNode<T> nextNode = null;
 
-        while(currentNode!=null) {
+        while (currentNode != null) {
             // Getting the next node and storing
             nextNode = currentNode.next;
             // linking current node to null (for first case and late to prev nods)
@@ -153,67 +153,4 @@ public class ReverseLinkedListIterative<T> {
     }
 
 
-    /*
-    Given a linked list l, reverse its nodes k at a time and return the modified list.
-    k is a positive integer that is less than or equal to the length of l. If the number
-    of nodes in the linked list is not a multiple of k, then the nodes that are left out at
-    the end should remain as-is.
-
-    You may not alter the values in the nodes - only the nodes themselves can be changed.
-
-    For l = [1, 2, 3, 4, 5] and k = 2, the output should be
-
-    reverseNodesInKGroups(l, k) = [2, 1, 4, 3, 5];
-
-    */
-
-
-    public void reverseInBlocks(LinkNode<T> node ,int k) {
-
-        LinkNode<T> current = node;
-        LinkNode<T> prevNode = null;
-        LinkNode<T> nextNode = null;
-        LinkNode<T> tailNode = null;
-        LinkNode <T> tempTail = null;
-
-        int blockSize = k;
-
-        int size =0;
-        int t = 0;
-        int i =0;
-
-
-        while(node != null) {
-            size ++;
-            node = node.next;
-        }
-
-        while (i++ < size/k) {
-            tailNode = current;
-            while (blockSize-- > 0) {
-                nextNode = current.next;
-                current.next = prevNode;
-                prevNode = current;
-                current = nextNode;
-                t++;
-            }
-
-            blockSize = k;
-
-            if(t == k) {
-               first = prevNode;
-               tempTail = tailNode;
-            }
-
-            tempTail.next = prevNode;
-
-            if(t== size) {
-               tailNode.next = null;
-            } else {
-                tempTail = tailNode;
-                tailNode.next = current;
-            }
-        }
-        print();
-    }
 }

@@ -129,6 +129,4 @@ public class ReverseLinkedListFromMtoN<T> {
         }
         System.out.println();
     }
-
-
 }
