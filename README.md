@@ -17,7 +17,10 @@
         * [Queue using stack](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/queue/QueueWithTwoStacks.java)
         
    3. Linked List
+        * [LinkedList Intersection](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/linkedList/IntersectionPointOfLinkedList.java)
         * [Kth Element from last](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/linkedList/KthFromLastLinkedList.java)
+        * [Loop in LinkedList](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/linkedList/LinkedListCycle.java)
+        
         * [Linked list length](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/linkedList/LinkedListLength.java)
         * [Linked list palindrome](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/linkedList/LinkedListPalindrome.java)
         * [Partition linked list around X](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/linkedList/LinkedListPartitionAroundX.java)
@@ -28,6 +31,7 @@
         * [Rearrage last N values in linkedlist](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/linkedList/RearrangeLastN.java)
         * [Duplicate removal in linkedlist](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/linkedList/RemoveDuplicateLinkedList.java)
         * [Reverse linkedlist in groups of K](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/linkedList/ReverseInKGroup.java)
+        * [Reverse LinkedList from M to N](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/linkedList/ReverseLinkedListFromMtoN.java)
         * [Reverse Linkedlist](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/linkedList/ReverseLinkedListIterative.java)
         
    4. Binary Search Tree
@@ -43,7 +47,7 @@
         * [Binary tree height](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/binaryTree/BinaryTreeHeight.java)
         * [Is Binary tree a BST](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/binaryTree/BinaryTreeIsBST.java)
         * [Is binary tree balanced](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/binaryTree/BinaryTreeIsBalanced.java)
-        * [Binary tree left lead sum](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/binaryTree/BinaryTreeLeftLeafSum.java)
+        * [Binary tree left leaf sum](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/binaryTree/BinaryTreeLeftLeafSum.java)
         * [Binary tree left view](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/binaryTree/BinaryTreeLeftView.java)
         * [Binary tree lowest common ancestor](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/binaryTree/BinaryTreeLowestCommonAncestor.java)
         * [Binary tree minimum and maximum](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/binaryTree/BinaryTreeMinMaxElement.java)
