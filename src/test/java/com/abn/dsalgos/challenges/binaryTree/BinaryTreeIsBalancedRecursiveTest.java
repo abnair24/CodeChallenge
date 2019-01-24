@@ -1,6 +1,5 @@
 package com.abn.dsalgos.challenges.binaryTree;
 
-import com.abn.dsalgos.challenges.linkedList.BinaryTreeIsBalancedRecursive;
 import com.abn.dsalgos.utils.MyTreeNode;
 import org.testng.annotations.Test;
 

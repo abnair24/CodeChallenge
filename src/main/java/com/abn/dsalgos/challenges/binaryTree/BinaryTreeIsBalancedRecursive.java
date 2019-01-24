@@ -1,4 +1,4 @@
-package com.abn.dsalgos.challenges.linkedList;
+package com.abn.dsalgos.challenges.binaryTree;
 
 import com.abn.dsalgos.utils.MyTreeNode;
 
