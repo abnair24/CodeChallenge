@@ -1,10 +1,10 @@
-package com.abn.dsalgos.challenges.binaryTree;
+package com.abn.dsalgos.challenges.linkedList;
 
 import com.abn.dsalgos.utils.MyTreeNode;
 
 public class BinaryTreeIsBalancedRecursive<T> {
 
-    MyTreeNode<T> root;
+    public MyTreeNode<T> root;
 
     public BinaryTreeIsBalancedRecursive() {
         root = null;

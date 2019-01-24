@@ -134,19 +134,25 @@ public class LinkedListCycle<T> {
         System.out.println();
     }
 
-    public LinkNode<T> findLinkedListCycle(LinkNode<T> node) {
+    /*
+    Two pointers at different speed. If loop is present, pointers meet.
+     */
+    public boolean findLinkedListCycle(LinkNode<T> node) {
         LinkNode<T> fNode = node;
         LinkNode<T> sNode = node;
+
+        if(node == null) {
+            return false;
+        }
 
         while(fNode != null && fNode.next != null) {
             sNode = sNode.next;
             fNode = fNode.next.next;
 
             if(fNode == sNode) {
-                return fNode;
+                return true;
             }
         }
-
-        return null;
+        return false;
     }
 }
