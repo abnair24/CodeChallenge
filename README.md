@@ -30,6 +30,7 @@
         * [Merge 2 sorted linkedlist](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/linkedList/MergeSortedLinkedList.java)
         * [Rearrage last N values in linkedlist](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/linkedList/RearrangeLastN.java)
         * [Duplicate removal in linkedlist](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/linkedList/RemoveDuplicateLinkedList.java)
+        * [Reorder LinkedList](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/linkedList/ReorderLinkedList.java)
         * [Reverse linkedlist in groups of K](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/linkedList/ReverseInKGroup.java)
         * [Reverse LinkedList from M to N](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/linkedList/ReverseLinkedListFromMtoN.java)
         * [Reverse Linkedlist](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/linkedList/ReverseLinkedListIterative.java)
