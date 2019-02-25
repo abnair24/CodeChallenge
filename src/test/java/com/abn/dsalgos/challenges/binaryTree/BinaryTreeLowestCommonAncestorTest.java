@@ -33,5 +33,7 @@ public class BinaryTreeLowestCommonAncestorTest {
         Assert.assertEquals(binaryTreeLowestCommonAncestor.lowestCommonAncestor(node1,node5,node8),node5.data);
         Assert.assertEquals(binaryTreeLowestCommonAncestor.lowestCommonAncestor(node1,node4,node6),node4.data);
         Assert.assertEquals(binaryTreeLowestCommonAncestor.lowestCommonAncestor(node1,node2,node5),node1.data);
+
+        Assert.assertEquals(binaryTreeLowestCommonAncestor.lowestCommonAncestor(node1,node4,node7),node4.data);
     }
 }

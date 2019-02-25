@@ -13,24 +13,24 @@ public class BinaryTreeLowestCommonAncestor<T> {
     }
 
     public T lowestCommonAncestor(MyTreeNode<T> root,MyTreeNode<T> node1, MyTreeNode<T>node2 ) {
-        Stack<MyTreeNode<T>> stack = new Stack<>();
+        Queue<MyTreeNode<T>> queue = new LinkedList<>();
         Map<MyTreeNode<T>,MyTreeNode<T>> parent = new HashMap<>();
         List<MyTreeNode<T>> parentArray = new ArrayList<>();
         MyTreeNode<T> current;
 
-        stack.add(root);
+        queue.add(root);
         parent.put(root, null);
 
         while(!parent.containsKey(node1) || !parent.containsKey(node2)) {
-            current = stack.pop();
+            current = queue.poll();
 
             if(current.left != null) {
                 parent.put(current.left,current);
-                stack.add(current.left);
+                queue.add(current.left);
             }
             if(current.right != null) {
                 parent.put(current.right,current);
-                stack.add(current.right);
+                queue.add(current.right);
             }
         }
 

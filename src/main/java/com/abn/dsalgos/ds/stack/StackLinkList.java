@@ -32,7 +32,7 @@ public class StackLinkList<T> {
         } else {
             LinkNode<T> temp = top;
             top = top.next;
-            size--;
+            size --;
             return temp.data;
         }
     }

@@ -1,6 +1,7 @@
 package com.abn.dsalgos.ds.stack;
 
 import java.util.Arrays;
+import java.util.EmptyStackException;
 
 
 /**
@@ -30,8 +31,12 @@ public class StackArrays<T> {
     }
 
     public T pop() {
-        T t = (T) element[-- size];
-        return t;
+        if(isEmpty()) {
+            throw  new EmptyStackException();
+        } else {
+            T t = (T) element[--size];
+            return t;
+        }
     }
 
     public boolean isEmpty() {
@@ -39,9 +44,13 @@ public class StackArrays<T> {
     }
 
     public T peek() {
-        top = getSize();
-        T t = (T) element[--top];
-        return t;
+        if(isEmpty()) {
+            throw  new EmptyStackException();
+        } else {
+            top = getSize();
+            T t = (T) element[--top];
+            return t;
+        }
     }
 
     public int getSize() {
