@@ -2,7 +2,7 @@ package com.abn.dsalgos.challenges.string;
 
 /*
 Print Longest substring without repeating characters
-GEEKSFORGEEKSABCDH
+GEEKSFORGEEKSABCDH`
  */
 
 import java.util.HashMap;
@@ -21,7 +21,7 @@ public class LongestSubstring {
         Map<Character,Integer> map = new HashMap<>();
 
         for(int i =0;i<len;i++) {
-            if(map.get(str.charAt(i))== null) {
+            if(!map.containsKey(str.charAt(i))) {
                 map.put(str.charAt(i),i);
             } else {
                 if(map.get(str.charAt(i)) >= currStartIndex ) {

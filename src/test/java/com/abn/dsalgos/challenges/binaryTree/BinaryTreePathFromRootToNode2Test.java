@@ -29,6 +29,6 @@ public class BinaryTreePathFromRootToNode2Test {
         binaryTree.root.right.right = node8;
 
         binaryTree.getPath(node1, node6);
-        binaryTree.getPath(node1, node8);
+        binaryTree.getPath(node1, node5);
     }
 }

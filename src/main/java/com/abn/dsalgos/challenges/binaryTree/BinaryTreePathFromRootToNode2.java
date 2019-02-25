@@ -13,24 +13,24 @@ public class BinaryTreePathFromRootToNode2<T> {
     }
 
     public void getPath(MyTreeNode<T> root, MyTreeNode<T> node) {
-        Stack<MyTreeNode<T>> stack = new Stack<>();
+       Queue<MyTreeNode<T>> ds = new LinkedList<>();
         Map<MyTreeNode<T>,MyTreeNode<T>> parent = new HashMap<>();
         List<MyTreeNode<T>> parentArray = new ArrayList<>();
 
         MyTreeNode<T> current;
 
-        stack.add(root);
+        ds.add(root);
         parent.put(root, null);
 
         while(!parent.containsKey(node)) {
-            current = stack.pop();
+            current = ds.poll();
             if(current.left != null) {
                 parent.put(current.left, current);
-                stack.add(current.left);
+                ds.add(current.left);
             }
             if(current.right != null){
                 parent.put(current.right,current);
-                stack.add(current.right);
+                ds.add(current.right);
             }
         }
 
