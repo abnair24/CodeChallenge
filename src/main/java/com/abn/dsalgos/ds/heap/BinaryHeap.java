@@ -1,14 +1,23 @@
 package com.abn.dsalgos.ds.heap;
 
-public class HeapMin {
+public class BinaryHeap {
 
     public int[] heap;
     public int length;
+    public boolean min;
 
-    public HeapMin(int len) {
+    public BinaryHeap(int len, boolean min) {
         heap = new int[len];
         length = 0;
+        this.min = min;
     }
+
+    public BinaryHeap(int len) {
+        heap = new int[len];
+        length = 0;
+        this.min = true;
+    }
+
 
     public void createHeap(int[] array) {
         if(array.length > 0) {
@@ -27,19 +36,28 @@ public class HeapMin {
         int index = length++;
         heap[index] = x;
         heapifyUp(index);
-
     }
 
     private void heapifyUp(int index) {
-        int parentIndex = (index-1)/2;
 
-        while(index>0 && heap[parentIndex] > heap[index]) {
-            swap(index,parentIndex);
-            parentIndex = (parentIndex-1)/2;
+        if(min) {
+            while(index>0 && heap[parentIndex(index)] > heap[index]) {
+                swap(index,parentIndex(index));
+                index = (index-1)/2;
+            }
+        } else {
+            while(index>0 && heap[parentIndex(index)] < heap[index]) {
+                swap(index, parentIndex(index));
+                index = (index - 1) / 2;
+            }
         }
     }
 
-    public int extractMin() {
+    protected int parentIndex(int i) {
+         return (i-1)/2;
+    }
+
+    public int extract() {
         if(length<=0) {
             return 0;
         } if(length == 1) {
@@ -51,13 +69,18 @@ public class HeapMin {
         heap[0] = heap[length -1];
         heap[length-1] = 0;
         length --;
-        heapifyDown(0);
+
+        if(min) {
+            minHeapifyDown(0);
+        } else{
+            maxHeapifyDown(0);
+        }
         display();
 
         return root;
     }
 
-    private void heapifyDown(int index) {
+    private void minHeapifyDown(int index) {
         int lIndex = 2*index +1;
         int rIndex = 2*index +2;
 
@@ -72,7 +95,26 @@ public class HeapMin {
 
         if(small != index) {
             swap(index,small);
-            heapifyDown(small);
+            minHeapifyDown(small);
+        }
+    }
+
+    private void maxHeapifyDown(int index) {
+        int lIndex = 2*index +1;
+        int rIndex = 2*index +2;
+
+        int large = index;
+
+        if(lIndex < length && heap[lIndex] > heap[index]) {
+            large = lIndex;
+        }
+        if(rIndex < length && heap[rIndex] > heap[large]) {
+            large = rIndex;
+        }
+
+        if(large != index) {
+            swap(index,large);
+            maxHeapifyDown(large);
         }
     }
 
