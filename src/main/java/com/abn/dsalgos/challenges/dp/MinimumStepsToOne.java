@@ -1,7 +1,5 @@
 package com.abn.dsalgos.challenges.dp;
 
-import org.testng.annotations.Test;
-
 public class MinimumStepsToOne {
 
     int[] arr;

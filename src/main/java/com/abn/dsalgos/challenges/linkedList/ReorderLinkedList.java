@@ -1,8 +1,6 @@
 package com.abn.dsalgos.challenges.linkedList;
 
-
 import com.abn.dsalgos.utils.LinkNode;
-import com.abn.dsalgos.utils.Node;
 
 /*
 Given a singly linked list

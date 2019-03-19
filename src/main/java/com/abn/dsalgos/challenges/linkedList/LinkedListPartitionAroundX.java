@@ -1,7 +1,6 @@
 package com.abn.dsalgos.challenges.linkedList;
 
 import com.abn.dsalgos.utils.LinkNode;
-import sun.awt.image.ImageWatched;
 
 import java.util.NoSuchElementException;
 
