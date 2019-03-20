@@ -1,15 +1,16 @@
 package com.abn.dsalgos.challenges.graph;
 
 import com.abn.dsalgos.utils.GraphNode;
+
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class GraphBreadthFirstSearch<T> {
+public class GraphDepthFirstSearch<T> {
 
     private Map<GraphNode<T>, List<GraphNode<T>>> vertexMap;
     private HashSet<GraphNode<T>> vertices;
 
-    public GraphBreadthFirstSearch() {
+    public GraphDepthFirstSearch() {
         vertexMap = new ConcurrentHashMap<>();
         vertices = new HashSet<>();
     }
@@ -41,22 +42,25 @@ public class GraphBreadthFirstSearch<T> {
         }
     }
 
-    public void BFS(GraphNode<T> startNode) {
+    public void DFS(GraphNode<T> startNode) {
 
-        Queue<GraphNode<T>> queue = new LinkedList<>();
-        queue.add(startNode);
+        if(startNode == null) {
+            return;
+        }
+
+        Stack<GraphNode<T>> stack = new Stack<>();
+        stack.push(startNode);
         startNode.visited = true;
 
-        while(!queue.isEmpty()){
-
-            GraphNode<T> temp = queue.poll();
+        while(!stack.isEmpty()){
+            GraphNode<T> temp = stack.pop();
             System.out.println(temp.data);
 
             List<GraphNode<T>> adjVertexList = vertexMap.get(temp);
             for(GraphNode<T> v : adjVertexList) {
                 if(!v.visited) {
+                    stack.push(v);
                     v.visited = true;
-                    queue.add(v);
                 }
             }
         }
