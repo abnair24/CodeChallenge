@@ -1,32 +1,37 @@
 package com.abn.dsalgos.utils;
 
-import lombok.Getter;
-import lombok.Setter;
+import java.util.Objects;
 
-@Getter
-@Setter
 public class GraphNode<T>{
 
-    private T id;
-    private Integer weight;
+    public T data;
+    public Integer weight;
+    public boolean visited;
 
-    public GraphNode(T id, Integer weight) {
-        this.id = id;
+    public GraphNode(T data, Integer weight) {
+        this.data = data;
         this.weight = weight;
     }
 
-    public GraphNode(T id) {
-        this.id = id;
+    public GraphNode(T data) {
+        this.data = data;
     }
 
     @Override
-    public boolean equals(Object object) {
-        GraphNode<T> graphNode = (GraphNode) object;
-        return graphNode.id == id;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        GraphNode<?> graphNode = (GraphNode<?>) o;
+        return Objects.equals(data, graphNode.data);
     }
 
     @Override
     public int hashCode() {
-        return id.hashCode();
+        return Objects.hash(data);
+    }
+
+    @Override
+    public String toString() {
+        return "data:" + data;
     }
 }
