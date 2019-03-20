@@ -1,25 +1,25 @@
 package com.abn.dsalgos.ds.heap;
 
-public class BinaryHeap {
+public class BinaryHeap<T extends Comparable<T>> {
 
-    public int[] heap;
+    public T[] heap;
     public int length;
     public boolean min;
 
     public BinaryHeap(int len, boolean min) {
-        heap = new int[len];
+        heap = (T[]) new Comparable[len];
         length = 0;
         this.min = min;
     }
 
     public BinaryHeap(int len) {
-        heap = new int[len];
+        heap = (T[]) new Comparable[len];
         length = 0;
         this.min = true;
     }
 
 
-    public void createHeap(int[] array) {
+    public void createHeap(T[] array) {
         if(array.length > 0) {
             for (int i =0; i < array.length; i++) {
                 insert(array[i]);
@@ -28,7 +28,7 @@ public class BinaryHeap {
         display();
     }
 
-    private void insert(int x) {
+    private void insert(T x) {
         if(length == heap.length) {
             System.out.println("reached limit");
         }
@@ -41,12 +41,12 @@ public class BinaryHeap {
     private void heapifyUp(int index) {
 
         if(min) {
-            while(index>0 && heap[parentIndex(index)] > heap[index]) {
+            while(index>0 && heap[parentIndex(index)].compareTo(heap[index]) > 0) {
                 swap(index,parentIndex(index));
                 index = (index-1)/2;
             }
         } else {
-            while(index>0 && heap[parentIndex(index)] < heap[index]) {
+            while(index>0 && heap[parentIndex(index)].compareTo(heap[index]) < 0) {
                 swap(index, parentIndex(index));
                 index = (index - 1) / 2;
             }
@@ -57,17 +57,17 @@ public class BinaryHeap {
          return (i-1)/2;
     }
 
-    public int extract() {
+    public T extract() {
         if(length<=0) {
-            return 0;
+            return null;
         } if(length == 1) {
             length --;
             return heap[0];
         }
 
-        int root = heap[0];
+        T root = heap[0];
         heap[0] = heap[length -1];
-        heap[length-1] = 0;
+        heap[length-1] = null;
         length --;
 
         if(min) {
@@ -86,10 +86,10 @@ public class BinaryHeap {
 
         int small = index;
 
-        if(lIndex < length && heap[lIndex] < heap[index]) {
+        if(lIndex < length && heap[lIndex].compareTo(heap[index]) < 0) {
             small = lIndex;
         }
-        if(rIndex < length && heap[rIndex] < heap[small]) {
+        if(rIndex < length && heap[rIndex].compareTo( heap[small]) < 0) {
             small = rIndex;
         }
 
@@ -105,10 +105,10 @@ public class BinaryHeap {
 
         int large = index;
 
-        if(lIndex < length && heap[lIndex] > heap[index]) {
+        if(lIndex < length && heap[lIndex].compareTo(heap[index]) > 0) {
             large = lIndex;
         }
-        if(rIndex < length && heap[rIndex] > heap[large]) {
+        if(rIndex < length && heap[rIndex].compareTo(heap[large]) > 0) {
             large = rIndex;
         }
 
@@ -119,7 +119,7 @@ public class BinaryHeap {
     }
 
     private void swap(int cIndex, int pIndex) {
-        int temp = heap[cIndex];
+        T temp = heap[cIndex];
         heap[cIndex] = heap[pIndex];
         heap[pIndex] = temp;
     }
