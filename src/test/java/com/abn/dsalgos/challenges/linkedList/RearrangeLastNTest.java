@@ -18,9 +18,9 @@ public class RearrangeLastNTest {
     public void rearrangeN() throws Exception {
         LinkNode<Integer> first = new LinkNode<>(1);
         LinkNode<Integer> second = new LinkNode<>(2);
-        LinkNode<Integer> third = new LinkNode<>(2);
-        LinkNode<Integer> fourth = new LinkNode<>(2);
-        LinkNode<Integer> fifth = new LinkNode<>(2);
+        LinkNode<Integer> third = new LinkNode<>(3);
+        LinkNode<Integer> fourth = new LinkNode<>(4);
+        LinkNode<Integer> fifth = new LinkNode<>(5);
         linkedList.insertFirst(first.data);
         linkedList.insertLast(second.data);
         linkedList.insertLast(third.data);

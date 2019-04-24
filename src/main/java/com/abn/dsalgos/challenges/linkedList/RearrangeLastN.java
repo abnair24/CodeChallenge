@@ -1,6 +1,7 @@
 package com.abn.dsalgos.challenges.linkedList;
 
 import com.abn.dsalgos.utils.LinkNode;
+import com.abn.dsalgos.utils.Node;
 
 import java.util.NoSuchElementException;
 
@@ -133,19 +134,19 @@ rearrangeLastN(l, n) = [7, 1, 2, 3, 4, 5, 6].
 
      */
 
-    public LinkNode<T> reverseLastN(LinkNode<T> l, int k) {
+    public void reverseLastN(LinkNode<T> l, int k) {
         LinkNode<T> p1 = l;
         LinkNode<T> p2 = l;
         LinkNode<T> prev = null;
         LinkNode<T> tail = null;
 
         if (l == null) {
-            return null;
+            return ;
         }
 
-        if (k == 0) {
-            return l;
-        }
+//        if (k == 0) {
+//            return l;
+//        }
 
 
         for (int i = 0; i < k; i++) {
@@ -167,8 +168,18 @@ rearrangeLastN(l, n) = [7, 1, 2, 3, 4, 5, 6].
          */
         if (p2 != l) {
             prev.next = first;
+            first = p2;
             tail.next = null;
         }
-        return p2;
+
+        print();
+    }
+
+    public void print() {
+        LinkNode n = first;
+        while (n != null) {
+            System.out.print(n.data + " ");
+            n = n.next;
+        }
     }
 }
