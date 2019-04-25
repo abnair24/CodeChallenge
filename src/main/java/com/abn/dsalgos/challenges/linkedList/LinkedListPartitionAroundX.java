@@ -125,12 +125,12 @@ public class LinkedListPartitionAroundX<T> {
         while(node!=null) {
             LinkNode current = node;
             if ((int) node.data < k) {
-                if (headPtr == null) {
+                if (head == null) {
                     head = current;
                     headPtr = head;
                 } else {
-                    headPtr.next = current;
-                    headPtr = current;
+                    head.next = current;
+                    head = current;
                 }
             } else {
                 if (tailPtr == null) {
@@ -148,13 +148,13 @@ public class LinkedListPartitionAroundX<T> {
         /*
         In case when values are all higher than partition, so headptr will be always null.
          */
-        if(headPtr==null) {
-            head = tailPtr;
+        if(head==null) {
+            headPtr = tailPtr;
         } else {
-            headPtr.next = tailPtr;
+            head.next = tailPtr;
         }
 
-        LinkNode n = head;
+        LinkNode n = headPtr;
         while (n != null) {
             System.out.print(n.data + " ");
             n = n.next;
