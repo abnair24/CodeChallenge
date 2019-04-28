@@ -25,6 +25,8 @@ public class BinaryTreeNonRecursiveTest {
         binaryTreeNonRecursive.root.right = new MyTreeNode(3);
         binaryTreeNonRecursive.root.left.left = new MyTreeNode(4);
         binaryTreeNonRecursive.root.left.right = new MyTreeNode(5);
+        binaryTreeNonRecursive.root.left.left.left = new MyTreeNode(8);
+        binaryTreeNonRecursive.root.left.left.right = new MyTreeNode(9);
         binaryTreeNonRecursive.root.right.left = new MyTreeNode(6);
         binaryTreeNonRecursive.root.right.right = new MyTreeNode(7);
 

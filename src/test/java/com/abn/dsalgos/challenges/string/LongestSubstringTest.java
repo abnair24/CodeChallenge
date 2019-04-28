@@ -9,7 +9,7 @@ public class LongestSubstringTest {
 
     @Test
     public void test1() throws Exception {
-        Assert.assertEquals(str.longestSubstring("GEEKSFORGEEKS"), "EKSFORG");
+        Assert.assertEquals(str.longestSubstring("GEKSFORGEEKS"), "GEKSFOR");
     }
 
 

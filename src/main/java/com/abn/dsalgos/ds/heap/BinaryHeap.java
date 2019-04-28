@@ -38,6 +38,11 @@ public class BinaryHeap<T extends Comparable<T>> {
         heapifyUp(index);
     }
 
+    /*
+    Heapify up is used when we insert a new element to a heap. When inserting a new element, we add it at the
+    bottom of the heap tree, and move up the tree while comparing to the current parent element and swapping if needed
+     */
+
     private void heapifyUp(int index) {
 
         if(min) {
@@ -80,6 +85,11 @@ public class BinaryHeap<T extends Comparable<T>> {
         return root;
     }
 
+    /*
+    Heapify down is used when we remove the top element from a heap. Removal of an element is done by
+    swapping the top element with the last element at the bottom of the tree,
+    removing the last element, and then heapfying the new top element down to maintain the heap property
+     */
     private void minHeapifyDown(int index) {
         int lIndex = 2*index +1;
         int rIndex = 2*index +2;

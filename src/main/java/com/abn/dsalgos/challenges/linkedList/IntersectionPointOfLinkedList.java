@@ -173,7 +173,7 @@ public class IntersectionPointOfLinkedList<T> {
     Now when both equals, return
      */
 
-    public LinkNode<T> findIntersection2(LinkNode<T> nodeA, LinkNode<T> nodeB) {
+    public T findIntersection2(LinkNode<T> nodeA, LinkNode<T> nodeB) {
 
         if(nodeA== null || nodeB == null) {
             return null;
@@ -187,6 +187,6 @@ public class IntersectionPointOfLinkedList<T> {
             headB = headB == null ? headA: headB.next;
         }
 
-        return headA;
+        return headB.data;
     }
 }

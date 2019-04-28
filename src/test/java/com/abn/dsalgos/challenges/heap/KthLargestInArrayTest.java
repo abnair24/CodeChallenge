@@ -14,7 +14,7 @@ public class KthLargestInArrayTest {
 
         List<Integer> array = Arrays.asList(7,4,6,3,2,9,1,8,5);
 
-        Assert.assertEquals(large.findLargest(array,3),7);
+        Assert.assertEquals(large.findLargest(array,1),9);
         Assert.assertEquals(large.findLargest(array,6),4);
     }
 }
