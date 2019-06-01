@@ -1,5 +1,9 @@
 package com.abn.dsalgos.challenges.string;
 
+/*
+Find the maximum product of k consecutive digits in a string of length N.
+ */
+
 public class MaxProductOfKDigits {
 
     public int maxProduct(String str , int k) {
