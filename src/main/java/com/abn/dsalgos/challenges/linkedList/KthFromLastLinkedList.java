@@ -12,7 +12,7 @@ public class KthFromLastLinkedList<T> {
     public KthFromLastLinkedList() {
         first =null;
         last = null;
-        size=0;
+        size = 0;
     }
 
     public void insertFirst(T value) {
