@@ -25,4 +25,10 @@ public class MaxSubArraySumTest {
         Assert.assertEquals(maxSubArraySum.maxSum(t1),12);
     }
 
+    @Test
+    public void test4() throws Exception {
+        int[] t1 = new int[] {3, 2, 1, 5, 10};
+        MaxSubArraySum maxSubArraySum = new MaxSubArraySum();
+        Assert.assertEquals(maxSubArraySum.maxSum(t1),21);
+    }
 }
