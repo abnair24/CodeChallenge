@@ -21,7 +21,7 @@ Secret : 9852
 time  :  0 + 2 + 2+ 2 = 6 sec.
  */
 
-public class SecretKeyTime {
+public class KeypadInputTime {
 
     public int keyEntryTime(String secret, String keypad) {
         if(secret == null || secret.length() ==0){
