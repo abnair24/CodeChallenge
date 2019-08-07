@@ -1,4 +1,4 @@
-package com.abn.dsalgos.challenges.string;
+package com.abn.dsalgos.challenges.problems;
 
 public class MatrixDiagonal {
 
