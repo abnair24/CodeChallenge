@@ -3,6 +3,7 @@
    * [Queue](https://github.com/abnair24/DSandAlgos/tree/master/src/main/java/com/abn/dsalgos/ds/queue)
    * [Linked List](https://github.com/abnair24/DSandAlgos/tree/master/src/main/java/com/abn/dsalgos/ds/linkedList)
    * [Tree](https://github.com/abnair24/DSandAlgos/tree/master/src/main/java/com/abn/dsalgos/ds/binaryTree)
+   * [Heap](https://github.com/abnair24/CodeChallenge/tree/master/src/main/java/com/abn/dsalgos/ds/heap)
    
 ### Sorting Algorithms
    * [Merge Sort](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/sortAlgos/MergeSort.java)
@@ -26,7 +27,7 @@
         * [Partition linked list around X](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/linkedList/LinkedListPartitionAroundX.java)
         * [Push even nodes to end Linkedlist](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/linkedList/LinkedListPushEvenNodesToEnd.java)
         * [Remove K values in linkedlist](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/linkedList/LinkedListRemoveAllKvalue.java)
-        * [Sum of number using linkedlist](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/linkedList/LinkedListSum.java)
+        * [Sum of number using linkedlist](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/challenges/linkedList/LinkedListSumOfNumbers.java)
         * [Merge 2 sorted linkedlist](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/linkedList/MergeSortedLinkedList.java)
         * [Rearrage last N values in linkedlist](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/linkedList/RearrangeLastN.java)
         * [Duplicate removal in linkedlist](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/linkedList/RemoveDuplicateLinkedList.java)
@@ -56,3 +57,12 @@
         * [Binary tree root to leaf path with given sum](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/binaryTree/BinaryTreeRootToLeafSumPath.java)
         * [Binary tree size](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/binaryTree/BinaryTreeSize.java)
         * [Minimal Binary tree](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/binaryTree/MinimalBST.java)
+        
+        
+   6. String
+        * [Anagram](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/challenges/string/Anagram.java)
+        * [Subsequence](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/challenges/string/IsSubSequence.java)
+        * [Longest Substring](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/challenges/string/LongestSubstring.java)
+        * [Make Anagram](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/challenges/string/LongestSubstring.java)
+        * [Max product of K consecutive digits](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/challenges/string/MaxProductOfKDigits.java)
+        
