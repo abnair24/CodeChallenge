@@ -62,8 +62,7 @@
    6. String
         * [Anagram](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/challenges/string/Anagram.java)
         * [Subsequence](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/challenges/string/IsSubSequence.java)
-        * [LongestSubstring]
- (https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/challenges/string/LongestSubstring.java)
+        * [Longest Substring](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/challenges/string/LongestSubstring.java)
         * [Make Anagram](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/challenges/string/LongestSubstring.java)
         * [Max product of K consecutive digits](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/challenges/string/MaxProductOfKDigits.java)
         
