@@ -24,6 +24,7 @@ public class IsSubSequence {
                 if(str1.charAt(i)==str2.charAt(j)){
                     status = true;
                     k = j+1;
+                    break;
                 }
             }
         }
