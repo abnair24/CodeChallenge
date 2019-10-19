@@ -24,7 +24,7 @@ public class MakingAnagramTest {
 
     @Test
     public void test4() throws Exception {
-        Assert.assertEquals(string.makeAnagram("abcdef","abc"),3);
+        Assert.assertEquals(string.makeAnagram("abc","abccef"),3);
     }
 
     @Test

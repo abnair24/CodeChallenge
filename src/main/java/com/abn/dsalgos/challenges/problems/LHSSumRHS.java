@@ -1,4 +1,4 @@
-package practice;
+package com.abn.dsalgos.challenges.problems;
 
 
 /*
