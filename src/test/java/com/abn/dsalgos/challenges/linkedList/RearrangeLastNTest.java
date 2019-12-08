@@ -28,7 +28,7 @@ public class RearrangeLastNTest {
         linkedList.insertLast(fifth.data);
 
 
-        linkedList.reverseLastN(linkedList.getFirstNode(),5);
+        linkedList.reverseLastN(linkedList.getFirstNode(),1);
     }
 
 }

@@ -14,7 +14,7 @@ public class LinkedListSumOfNumbers {
     For example:
     Sum of two number:
             56712
-            +   6359
+            +6359
             ———–
             63071
 

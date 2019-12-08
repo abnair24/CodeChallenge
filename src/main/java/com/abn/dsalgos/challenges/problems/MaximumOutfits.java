@@ -1,6 +1,7 @@
 package com.abn.dsalgos.challenges.problems;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 /*
@@ -37,5 +38,19 @@ public class MaximumOutfits {
             maxCount = Math.max(count,maxCount);
         }
         return maxCount;
+    }
+
+
+    public static void main(String[] args) {
+        List<Integer> outfitValue = new ArrayList<>();
+        outfitValue.add(2);
+        outfitValue.add(3);
+        outfitValue.add(2);
+        outfitValue.add(1);
+        outfitValue.add(1);
+        outfitValue.add(2);
+        outfitValue.add(1);
+
+        getMaximumOutfits(outfitValue,5);
     }
 }

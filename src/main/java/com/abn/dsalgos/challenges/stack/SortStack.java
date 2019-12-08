@@ -10,7 +10,6 @@ public class SortStack {
     public SortStack() {
         original =  new Stack<>();
         result = new Stack<>();
-
     }
 
     public void sort(Stack<Integer> s) {
