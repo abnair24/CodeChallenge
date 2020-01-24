@@ -5,40 +5,26 @@ import java.util.Arrays;
 public class RotateArrayKtimes {
 
 
-    public static void main(String[] args) {
-
-        int[] array = new int[] {1,2,3,4,5,6,7};
-
-        System.out.println(Arrays.toString(rotateArray(array,199)));
-    }
-
-    public static int[] rotateArray(int[] array,int shift) {
+    public int[] rotateArray(int[] array,int shift) {
 
         int length = array.length;
-
-        // to support when shift > length value
-
-        shift = shift%length;
-
-        System.out.println(shift);
-
+        if(length == 0 || length == 1) {
+            return array;
+        }
         int[] temp = new int[length];
+        int x = shift % length;
+        if(x == 0) {
+            return array;
+        } else {
+            for(int i= 0; i< length - x;i ++) {
+                temp[i]= array[i+x];
+            }
 
-        int[] temp2 = new int[shift];
-
-        for(int i = 0; i< shift; i++) {
-            temp2[i] = array[i];
+            for(int i = length-x; i< length ;i++) {
+                temp[i]= array[i - (length-x)];
+            }
+            return temp;
         }
-
-        for(int i= 0; i< length - shift;i ++) {
-            temp[i]= array[i+shift];
-        }
-
-        for(int i = length-shift; i< length ;i++) {
-            temp[i]= temp2[i - (length-shift)];
-        }
-
-        return temp;
     }
 }
 
