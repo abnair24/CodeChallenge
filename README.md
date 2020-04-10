@@ -1,15 +1,26 @@
-### Data structure Implementation
+## Table of Contents
+  * [Data structure](#Datastructure)
+  
+  * [Sorting](#Sorting)
+  
+  * [Problems](#Problems)
+  
+  * [Leetcode 30 Day](https://github.com/abnair24/CodeChallenge/tree/master/src/main/java/com/abn/dsalgos/leetcode30Day)
+  
+  * [Daily Coding Problem](https://github.com/abnair24/CodeChallenge/tree/master/src/main/java/com/abn/dsalgos/dailyCoding)
+
+### <a name="Datastructure"></a> Data structure Implementation
    * [Stack](https://github.com/abnair24/DSandAlgos/tree/master/src/main/java/com/abn/dsalgos/ds/stack)
    * [Queue](https://github.com/abnair24/DSandAlgos/tree/master/src/main/java/com/abn/dsalgos/ds/queue)
    * [Linked List](https://github.com/abnair24/DSandAlgos/tree/master/src/main/java/com/abn/dsalgos/ds/linkedList)
    * [Tree](https://github.com/abnair24/DSandAlgos/tree/master/src/main/java/com/abn/dsalgos/ds/binaryTree)
    * [Heap](https://github.com/abnair24/CodeChallenge/tree/master/src/main/java/com/abn/dsalgos/ds/heap)
    
-### Sorting Algorithms
+### <a name="Sorting"></a> Sorting Algorithms
    * [Merge Sort](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/sortAlgos/MergeSort.java)
    * [Quick Sort](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/sortAlgos/QuickSort.java)
    
-### Problems
+### <a name="Problems"></a> Problems
    1. Stack
         * [Maximum in Stack](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/stack/MaxStack.java)
         * [Stack sorting](https://github.com/abnair24/DSandAlgos/blob/master/src/main/java/com/abn/dsalgos/challenges/stack/SortStack.java)
