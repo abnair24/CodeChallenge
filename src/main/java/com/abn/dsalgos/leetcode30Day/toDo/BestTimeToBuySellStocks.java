@@ -1,6 +1,6 @@
 package com.abn.dsalgos.leetcode30Day;
 
-public class GroupingAnagram {
+public class BestTimeToBuySellStocks {
 
     /*
     Design an algorithm to find the maximum profit. You may complete

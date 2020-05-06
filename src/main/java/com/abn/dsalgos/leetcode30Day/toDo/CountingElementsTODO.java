@@ -27,10 +27,10 @@ package com.abn.dsalgos.leetcode30Day;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CountingElements {
+public class CountingElementsTODO {
 
     public static void main(String[] args) {
-        CountingElements countingElements = new CountingElements();
+        CountingElementsTODO countingElements = new CountingElementsTODO();
         countingElements.countElements(new int[] {1,3,2,3,5,0});
     }
 
