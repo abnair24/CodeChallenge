@@ -1,6 +1,7 @@
 package com.abn.dsalgos.challenges.problems;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class RotateArrayKtimes {
 

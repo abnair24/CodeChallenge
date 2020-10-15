@@ -1,4 +1,4 @@
-package com.abn.dsalgos.dailyCoding;
+package com.abn.dsalgos.leetcode30Day;
 
 import java.util.ArrayList;
 import java.util.List;
