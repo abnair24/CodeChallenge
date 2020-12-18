@@ -16,16 +16,16 @@ public class RotateArrayKtimes {
         int x = shift % length;
         if(x == 0) {
             return array;
-        } else {
-            for(int i= 0; i< length - x;i ++) {
-                temp[i]= array[i+x];
-            }
-
-            for(int i = length-x; i< length ;i++) {
-                temp[i]= array[i - (length-x)];
-            }
-            return temp;
         }
+
+        for(int i= 0; i< length - x;i ++) {
+            temp[i]= array[i+x];
+        }
+
+        for(int i = length-x; i< length ;i++) {
+            temp[i]= array[i - (length-x)];
+        }
+        return temp;
     }
 }
 

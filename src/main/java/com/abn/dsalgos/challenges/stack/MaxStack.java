@@ -2,6 +2,10 @@ package com.abn.dsalgos.challenges.stack;
 
 import java.util.Stack;
 
+/*
+    Max value in a stack implementation.
+ */
+
 class Wrapper{
     int data;
     int maxData;
