@@ -41,7 +41,5 @@ public class LinkedListPalindromeTest {
         charList.insertLast('m');
 
         Assert.assertTrue(charList.isPalindrome());
-        }
-
-
+    }
 }

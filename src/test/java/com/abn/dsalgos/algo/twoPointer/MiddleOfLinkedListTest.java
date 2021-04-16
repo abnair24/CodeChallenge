@@ -1,10 +1,10 @@
-package com.abn.dsalgos.leetcode30Day;
+package com.abn.dsalgos.algo.twoPointer;
 
+import com.abn.dsalgos.algo.twoPointers.MiddleOfLinkedList;
 import com.abn.dsalgos.utils.ListNode;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import org.w3c.dom.ls.LSException;
 
 public class MiddleOfLinkedListTest {
 

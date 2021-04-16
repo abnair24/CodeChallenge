@@ -1,4 +1,4 @@
-package com.abn.dsalgos.leetcode30Day;
+package com.abn.dsalgos.algo.twoPointers;
 
 import com.abn.dsalgos.utils.ListNode;
 

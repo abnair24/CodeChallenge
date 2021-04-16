@@ -1,0 +1,20 @@
+package com.abn.dsalgos.utils;
+
+public class TreeNode {
+
+    public int val;
+    public TreeNode right;
+    public TreeNode left;
+
+    TreeNode() {}
+
+    public TreeNode(int val) {
+        this.val = val;
+    }
+
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+}

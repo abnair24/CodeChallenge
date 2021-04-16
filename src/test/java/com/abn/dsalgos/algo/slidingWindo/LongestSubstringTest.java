@@ -1,4 +1,4 @@
-package com.abn.dsalgos.challenges.string;
+package com.abn.dsalgos.algo.slidingWindo;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -9,9 +9,8 @@ public class LongestSubstringTest {
 
     @Test
     public void test1() throws Exception {
-        Assert.assertEquals(str.longestSubstring("GEKSFORGEEKS"), "GEKSFOR");
+        Assert.assertEquals(str.longestSubstring("GEKSFORGEEKS"), "KSFORGE");
     }
-
 
     @Test
     public void test2() throws Exception {
@@ -24,15 +23,12 @@ public class LongestSubstringTest {
     }
 
     @Test
-    public void test4() throws Exception {
-        Assert.assertEquals(str.longestSubstring("PWWKEW"),"WKE");
-
+    public void test6() throws Exception {
+        Assert.assertEquals(str.longestSubstring("abbcdafebgh"), "cdafebgh");
     }
 
     @Test
     public void test5() throws Exception {
         Assert.assertEquals(str.longestSubstring("BBBBE"),"BE");
     }
-
-
 }
