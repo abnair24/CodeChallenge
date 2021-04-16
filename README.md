@@ -8,6 +8,8 @@
   * [Leetcode 30 Day](https://github.com/abnair24/CodeChallenge/tree/master/src/main/java/com/abn/dsalgos/leetcode30Day)
   
   * [Daily Coding Problem](https://github.com/abnair24/CodeChallenge/tree/master/src/main/java/com/abn/dsalgos/dailyCoding)
+  
+  * [Algorithms](https://github.com/abnair24/CodeChallenge/tree/master/src/main/java/com/abn/dsalgos/algo)
 
 ### <a name="Datastructure"></a> Data structure Implementation
    * [Stack](https://github.com/abnair24/DSandAlgos/tree/master/src/main/java/com/abn/dsalgos/ds/stack)
@@ -77,3 +79,16 @@
         * [Make Anagram](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/challenges/string/LongestSubstring.java)
         * [Max product of K consecutive digits](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/challenges/string/MaxProductOfKDigits.java)
         
+### <a name="Algorithms"></a> Algorithms
+ 1. [Sliding Window](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/algo/slidingWindo)
+    * [FruitsIntoBasket](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/algo/slidingWindo/FruitsIntoBasket.java)
+    * [Longest Ones](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/algo/slidingWindo/LongestOnes.java)
+    * [Longest substring](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/algo/slidingWindo/LongestSubstring.java)
+    * [Longest Substring K distinct](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/algo/slidingWindo/LongestSubstringWithKDistinctChar.java)
+    * [Longest substring same letter](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/algo/slidingWindo/LongestSubstringWithSameLetterAfterReplacement.java)
+    * [Max value in window](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/algo/slidingWindo/MaxValueInWindow.java)
+    * [Max vowels in substring](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/algo/slidingWindo/MaxVowelsInSubstring.java)
+    * [Min window substring](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/algo/slidingWindo/MinimumWindowSubstring.java)
+    * [Smallest subarray with sum](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/algo/slidingWindo/SmallestSubarrayWithGivenSum.java)
+    * [String permutation](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/algo/slidingWindo/StringPermutation.java)
+    * [String permutation index list](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/algo/slidingWindo/StringPermutationsIndexList.java)
