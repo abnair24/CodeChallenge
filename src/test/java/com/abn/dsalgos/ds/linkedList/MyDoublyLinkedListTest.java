@@ -1,6 +1,5 @@
 package com.abn.dsalgos.ds.linkedList;
 
-import com.abn.dsalgos.ds.linkedList.MyDoublyLinkedList;
 import com.abn.dsalgos.exceptions.EmptyLinkedListException;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -8,9 +7,6 @@ import org.testng.annotations.Test;
 
 import java.util.NoSuchElementException;
 
-/**
- * Created by aswathyn on 17/02/17.
- */
 public class MyDoublyLinkedListTest {
 
     private MyDoublyLinkedList<Object> doublyLinkedList;
@@ -26,7 +22,7 @@ public class MyDoublyLinkedListTest {
     }
 
     @Test
-    public void insertFirstTest() throws Exception {
+    public void insertFirstTest() {
         doublyLinkedList.insertFirst(OBJECT_A);
         doublyLinkedList.insertFirst(OBJECT_B);
         Assert.assertEquals(2, doublyLinkedList.size());
@@ -34,7 +30,7 @@ public class MyDoublyLinkedListTest {
     }
 
     @Test
-    public void insertLastTest() throws Exception {
+    public void insertLastTest() {
         doublyLinkedList.insertLast(OBJECT_A);
         doublyLinkedList.insertLast(OBJECT_B);
         Assert.assertEquals(OBJECT_A,doublyLinkedList.peek());
@@ -63,7 +59,7 @@ public class MyDoublyLinkedListTest {
     }
 
     @Test
-    public void deleteValueTest() throws Exception {
+    public void deleteValueTest() {
         doublyLinkedList.insertLast(OBJECT_A);
         doublyLinkedList.insertLast(OBJECT_B);
         doublyLinkedList.insertLast(OBJECT_C);
@@ -71,13 +67,13 @@ public class MyDoublyLinkedListTest {
     }
 
     @Test(expectedExceptions = NoSuchElementException.class)
-    public void deleteOnEmptyList() throws Exception {
+    public void deleteOnEmptyList() {
 
         doublyLinkedList.delete(OBJECT_A);
     }
 
     @Test(expectedExceptions = IndexOutOfBoundsException.class)
-    public void deleteNonExistingValueFromList() throws Exception {
+    public void deleteNonExistingValueFromList() {
         doublyLinkedList.insertFirst(OBJECT_A);
         doublyLinkedList.insertFirst(OBJECT_C);
         doublyLinkedList.delete(OBJECT_B);
@@ -96,7 +92,7 @@ public class MyDoublyLinkedListTest {
     }
 
     @Test(expectedExceptions = NoSuchElementException.class)
-    public void insertAfterNonExistingValue() throws Exception {
+    public void insertAfterNonExistingValue() {
         doublyLinkedList.insertFirst(OBJECT_A);
         doublyLinkedList.insertFirst(OBJECT_C);
        doublyLinkedList.insertAfter(OBJECT_B,OBJECT_D);

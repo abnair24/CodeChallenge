@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /*
- Given a binary tree, Print All the Nodes that don’t have siblings.
+ Given a binary tree, Print All the Nodes that dont have siblings.
 
 Note: sibling node is the node which has the same parent, so you need to print the nodes who is a single child of his parent.
  */

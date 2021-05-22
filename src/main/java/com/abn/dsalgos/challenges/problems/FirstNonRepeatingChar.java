@@ -8,7 +8,7 @@ public class FirstNonRepeatingChar {
 
 	public static void main(String[] args) {
 		String str = "teeter";
-		Map<Character,Integer> lhm = new LinkedHashMap<Character,Integer>();
+		Map<Character,Integer> lhm = new LinkedHashMap<>();
 		
 		for(char c: str.toCharArray())
 		{
@@ -23,15 +23,8 @@ public class FirstNonRepeatingChar {
 				
 			}
 		}
-		
-		
-		for(Entry<Character, Integer>ent:lhm.entrySet())
-		{
-			if(ent.getValue()==1) {
-				System.out.println(ent.getKey());
-				break;
-			}
-		}
+
+		lhm.entrySet().stream().filter(ent -> ent.getValue() == 1).findFirst().ifPresent(ent -> System.out.println(ent.getKey()));
 
 	}
 

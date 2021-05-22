@@ -4,9 +4,6 @@ import com.abn.dsalgos.sortAlgos.MergeSort;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-/**
- * Created by aswathyn on 23/02/17.
- */
 public class MergeSortTest {
 
     private Integer[] x;
@@ -27,10 +24,9 @@ public class MergeSortTest {
     }
 
     @Test
-    public void integerSort() throws Exception {
+    public void integerSort() {
         MergeSort<Integer> ms = new MergeSort<>();
         ms.sort(Integer.class,x);
-        System.out.println("");
         for(Integer i: x) {
             System.out.print(i+ " ");
         }
@@ -40,7 +36,6 @@ public class MergeSortTest {
     public void objectSort() {
         MergeSort<Emp> mergeSort = new MergeSort<>();
         mergeSort.sort(Emp.class,emp);
-        System.out.println("");
         for( Emp e: emp) {
             System.out.print(e.getId()+":"+e.getName()+" ");
         }

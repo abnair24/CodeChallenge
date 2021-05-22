@@ -1,6 +1,7 @@
 package com.abn.dsalgos.challenges.problems;
 
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -33,12 +34,7 @@ public class DuplicateWithLowerSecondIndex {
     public static int firstDuplicate (int[] input) {
         Set<Integer> set = new HashSet<>();
 
-        for (int i : input) {
-            if (!set.add(i)) {
-                return i;
-            }
-        }
-        return -1;
+        return Arrays.stream(input).filter(i -> !set.add(i)).findFirst().orElse(-1);
     }
 
 }

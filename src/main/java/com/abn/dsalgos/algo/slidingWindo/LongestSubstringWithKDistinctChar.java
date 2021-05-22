@@ -24,7 +24,7 @@ public class LongestSubstringWithKDistinctChar {
     public int longestSubstring(String str, int k) {
         int start = 0;
         int maxSize = 0;
-        int size =0;
+        int size;
 
         int len = str.length();
         HashMap<Character, Integer> hm = new HashMap<>();

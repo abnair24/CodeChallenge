@@ -18,7 +18,7 @@ public class BinarySearchTreeLowestCommonAncestor<T extends Comparable<T>> {
         }
 
         MyBSTNode<T> current = root;
-        MyBSTNode<T> parent = null;
+        MyBSTNode<T> parent;
 
         while(current != null) {
             parent = current;

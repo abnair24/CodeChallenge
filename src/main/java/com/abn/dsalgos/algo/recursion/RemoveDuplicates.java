@@ -11,7 +11,7 @@ public class RemoveDuplicates {
             return remDuplicates(text.substring(1));
         }
         else {
-            return text.substring(0,1) + remDuplicates(text.substring(1));
+            return text.charAt(0) + remDuplicates(text.substring(1));
         }
     }
 }

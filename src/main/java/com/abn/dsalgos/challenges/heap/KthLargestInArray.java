@@ -1,6 +1,5 @@
 package com.abn.dsalgos.challenges.heap;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.PriorityQueue;
 

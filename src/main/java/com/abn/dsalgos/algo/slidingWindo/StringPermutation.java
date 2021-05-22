@@ -14,7 +14,7 @@ public class StringPermutation {
 
         int start = 0;
         int count = 0;
-        int len = 0;
+        int len;
         int patternLen = pattern.length();
 
         for(int i = 0; i < patternLen; i++) {

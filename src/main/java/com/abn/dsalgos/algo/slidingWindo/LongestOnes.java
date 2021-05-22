@@ -8,9 +8,9 @@ public class LongestOnes {
     public int getLongestOnes(int[] arr, int k) {
         int start = 0;
         int maxLen = Integer.MIN_VALUE;
-        int len = 0;
-        int windowSize = 0;
-        int maxOnes = 0;
+        int len;
+        int windowSize;
+        int maxOnes;
 
         Map<Integer, Integer> hm = new HashMap<>();
 

@@ -28,7 +28,7 @@ public class InOrderSuccessor<T extends Comparable<T>> {
             return;
         }
         MyBSTNode<T> current = root;
-        MyBSTNode<T> parent = null;
+        MyBSTNode<T> parent;
         while(current != null) {
             parent = current;
 

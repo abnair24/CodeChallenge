@@ -17,7 +17,7 @@ public class BinarySearchTreeArrayOfNodesDeletion<Integer> {
         }
 
         MyBSTNode<java.lang.Integer> current = root;
-        MyBSTNode<java.lang.Integer> parent = null;
+        MyBSTNode<java.lang.Integer> parent;
 
         while(current != null) {
             parent = current;
@@ -49,7 +49,7 @@ public class BinarySearchTreeArrayOfNodesDeletion<Integer> {
 
     public boolean delete(MyBSTNode<java.lang.Integer> node ,int query) {
 
-        java.lang.Integer q = new java.lang.Integer(query);
+        java.lang.Integer q = query;
         MyBSTNode<java.lang.Integer> temp = node;
         MyBSTNode<java.lang.Integer> parent = null;
         boolean isNodePresent = false;

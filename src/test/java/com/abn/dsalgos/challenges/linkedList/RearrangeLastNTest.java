@@ -8,14 +8,13 @@ public class RearrangeLastNTest {
 
     private RearrangeLastN<Integer> linkedList;
 
-
     @BeforeMethod
     public void setup() throws Exception{
         linkedList = new RearrangeLastN<>();
     }
 
     @Test
-    public void rearrangeN() throws Exception {
+    public void rearrangeN() {
         LinkNode<Integer> first = new LinkNode<>(1);
         LinkNode<Integer> second = new LinkNode<>(2);
         LinkNode<Integer> third = new LinkNode<>(3);

@@ -14,8 +14,6 @@ public class ReorderLinkedList<T> {
 
     private LinkNode<T> first;
     private LinkNode<T> last;
-    private int size;
-
 
 
     public LinkNode<T> reorderLinkedList(LinkNode<T> node) {
@@ -84,7 +82,6 @@ public class ReorderLinkedList<T> {
     public ReorderLinkedList() {
         first =null;
         last = null;
-        size=0;
     }
 
     public void insertFirst(T value) {
@@ -95,7 +92,6 @@ public class ReorderLinkedList<T> {
             newLink.next = first;
         }
         first = newLink;
-        size++;
     }
 
     public void insertLast(T value) {
@@ -106,7 +102,6 @@ public class ReorderLinkedList<T> {
             last.next = newLink;
         }
         last = newLink;
-        size ++;
 
     }
 

@@ -151,7 +151,6 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
     public void display(MyBSTNode<T> node) {
         if(node != null) {
             display(node.left);
-            System.out.print(node.data + " ");
             display(node.right);
         }
     }

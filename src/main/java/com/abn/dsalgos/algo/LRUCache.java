@@ -14,9 +14,9 @@ class Node {
 
 public class LRUCache {
 
-    private Map<Integer, Node> hmap;
+    private final Map<Integer, Node> hmap;
     private Node start, end;
-    private int size;
+    private final int size;
 
     public LRUCache(int size) {
         hmap = new HashMap<>();

@@ -26,7 +26,7 @@ public class MoveZeroesToBeginningTest {
 
     @Test(dataProvider = "data")
     public void test(int[] array, int[] expected) {
-//        Assert.assertEquals(moveZeroesToBeginning.move_zeroes(array, array.length);, expected) ;
+        Assert.assertEquals(moveZeroesToBeginning.moveZero(array), expected) ;
     }
 
 

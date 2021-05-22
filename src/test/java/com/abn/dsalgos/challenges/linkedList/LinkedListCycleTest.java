@@ -9,7 +9,7 @@ public class LinkedListCycleTest {
     LinkedListCycle<Integer> list = new LinkedListCycle<>();
 
     @Test
-    public void loopTest() throws Exception {
+    public void loopTest() {
         LinkNode<Integer> node1 = new LinkNode<>(1);
         LinkNode<Integer> node2 = new LinkNode<>(2);
         LinkNode<Integer> node3 = new LinkNode<>(3);
@@ -31,7 +31,7 @@ public class LinkedListCycleTest {
     }
 
     @Test
-    public void noLoopTest() throws Exception {
+    public void noLoopTest() {
         LinkNode<Integer> node1 = new LinkNode<>(1);
         LinkNode<Integer> node2 = new LinkNode<>(2);
         LinkNode<Integer> node3 = new LinkNode<>(3);
@@ -62,7 +62,7 @@ public class LinkedListCycleTest {
     }
 
     @Test
-    public void fullLoopTest() throws Exception {
+    public void fullLoopTest() {
         LinkNode<Integer> node1 = new LinkNode<>(1);
         LinkNode<Integer> node2 = new LinkNode<>(2);
         LinkNode<Integer> node3 = new LinkNode<>(3);
@@ -83,7 +83,7 @@ public class LinkedListCycleTest {
     }
 
     @Test
-    public void lastNodeLoopTest() throws Exception {
+    public void lastNodeLoopTest() {
         LinkNode<Integer> node1 = new LinkNode<>(1);
         LinkNode<Integer> node2 = new LinkNode<>(2);
         LinkNode<Integer> node3 = new LinkNode<>(3);
@@ -102,5 +102,4 @@ public class LinkedListCycleTest {
         list.insertFirst(node1.data);
         Assert.assertTrue(list.findLinkedListCycle(node1));
     }
-
 }

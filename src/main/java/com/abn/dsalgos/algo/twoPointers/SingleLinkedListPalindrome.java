@@ -34,7 +34,7 @@ public class SingleLinkedListPalindrome {
     private ListNode reverse(ListNode head) {
 
         ListNode current = head;
-        ListNode next = null;
+        ListNode next;
         ListNode prev = null;
 
         while(current != null) {

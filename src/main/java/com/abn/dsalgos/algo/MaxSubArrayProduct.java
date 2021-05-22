@@ -14,10 +14,8 @@ public class MaxSubArrayProduct {
         long localMax = array[0];
         long localMin = array[0];
         long maxProd = array[0];
-        long prod = array[0];
 
         for (int i = 1; i < array.length; i++) {
-            prod *= array[i];
             if (array[i] > 0) {
                 localMax = Math.max(localMax * array[i], array[i]);
                 localMin = Math.min(localMin * array[i], array[i]);

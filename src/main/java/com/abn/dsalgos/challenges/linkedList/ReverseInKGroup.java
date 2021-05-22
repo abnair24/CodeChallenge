@@ -153,8 +153,8 @@ public class ReverseInKGroup<T> {
 
         LinkNode<T> current = node;
         LinkNode<T> prevNode = null;
-        LinkNode<T> nextNode = null;
-        LinkNode<T> tailNode = null;
+        LinkNode<T> nextNode;
+        LinkNode<T> tailNode;
         LinkNode <T> tempTail = null;
 
         int blockSize = k;

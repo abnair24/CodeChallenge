@@ -13,8 +13,8 @@ public class LongestSubstringWithSameLetterAfterReplacement {
 
         int start = 0;
         int maxLen = Integer.MIN_VALUE;
-        int len = 0;
-        int windowSize = 0;
+        int len;
+        int windowSize;
         int maxRepeatedCount = 0;
 
         Map<Character, Integer> hm =new HashMap<>();

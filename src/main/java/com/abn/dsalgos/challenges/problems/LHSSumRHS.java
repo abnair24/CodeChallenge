@@ -1,6 +1,8 @@
 package com.abn.dsalgos.challenges.problems;
 
 
+import java.util.Arrays;
+
 /*
 Given, an array of size n. Find an element which divides the array in two sub-arrays with equal sum.
 
@@ -18,12 +20,10 @@ public class LHSSumRHS {
 
     public int findElement(int[] array) {
 
-        int rsum = 0;
+        int rsum;
         int lsum = 0;
 
-        for(int i =1;i<array.length;i++) {
-            rsum += array[i];
-        }
+        rsum = Arrays.stream(array, 1, array.length).sum();
 
         for(int i =0,j=1; j< array.length; i++,j++) {
             rsum = rsum - array[j];

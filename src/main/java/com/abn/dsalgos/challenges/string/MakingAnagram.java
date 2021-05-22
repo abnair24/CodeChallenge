@@ -31,9 +31,7 @@ public class MakingAnagram {
         }
 
         if(map.size() != 0) {
-            for (int v : map.values()) {
-                count = count + v;
-            }
+            count += map.values().stream().mapToInt(v -> v).sum();
         }
 
         return count;

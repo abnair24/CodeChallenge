@@ -5,7 +5,6 @@ import com.abn.dsalgos.utils.MyTreeNode;
 import java.util.LinkedList;
 import java.util.Queue;
 
-
 /*
 Breadth First Search implementation of BT
  */
@@ -19,7 +18,7 @@ public class BinaryTreeBFS<T> {
     }
 
     public void breadthFirstSearch(MyTreeNode node) {
-        Queue<MyTreeNode> queue = new LinkedList<MyTreeNode>();
+        Queue<MyTreeNode> queue = new LinkedList<>();
         if (node== null){
             return;
         }

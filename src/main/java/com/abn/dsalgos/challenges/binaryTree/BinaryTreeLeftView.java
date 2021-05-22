@@ -28,7 +28,7 @@ public class BinaryTreeLeftView<T> {
             int i =1;
             nodeCount= queue.size();
 
-            while( i < nodeCount) {
+            while( i <= nodeCount) {
                 MyTreeNode<T> current = queue.poll();
                 if(i==1) {
                     System.out.println(current.data);

@@ -137,7 +137,7 @@ public class ReverseLinkedListIterative<T> {
     public void reverseLinkedList() {
         LinkNode<T> currentNode = first;
         LinkNode<T> prevNode = null;
-        LinkNode<T> nextNode = null;
+        LinkNode<T> nextNode;
 
         while (currentNode != null) {
             // Getting the next node and storing

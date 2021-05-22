@@ -55,7 +55,7 @@ public class HappyNumber {
 
     private int findSquareSum(int num) {
         int sum = 0;
-        int digit = 0;
+        int digit;
         while(num > 0) {
             digit = num %10;
             sum += digit * digit;

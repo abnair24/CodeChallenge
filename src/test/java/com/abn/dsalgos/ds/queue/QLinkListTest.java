@@ -1,6 +1,5 @@
 package com.abn.dsalgos.ds.queue;
 
-import com.abn.dsalgos.ds.queue.QLinkList;
 import com.abn.dsalgos.exceptions.EmptyQException;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -8,9 +7,6 @@ import org.testng.annotations.Test;
 
 import java.util.NoSuchElementException;
 
-/**
- * Created by aswathyn on 15/02/17.
- */
 public class QLinkListTest {
 
     private QLinkList<Object> queue;

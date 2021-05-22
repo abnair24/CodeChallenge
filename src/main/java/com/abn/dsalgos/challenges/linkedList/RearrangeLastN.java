@@ -9,12 +9,10 @@ public class RearrangeLastN<T> {
 
     private LinkNode<T> first;
     private LinkNode<T> last;
-    private int size;
 
     public RearrangeLastN() {
         first =null;
         last = null;
-        size=0;
     }
 
     public void insertFirst(T value) {
@@ -25,7 +23,6 @@ public class RearrangeLastN<T> {
             newLink.next = first;
         }
         first = newLink;
-        size++;
     }
 
     public void insertLast(T value) {
@@ -36,7 +33,6 @@ public class RearrangeLastN<T> {
             last.next = newLink;
         }
         last = newLink;
-        size ++;
     }
 
     public boolean isEmpty() {
@@ -49,7 +45,6 @@ public class RearrangeLastN<T> {
         } else {
             LinkNode<T> temp = first;
             first = first.next;
-            size--;
             return temp.data;
         }
     }

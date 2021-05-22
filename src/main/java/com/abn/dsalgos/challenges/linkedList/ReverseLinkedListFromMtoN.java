@@ -8,12 +8,10 @@ public class ReverseLinkedListFromMtoN<T> {
 
     private LinkNode<T> first;
     private LinkNode<T> last;
-    private int size;
 
     public ReverseLinkedListFromMtoN() {
         first =null;
         last = null;
-        size=0;
     }
 
     public void insertFirst(T value) {
@@ -24,7 +22,6 @@ public class ReverseLinkedListFromMtoN<T> {
             newLink.next = first;
         }
         first = newLink;
-        size++;
     }
 
     public void insertLast(T value) {
@@ -35,7 +32,6 @@ public class ReverseLinkedListFromMtoN<T> {
             last.next = newLink;
         }
         last = newLink;
-        size ++;
     }
 
     public boolean isEmpty() {
@@ -48,7 +44,6 @@ public class ReverseLinkedListFromMtoN<T> {
         } else {
             LinkNode<T> temp = first;
             first = first.next;
-            size--;
             return temp.data;
         }
     }
@@ -65,7 +60,7 @@ public class ReverseLinkedListFromMtoN<T> {
     public LinkNode<T> reverseLinkedListFromMtoN(LinkNode<T> node, int m, int n) {
         LinkNode<T> previous = null;
         LinkNode<T> current = node;
-        LinkNode<T> temp = null;
+        LinkNode<T> temp;
         LinkNode<T> head = node;
 
         int size = 1;

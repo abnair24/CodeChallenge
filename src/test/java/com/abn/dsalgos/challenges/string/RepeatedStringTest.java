@@ -13,7 +13,7 @@ public class RepeatedStringTest {
     }
 
     @Test
-    public void singleCharTest() throws Exception {
+    public void singleCharTest() {
         Assert.assertEquals(string.repeatedCount("x",970770),0);
     }
 

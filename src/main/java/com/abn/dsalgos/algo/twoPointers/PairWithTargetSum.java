@@ -20,7 +20,7 @@ public class PairWithTargetSum {
 
         int startPtr = 0;
         int endPtr = arr.length-1;
-        int sum = 0;
+        int sum;
 
         for(int i = 0; i < arr.length; i ++) {
             sum = arr[startPtr] + arr[endPtr];

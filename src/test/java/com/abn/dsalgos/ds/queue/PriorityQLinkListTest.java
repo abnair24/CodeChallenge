@@ -6,10 +6,6 @@ import org.testng.annotations.Test;
 
 import java.util.NoSuchElementException;
 
-/**
- * Created by aswathyn on 16/02/17.
- */
-
 public class PriorityQLinkListTest {
 
     private PriorityQLinkList<Employee> employeeLinkList;
@@ -72,18 +68,6 @@ class Employee implements Comparable<Employee>{
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     @Override
