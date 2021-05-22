@@ -15,7 +15,7 @@ public class LinkedListPartitionAroundXTest {
     }
 
     @Test
-    public void partitionTest() throws Exception {
+    public void partitionTest() {
         linkedList.insertLast(30);
         linkedList.insertLast(4);
         linkedList.insertLast(5);
@@ -31,7 +31,7 @@ public class LinkedListPartitionAroundXTest {
     }
 
     @Test
-    public void partitionTestHighValues() throws Exception {
+    public void partitionTestHighValues() {
         linkedList.insertLast(10);
         linkedList.insertLast(20);
         linkedList.insertLast(30);
@@ -42,7 +42,7 @@ public class LinkedListPartitionAroundXTest {
     }
 
     @Test
-    public void partitionTestLowValues() throws Exception {
+    public void partitionTestLowValues() {
         linkedList.insertLast(10);
         linkedList.insertLast(20);
         linkedList.insertLast(30);

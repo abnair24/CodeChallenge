@@ -17,7 +17,7 @@ public class BinaryTreeIsBalanced<T> {
         root = null;
     }
 
-    public boolean isBalanced(MyTreeNode<T> node) throws Exception {
+    public boolean isBalanced(MyTreeNode<T> node) {
         if (node == null) {
             return true;
         }

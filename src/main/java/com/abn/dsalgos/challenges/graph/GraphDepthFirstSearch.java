@@ -8,7 +8,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class GraphDepthFirstSearch<T> {
 
     private Map<GraphNode<T>, List<GraphNode<T>>> vertexMap;
-    private HashSet<GraphNode<T>> vertices;
+    private final HashSet<GraphNode<T>> vertices;
 
     public GraphDepthFirstSearch() {
         vertexMap = new ConcurrentHashMap<>();

@@ -17,18 +17,18 @@ import com.abn.dsalgos.utils.MyTreeNode;
 
 public class MinimalBST {
 
-    public MyTreeNode arrayToBST(int[] array) {
+    public MyTreeNode<Integer> arrayToBST(int[] array) {
 
         return binarySearchTree(array,0,array.length -1);
     }
 
-    private MyTreeNode binarySearchTree(int[] arr, int start, int end) {
+    private MyTreeNode<Integer> binarySearchTree(int[] arr, int start, int end) {
         if(start > end) {
             return null;
         }
 
         int mid = (start + end) / 2;
-        MyTreeNode node = new MyTreeNode(arr[mid]);
+        MyTreeNode<Integer> node = new MyTreeNode<>(arr[mid]);
 
         node.left =  binarySearchTree(arr,start,mid-1);
         node.right = binarySearchTree(arr,mid+1,end);

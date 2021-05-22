@@ -16,7 +16,7 @@ public class LinkedListSumTest {
     }
 
     @Test
-    public void insertFirstTest() throws Exception {
+    public void insertFirstTest() {
         linkedList1.insertLast(7);
         linkedList1.insertLast(1);
         linkedList1.insertLast(6);

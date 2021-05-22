@@ -5,13 +5,13 @@ import org.testng.annotations.Test;
 
 public class MinimalBSTTest {
 
-    private MinimalBST minimalBST = new MinimalBST();
+    private final MinimalBST minimalBST = new MinimalBST();
 
 
     @Test
-    public void createBST() throws  Exception {
+    public void createBST() {
         int [] array = new int[] {1,2,3,4,5,6,7,8};
-        MyTreeNode root = minimalBST.arrayToBST(array);
+        MyTreeNode<Integer> root = minimalBST.arrayToBST(array);
         minimalBST.preOrder(root);
     }
 }

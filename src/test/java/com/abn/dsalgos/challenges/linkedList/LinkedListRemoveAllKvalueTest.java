@@ -7,7 +7,7 @@ public class LinkedListRemoveAllKvalueTest {
     LinkedListRemoveAllKvalue<Integer> linkedList = new LinkedListRemoveAllKvalue<>();
 
     @Test
-    public void removeKtest() throws Exception {
+    public void removeKtest() {
         linkedList.insertFirst(3);
         linkedList.insertLast(1);
         linkedList.insertLast(2);
@@ -19,7 +19,7 @@ public class LinkedListRemoveAllKvalueTest {
     }
 
     @Test
-    public void removeKtest1() throws Exception {
+    public void removeKtest1() {
         linkedList.insertFirst(3);
         linkedList.insertLast(1);
         linkedList.insertLast(2);

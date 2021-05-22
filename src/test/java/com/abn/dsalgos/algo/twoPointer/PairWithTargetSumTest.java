@@ -16,7 +16,7 @@ public class PairWithTargetSumTest {
     @DataProvider
     public Iterator<Object[]> dp() {
 
-        List lst = Lists.newLinkedList();
+        List<Object[]> lst = Lists.newLinkedList();
         lst.add(new Object[] { new int[]{1, 2, 3, 4, 6}, 6, new int[]{1, 3}});
         lst.add(new Object[] { new int[]{2, 5, 9, 11}, 11, new int[]{0, 2}});
 

@@ -10,9 +10,9 @@ public class BinarySearchTreeLowestCommonAncestorTest {
 
     @Test()
     public void test() throws Exception {
-        MyBSTNode<Integer> node1 = new MyBSTNode<Integer>(40);
-        MyBSTNode<Integer> node2 = new MyBSTNode<Integer>(20);
-        MyBSTNode<Integer> node3 = new MyBSTNode<Integer>(60);
+        MyBSTNode<Integer> node1 = new MyBSTNode<>(40);
+        MyBSTNode<Integer> node2 = new MyBSTNode<>(20);
+        MyBSTNode<Integer> node3 = new MyBSTNode<>(60);
         MyBSTNode<Integer> node4 = new MyBSTNode<>(10);
         MyBSTNode<Integer> node5 = new MyBSTNode<>(30);
         MyBSTNode<Integer> node6 = new MyBSTNode<>(50);

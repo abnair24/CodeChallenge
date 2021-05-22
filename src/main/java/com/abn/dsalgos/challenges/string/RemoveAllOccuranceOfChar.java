@@ -1,5 +1,7 @@
 package com.abn.dsalgos.challenges.string;
 
+import java.util.Arrays;
+
 public class RemoveAllOccuranceOfChar {
 
     public String removeChars(String str, char ch) {
@@ -21,6 +23,6 @@ public class RemoveAllOccuranceOfChar {
             count -- ;
         }
 
-        return tempCharArray.toString();
+        return Arrays.toString(tempCharArray);
     }
 }

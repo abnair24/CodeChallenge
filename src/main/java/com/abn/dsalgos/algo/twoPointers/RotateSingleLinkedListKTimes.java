@@ -6,7 +6,7 @@ public class RotateSingleLinkedListKTimes {
 
     public ListNode rotate(ListNode head, int k) {
 
-        int len = 0;
+        int len;
         ListNode fPtr = head;
         ListNode sPtr = head;
 

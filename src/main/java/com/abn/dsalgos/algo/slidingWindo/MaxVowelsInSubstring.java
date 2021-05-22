@@ -18,7 +18,7 @@ public class MaxVowelsInSubstring {
         int size = 0;
         int start = 0;
 
-        if(str == vowel){
+        if(str.equals(vowel)){
             return k;
         }
 

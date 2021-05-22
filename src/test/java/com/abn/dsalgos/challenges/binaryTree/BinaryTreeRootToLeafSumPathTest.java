@@ -9,7 +9,7 @@ public class BinaryTreeRootToLeafSumPathTest {
 
     @Test
     public void test() throws Exception{
-        MyTreeNode<Integer> node1 = new MyTreeNode(5);
+        MyTreeNode<Integer> node1 = new MyTreeNode<>(5);
         MyTreeNode<Integer> node2 = new MyTreeNode<>(4);
         MyTreeNode<Integer> node3 = new MyTreeNode<>(8  );
         MyTreeNode<Integer> node4 = new MyTreeNode<>(11);

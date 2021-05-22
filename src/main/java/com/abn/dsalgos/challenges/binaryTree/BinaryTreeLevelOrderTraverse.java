@@ -25,7 +25,7 @@ public class BinaryTreeLevelOrderTraverse {
 
     public List<List<Integer>> levelOrder(TreeNode root) {
 
-        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        List<List<Integer>> result = new ArrayList<>();
 
         if (root == null)
             return result;

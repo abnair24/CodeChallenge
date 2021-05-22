@@ -22,7 +22,7 @@ public class BinaryTreeFullNodes<T> {
             return;
         }
 
-        Queue<MyTreeNode> queue = new LinkedList();
+        Queue<MyTreeNode> queue = new LinkedList<>();
         queue.add(node);
 
         while(queue.size() > 0) {

@@ -8,12 +8,12 @@ public class FibonacciTest {
     Fibonacii fib = new Fibonacii();
 
     @Test
-    public void topDownTest() throws Exception {
+    public void topDownTest() {
         System.out.println(fib.fibTopDown(10));
     }
 
     @Test
-    public void bottomUpTest() throws Exception {
+    public void bottomUpTest() {
         System.out.println(fib.fibBottomUp(10));
     }
 }

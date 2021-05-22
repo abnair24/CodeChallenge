@@ -8,12 +8,10 @@ public class LinkedListPartitionAroundX<T> {
 
     private LinkNode<T> first;
     private LinkNode<T> last;
-    private int size;
 
     public LinkedListPartitionAroundX() {
         first =null;
         last = null;
-        size=0;
     }
 
     public void insertFirst(T value) {
@@ -24,7 +22,6 @@ public class LinkedListPartitionAroundX<T> {
             newLink.next = first;
         }
         first = newLink;
-        size++;
     }
 
     public void insertLast(T value) {
@@ -35,7 +32,6 @@ public class LinkedListPartitionAroundX<T> {
             last.next = newLink;
         }
         last = newLink;
-        size ++;
 
     }
 
@@ -49,7 +45,6 @@ public class LinkedListPartitionAroundX<T> {
         } else {
             LinkNode<T> temp = first;
             first = first.next;
-            size--;
             return temp.data;
         }
     }

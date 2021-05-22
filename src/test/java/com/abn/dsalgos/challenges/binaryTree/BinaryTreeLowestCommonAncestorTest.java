@@ -3,7 +3,6 @@ package com.abn.dsalgos.challenges.binaryTree;
 import com.abn.dsalgos.utils.MyTreeNode;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.reporters.jq.INavigatorPanel;
 
 public class BinaryTreeLowestCommonAncestorTest {
 
@@ -12,7 +11,7 @@ public class BinaryTreeLowestCommonAncestorTest {
     @Test
     public void test() throws Exception {
         MyTreeNode<Integer> node1 = new MyTreeNode<>(1);
-        MyTreeNode<Integer> node2 = new MyTreeNode(2);
+        MyTreeNode<Integer> node2 = new MyTreeNode<>(2);
         MyTreeNode<Integer> node3 = new MyTreeNode<>(4);
         MyTreeNode<Integer> node4 = new MyTreeNode<>(3);
         MyTreeNode<Integer> node5 = new MyTreeNode<>(5);

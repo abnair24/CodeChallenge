@@ -1,0 +1,7 @@
+<suite name="MUS-Functional" parallel="classes" thread-count="20">
+    <test name="TestSuite">
+        <packages>
+            <package name="com.abn.dsalgos.*"/>
+        </packages>
+    </test>
+</suite>

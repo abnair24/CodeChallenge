@@ -27,11 +27,11 @@ public class BinaryTreeIsBSTIterative<T extends Comparable<T>> {
 
             if(temp.left != null) {
                 temp.left.max = (Integer) temp.data;
-                temp.left.min = (Integer) temp.min;
+                temp.left.min = temp.min;
                 queue.add(temp.left);
             }
             if(temp.right != null) {
-                temp.right.max =(Integer) temp.max;
+                temp.right.max = temp.max;
                 temp.right.min = (Integer) temp.data;
                 queue.add(temp.right);
             }

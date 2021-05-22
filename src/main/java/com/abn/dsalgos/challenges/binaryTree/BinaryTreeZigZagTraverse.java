@@ -13,7 +13,7 @@ public class BinaryTreeZigZagTraverse {
 
         List<List<Integer>> list = new ArrayList<>();
         int height = 0;
-        int nodeCount= 0;
+        int nodeCount;
 
         if(root == null) {
             return;

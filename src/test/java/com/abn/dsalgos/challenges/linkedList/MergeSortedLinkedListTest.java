@@ -23,8 +23,5 @@ public class MergeSortedLinkedListTest {
         mergeSortedLinkedList2.insertLast(11);
 
         mergeSortedLinkedList3.mergeSortedList(mergeSortedLinkedList1.getFirstNode(),mergeSortedLinkedList2.getFirstNode());
-
-
-
     }
 }

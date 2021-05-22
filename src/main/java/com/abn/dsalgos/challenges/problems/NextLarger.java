@@ -35,8 +35,8 @@ public class NextLarger {
                 }
             }
         }
-        for(int k =0; k<a.length;k++) {
-            System.out.print(a[k] + ", ");
+        for (int i : a) {
+            System.out.print(i + ", ");
         }
     }
 

@@ -1,7 +1,5 @@
 package com.abn.dsalgos.challenges.linkedList;
 
-import com.abn.dsalgos.utils.Node;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class LinkedListSumOfNumbersTest {

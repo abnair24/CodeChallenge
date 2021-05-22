@@ -6,9 +6,9 @@ import java.util.LinkedHashSet;
 import java.util.Map;
 
 public class LFUCache {
-    private Map<Integer, Integer> keyFrequencyMap;
-    private Map<Integer, Integer> keyValueMap;
-    private Map<Integer, LinkedHashSet<Integer>> frequencyMap;
+    private final Map<Integer, Integer> keyFrequencyMap;
+    private final Map<Integer, Integer> keyValueMap;
+    private final Map<Integer, LinkedHashSet<Integer>> frequencyMap;
 
     int size;
     int min;

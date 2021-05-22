@@ -12,9 +12,9 @@ public class BinarySearchTreeKthSmallestLargestTest {
     @Test
     public void test() throws Exception {
 
-        MyBSTNode<Integer> node1 = new MyBSTNode<Integer>(5);
-        MyBSTNode<Integer> node2 = new MyBSTNode<Integer>(3);
-        MyBSTNode<Integer> node3 = new MyBSTNode<Integer>(8);
+        MyBSTNode<Integer> node1 = new MyBSTNode<>(5);
+        MyBSTNode<Integer> node2 = new MyBSTNode<>(3);
+        MyBSTNode<Integer> node3 = new MyBSTNode<>(8);
         MyBSTNode<Integer> node4 = new MyBSTNode<>(10);
         MyBSTNode<Integer> node5 = new MyBSTNode<>(1);
         MyBSTNode<Integer> node6 = new MyBSTNode<>(4);
@@ -39,9 +39,9 @@ public class BinarySearchTreeKthSmallestLargestTest {
     @Test
     public void test1() throws Exception {
 
-        MyBSTNode<Integer> node1 = new MyBSTNode<Integer>(5);
-        MyBSTNode<Integer> node2 = new MyBSTNode<Integer>(3);
-        MyBSTNode<Integer> node3 = new MyBSTNode<Integer>(8);
+        MyBSTNode<Integer> node1 = new MyBSTNode<>(5);
+        MyBSTNode<Integer> node2 = new MyBSTNode<>(3);
+        MyBSTNode<Integer> node3 = new MyBSTNode<>(8);
         MyBSTNode<Integer> node4 = new MyBSTNode<>(10);
         MyBSTNode<Integer> node5 = new MyBSTNode<>(1);
         MyBSTNode<Integer> node6 = new MyBSTNode<>(4);

@@ -1,6 +1,8 @@
 package com.abn.dsalgos.challenges.dp;
 
 
+import java.util.stream.IntStream;
+
 /*
 Count the number of Binary Substring that start and end with 1
 
@@ -13,14 +15,10 @@ public class BinaryStringStartAndEndWithOne {
     public int getCount(String str) {
 
         int len = str.length();
-        int count =0;
-        int totalStringCount =0;
+        int count;
+        int totalStringCount;
 
-        for(int i=0; i<len;i++) {
-            if((str.charAt(i)-'0') == 1 ) {
-                count+= 1;
-            }
-        }
+        count = (int) IntStream.range(0, len).filter(i -> (str.charAt(i) - '0') == 1).count();
 
         if(count!=0) {
             totalStringCount = count * (count -1) /2;

@@ -89,6 +89,5 @@ public class ReorderLinkedListTest {
         node7.next = null;
 
         list.print(list.reorderLinkedList(node1));
-
     }
 }

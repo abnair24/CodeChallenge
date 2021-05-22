@@ -1,19 +1,20 @@
 package com.abn.dsalgos.challenges.linkedList;
 
 import com.abn.dsalgos.utils.LinkNode;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.NoSuchElementException;
 
+@Slf4j
 public class IntersectionPointOfLinkedList<T> {
 
     private LinkNode<T> first;
     private LinkNode<T> last;
-    private int size;
 
     public IntersectionPointOfLinkedList() {
+
         first =null;
         last = null;
-        size=0;
     }
 
     public void insertFirst(T value) {
@@ -24,7 +25,6 @@ public class IntersectionPointOfLinkedList<T> {
             newLink.next = first;
         }
         first = newLink;
-        size++;
     }
 
     public void insertLast(T value) {
@@ -35,7 +35,6 @@ public class IntersectionPointOfLinkedList<T> {
             last.next = newLink;
         }
         last = newLink;
-        size ++;
     }
 
     public boolean isEmpty() {
@@ -48,7 +47,6 @@ public class IntersectionPointOfLinkedList<T> {
         } else {
             LinkNode<T> temp = first;
             first = first.next;
-            size--;
             return temp.data;
         }
     }

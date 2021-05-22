@@ -6,9 +6,6 @@ import org.testng.annotations.Test;
 
 import java.util.EmptyStackException;
 
-/**
- * Created by aswathyn on 18/02/17.
- */
 public class MaxStackTest {
 
     private MaxStack maxStack;

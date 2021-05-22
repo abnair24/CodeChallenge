@@ -1,6 +1,5 @@
 package com.abn.dsalgos.challenges.linkedList;
 
-import com.abn.dsalgos.utils.LinkNode;
 import com.abn.dsalgos.utils.Node;
 
 import java.util.NoSuchElementException;
@@ -15,7 +14,7 @@ public class LinkedListSumOfNumbers {
     Sum of two number:
             56712
             +6359
-            ———–
+
             63071
 
 Algorithm:
@@ -27,12 +26,10 @@ Algorithm:
  */
    private Node first;
     private Node last;
-    private int size;
 
     public LinkedListSumOfNumbers() {
         first =null;
         last = null;
-        size=0;
     }
 
     public void insertFirst(Integer value) {
@@ -43,7 +40,6 @@ Algorithm:
             newLink.next = first;
         }
         first = newLink;
-        size++;
     }
 
     public void insertLast(Integer value) {
@@ -54,7 +50,6 @@ Algorithm:
             last.next = newLink;
         }
         last = newLink;
-        size ++;
 
     }
 
@@ -101,7 +96,7 @@ Algorithm:
     public Node reverseLinkedList(Node firstNode) {
         Node currentNode = firstNode;
         Node prevNode = null;
-        Node nextNode = null;
+        Node nextNode;
 
         while (currentNode != null) {
             // Getting the next node and storing
@@ -122,7 +117,7 @@ Algorithm:
         Node head2 = reverseLinkedList(l2.getFirstNode());
 
         int carry =0;
-        int sum = 0;
+        int sum;
 
         Node sumHead = null;
         Node sumNode = null;
@@ -157,13 +152,10 @@ Algorithm:
         }
 
         if(carry !=0) {
-            Node temp = new Node(carry);
-            sumNode.next = temp;
+            sumNode.next = new Node(carry);
         }
 
-        Node sumTotalHead = reverseLinkedList(sumHead);
-
-        return sumTotalHead;
+        return reverseLinkedList(sumHead);
     }
 
 }

@@ -33,8 +33,8 @@ public class BinaryTreeLevelOrderConnect {
     public static TreeNode connectLevels(TreeNode root) {
 
         Queue<TreeNode> queue = new LinkedList<>();
-        TreeNode previous = null;
-        int nodeCount = 0;
+        TreeNode previous;
+        int nodeCount;
 
         if(root == null) {
             return null;

@@ -10,8 +10,7 @@ import java.util.Stack;
  */
 
 public class BinaryTreeLeftLeafSum<T> {
-    public MyTreeNode root = null;
-    private int sum =0;
+    public MyTreeNode root;
 
     public BinaryTreeLeftLeafSum() {
         root = null;

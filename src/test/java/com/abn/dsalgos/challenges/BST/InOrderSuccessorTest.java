@@ -10,7 +10,7 @@ public class InOrderSuccessorTest {
 
     @Test
     public void test() throws Exception {
-        MyBSTNode<Integer> node1 = new MyBSTNode<Integer>(100);
+        MyBSTNode<Integer> node1 = new MyBSTNode<>(100);
         MyBSTNode<Integer> node2 = new MyBSTNode<>(150);
         MyBSTNode<Integer> node3 = new MyBSTNode<>(50);
         MyBSTNode<Integer> node4 = new MyBSTNode<>(25);

@@ -1,6 +1,5 @@
 package com.abn.dsalgos.ds.linkedList;
 
-import com.abn.dsalgos.ds.linkedList.MyLinkedList;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -8,10 +7,6 @@ import org.testng.annotations.Test;
 
 import java.util.NoSuchElementException;
 
-
-/**
- * Created by aswathyn on 16/02/17.
- */
 public class MyLinkedListTest {
 
 
@@ -25,24 +20,24 @@ public class MyLinkedListTest {
     }
 
     @Test
-    public void insertFirstTest() throws Exception {
+    public void insertFirstTest() {
         linkedList.insertFirst(OBJECT_A);
         linkedList.insertFirst(OBJECT_B);
         Assert.assertEquals(2, linkedList.size());
     }
 
     @Test(expectedExceptions = NoSuchElementException.class)
-    public void getFirstOnEmptyListTest() throws Exception {
+    public void getFirstOnEmptyListTest() {
         linkedList.getFirst();
     }
 
     @Test(expectedExceptions = NoSuchElementException.class)
-    public void getLastOnEmptyListTest() throws Exception {
+    public void getLastOnEmptyListTest() {
         linkedList.getLast();
     }
 
     @Test
-    public void getOnInsertFirstTest() throws Exception {
+    public void getOnInsertFirstTest() {
         linkedList.insertFirst(OBJECT_B);
         linkedList.insertFirst(OBJECT_A);
         Assert.assertEquals(OBJECT_A,linkedList.getFirst());
@@ -50,7 +45,7 @@ public class MyLinkedListTest {
     }
 
     @Test
-    public void getOnInsertLastTest() throws Exception {
+    public void getOnInsertLastTest() {
         linkedList.insertLast(OBJECT_B);
         linkedList.insertLast(OBJECT_A);
         Assert.assertEquals(OBJECT_B,linkedList.getFirst());
@@ -58,7 +53,7 @@ public class MyLinkedListTest {
     }
 
     @Test
-    public void insertLastTest() throws Exception {
+    public void insertLastTest() {
         linkedList.insertLast(OBJECT_A);
         linkedList.insertLast(OBJECT_B);
         Assert.assertEquals(2,linkedList.size());
@@ -72,7 +67,7 @@ public class MyLinkedListTest {
     }
 
     @Test
-    public void deleteTest() throws Exception {
+    public void deleteTest() {
         linkedList.insertFirst(10);
         linkedList.insertFirst(20);
         linkedList.insertFirst(40);
@@ -86,12 +81,12 @@ public class MyLinkedListTest {
     }
 
     @Test(expectedExceptions = NoSuchElementException.class)
-    public void deleteOnEmptyList() throws Exception {
+    public void deleteOnEmptyList() {
         linkedList.delete(10);
     }
 
     @Test(expectedExceptions = IndexOutOfBoundsException.class)
-    public void deleteNonExistingTest() throws Exception {
+    public void deleteNonExistingTest() {
         linkedList.insertLast(10);
         linkedList.insertLast(20);
         linkedList.insertLast(30);
@@ -99,19 +94,19 @@ public class MyLinkedListTest {
     }
 
     @Test(expectedExceptions = NoSuchElementException.class)
-    public void findOnEmptyList() throws Exception {
+    public void findOnEmptyList() {
         linkedList.find(10);
     }
 
     @Test
-    public void findElementInList() throws Exception {
+    public void findElementInList() {
         linkedList.insertFirst(OBJECT_B);
         linkedList.insertFirst(OBJECT_A);
         Assert.assertEquals(OBJECT_A,linkedList.find(OBJECT_A));
     }
 
     @Test(expectedExceptions = IndexOutOfBoundsException.class)
-    public void findNonExistingTest() throws Exception {
+    public void findNonExistingTest() {
         linkedList.insertLast(10);
         linkedList.insertLast(100);
         linkedList.insertLast(30);
@@ -119,7 +114,7 @@ public class MyLinkedListTest {
     }
 
     @Test
-    public void removeDuplicatesTest() throws Exception {
+    public void removeDuplicatesTest() {
         linkedList.insertFirst(10);
         linkedList.insertFirst(20);
         linkedList.insertFirst(30);

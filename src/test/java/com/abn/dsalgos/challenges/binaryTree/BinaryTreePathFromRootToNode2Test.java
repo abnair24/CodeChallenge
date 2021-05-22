@@ -10,7 +10,7 @@ public class BinaryTreePathFromRootToNode2Test {
     @Test
     public void test() throws Exception {
 
-        MyTreeNode<Integer> node1 = new MyTreeNode(1);
+        MyTreeNode<Integer> node1 = new MyTreeNode<>(1);
         MyTreeNode<Integer> node2 = new MyTreeNode<>(2);
         MyTreeNode<Integer> node3 = new MyTreeNode<>(3);
         MyTreeNode<Integer> node4 = new MyTreeNode<>(4);

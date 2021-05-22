@@ -1,6 +1,5 @@
 package com.abn.dsalgos.ds.linkedList;
 
-import com.abn.dsalgos.ds.linkedList.MyCircularLinkedList;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

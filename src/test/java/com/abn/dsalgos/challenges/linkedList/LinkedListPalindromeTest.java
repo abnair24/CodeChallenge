@@ -17,7 +17,7 @@ public class LinkedListPalindromeTest {
     }
 
     @Test
-    public void palindromeTest() throws Exception {
+    public void palindromeTest() {
         list.insertFirst(1);
         list.insertLast(2);
         list.insertLast(3);
@@ -29,7 +29,7 @@ public class LinkedListPalindromeTest {
     }
 
     @Test
-    public void palindromeCharacter() throws Exception {
+    public void palindromeCharacter() {
         charList.insertFirst('m');
         charList.insertLast('a');
         charList.insertLast('l');

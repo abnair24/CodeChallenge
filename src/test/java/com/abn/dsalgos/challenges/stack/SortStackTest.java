@@ -23,9 +23,8 @@ public class SortStackTest {
         s1.push(5);
     }
 
-
     @Test
-    public void sortStack() throws Exception {
+    public void sortStack() {
         sortStack = new SortStack();
         sortStack.sort(s1);
 

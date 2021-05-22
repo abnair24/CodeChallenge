@@ -4,10 +4,6 @@ import com.abn.dsalgos.sortAlgos.QuickSort;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-/**
- * Created by aswathyn on 18/02/17.
- */
-
 public class QuickSortTest {
 
     private Integer[] x;

@@ -1,14 +1,15 @@
 package com.abn.dsalgos.algo.merge;
 
+import lombok.extern.slf4j.Slf4j;
+
+import java.util.Arrays;
+
+@Slf4j
 public class MergeTwoSortedArrays {
 
     public int[] merge(int[] nums1, int m, int[] nums2, int n) {
 
-        int [] tempNums1 = new int[m];
-
-        for(int i=0; i< m; i++) {
-            tempNums1[i] = nums1[i];
-        }
+        int [] tempNums1 = Arrays.stream(nums1, 0, m).toArray();
 
         int i =0;
         int j =0;

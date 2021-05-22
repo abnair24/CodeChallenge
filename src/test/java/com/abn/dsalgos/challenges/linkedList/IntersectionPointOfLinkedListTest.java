@@ -5,12 +5,10 @@ import org.testng.annotations.Test;
 
 public class IntersectionPointOfLinkedListTest {
 
-
     IntersectionPointOfLinkedList<Integer> list1 = new IntersectionPointOfLinkedList<>();
-    IntersectionPointOfLinkedList<Integer> list2 = new IntersectionPointOfLinkedList<>();
 
     @Test
-    public void sameLengthTest() throws Exception {
+    public void sameLengthTest() {
         LinkNode<Integer> node1 = new LinkNode<>(1);
         LinkNode<Integer> node2 = new LinkNode<>(2);
         LinkNode<Integer> node3 = new LinkNode<>(3);
@@ -31,20 +29,17 @@ public class IntersectionPointOfLinkedListTest {
     }
 
     @Test
-    public void diffLengthTest() throws Exception {
+    public void diffLengthTest() {
 
     }
 
     @Test
-    public void singleListTest() throws Exception {
+    public void singleListTest() {
 
     }
 
     @Test
-    public void nullListsTest() throws Exception {
+    public void nullListsTest() {
 
     }
-
-
-
 }

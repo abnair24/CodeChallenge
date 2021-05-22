@@ -27,10 +27,11 @@ public class MaxProductOfKDigits {
 
         for(int i = k; i < len; i++) {
 
-            if((str.charAt(i-k)-'0') == 0) {
+            int temp = str.charAt(i - k) - '0';
+            if(temp == 0) {
                 break;
             } else {
-                product = product * (str.charAt(i) - '0') / (str.charAt(i - k) - '0');
+                product = product * (str.charAt(i) - '0') / temp;
             }
 
             maxProd = Math.max(maxProd,product);

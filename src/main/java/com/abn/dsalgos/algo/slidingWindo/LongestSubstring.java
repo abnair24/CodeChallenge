@@ -12,7 +12,7 @@ public class LongestSubstring {
     public String longestSubstring(String str) {
         int start = 0;
         int maxLen = 0;
-        int len = 0;
+        int len;
         Map<Character, Integer> hm = new HashMap<>();
         int maxStartIndex = 0;
 

@@ -14,7 +14,7 @@ public class QueueWithTwoStacksTest {
     }
 
     @Test
-    public void addAndPop() throws Exception {
+    public void addAndPop() {
         q.enqueue(1);
         q.enqueue(2);
         q.enqueue(3);
