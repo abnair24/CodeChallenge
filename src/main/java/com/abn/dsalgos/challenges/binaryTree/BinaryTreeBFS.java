@@ -19,21 +19,21 @@ public class BinaryTreeBFS<T> {
 
     public void breadthFirstSearch(MyTreeNode node) {
         Queue<MyTreeNode> queue = new LinkedList<>();
-        if (node== null){
+        if (node == null) {
             return;
         }
 
         queue.add(node);
 
-        while (!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             MyTreeNode temp = queue.remove();
             System.out.println(temp.data);
 
-            if(temp.left!=null) {
+            if (temp.left != null) {
                 queue.add(temp.left);
             }
 
-            if(temp.right!=null) {
+            if (temp.right != null) {
                 queue.add(temp.right);
             }
         }
