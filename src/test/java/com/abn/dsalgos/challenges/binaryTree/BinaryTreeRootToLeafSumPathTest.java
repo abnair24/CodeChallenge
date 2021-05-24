@@ -1,14 +1,27 @@
 package com.abn.dsalgos.challenges.binaryTree;
 
 import com.abn.dsalgos.utils.MyTreeNode;
+import com.google.common.collect.Lists;
+import com.google.common.primitives.Ints;
+import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class BinaryTreeRootToLeafSumPathTest {
 
-    BinaryTreeRootToLeafSumPath<Integer> binaryTree = new BinaryTreeRootToLeafSumPath<>();
+    BinaryTreeRootToLeafSumPath binaryTree = new BinaryTreeRootToLeafSumPath();
 
-    @Test
-    public void test() throws Exception{
+    @DataProvider
+    public Iterator<Object[]> data() {
+
+        List<Object[]> lst = Lists.newLinkedList();
+
         MyTreeNode<Integer> node1 = new MyTreeNode<>(5);
         MyTreeNode<Integer> node2 = new MyTreeNode<>(4);
         MyTreeNode<Integer> node3 = new MyTreeNode<>(8  );
@@ -31,6 +44,21 @@ public class BinaryTreeRootToLeafSumPathTest {
         binaryTree.root.right.right.right = node9;
         binaryTree.root.right.right.left = node10;
 
-        binaryTree.getPath(node1,22);
+        lst.add(new Object[] {binaryTree, 22, Stream.of(Ints.asList(5,4,11,2),
+                Ints.asList(5,8,4,5))
+                .flatMap(Collection::stream)
+                .collect(Collectors.toList())});
+        lst.add(new Object[] {binaryTree, 26, Stream.of(Ints.asList(5, 8, 13))
+                .flatMap(Collection::stream)
+                .collect(Collectors.toList())});
+        lst.add(new Object[] {binaryTree, 4, Lists.newArrayList()});
+
+        return lst.iterator();
+    }
+
+    @Test(dataProvider = "data")
+    public void test(BinaryTreeRootToLeafSumPath binaryTree, int sum, List<Integer> expected ) throws Exception{
+
+        Assert.assertEquals(binaryTree.getPath(sum), expected);
     }
 }

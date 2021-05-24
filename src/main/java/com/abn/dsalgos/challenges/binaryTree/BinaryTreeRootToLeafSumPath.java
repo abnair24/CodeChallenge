@@ -1,36 +1,57 @@
 package com.abn.dsalgos.challenges.binaryTree;
 
 import com.abn.dsalgos.utils.MyTreeNode;
+import com.google.common.collect.Lists;
+import org.testng.collections.Maps;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.Queue;
+import java.util.stream.Collectors;
 
 /*
 To print all path from roof to leaf which has sum equal to given sum
  */
 
-public class BinaryTreeRootToLeafSumPath<Integer> {
+public class BinaryTreeRootToLeafSumPath {
 
-    MyTreeNode<java.lang.Integer> root;
+    MyTreeNode<Integer> root;
 
     public BinaryTreeRootToLeafSumPath() {
         root = null;
     }
 
-    /*
-    Queue 1: For storing nodes
-    Queue 2: For storing sumvalues at each node
-    HashMap: For storing parent of each node
-    ArrayList : For storing the entire path
-     */
+    public List<Integer> getPath(int sum) {
 
-    public void getPath(MyTreeNode<java.lang.Integer> node, int sum) {
+        /*
+        nodeQueue : Stores nodes
+         */
+        Queue<MyTreeNode<Integer>> nodeQueue = Lists.newLinkedList();
 
-        Queue<MyTreeNode<java.lang.Integer>> nodeQueue = new LinkedList<>();
-        Queue<java.lang.Integer> valueQueue = new LinkedList<>();
-        HashMap<MyTreeNode<java.lang.Integer>, MyTreeNode<java.lang.Integer>> parent = new HashMap<>();
-        List<MyTreeNode<java.lang.Integer>> parentArray;
+        /*
+        valueQueue : Stores sum at each node
+         */
+        Queue<Integer> valueQueue = Lists.newLinkedList();
 
-        MyTreeNode<java.lang.Integer> current;
+        /*
+        parent : Stores parent of each node
+         */
+        Map<MyTreeNode<Integer>, MyTreeNode<Integer>> parent = Maps.newHashMap();
+
+        /*
+        parentArray : Stores entire path
+         */
+        List<Integer> parentArray;
+
+        /*
+        resultArray : Stores list of paths
+         */
+
+        List<List<Integer>> resultArray = Lists.newArrayList();
+
+        MyTreeNode<Integer> current;
 
         nodeQueue.add(root);
         valueQueue.add(root.data);
@@ -38,7 +59,7 @@ public class BinaryTreeRootToLeafSumPath<Integer> {
 
         while (!nodeQueue.isEmpty()) {
             current = nodeQueue.poll();
-            int sumValue = new java.lang.Integer(valueQueue.poll()).intValue();
+            int sumValue = valueQueue.poll();
 
             if (current.left != null) {
                 nodeQueue.add(current.left);
@@ -52,20 +73,18 @@ public class BinaryTreeRootToLeafSumPath<Integer> {
             }
 
             if (current.left == null && current.right == null && sumValue == sum) {
-                parentArray = new ArrayList<>();
+                parentArray = Lists.newArrayList();
                 while (current != null) {
-                    parentArray.add(current);
+                    parentArray.add(current.data);
                     current = parent.get(current);
                 }
 
                 Collections.reverse(parentArray);
 
-                for (MyTreeNode<java.lang.Integer> n : parentArray) {
-                    System.out.print(" ->" + n.data);
-                }
-                System.out.println();
+                resultArray.add(parentArray);
             }
-
         }
+        // Return as a flat List instead of List<List<Integer>>
+        return resultArray.stream().flatMap(Collection::stream).collect(Collectors.toList());
     }
 }
