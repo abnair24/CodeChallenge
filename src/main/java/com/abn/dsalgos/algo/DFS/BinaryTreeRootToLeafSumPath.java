@@ -1,4 +1,4 @@
-package com.abn.dsalgos.challenges.binaryTree;
+package com.abn.dsalgos.algo.DFS;
 
 import com.abn.dsalgos.utils.MyTreeNode;
 import com.google.common.collect.Lists;
@@ -13,6 +13,13 @@ import java.util.stream.Collectors;
 
 /*
 To print all path from roof to leaf which has sum equal to given sum
+
+ Eg:          1
+           7     9
+        4    5  2  7
+
+        sum = 12
+        o/p : [1,7,4,1,9,2]
  */
 
 public class BinaryTreeRootToLeafSumPath {
@@ -84,7 +91,9 @@ public class BinaryTreeRootToLeafSumPath {
                 resultArray.add(parentArray);
             }
         }
+
         // Return as a flat List instead of List<List<Integer>>
         return resultArray.stream().flatMap(Collection::stream).collect(Collectors.toList());
+
     }
 }
