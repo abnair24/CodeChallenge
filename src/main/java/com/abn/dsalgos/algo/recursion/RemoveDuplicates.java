@@ -1,8 +1,19 @@
 package com.abn.dsalgos.algo.recursion;
 
+/*
+When given a string that has repeating adjacent characters, we only want to keep one of each character.
+To do this, we must eliminate the
+repeating characters. The illustration below shows this process.
+
+"Helllo Woorld" -> "Helo World"
+
+"Thiss iss aa testt" -> "This is a test"
+ */
 public class RemoveDuplicates {
 
     public String remDuplicates(String text) {
+
+        //Base case
         if (text.length() == 1) {
             return text;
         }
