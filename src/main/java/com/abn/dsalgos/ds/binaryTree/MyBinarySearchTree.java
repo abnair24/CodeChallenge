@@ -17,21 +17,21 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
         }
 
         MyBSTNode<T> current = root;
-        MyBSTNode<T> parent = null;
+        MyBSTNode<T> parent;
 
-        while(current != null) {
+        while (current != null) {
             parent = current;
 
-            if(node.data.compareTo(current.data) < 0) {
+            if (node.data.compareTo(current.data) < 0) {
 
                 current = current.left;
-                if(current == null) {
+                if (current == null) {
                     parent.left = node;
                     return;
                 }
             } else {
                 current = current.right;
-                if(current == null) {
+                if (current == null) {
                     parent.right = node;
                     return;
                 }
@@ -43,17 +43,17 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
         MyBSTNode<T> temp = root;
         MyBSTNode<T> parent = null;
 
-        while(temp!=null){
+        while (temp != null) {
 
-            if(node.data.compareTo(temp.data) == 0){
-                System.out.println("parent :"+ parent.data);
+            if (node.data.compareTo(temp.data) == 0) {
+                System.out.println("parent :" + parent.data);
                 return true;
             }
-            if(node.data.compareTo(temp.data) > 0) {
+            if (node.data.compareTo(temp.data) > 0) {
                 parent = temp;
                 temp = temp.right;
             }
-            if(node.data.compareTo(temp.data) < 0) {
+            if (node.data.compareTo(temp.data) < 0) {
                 parent = temp;
                 temp = temp.left;
             }
@@ -115,9 +115,7 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
                 value from right left children. Replace value with node.
                  */
             } else if (temp.left != null && temp.right != null) {
-
                 temp = getSuccessorNode(temp);
-
                 return true;
             }
         }
@@ -130,14 +128,13 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
     private MyBSTNode<T> getSuccessorNode(MyBSTNode<T> n) {
 
         MyBSTNode<T> successor = n.right;
-        MyBSTNode<T> current = successor;
         MyBSTNode<T> parent = n.right;
 
-        if(successor.right != null && successor.left == null) {
+        if (successor.right != null && successor.left == null) {
             n.data = successor.data;
             n.right = successor.right;
         } else {
-            while(successor.left !=  null) {
+            while (successor.left != null) {
                 parent = successor;
                 successor = successor.left;
             }
@@ -149,7 +146,7 @@ public class MyBinarySearchTree<T extends Comparable<T>> {
     }
 
     public void display(MyBSTNode<T> node) {
-        if(node != null) {
+        if (node != null) {
             display(node.left);
             display(node.right);
         }

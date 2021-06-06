@@ -4,13 +4,13 @@ import com.abn.dsalgos.utils.LinkNode;
 
 import java.util.NoSuchElementException;
 
-public class ReverseInKGroup<T> {
+public class ReverseInKGroupIterative<T> {
 
     private LinkNode<T> first;
     private LinkNode<T> last;
     private int size;
 
-    public ReverseInKGroup() {
+    public ReverseInKGroupIterative() {
         first =null;
         last = null;
         size=0;
