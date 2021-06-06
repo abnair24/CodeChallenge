@@ -3,13 +3,13 @@ package com.abn.dsalgos.challenges.linkedList;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class ReverseLinkedListInKgroupsTest {
+public class ReverseLinkedListInKGroupIterativeTest {
 
-    private ReverseInKGroup<Integer> reverseLinkedListIterative;
+    private ReverseInKGroupIterative<Integer> reverseLinkedListIterative;
 
     @BeforeMethod
     public void setup() throws Exception {
-        reverseLinkedListIterative = new ReverseInKGroup<>();
+        reverseLinkedListIterative = new ReverseInKGroupIterative<>();
     }
 
     @Test
