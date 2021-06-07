@@ -18,7 +18,7 @@ public class BinaryTreeHeight<T> {
     }
 
     public int height(MyTreeNode node) {
-        if (node == null ) {
+        if (node == null) {
             return 0;
         }
 
@@ -30,7 +30,7 @@ public class BinaryTreeHeight<T> {
         while (!queue.isEmpty()) {
             height++;
             int nodeCount = queue.size();
-            while(nodeCount >0) {
+            while (nodeCount > 0) {
                 MyTreeNode temp = queue.poll();
 
                 if (temp.left != null) {
@@ -46,10 +46,10 @@ public class BinaryTreeHeight<T> {
     }
 
     public int heightRecursive(MyTreeNode node) {
-        if(node == null) {
+        if (node == null) {
             return 0;
         } else {
-            return (Math.max(heightRecursive(node.left),heightRecursive(node.right)) + 1);
+            return (Math.max(heightRecursive(node.left), heightRecursive(node.right)) + 1);
         }
     }
 }
