@@ -1,20 +1,19 @@
 package com.abn.dsalgos.challenges.dp;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class PascalTriangleRow {
 
     public List<Integer> getRow(int rowIndex) {
 
-        List<Integer> rowNums = new ArrayList<>();
+        List<Integer> rowNums;
 
         int[][] cache = new int[rowIndex+1][rowIndex+1];
         cache[0][0] = 1;
 
-        for(int j = 0; j <= rowIndex; j++) {
-            rowNums.add(getPascal(rowIndex, j, cache));
-        }
+        rowNums = IntStream.rangeClosed(0, rowIndex).mapToObj(j -> getPascal(rowIndex, j, cache)).collect(Collectors.toList());
         return rowNums;
     }
 
