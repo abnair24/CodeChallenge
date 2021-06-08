@@ -1,11 +1,12 @@
 package com.abn.dsalgos.challenges.binaryTree;
 
 import com.abn.dsalgos.utils.MyBSTNode;
+import org.junit.Assert;
 import org.testng.annotations.Test;
 
 public class BinaryTreeIsBSTTest {
 
-    BinaryTreeIsBST<Integer> binaryTreeIsBST = new BinaryTreeIsBST<>();
+    BinaryTreeIsBST binaryTreeIsBST = new BinaryTreeIsBST();
 
     @Test
     public void test() throws Exception {
@@ -19,7 +20,7 @@ public class BinaryTreeIsBSTTest {
         binaryTreeIsBST.root.right.left = new MyBSTNode<>(17);
         binaryTreeIsBST.root.right.right = new MyBSTNode<>(25 );
 
-        System.out.println(binaryTreeIsBST.isBST(binaryTreeIsBST.root,Integer.MIN_VALUE,Integer.MAX_VALUE));
+        Assert.assertTrue(binaryTreeIsBST.isBST(binaryTreeIsBST.root));
     }
 
     @Test
@@ -30,8 +31,22 @@ public class BinaryTreeIsBSTTest {
         binaryTreeIsBST.root.right.left = new MyBSTNode<>(10);
         binaryTreeIsBST.root.right.right = new MyBSTNode<>(50 );
 
-        System.out.println(binaryTreeIsBST.isBST(binaryTreeIsBST.root,Integer.MIN_VALUE,Integer.MAX_VALUE));
+        Assert.assertFalse(binaryTreeIsBST.isBST(binaryTreeIsBST.root));
     }
 
+    @Test
+    public void test2() throws Exception {
+        binaryTreeIsBST.root = new MyBSTNode<>(2147483647);
+        Assert.assertTrue(binaryTreeIsBST.isBST(binaryTreeIsBST.root));
+    }
+
+    @Test
+    public void test3() throws Exception {
+        binaryTreeIsBST.root = new MyBSTNode<>(2);
+        binaryTreeIsBST.root.left = new MyBSTNode<>(2);
+        binaryTreeIsBST.root.right = new MyBSTNode<>(2);
+
+        Assert.assertFalse(binaryTreeIsBST.isBST(binaryTreeIsBST.root));
+    }
 
 }

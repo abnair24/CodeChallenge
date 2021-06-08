@@ -6,33 +6,33 @@ import com.abn.dsalgos.utils.MyBSTNode;
 Validate BST: Implement a function to check if a binary tree is a binary search tree.
 
  */
-public class BinaryTreeIsBST<T extends Comparable<T>> {
+public class BinaryTreeIsBST {
 
-    public MyBSTNode<T> root;
+    public MyBSTNode<Integer> root;
 
     public BinaryTreeIsBST() {
         root = null;
     }
 
-
-    public boolean isBST(MyBSTNode<T> root, T min, T max) {
+    public boolean isValidBST(MyBSTNode<Integer> root, Integer min, Integer max) {
 
 
         if (root == null) {
             return true;
-        } else {
-
-            if (root.data.compareTo(max) > 0 || root.data.compareTo(min) < 0) {
-                return false;
-            } else {
-
-                System.out.println("Root : " + root.data + " min: " + min + " max: " + max);
-
-                boolean isLeftTreeBST = isBST(root.left, min, root.data);
-                boolean isRightTreeBST = isBST(root.right, root.data, max);
-
-                return isLeftTreeBST && isRightTreeBST;
-            }
         }
+        if ((min != null && root.data <= min) || (max != null && root.data >= max)) {
+            return false;
+        }
+        return isValidBST(root.left, min, root.data) && isValidBST(root.right, root.data, max);
+    }
+
+
+    public boolean isBST(MyBSTNode<Integer> node) {
+
+        // Integer.MIN_VALUE and Integer.MAX_VALUE is not used for max and min values
+        // as if single node with MAX_VALUE is present,
+        // returns false instead of true. Modified code and added test.
+
+        return isValidBST(node, null, null);
     }
 }
