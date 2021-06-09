@@ -3,46 +3,47 @@ package com.abn.dsalgos.sortAlgos;
 /**
  * Created by aswathyn on 18/02/17.
  */
-public class QuickSort<T extends Comparable<T>> {
+public class QuickSort {
 
-    public T[] A;
-
-    public void sort(T[] A) {
-        if (A == null || A.length == 0)
-            return;
-        quicksort(A, 0, A.length - 1);
+    public void quickSort(int [] lst) {
+        /* Sorts an array in the ascending order in O(n log n) time */
+        int n = lst.length;
+        qSort(lst, 0, n - 1);
     }
 
-    private void quicksort(T[] array, int left, int right) {
+    private void qSort(int [] lst, int lo, int hi) {
+        if (lo < hi) {
+            int p = partition(lst, lo, hi);
+            qSort(lst, lo, p - 1);
+            qSort(lst, p + 1, hi);
+        }
+    }
 
-        T pivot = array[left + (right - left) / 2];
-
-        int i = left;
-        int j = right;
-
-        while (i <= j) {
-
-            while (array[i].compareTo(pivot) < 0) {
+    private int partition(int [] lst, int lo, int hi) {
+    /*
+      Picks the last element hi as a pivot
+      and returns the index of pivot value in the sorted array */
+        int pivot = lst[hi];
+        int i = lo;
+        for (int j = lo; j < hi; ++j) {
+            if (lst[j] < pivot) {
+                int tmp = lst[i];
+                lst[i] = lst[j];
+                lst[j] = tmp;
                 i++;
-            }
-            while (array[j].compareTo(pivot) > 0) {
-                j--;
-            }
-
-            if (i <= j) {
-
-                T temp = array[i];
-                array[i]=array[j];
-                array[j] = temp;
-
-                i++;
-                j--;
             }
         }
-
-        if(left < j)
-            quicksort(array,left,j);
-        if(i < right)
-            quicksort(array,i,right);
+        int tmp = lst[i];
+        lst[i] = lst[hi];
+        lst[hi] = tmp;
+        return i;
     }
+
+    public static void main(String[] args) {
+
+        QuickSort quickSort = new QuickSort();
+
+        quickSort.quickSort(new int[] {1, 5, 3, 2, 8, 7, 6, 4});
+    }
+
 }
