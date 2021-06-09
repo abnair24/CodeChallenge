@@ -1,4 +1,4 @@
-package com.abn.dsalgos.challenges.dp;
+package com.abn.dsalgos.challenges.string;
 
 
 import java.util.stream.IntStream;
@@ -10,7 +10,7 @@ Count the number of Binary Substring that start and end with 1
 01010 -> 1
 001001101 -> 6 ( 1001, 10011,1001101, 11, 1101, 101)
  */
-public class BinaryStringStartAndEndWithOne {
+public class StringStartAndEndWithOne {
 
     public int getCount(String str) {
 
