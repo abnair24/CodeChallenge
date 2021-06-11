@@ -62,6 +62,9 @@ public class BinaryTreeHeight<T> {
         }
     }
 
+
+    // visit the node first to come up with some values,
+    // and pass these values to its children when calling the function recursive
     private int heightRecursiveTopDownHelper(MyTreeNode node, int level) {
 
         if(node == null) {
