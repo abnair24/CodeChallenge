@@ -45,7 +45,7 @@ public class BinaryTreeHeightTest {
         binaryTreeHeight.root.left.left = new MyTreeNode<>(4);
         binaryTreeHeight.root.left.right = new MyTreeNode<>(5);
         binaryTreeHeight.root.left.right.left = new MyTreeNode<>(6);
-        Assert.assertEquals(binaryTreeHeight.heightRecursive(binaryTreeHeight.root),4);
+        Assert.assertEquals(binaryTreeHeight.heightRecursiveBottomUp(binaryTreeHeight.root),4);
     }
 
 

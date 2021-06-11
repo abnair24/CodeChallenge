@@ -7,7 +7,7 @@ public class MinimumStepsToOneTest {
 
     @Test
     public void test() throws Exception {
-        MinimumStepsToOne min = new MinimumStepsToOne(10);
-        System.out.println(min.minSteps(10));
+        MinimumStepsToOne min = new MinimumStepsToOne(50);
+        System.out.println(min.minSteps(50));
     }
 }
