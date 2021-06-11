@@ -17,6 +17,8 @@ public class BinaryTreeHeight<T> {
         root = null;
     }
 
+    int depth = 1;
+
     public int height(MyTreeNode node) {
         if (node == null) {
             return 0;
@@ -45,11 +47,38 @@ public class BinaryTreeHeight<T> {
         return height;
     }
 
-    public int heightRecursive(MyTreeNode node) {
+    // Bottom up approach in recursion.
+    // In each recursive call, we will firstly call the function recursively for all the children nodes
+    // and then come up with the answer according to the returned values and the value of the current node itself
+
+    public int heightRecursiveBottomUp(MyTreeNode node) {
         if (node == null) {
             return 0;
         } else {
-            return (Math.max(heightRecursive(node.left), heightRecursive(node.right)) + 1);
+            int left_depth = heightRecursiveBottomUp(node.left);
+            int right_depth = heightRecursiveBottomUp(node.right);
+
+            return (Math.max(left_depth, right_depth) + 1);
         }
+    }
+
+    private int heightRecursiveTopDownHelper(MyTreeNode node, int level) {
+
+        if(node == null) {
+            return 0;
+        }
+
+        if(node.left == null || node.right == null) {
+            depth = Math.max(depth, level);
+        }
+        heightRecursiveTopDownHelper(node.left, level + 1);
+        heightRecursiveTopDownHelper(node.right, level + 1);
+
+        return depth;
+    }
+
+    public int heightRecursiveTopDown(MyTreeNode node) {
+
+        return heightRecursiveTopDownHelper(node, 1);
     }
 }
