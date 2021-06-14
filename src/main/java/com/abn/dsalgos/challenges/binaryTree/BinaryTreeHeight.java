@@ -11,7 +11,7 @@ import java.util.Queue;
 
 public class BinaryTreeHeight<T> {
 
-    public MyTreeNode root;
+    public MyTreeNode<T> root;
 
     public BinaryTreeHeight() {
         root = null;
@@ -19,26 +19,26 @@ public class BinaryTreeHeight<T> {
 
     int depth = 1;
 
-    public int height(MyTreeNode node) {
+    public int height(MyTreeNode<T> node) {
         if (node == null) {
             return 0;
         }
 
         int height = 0;
 
-        Queue<MyTreeNode> queue = new LinkedList<>();
+        Queue<MyTreeNode<T>> queue = new LinkedList<>();
         queue.add(node);
 
         while (!queue.isEmpty()) {
             height++;
             int nodeCount = queue.size();
             while (nodeCount > 0) {
-                MyTreeNode temp = queue.poll();
+                MyTreeNode<T> temp = queue.poll();
 
-                if (temp.left != null) {
+                if (temp != null && temp.left != null) {
                     queue.add(temp.left);
                 }
-                if (temp.right != null) {
+                if (temp != null && temp.right != null) {
                     queue.add(temp.right);
                 }
                 nodeCount--;
@@ -51,7 +51,7 @@ public class BinaryTreeHeight<T> {
     // In each recursive call, we will firstly call the function recursively for all the children nodes
     // and then come up with the answer according to the returned values and the value of the current node itself
 
-    public int heightRecursiveBottomUp(MyTreeNode node) {
+    public int heightRecursiveBottomUp(MyTreeNode<T> node) {
         if (node == null) {
             return 0;
         } else {
@@ -65,7 +65,7 @@ public class BinaryTreeHeight<T> {
 
     // visit the node first to come up with some values,
     // and pass these values to its children when calling the function recursive
-    private int heightRecursiveTopDownHelper(MyTreeNode node, int level) {
+    private int heightRecursiveTopDownHelper(MyTreeNode<T> node, int level) {
 
         if(node == null) {
             return 0;
@@ -80,7 +80,7 @@ public class BinaryTreeHeight<T> {
         return depth;
     }
 
-    public int heightRecursiveTopDown(MyTreeNode node) {
+    public int heightRecursiveTopDown(MyTreeNode<T> node) {
 
         return heightRecursiveTopDownHelper(node, 1);
     }
