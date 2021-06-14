@@ -12,12 +12,11 @@ import java.util.Queue;
 public class BinaryTreeHeight<T> {
 
     public MyTreeNode<T> root;
+    int depth = 1;
 
     public BinaryTreeHeight() {
         root = null;
     }
-
-    int depth = 1;
 
     public int height(MyTreeNode<T> node) {
         if (node == null) {
@@ -50,7 +49,6 @@ public class BinaryTreeHeight<T> {
     // Bottom up approach in recursion.
     // In each recursive call, we will firstly call the function recursively for all the children nodes
     // and then come up with the answer according to the returned values and the value of the current node itself
-
     public int heightRecursiveBottomUp(MyTreeNode<T> node) {
         if (node == null) {
             return 0;
@@ -67,11 +65,11 @@ public class BinaryTreeHeight<T> {
     // and pass these values to its children when calling the function recursive
     private int heightRecursiveTopDownHelper(MyTreeNode<T> node, int level) {
 
-        if(node == null) {
+        if (node == null) {
             return 0;
         }
 
-        if(node.left == null || node.right == null) {
+        if (node.left == null || node.right == null) {
             depth = Math.max(depth, level);
         }
         heightRecursiveTopDownHelper(node.left, level + 1);
