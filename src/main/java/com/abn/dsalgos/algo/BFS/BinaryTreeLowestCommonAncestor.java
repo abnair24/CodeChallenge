@@ -1,4 +1,4 @@
-package com.abn.dsalgos.challenges.binaryTree;
+package com.abn.dsalgos.algo.BFS;
 
 import com.abn.dsalgos.utils.MyTreeNode;
 
@@ -12,7 +12,7 @@ public class BinaryTreeLowestCommonAncestor<T> {
         root = null;
     }
 
-    public T lowestCommonAncestor(MyTreeNode<T> root,MyTreeNode<T> node1, MyTreeNode<T>node2 ) {
+    public MyTreeNode lowestCommonAncestor(MyTreeNode<T> root,MyTreeNode<T> node1, MyTreeNode<T>node2 ) {
         Queue<MyTreeNode<T>> queue = new LinkedList<>();
         Map<MyTreeNode<T>,MyTreeNode<T>> parent = new HashMap<>();
         List<MyTreeNode<T>> parentArray = new ArrayList<>();
@@ -41,6 +41,6 @@ public class BinaryTreeLowestCommonAncestor<T> {
         while(!parentArray.contains(node2)) {
             node2 = parent.get(node2);
         }
-        return node2.data;
+        return node2;
     }
 }

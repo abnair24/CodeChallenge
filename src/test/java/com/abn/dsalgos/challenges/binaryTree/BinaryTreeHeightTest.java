@@ -38,7 +38,7 @@ public class BinaryTreeHeightTest {
     }
 
     @Test
-    public void testRecursive() throws Exception {
+    public void testRecursive() {
         binaryTreeHeight.root = new MyTreeNode<>(1);
         binaryTreeHeight.root.left = new MyTreeNode<>(2);
         binaryTreeHeight.root.right = new MyTreeNode<>(3);
