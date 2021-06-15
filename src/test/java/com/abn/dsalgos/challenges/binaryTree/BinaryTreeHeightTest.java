@@ -38,14 +38,14 @@ public class BinaryTreeHeightTest {
     }
 
     @Test
-    public void testRecursive() throws Exception {
+    public void testRecursive() {
         binaryTreeHeight.root = new MyTreeNode<>(1);
         binaryTreeHeight.root.left = new MyTreeNode<>(2);
         binaryTreeHeight.root.right = new MyTreeNode<>(3);
         binaryTreeHeight.root.left.left = new MyTreeNode<>(4);
         binaryTreeHeight.root.left.right = new MyTreeNode<>(5);
         binaryTreeHeight.root.left.right.left = new MyTreeNode<>(6);
-        Assert.assertEquals(binaryTreeHeight.heightRecursive(binaryTreeHeight.root),4);
+        Assert.assertEquals(binaryTreeHeight.heightRecursiveBottomUp(binaryTreeHeight.root),4);
     }
 
 
