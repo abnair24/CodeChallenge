@@ -13,18 +13,45 @@ public class MyTrie {
     }
 
     public void insert(String word) {
-        HashMap<Character,TrieNode> childNodes = root.childNodes;
-        for(int i =0; i< word.length();i++) {
+        TrieNode current = root;
+
+        for(int i = 0; i < word.length(); i++) {
+
+            char c = word.charAt(i);
+            if(!current.childNodes.containsKey(c)) {
+                current.childNodes.put(c, new TrieNode());
+            }
+
+            current = current.childNodes.get(c);
+        }
+        current.isWord = true;
+    }
+
+    public boolean search(String word) {
+
+        TrieNode current = root;
+        for(int i = 0; i < word.length(); i++) {
             char c = word.charAt(i);
 
-            TrieNode temp;
-            if(childNodes.containsKey(c)) {
-                temp = childNodes.get(c);
-            } else {
-                temp = new TrieNode(c);
-                childNodes.put(c,temp);
+            if(current.childNodes.get(c) == null) {
+                return false;
             }
-            childNodes = temp.childNodes;
+            current = current.childNodes.get(c);
         }
+        return current.isWord;
+    }
+
+    public boolean startsWith(String prefix) {
+
+        TrieNode current = root;
+        for(int i = 0; i < prefix.length(); i++) {
+            char c = prefix.charAt(i);
+
+            if(current.childNodes.get(c) == null) {
+                return false;
+            }
+            current = current.childNodes.get(c);
+        }
+       return true;
     }
 }

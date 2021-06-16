@@ -2,22 +2,22 @@ package com.abn.dsalgos.challenges.BST;
 
 import com.abn.dsalgos.utils.MyBSTNode;
 
-public class BinarySearchTreeArrayOfNodesDeletion<Integer> {
+public class BinarySearchTreeArrayOfNodesDeletion<T> {
 
-    MyBSTNode<java.lang.Integer> root;
+    MyBSTNode<Integer> root;
 
     public BinarySearchTreeArrayOfNodesDeletion() {
         root = null;
     }
 
-    public void insertNode(MyBSTNode<java.lang.Integer> node) {
+    public void insertNode(MyBSTNode<Integer> node) {
         if (root == null) {
             root = node;
             return;
         }
 
-        MyBSTNode<java.lang.Integer> current = root;
-        MyBSTNode<java.lang.Integer> parent;
+        MyBSTNode<Integer> current = root;
+        MyBSTNode<Integer> parent;
 
         while(current != null) {
             parent = current;
@@ -39,7 +39,7 @@ public class BinarySearchTreeArrayOfNodesDeletion<Integer> {
         }
     }
 
-    public void deleteArray(MyBSTNode<java.lang.Integer> root, int[] queries) {
+    public void deleteArray(MyBSTNode<Integer> root, int[] queries) {
 
         for(int i : queries) {
             delete(root,i);
@@ -47,11 +47,11 @@ public class BinarySearchTreeArrayOfNodesDeletion<Integer> {
         display(root);
     }
 
-    public boolean delete(MyBSTNode<java.lang.Integer> node ,int query) {
+    public boolean delete(MyBSTNode<Integer> node ,int query) {
 
-        java.lang.Integer q = query;
-        MyBSTNode<java.lang.Integer> temp = node;
-        MyBSTNode<java.lang.Integer> parent = null;
+        Integer q = query;
+        MyBSTNode<Integer> temp = node;
+        MyBSTNode<Integer> parent = null;
         boolean isNodePresent = false;
 
         /*
@@ -110,11 +110,11 @@ public class BinarySearchTreeArrayOfNodesDeletion<Integer> {
         return false;
     }
 
-    private MyBSTNode<java.lang.Integer> getSuccessorNode(MyBSTNode<java.lang.Integer> n) {
+    private MyBSTNode<Integer> getSuccessorNode(MyBSTNode<Integer> n) {
 
-        MyBSTNode<java.lang.Integer> successor = n.right;
-        MyBSTNode<java.lang.Integer> current = successor;
-        MyBSTNode<java.lang.Integer> parent = n.right;
+        MyBSTNode<Integer> successor = n.right;
+        MyBSTNode<Integer> current = successor;
+        MyBSTNode<Integer> parent = n.right;
 
         if(successor.right != null && successor.left == null) {
             n.data = successor.data;
@@ -131,7 +131,7 @@ public class BinarySearchTreeArrayOfNodesDeletion<Integer> {
         return n;
     }
 
-    public void display(MyBSTNode<java.lang.Integer> node) {
+    public void display(MyBSTNode<Integer> node) {
         if(node != null) {
             display(node.left);
             System.out.print(node.data + " ");
