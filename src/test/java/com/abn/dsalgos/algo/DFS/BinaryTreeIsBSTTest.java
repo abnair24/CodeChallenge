@@ -1,5 +1,6 @@
-package com.abn.dsalgos.challenges.binaryTree;
+package com.abn.dsalgos.algo.DFS;
 
+import com.abn.dsalgos.algo.DFS.BinaryTreeIsBST;
 import com.abn.dsalgos.utils.MyBSTNode;
 import org.junit.Assert;
 import org.testng.annotations.Test;

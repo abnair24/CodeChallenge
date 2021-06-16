@@ -1,4 +1,4 @@
-package com.abn.dsalgos.challenges.binaryTree;
+package com.abn.dsalgos.algo.DFS;
 
 import com.abn.dsalgos.utils.MyBSTNode;
 
@@ -20,6 +20,7 @@ public class BinaryTreeIsBST {
         if (root == null) {
             return true;
         }
+
         if ((min != null && root.data <= min) || (max != null && root.data >= max)) {
             return false;
         }

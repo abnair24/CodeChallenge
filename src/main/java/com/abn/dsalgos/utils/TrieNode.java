@@ -5,15 +5,9 @@ import java.util.Map;
 
 public class TrieNode {
 
-    public HashMap<Character,TrieNode>childNodes = new HashMap<>();
-    private boolean isLeaf;
-    private Character character;
+    public boolean isWord;
+    public Map<Character, TrieNode> childNodes = new HashMap<>();
 
-    public TrieNode() {
+    public TrieNode() {}
 
-    }
-
-    public TrieNode(Character character) {
-        this.character = character;
-    }
 }
