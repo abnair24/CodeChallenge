@@ -9,20 +9,15 @@ import java.util.Queue;
  Given a binary tree, determine if it is height-balanced.
  Hint : A binary tree in which the depth of the two subtrees of every node never differ by more than 1.
  */
-public class BinaryTreeIsBalanced<T> {
+public class BinaryTreeIsBalanced {
 
-    MyTreeNode<T> root ;
-
-    public BinaryTreeIsBalanced() {
-        root = null;
-    }
-
-    public boolean isBalanced(MyTreeNode<T> node) {
+    //WIP : fix the code for failing test
+    public boolean isBalanced(MyTreeNode<Integer> node) {
         if (node == null) {
             return true;
         }
 
-        Queue<MyTreeNode<T>> queue = new LinkedList<>();
+        Queue<MyTreeNode<Integer>> queue = new LinkedList<>();
 
         int height = 1;
         int minHeight = Integer.MAX_VALUE;
@@ -34,7 +29,7 @@ public class BinaryTreeIsBalanced<T> {
             int nodeCount = queue.size();
 
             while (nodeCount > 0) {
-                MyTreeNode<T> temp = queue.poll();
+                MyTreeNode<Integer> temp = queue.poll();
 
                 if (temp.left != null)
                     queue.add(temp.left);
@@ -55,7 +50,7 @@ public class BinaryTreeIsBalanced<T> {
 
                 nodeCount--;
             }
-            if (Math.abs(maxHeight - minHeight) > 1) {
+            if (Math.abs(maxHeight - minHeight) < 2) {
                 return false;
             }
             height++;

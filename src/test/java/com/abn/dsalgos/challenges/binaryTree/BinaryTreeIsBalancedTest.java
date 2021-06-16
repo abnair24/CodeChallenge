@@ -7,78 +7,102 @@ import org.testng.annotations.Test;
 
 public class BinaryTreeIsBalancedTest {
 
-    BinaryTreeIsBalanced<Integer> binaryTreeIsBalanced;
+    BinaryTreeIsBalanced binaryTreeIsBalanced;
 
-    @BeforeMethod(alwaysRun = true)
-    public void beforeMethod() throws Exception {
-       binaryTreeIsBalanced = new BinaryTreeIsBalanced<>();
+    @BeforeMethod (alwaysRun = true)
+    public void beforeMethod()
+            throws Exception {
+        binaryTreeIsBalanced = new BinaryTreeIsBalanced();
     }
 
     @Test
-    public void test() throws Exception{
-        binaryTreeIsBalanced.root = new MyTreeNode<>(1);
-        binaryTreeIsBalanced.root.left = new MyTreeNode<>(2);
-        binaryTreeIsBalanced.root.right = new MyTreeNode<>(3);
-        binaryTreeIsBalanced.root.left.left = new MyTreeNode<>(4);
-        binaryTreeIsBalanced.root.left.right = new MyTreeNode<>(5);
-        binaryTreeIsBalanced.root.left.left.left = new MyTreeNode<>(8);
-        binaryTreeIsBalanced.root.right.right = new MyTreeNode<>(7);
-        binaryTreeIsBalanced.root.right.left = new MyTreeNode<>(6);
+    public void test()
+            throws Exception {
 
-        Assert.assertTrue(binaryTreeIsBalanced.isBalanced(binaryTreeIsBalanced.root));
+        MyTreeNode<Integer> root = new MyTreeNode<>(1);
+        root.left = new MyTreeNode<>(2);
+        root.right = new MyTreeNode<>(3);
+        root.left.left = new MyTreeNode<>(4);
+        root.left.right = new MyTreeNode<>(5);
+        root.left.left.left = new MyTreeNode<>(8);
+        root.right.right = new MyTreeNode<>(7);
+        root.right.left = new MyTreeNode<>(6);
+
+        Assert.assertTrue(binaryTreeIsBalanced.isBalanced(root));
     }
 
     @Test
-    public void test2() throws Exception {
-        binaryTreeIsBalanced.root = new MyTreeNode<>(1);
-        binaryTreeIsBalanced.root.left = new MyTreeNode<>(2);
-        binaryTreeIsBalanced.root.left.left = new MyTreeNode<>(3);
+    public void test2()
+            throws Exception {
+        MyTreeNode<Integer> root = new MyTreeNode<>(1);
+        root.left = new MyTreeNode<>(2);
+        root.left.left = new MyTreeNode<>(3);
 
-        Assert.assertFalse(binaryTreeIsBalanced.isBalanced(binaryTreeIsBalanced.root));
+        Assert.assertFalse(binaryTreeIsBalanced.isBalanced(root));
     }
 
     @Test
-    public void test3() throws Exception {
-        binaryTreeIsBalanced.root = new MyTreeNode<>(1);
-        binaryTreeIsBalanced.root.left = new MyTreeNode<>(2);
-        binaryTreeIsBalanced.root.right = new MyTreeNode<>(3);
-        binaryTreeIsBalanced.root.left.left = new MyTreeNode<>(4);
-        binaryTreeIsBalanced.root.left.right = new MyTreeNode<>(5);
-        binaryTreeIsBalanced.root.left.left.left = new MyTreeNode<>(6);
-        binaryTreeIsBalanced.root.left.left.right = new MyTreeNode<>(7);
+    public void test3()
+            throws Exception {
+        MyTreeNode<Integer> root = new MyTreeNode<>(1);
+        root.left = new MyTreeNode<>(2);
+        root.right = new MyTreeNode<>(3);
+        root.left.left = new MyTreeNode<>(4);
+        root.left.right = new MyTreeNode<>(5);
+        root.left.left.left = new MyTreeNode<>(6);
+        root.left.left.right = new MyTreeNode<>(7);
 
-        Assert.assertFalse(binaryTreeIsBalanced.isBalanced(binaryTreeIsBalanced.root));
+        Assert.assertFalse(binaryTreeIsBalanced.isBalanced(root));
     }
 
     @Test
-    public void test4() throws Exception {
-        binaryTreeIsBalanced.root = new MyTreeNode<>(1);
-        binaryTreeIsBalanced.root.right = new MyTreeNode<>(2);
-        binaryTreeIsBalanced.root.right.left = new MyTreeNode<>(3);
+    public void test4()
+            throws Exception {
 
-        Assert.assertFalse(binaryTreeIsBalanced.isBalanced(binaryTreeIsBalanced.root));
+        MyTreeNode<Integer> root = new MyTreeNode<>(1);
+        root.right = new MyTreeNode<>(2);
+        root.right.left = new MyTreeNode<>(3);
+
+        Assert.assertFalse(binaryTreeIsBalanced.isBalanced(root));
     }
 
     @Test
-    public void test5() throws Exception {
-        binaryTreeIsBalanced.root = new MyTreeNode<>(1);
-        binaryTreeIsBalanced.root.left = new MyTreeNode<>(2);
-        binaryTreeIsBalanced.root.right = new MyTreeNode<>(3);
-        binaryTreeIsBalanced.root.left.left = new MyTreeNode<>(4);
-        binaryTreeIsBalanced.root.left.right = new MyTreeNode<>(5);
-        binaryTreeIsBalanced.root.right.right = new MyTreeNode<>(6);
-        binaryTreeIsBalanced.root.right.right.right = new MyTreeNode<>(7);
+    public void test5()
+            throws Exception {
+        MyTreeNode<Integer> root = new MyTreeNode<>(1);
+        root.left = new MyTreeNode<>(2);
+        root.right = new MyTreeNode<>(3);
+        root.left.left = new MyTreeNode<>(4);
+        root.left.right = new MyTreeNode<>(5);
+        root.right.right = new MyTreeNode<>(6);
+        root.right.right.right = new MyTreeNode<>(7);
 
-        Assert.assertFalse(binaryTreeIsBalanced.isBalanced(binaryTreeIsBalanced.root));
+        Assert.assertFalse(binaryTreeIsBalanced.isBalanced(root));
     }
 
     @Test
-    public void test6() throws Exception {
-        binaryTreeIsBalanced.root = new MyTreeNode<>(1);
-        binaryTreeIsBalanced.root.left = new MyTreeNode<>(2);
-        binaryTreeIsBalanced.root.right = new MyTreeNode<>(3);
-        binaryTreeIsBalanced.root.left.left = new MyTreeNode<>(4);
+    public void test6() {
+        MyTreeNode<Integer> root = new MyTreeNode<>(1);
+        root.left = new MyTreeNode<>(2);
+        root.right = new MyTreeNode<>(3);
+        root.left.left = new MyTreeNode<>(4);
 
-        Assert.assertTrue(binaryTreeIsBalanced.isBalanced(binaryTreeIsBalanced.root));
+        Assert.assertTrue(binaryTreeIsBalanced.isBalanced(root));
+    }
+
+    // WIP : Test fails.
+    @Test
+    public void test7() {
+
+        MyTreeNode<Integer> root = new MyTreeNode<>(1);
+        root.left = new MyTreeNode<>(2);
+        root.right = new MyTreeNode<>(3);
+        root.left.left = new MyTreeNode<>(4);
+        root.left.right = new MyTreeNode<>(5);
+        root.right.left = new MyTreeNode<>(6);
+        root.left.left.left = new MyTreeNode<>(8);
+
+        Assert.assertTrue(binaryTreeIsBalanced.isBalanced(root));
+
     }
 }
