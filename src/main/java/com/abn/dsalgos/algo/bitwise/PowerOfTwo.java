@@ -20,7 +20,13 @@ public class PowerOfTwo {
 
     public boolean isPowerTwo(int x) {
 
-        if( (x & (x-1)) == 0) {
+        if (x == 0) {
+            return false;
+        }
+
+        long n = x;
+
+        if ((n & (n - 1)) == 0) {
             return true;
         }
 
