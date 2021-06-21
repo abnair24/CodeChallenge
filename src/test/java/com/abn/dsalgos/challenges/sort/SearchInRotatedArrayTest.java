@@ -1,5 +1,6 @@
 package com.abn.dsalgos.challenges.sort;
 
+import com.abn.dsalgos.algo.binarySearch.SearchInRotatedArray;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

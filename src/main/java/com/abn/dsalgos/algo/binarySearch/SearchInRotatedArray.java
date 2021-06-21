@@ -1,4 +1,4 @@
-package com.abn.dsalgos.challenges.sort;
+package com.abn.dsalgos.algo.binarySearch;
 
 
 
