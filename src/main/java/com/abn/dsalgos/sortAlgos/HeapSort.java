@@ -2,7 +2,7 @@ package com.abn.dsalgos.sortAlgos;
 
 public class HeapSort {
 
-		 public void sort(int arr[]) //sort in ascending order
+		 public int[] sort(int arr[]) //sort in ascending order
 		    {
 		        int n = arr.length;
 		        int startIndex = (n-1)/2;
@@ -17,6 +17,7 @@ public class HeapSort {
 		            arr[i] = temp;
 		            heapify(arr, i, 0);
 		        }
+		        return arr;
 		    }
 		 
 		    void heapify(int arr[], int n, int i) //heapify procedure for creating max heap 
@@ -53,19 +54,6 @@ public class HeapSort {
 		        System.out.println();
 		    }
 		 
-		    
-		    public static void main(String args[])
-		    {
-		        int arr[] = { 12, 11, 13, 5, 6, 7 };
-		        int n = arr.length;
-		 
-		        HeapSort ob = new HeapSort();
-		        ob.sort(arr);
-		 
-		        System.out.println("Sorted array is");
-		        printArray(arr);
-		    }
-		
 }
 
 
