@@ -1,4 +1,4 @@
-package com.abn.dsalgos.challenges.dp;
+package com.abn.dsalgos.algo.dp;
 
 
 import org.testng.annotations.Test;
