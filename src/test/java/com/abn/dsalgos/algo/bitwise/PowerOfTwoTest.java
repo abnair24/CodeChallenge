@@ -19,6 +19,8 @@ public class PowerOfTwoTest {
         list.add(new Object[] {6, false});
         list.add(new Object[] {1, true});
         list.add(new Object[] {7, false});
+        list.add(new Object[] {0, false});
+        list.add(new Object[] {-2147483648, false});
 
         return list.iterator();
     }

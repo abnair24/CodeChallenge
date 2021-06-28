@@ -31,4 +31,24 @@ public class MoveZeroesToEndInPlace {
         }
         return arr;
     }
+
+    public int[] push(int[] arr) {
+        int readIndex = 0;
+        int writeIndex = 0;
+        int len = arr.length;
+
+        while(readIndex < len) {
+            if(arr[readIndex] != 0) {
+                arr[writeIndex] = arr[readIndex];
+                writeIndex ++;
+            }
+            readIndex ++;
+        }
+
+        while(writeIndex < len) {
+            arr[writeIndex++] = 0;
+        }
+
+        return arr;
+    }
 }

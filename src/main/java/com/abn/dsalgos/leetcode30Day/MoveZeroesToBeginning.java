@@ -21,9 +21,6 @@ public class MoveZeroesToBeginning {
         while(writeIndex >= 0) {
             array[writeIndex--] = 0;
         }
-        for(int i =0; i< array.length; i++) {
-            System.out.print(array[i] + " ");
-        }
 
         return array;
     }
