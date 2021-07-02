@@ -18,6 +18,7 @@ public class FruitsIntoBasketTest {
 
         lst.add(new Object[]{new char[] {'A', 'B', 'C', 'A', 'C'}, 3});
         lst.add(new Object[]{new char[] {'A', 'B', 'C', 'B', 'B', 'C'}, 5});
+        lst.add(new Object[]{new char[] {'A', 'A', 'A', 'B', 'C', 'B', 'B', 'C', 'A', 'A', 'D'}, 5});
 
         return lst.iterator();
     }

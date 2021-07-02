@@ -18,6 +18,7 @@ public class LongestSubstringWithKDistinctCharTest {
         lst.add(new Object[] {"araaci", 2, 4});
         lst.add(new Object[] {"cbbebi", 3, 5});
         lst.add(new Object[] {"araaci", 1, 2});
+        lst.add(new Object[] {"ccaabbb", 2, 5});
 
         return lst.iterator();
     }
