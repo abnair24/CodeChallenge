@@ -42,6 +42,6 @@ public class LongestSubstringWithKDistinctChar {
                 start++;
             }
         }
-        return maxSize;
+        return Math.max(maxSize, str.length() - start);
     }
 }
