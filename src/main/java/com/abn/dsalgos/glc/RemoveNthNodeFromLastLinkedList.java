@@ -1,4 +1,4 @@
-package com.abn.glc;
+package com.abn.dsalgos.glc;
 
 /*
 Given the head of a linked list, remove the nth node from the end of the list and return its head.
@@ -17,11 +17,11 @@ public class RemoveNthNodeFromLastLinkedList {
         ListNode fast = dummy;
         ListNode slow = dummy;
 
-        for(int i = 1; i <= n+1; i++) {
+        for (int i = 1; i <= n + 1; i++) {
             fast = fast.next;
         }
 
-        while(fast != null) {
+        while (fast != null) {
             fast = fast.next;
             slow = slow.next;
         }

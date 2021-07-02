@@ -1,4 +1,4 @@
-package com.abn.glc;
+package com.abn.dsalgos.glc;
 
 /*
 Given an encoded string, return its decoded string.

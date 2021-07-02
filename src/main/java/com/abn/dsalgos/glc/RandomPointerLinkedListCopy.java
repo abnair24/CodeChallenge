@@ -1,4 +1,4 @@
-package com.abn.glc;
+package com.abn.dsalgos.glc;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -30,9 +30,10 @@ class Node {
 public class RandomPointerLinkedListCopy {
 
     Map<Node, Node> visitedMap = new HashMap<>();
+
     public Node randomCopy(Node head) {
 
-        if(head == null) {
+        if (head == null) {
             return head;
         }
 
@@ -40,7 +41,7 @@ public class RandomPointerLinkedListCopy {
         Node newNode = new Node(oldNode.val, null, null);
         visitedMap.put(oldNode, newNode);
 
-        while(oldNode != null) {
+        while (oldNode != null) {
             newNode.next = getNode(oldNode.next);
             newNode.random = getNode(oldNode.random);
 
@@ -53,7 +54,7 @@ public class RandomPointerLinkedListCopy {
 
     private Node getNode(Node node) {
 
-        if(node != null) {
+        if (node != null) {
             if (!visitedMap.containsKey(node)) {
                 visitedMap.put(node, new Node(node.val, null, null));
             }

@@ -1,4 +1,4 @@
-package com.abn.glc;
+package com.abn.dsalgos.glc;
 
 import com.abn.dsalgos.utils.ListNode;
 
@@ -21,7 +21,6 @@ public class AddTwoNumbers {
 
     public ListNode addTwoNumbers(ListNode head1, ListNode head2) {
 
-
         ListNode sumNode = null;
         ListNode sumHead = null;
 
@@ -29,22 +28,22 @@ public class AddTwoNumbers {
         int carry = 0;
         int count = 0;
 
-        while(head1 != null || head2 != null) {
-            count ++;
+        while (head1 != null || head2 != null) {
+            count++;
             sum = carry;
-            if(head1 != null) {
+            if (head1 != null) {
                 sum = sum + head1.val;
                 head1 = head1.next;
             }
-            if(head2 != null) {
+            if (head2 != null) {
                 sum = sum + head2.val;
                 head2 = head2.next;
             }
 
-            carry = sum /10;
-            sum = sum %10;
+            carry = sum / 10;
+            sum = sum % 10;
 
-            if(count == 1) {
+            if (count == 1) {
                 sumNode = new ListNode(sum);
                 sumHead = sumNode;
             } else {
@@ -53,7 +52,7 @@ public class AddTwoNumbers {
                 sumNode = sumNode.next;
             }
         }
-        if(carry != 0) {
+        if (carry != 0) {
             ListNode carryNode = new ListNode(carry);
             sumNode.next = carryNode;
         }

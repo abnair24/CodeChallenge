@@ -1,4 +1,4 @@
-package com.abn.glc;
+package com.abn.dsalgos.glc;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +33,11 @@ Output: ["-2"]
  */
 public class MissingRanges {
 
+    public static void main(String[] args) {
+        MissingRanges missingRanges = new MissingRanges();
+        System.out.println(missingRanges.findMissingRanges(new int[] {-1}, -2, -1));
+    }
+
     public List<Integer> findMissingRanges(int[] nums, int lower, int upper) {
 
         int leftIndex = 1;
@@ -41,10 +46,5 @@ public class MissingRanges {
         List<Integer> result = new ArrayList<>();
 
         return result;
-    }
-
-    public static void main(String[] args) {
-        MissingRanges missingRanges = new MissingRanges();
-        System.out.println(missingRanges.findMissingRanges(new int[]{-1}, -2, -1));
     }
 }
