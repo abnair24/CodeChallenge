@@ -1,4 +1,4 @@
-package com.abn.dsalgos.leetcode30Day.toDo;
+package com.abn.dsalgos.glc;
 
 /*
 Given a binary tree, you need to compute the length of the diameter of the tree.
