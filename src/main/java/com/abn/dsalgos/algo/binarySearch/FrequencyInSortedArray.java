@@ -13,7 +13,6 @@ public class FrequencyInSortedArray {
         int mid;
         int result = -1;
 
-
         // Loop to find first occurance
         while(start <= end) {
 
@@ -57,6 +56,6 @@ public class FrequencyInSortedArray {
 
     public static void main(String[] args) {
         FrequencyInSortedArray freq = new FrequencyInSortedArray();
-        freq.frequency(new int[] {-5,-3,0,1,3,3,3,3,4,5}, 4);
+        freq.frequency(new int[] {1, 2, 3, 4, 4, 4, 4, 4, 4, 4, 4, 5, 6, 7, 8, 9, 10, 11}, 4);
     }
 }

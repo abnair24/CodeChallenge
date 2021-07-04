@@ -1,4 +1,4 @@
-package com.abn.dsalgos.leetcode30Day.toDo;
+package com.abn.dsalgos.leetcode30Day;
 
 import java.util.HashMap;
 import java.util.Map;
