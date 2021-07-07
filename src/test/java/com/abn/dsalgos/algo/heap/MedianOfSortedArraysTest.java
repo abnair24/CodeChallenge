@@ -16,10 +16,9 @@ public class MedianOfSortedArraysTest {
 
         List<Object[]> list = Lists.newLinkedList();
 
-//        list.add(new Object[] { new int[]{}, new int[]{1}, 1.0 });
-//        list.add(new Object[] { new int[]{1}, new int[]{}, 1.0});
-//        list.add(new Object[] { new int[]{}, new int[]{2, 3}, 2.5});
-
+        list.add(new Object[] { new int[]{}, new int[]{1}, 1.0 });
+        list.add(new Object[] { new int[]{1}, new int[]{}, 1.0});
+        list.add(new Object[] { new int[]{}, new int[]{2, 3}, 2.5});
         list.add(new Object[] {new int[]{5, 8, 10, 11, 20}, new int[]{900, 1000}, 11});
 
         return list.iterator();
