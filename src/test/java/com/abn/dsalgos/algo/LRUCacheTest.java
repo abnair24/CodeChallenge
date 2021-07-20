@@ -1,7 +1,7 @@
 package com.abn.dsalgos.algo;
 
+import com.abn.design.LRUCache;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class LRUCacheTest {

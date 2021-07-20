@@ -1,5 +1,6 @@
 package com.abn.dsalgos.algo;
 
+import com.abn.design.LFUCache;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
