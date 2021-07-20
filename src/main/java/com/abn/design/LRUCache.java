@@ -1,4 +1,4 @@
-package com.abn.dsalgos.algo;
+package com.abn.design;
 
 import java.util.HashMap;
 import java.util.Map;
