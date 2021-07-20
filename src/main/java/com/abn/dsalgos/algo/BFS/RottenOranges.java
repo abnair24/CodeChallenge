@@ -56,13 +56,4 @@ public class RottenOranges {
             return minutes;
         }
     }
-
-    public static void main(String[] args) {
-        RottenOranges rottenOranges = new RottenOranges();
-        int[][] grid =  {{2,1,1},{1,1,0}, {0,1,1}};
-//        int[][] grid =  {{2,1,1},{0,1,1}, {1,0,1}};
-//        int[][] grid =  {{1,2,1},{1,0,0}, {2,1,1},{1,0,1}};
-//        int[][] grid =  {{2,1,1},{1,1,0}, {0,1,2}};
-        System.out.println(rottenOranges.rotten(grid));
-    }
 }
