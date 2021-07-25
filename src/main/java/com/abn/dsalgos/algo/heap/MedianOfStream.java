@@ -1,6 +1,5 @@
 package com.abn.dsalgos.algo.heap;
 
-import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /*

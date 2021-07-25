@@ -1,4 +1,7 @@
 package com.abn.dsalgos.algo.dp;
+
+import org.testng.Assert;
+
 /*
 Given a string, find the minimum number of characters that we can remove to make it a palindrome.
 
@@ -7,11 +10,7 @@ O/P: 1
 
 I/P: cddpd
 o/p: 2
-
-
  */
-
-import org.testng.Assert;
 
 public class MinimumDeletionsMakePalindrom {
 
