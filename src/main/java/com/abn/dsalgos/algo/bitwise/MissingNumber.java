@@ -1,7 +1,7 @@
 package com.abn.dsalgos.algo.bitwise;
 
 /*
-Given an array of n-1n−1 integers in the range from 11 to nn, find the one number that is missing from the array.
+Given an array of n-1 integers in the range from 1 to n, find the one number that is missing from the array.
 
 steps to find the missing number using XOR:
 

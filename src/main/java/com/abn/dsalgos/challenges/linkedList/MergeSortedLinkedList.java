@@ -11,14 +11,14 @@ public class MergeSortedLinkedList {
     private int size;
 
     public MergeSortedLinkedList() {
-        first =null;
+        first = null;
         last = null;
-        size=0;
+        size = 0;
     }
 
     public void insertFirst(int value) {
         Node newLink = new Node(value);
-        if(isEmpty()) {
+        if (isEmpty()) {
             last = newLink;
         } else {
             newLink.next = first;
@@ -28,14 +28,14 @@ public class MergeSortedLinkedList {
     }
 
     public void insertLast(int value) {
-        Node  newLink = new Node(value);
-        if(isEmpty()) {
+        Node newLink = new Node(value);
+        if (isEmpty()) {
             first = newLink;
         } else {
             last.next = newLink;
         }
         last = newLink;
-        size ++;
+        size++;
 
     }
 
@@ -43,8 +43,9 @@ public class MergeSortedLinkedList {
         return first == null;
     }
 
-    public int deleteFirst() throws Exception {
-        if(isEmpty()){
+    public int deleteFirst()
+            throws Exception {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
             Node temp = first;
@@ -74,7 +75,7 @@ public class MergeSortedLinkedList {
 
         Node current = first;
         Node prev = first;
-        if(isEmpty()) {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
             while (current.data != value) {
@@ -96,7 +97,7 @@ public class MergeSortedLinkedList {
 
     public int getFirst() {
         Node temp = first;
-        if(temp == null){
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp.data;
@@ -105,7 +106,7 @@ public class MergeSortedLinkedList {
 
     public int getLast() {
         Node temp = last;
-        if(temp == null) {
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp.data;
@@ -118,7 +119,7 @@ public class MergeSortedLinkedList {
 
     public Node getFirstNode() {
         Node temp = first;
-        if(temp == null ){
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp;
@@ -137,24 +138,23 @@ public class MergeSortedLinkedList {
         return size;
     }
 
-
     public void mergeSortedList(Node node1, Node node2) {
         Node dummy = new Node(0);
 
         Node tail = dummy;
 
-        while(true) {
-            if(node1 == null) {
+        while (true) {
+            if (node1 == null) {
                 tail.next = node2;
                 break;
             }
 
-            if(node2 == null) {
+            if (node2 == null) {
                 tail.next = node1;
                 break;
             }
 
-            if(node1.data <= node2.data) {
+            if (node1.data <= node2.data) {
                 tail.next = node1;
                 node1 = node1.next;
             } else {
