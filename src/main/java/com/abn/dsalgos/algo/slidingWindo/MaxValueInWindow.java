@@ -28,10 +28,15 @@ public class MaxValueInWindow {
             if (len == k) {
                 array[start] = max;
                 start++;
-                max = Integer.MIN_VALUE;
+                max = arr[start];
             }
         }
         return array;
 
+    }
+
+    public static void main(String[] args) {
+        MaxValueInWindow maxValueInWindow = new MaxValueInWindow();
+        maxValueInWindow.maxSlidingWindow(new int[] {1, 6, 5, 4, 2, 7, 9}, 3);
     }
 }
