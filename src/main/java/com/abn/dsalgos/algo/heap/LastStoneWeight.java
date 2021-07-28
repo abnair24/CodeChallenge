@@ -1,5 +1,7 @@
-package com.abn.dsalgos.leetcode30Day.toDo;
+package com.abn.dsalgos.algo.heap;
 
+
+import java.util.PriorityQueue;
 
 /*
 We have a collection of stones, each stone has a positive integer weight.
@@ -20,4 +22,27 @@ we combine 2 and 1 to get 1 so the array converts to [1,1,1] then,
 we combine 1 and 1 to get 0 so the array converts to [1] then that's the value of last stone.
  */
 public class LastStoneWeight {
+
+    public int lastStoneWeight(int[] stones) {
+
+        if (stones.length == 1) {
+            return stones[0];
+        }
+
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>((n1, n2) -> n2 - n1);
+
+        for (int i = 0; i < stones.length; i++) {
+            maxHeap.add(stones[i]);
+        }
+        int total = 0;
+        while (maxHeap.size() > 1) {
+            int stone1 = maxHeap.remove();
+            int stone2 = maxHeap.remove();
+
+            total = Math.abs(stone1 - stone2);
+            maxHeap.add(total);
+        }
+
+        return total;
+    }
 }

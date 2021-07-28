@@ -1,4 +1,4 @@
-package com.abn.dsalgos.challenges.heap;
+package com.abn.dsalgos.algo.heap;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
