@@ -38,6 +38,6 @@ public class SubArraySumPrefix {
 
     public static void main(String[] args) {
         SubArraySumPrefix subArraySumPrefix = new SubArraySumPrefix();
-        subArraySumPrefix.subarray(new int[] {1, 3, -3, 8, 5, 7}, 5);
+        subArraySumPrefix.subarray(new int[] {1 ,-20, -3, 30, 5, 4}, 7);
     }
 }

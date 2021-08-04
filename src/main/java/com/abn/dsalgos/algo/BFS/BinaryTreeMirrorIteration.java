@@ -41,7 +41,7 @@ public class BinaryTreeMirrorIteration {
                 return false;
             }
 
-            if(leftNode.data.equals(rightNode.data)) {
+            if(!leftNode.data.equals(rightNode.data)) {
                 return false;
             }
 

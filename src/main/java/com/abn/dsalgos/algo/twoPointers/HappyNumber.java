@@ -31,6 +31,7 @@ package com.abn.dsalgos.algo.twoPointers;
   9 + 49 = 58
   25 + 64 = 89
 
+  https://leetcode.com/problems/happy-number/
 
     */
 public class HappyNumber {

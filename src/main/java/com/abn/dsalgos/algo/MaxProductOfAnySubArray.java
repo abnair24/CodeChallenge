@@ -14,27 +14,26 @@ a: [-4, -2, 10, 20, -3] : -4 * 10 * 20* -3 = 2400
  */
 public class MaxProductOfAnySubArray {
 
-
     public long maximumSubsetProduct(long[] nums) {
 
-        long neg_count=0;
+        long neg_count = 0;
         long min_neg = Integer.MIN_VALUE;
         long prod = 1;
 
-        if(nums.length == 1) {
+        if (nums.length == 1) {
             return nums[0];
         }
 
-        for(int i =0; i<nums.length;i++){
-            if(nums[i]<0){
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] < 0) {
                 neg_count++;
-                min_neg = Math.max(min_neg,nums[i]);
+                min_neg = Math.max(min_neg, nums[i]);
             }
             prod = prod * nums[i];
         }
 
-        if(neg_count %2 ==1) {
-            prod = prod /min_neg;
+        if (neg_count % 2 == 1) {
+            prod = prod / min_neg;
         }
         return prod;
     }

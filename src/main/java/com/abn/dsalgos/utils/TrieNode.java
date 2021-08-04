@@ -6,7 +6,7 @@ import java.util.Map;
 public class TrieNode {
 
     public boolean isWord;
-    public Map<Character, TrieNode> childNodes = new HashMap<>();
+    public Map<Character, TrieNode> children = new HashMap<>();
 
     public TrieNode() {}
 
