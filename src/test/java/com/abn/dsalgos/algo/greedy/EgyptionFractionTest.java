@@ -22,9 +22,23 @@ public class EgyptionFractionTest {
         return list.iterator();
     }
 
-    @Test (dataProvider = "dp")
-    public void test(int n, int d, String[] result) {
-        EgyptionFraction egyptionFraction = new EgyptionFraction();
-        Assert.assertEquals(egyptionFraction.getUnitFraction(n, d), result);
+//    @Test (dataProvider = "dp")
+//    public void test(int n, int d, String[] result) {
+//        EgyptionFraction egyptionFraction = new EgyptionFraction();
+//        Assert.assertEquals(egyptionFraction.getUnitFraction(n, d), result);
+//    }
+
+    @Test
+    public void test2() {
+        String isPass = "";
+        try {
+            String a = "cat";
+            String b = "rat";
+            Assert.assertTrue(a.equals(b),"message");
+            isPass="PASS";
+        }catch(Exception e) {
+            isPass = "FAIL";
+        }
+        System.out.println(isPass);
     }
 }
