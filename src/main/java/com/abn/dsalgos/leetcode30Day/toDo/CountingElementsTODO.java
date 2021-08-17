@@ -24,32 +24,38 @@ package com.abn.dsalgos.leetcode30Day.toDo;
     */
 
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class CountingElementsTODO {
 
-    public static void main(String[] args) {
-        CountingElementsTODO countingElements = new CountingElementsTODO();
-        countingElements.countElements(new int[] {1,3,2,3,5,0});
-    }
-
-    public int countElements(int[] arr) {
-        Map<Integer,Integer> count = new HashMap<>();
-        int elementCount = 0;
-
-        for(int i=0; i<arr.length; i++) {
-            if(!count.containsKey(arr[i])) {
-                count.put(arr[i] , arr[i] + 1);
-            }
-        }
-
-        for(int i = 0; i < arr.length; i++) {
-            if(count.containsValue(arr[i])) {
-                elementCount ++;
-            }
-        }
-        System.out.println(elementCount);
-        return elementCount;
-    }
+//    public static void main(String[] args) {
+//        CountingElementsTODO countingElements = new CountingElementsTODO();
+//        countingElements.countElements(new int[] {1,3,2,3,5,0});
+//    }
+//
+//    public int countElements(int[] arr) {
+//        Map<Integer, List<Integer>> count = new HashMap<>();
+//        int elementCount = 0;
+//
+//        for(int i=0; i<arr.length; i++) {
+//            if(!count.containsKey(arr[i])) {
+//                List<Integer> ll = new ArrayList<>();
+//                ll.add(arr[i] + 1);
+//                count.put(arr[i], ll);
+//            } else {
+//                count.get(arr[i]).add(arr[i] + 1);
+//            }
+//        }
+//
+//        for(int i = 0; i < arr.length; i++) {
+//            if(count.(arr[i])) {
+//                elementCount ++;
+//            }
+//        }
+//        System.out.println(elementCount);
+//        return elementCount;
+//    }
 }
