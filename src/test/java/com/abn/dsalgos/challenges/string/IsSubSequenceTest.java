@@ -14,7 +14,7 @@ public class IsSubSequenceTest {
     @Test
     public void test2() throws Exception {
         IsSubSequence isSubSequence = new IsSubSequence();
-        Assert.assertFalse(isSubSequence.isSubSequence("AZ","AXQ"));
+        Assert.assertFalse(isSubSequence.isSubSequence("AXC","AHBGDC"));
     }
 
     @Test
