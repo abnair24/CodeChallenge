@@ -31,10 +31,12 @@ public class BinaryTreeIsBalanced {
             while (nodeCount > 0) {
                 MyTreeNode<Integer> temp = queue.poll();
 
-                if (temp.left != null)
+                if (temp.left != null) {
                     queue.add(temp.left);
-                if (temp.right != null)
+                }
+                if (temp.right != null) {
                     queue.add(temp.right);
+                }
 
                 /*
                 Height diff of left and right subtree at every node needs to be checked and diff <=1
@@ -42,10 +44,12 @@ public class BinaryTreeIsBalanced {
                 Test case: 4,5,6
                  */
                 if (temp.left == null || temp.right == null) {
-                    if (minHeight > height)
+                    if (minHeight > height) {
                         minHeight = height;
-                    if (maxHeight < height)
+                    }
+                    if (maxHeight < height) {
                         maxHeight = height;
+                    }
                 }
 
                 nodeCount--;

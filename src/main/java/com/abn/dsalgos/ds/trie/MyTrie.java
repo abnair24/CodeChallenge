@@ -13,10 +13,10 @@ public class MyTrie {
     public void insert(String word) {
         TrieNode current = root;
 
-        for(int i = 0; i < word.length(); i++) {
+        for (int i = 0; i < word.length(); i++) {
 
             char c = word.charAt(i);
-            if(!current.children.containsKey(c)) {
+            if (!current.children.containsKey(c)) {
                 current.children.put(c, new TrieNode());
             }
 
@@ -28,10 +28,10 @@ public class MyTrie {
     public boolean search(String word) {
 
         TrieNode current = root;
-        for(int i = 0; i < word.length(); i++) {
+        for (int i = 0; i < word.length(); i++) {
             char c = word.charAt(i);
 
-            if(current.children.get(c) == null) {
+            if (current.children.get(c) == null) {
                 return false;
             }
             current = current.children.get(c);
@@ -42,14 +42,14 @@ public class MyTrie {
     public boolean startsWith(String prefix) {
 
         TrieNode current = root;
-        for(int i = 0; i < prefix.length(); i++) {
+        for (int i = 0; i < prefix.length(); i++) {
             char c = prefix.charAt(i);
 
-            if(current.children.get(c) == null) {
+            if (current.children.get(c) == null) {
                 return false;
             }
             current = current.children.get(c);
         }
-       return true;
+        return true;
     }
 }

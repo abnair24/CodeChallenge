@@ -2,6 +2,7 @@ package com.abn.dsalgos.ds.linkedList;
 
 import com.abn.dsalgos.exceptions.EmptyLinkedListException;
 import com.abn.dsalgos.utils.DoubleLinkNode;
+
 import java.util.NoSuchElementException;
 
 public class MyDoublyLinkedList<T> {
@@ -22,7 +23,7 @@ public class MyDoublyLinkedList<T> {
 
     public void insertFirst(T value) {
         DoubleLinkNode<T> newLink = new DoubleLinkNode<>(value);
-        if(isEmpty()) {
+        if (isEmpty()) {
             last = newLink;
         } else {
             first.previous = newLink;
@@ -32,9 +33,9 @@ public class MyDoublyLinkedList<T> {
         size++;
     }
 
-    public void insertLast(T value){
+    public void insertLast(T value) {
         DoubleLinkNode<T> newLink = new DoubleLinkNode<>(value);
-        if(isEmpty()) {
+        if (isEmpty()) {
             first = newLink;
         } else {
             last.next = newLink;
@@ -45,17 +46,17 @@ public class MyDoublyLinkedList<T> {
         size++;
     }
 
-    public void insertAfter(T value,T data) {
+    public void insertAfter(T value, T data) {
         DoubleLinkNode<T> current = first;
         DoubleLinkNode<T> newLink = new DoubleLinkNode<>(data);
-        while(current.data != value) {
+        while (current.data != value) {
             current = current.next;
-            if(current == null) {
+            if (current == null) {
                 throw new NoSuchElementException();
             }
         }
 
-        if(current == last) {
+        if (current == last) {
             newLink.next = null;
             last = newLink;
         } else {
@@ -69,12 +70,13 @@ public class MyDoublyLinkedList<T> {
 
     }
 
-    public T deleteFirst() throws Exception{
-        if(isEmpty()) {
+    public T deleteFirst()
+            throws Exception {
+        if (isEmpty()) {
             throw new EmptyLinkedListException();
         } else {
             DoubleLinkNode<T> temp = first;
-            if(first.next == null) {
+            if (first.next == null) {
                 last = null;
             } else {
                 first.next.previous = null;
@@ -85,12 +87,13 @@ public class MyDoublyLinkedList<T> {
         }
     }
 
-    public T deleteLast() throws Exception {
-        if(isEmpty()) {
+    public T deleteLast()
+            throws Exception {
+        if (isEmpty()) {
             throw new EmptyLinkedListException();
         } else {
             DoubleLinkNode<T> temp = last;
-            if(first.next == null) {
+            if (first.next == null) {
                 first = null;
             } else {
                 last.previous.next = null;
@@ -104,7 +107,7 @@ public class MyDoublyLinkedList<T> {
     public T delete(T value) {
         DoubleLinkNode<T> current = first;
 
-        if(isEmpty()) {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
             while (current.data != value) {
@@ -118,7 +121,7 @@ public class MyDoublyLinkedList<T> {
             } else {
                 current.previous.next = current.next;
             }
-            if(current == last) {
+            if (current == last) {
                 last = current.previous;
             } else {
                 current.next.previous = current.previous;
@@ -134,7 +137,7 @@ public class MyDoublyLinkedList<T> {
 
     public T peek() {
         DoubleLinkNode<T> temp = first;
-        if(temp == null){
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return first.data;

@@ -15,14 +15,14 @@ public class CyclicSort {
         int i = 0;
         int len = array.length;
 
-        while(i < len) {
+        while (i < len) {
 
-            if(array[i] - 1 != i) {
-               int temp = array[i];
-               array[i] = array[temp - 1];
-               array[temp - 1] = temp;
+            if (array[i] - 1 != i) {
+                int temp = array[i];
+                array[i] = array[temp - 1];
+                array[temp - 1] = temp;
             } else {
-                i ++;
+                i++;
             }
         }
         return array;

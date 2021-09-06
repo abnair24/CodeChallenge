@@ -15,36 +15,36 @@ public class BinaryTreeZigZagTraverse {
         int height = 0;
         int nodeCount;
 
-        if(root == null) {
+        if (root == null) {
             return;
         }
 
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             height++;
             nodeCount = queue.size();
             List<Integer> tempList = new LinkedList<>();
 
-            while(nodeCount > 0) {
+            while (nodeCount > 0) {
 
                 TreeNode temp = queue.remove();
 
-                if(height % 2 == 0) {
+                if (height % 2 == 0) {
                     tempList.add(0, temp.val);
                 } else {
                     tempList.add(temp.val);
                 }
 
-                if(temp.left != null) {
+                if (temp.left != null) {
                     queue.add(temp.left);
                 }
 
-                if(temp.right != null) {
+                if (temp.right != null) {
                     queue.add(temp.right);
                 }
-                nodeCount --;
+                nodeCount--;
             }
 
             list.add(tempList);

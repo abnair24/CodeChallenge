@@ -14,16 +14,16 @@ public class FrequencyInSortedArray {
         int result = -1;
 
         // Loop to find first occurance
-        while(start <= end) {
+        while (start <= end) {
 
             mid = (start + end) / 2;
-            if(array[mid] == key) {
+            if (array[mid] == key) {
 
                 result = mid;
                 end = mid - 1;
-            } else if(key > array[mid]) {
+            } else if (key > array[mid]) {
                 start = mid + 1;
-            } else if(key < array[mid]) {
+            } else if (key < array[mid]) {
                 end = mid - 1;
             }
         }
@@ -34,20 +34,20 @@ public class FrequencyInSortedArray {
         int mid1;
 
         // loop to find last occurance. then diff the indexes
-        while(start1 <= end1) {
+        while (start1 <= end1) {
 
             mid1 = (start1 + end1) / 2;
-            if(array[mid1] == key ) {
+            if (array[mid1] == key) {
                 result1 = mid1;
                 start1 = mid1 + 1;
-            } else if(key > array[mid1]) {
+            } else if (key > array[mid1]) {
                 start1 = mid1 + 1;
-            } else if(key < array[mid1]) {
+            } else if (key < array[mid1]) {
                 end1 = mid1 - 1;
             }
         }
 
-        if(result == -1 || result1 == -1) {
+        if (result == -1 || result1 == -1) {
             return result1 - result;
         }
 

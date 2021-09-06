@@ -16,15 +16,15 @@ public class LinkedListMergeSortedRecursion {
 
     private LinkNode<Integer> mergeSorted(LinkNode head1, LinkNode head2) {
 
-        if(head1 == null) {
+        if (head1 == null) {
             return head2;
         }
 
-        if(head2 == null) {
+        if (head2 == null) {
             return head1;
         }
 
-        if((int) head1.data < (int) head2.data) {
+        if ((int) head1.data < (int) head2.data) {
             head1.next = mergeSorted(head1.next, head2);
             return head1;
         } else {
@@ -33,12 +33,12 @@ public class LinkedListMergeSortedRecursion {
         }
     }
 
-    public MyLinkedList<Integer> merge(LinkNode<Integer> l1, LinkNode<Integer>l2) {
+    public MyLinkedList<Integer> merge(LinkNode<Integer> l1, LinkNode<Integer> l2) {
 
         LinkNode<Integer> mergeHead = mergeSorted(l1, l2);
         MyLinkedList<Integer> merge = new MyLinkedList<>();
 
-        while(mergeHead != null) {
+        while (mergeHead != null) {
             merge.insertLast(mergeHead.data);
             mergeHead = mergeHead.next;
         }

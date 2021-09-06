@@ -11,8 +11,8 @@ public class MergeKsortedLinkedList {
         PriorityQueue<ListNode> minHeap = new PriorityQueue<>((a1, a2) -> a1.val - a2.val);
 
         //Add first node of each list into min heap.
-        for(ListNode node: listNodes) {
-            if(node != null) {
+        for (ListNode node : listNodes) {
+            if (node != null) {
                 minHeap.add(node);
             }
         }
@@ -24,14 +24,14 @@ public class MergeKsortedLinkedList {
 
             ListNode temp = minHeap.poll();
 
-            if(head == null) {
+            if (head == null) {
                 head = tail = temp;
             } else {
                 tail.next = temp;
                 tail = tail.next;
             }
 
-            if(temp.next != null) {
+            if (temp.next != null) {
                 minHeap.add(temp.next);
             }
         }
@@ -52,12 +52,12 @@ public class MergeKsortedLinkedList {
         ListNode root3 = new ListNode(3);
         root3.next = new ListNode(4);
 
-        ListNode[] lists = new ListNode[]{root1, root2, root3};
+        ListNode[] lists = new ListNode[] {root1, root2, root3};
 
         MergeKsortedLinkedList mergeKsortedLinkedList = new MergeKsortedLinkedList();
         ListNode result = mergeKsortedLinkedList.merge(lists);
 
-        while(result != null) {
+        while (result != null) {
             System.out.print(result.val + " ");
             result = result.next;
         }

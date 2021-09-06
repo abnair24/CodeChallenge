@@ -1,6 +1,7 @@
 package com.abn.dsalgos.challenges.linkedList;
 
 import com.abn.dsalgos.utils.LinkNode;
+
 import java.util.NoSuchElementException;
 import java.util.Stack;
 
@@ -10,13 +11,13 @@ public class ReverseLinkedListFromMtoN<T> {
     private LinkNode<T> last;
 
     public ReverseLinkedListFromMtoN() {
-        first =null;
+        first = null;
         last = null;
     }
 
     public void insertFirst(T value) {
         LinkNode<T> newLink = new LinkNode<>(value);
-        if(isEmpty()) {
+        if (isEmpty()) {
             last = newLink;
         } else {
             newLink.next = first;
@@ -25,8 +26,8 @@ public class ReverseLinkedListFromMtoN<T> {
     }
 
     public void insertLast(T value) {
-        LinkNode <T> newLink = new LinkNode<>(value);
-        if(isEmpty()) {
+        LinkNode<T> newLink = new LinkNode<>(value);
+        if (isEmpty()) {
             first = newLink;
         } else {
             last.next = newLink;
@@ -38,8 +39,9 @@ public class ReverseLinkedListFromMtoN<T> {
         return first == null;
     }
 
-    public T deleteFirst() throws Exception {
-        if(isEmpty()){
+    public T deleteFirst()
+            throws Exception {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
             LinkNode<T> temp = first;
@@ -50,7 +52,7 @@ public class ReverseLinkedListFromMtoN<T> {
 
     public LinkNode<T> getFirstNode() {
         LinkNode<T> temp = first;
-        if(temp == null){
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp;
@@ -64,41 +66,41 @@ public class ReverseLinkedListFromMtoN<T> {
         LinkNode<T> head = node;
 
         int size = 1;
-        Stack<LinkNode>stack = new Stack<>();
+        Stack<LinkNode> stack = new Stack<>();
 
         /*
         If m == n or m>n return head node;
          */
-        if(m>=n) {
+        if (m >= n) {
             return node;
         }
 
-        if(current == null) {
+        if (current == null) {
             return null;
         }
 
         /*
         Find the previous before the m position
          */
-        while(current != null) {
+        while (current != null) {
 
-            if(size == (m-1)){
+            if (size == (m - 1)) {
                 previous = current;
             }
-            if(size == m){
-                for(int i = 0; i<= (n-m);i++) {
+            if (size == m) {
+                for (int i = 0; i <= (n - m); i++) {
                     stack.push(current);
-                    current =  current.next;
+                    current = current.next;
                     size++;
                 }
                 /*
                 If m = 1,previous will be null , then head need to be set as stack peek.
                  */
-                if(previous == null) {
+                if (previous == null) {
                     previous = node;
                     head = stack.peek();
                 }
-                while(!stack.empty()) {
+                while (!stack.empty()) {
                     temp = stack.pop();
                     previous.next = temp;
                     previous = previous.next;
@@ -106,7 +108,7 @@ public class ReverseLinkedListFromMtoN<T> {
 
                 previous.next = current;
             }
-            if(current != null) {
+            if (current != null) {
                 current = current.next;
             }
             size++;

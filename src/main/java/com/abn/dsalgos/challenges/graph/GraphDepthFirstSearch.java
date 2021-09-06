@@ -2,13 +2,17 @@ package com.abn.dsalgos.challenges.graph;
 
 import com.abn.dsalgos.utils.GraphNode;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Stack;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class GraphDepthFirstSearch<T> {
 
-    private Map<GraphNode<T>, List<GraphNode<T>>> vertexMap;
     private final HashSet<GraphNode<T>> vertices;
+    private Map<GraphNode<T>, List<GraphNode<T>>> vertexMap;
 
     public GraphDepthFirstSearch() {
         vertexMap = new ConcurrentHashMap<>();
@@ -19,14 +23,12 @@ public class GraphDepthFirstSearch<T> {
 
         List<GraphNode<T>> adjVertices = vertexMap.get(source);
 
-        if(adjVertices == null || adjVertices.isEmpty()) {
+        if (adjVertices == null || adjVertices.isEmpty()) {
             adjVertices = new ArrayList<>();
-            adjVertices.add(destination);
-        } else {
-            adjVertices.add(destination);
         }
+        adjVertices.add(destination);
 
-        vertexMap.put(source,adjVertices);
+        vertexMap.put(source, adjVertices);
         vertices.add(source);
         vertices.add(destination);
     }
@@ -44,7 +46,7 @@ public class GraphDepthFirstSearch<T> {
 
     public void DFS(GraphNode<T> startNode) {
 
-        if(startNode == null) {
+        if (startNode == null) {
             return;
         }
 
@@ -52,13 +54,13 @@ public class GraphDepthFirstSearch<T> {
         stack.push(startNode);
         startNode.visited = true;
 
-        while(!stack.isEmpty()){
+        while (!stack.isEmpty()) {
             GraphNode<T> temp = stack.pop();
             System.out.println(temp.data);
 
             List<GraphNode<T>> adjVertexList = vertexMap.get(temp);
-            for(GraphNode<T> v : adjVertexList) {
-                if(!v.visited) {
+            for (GraphNode<T> v : adjVertexList) {
+                if (!v.visited) {
                     stack.push(v);
                     v.visited = true;
                 }

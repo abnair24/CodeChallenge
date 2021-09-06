@@ -27,13 +27,13 @@ public class KthInGrammarRecursion {
 
     public int getKthSymbol(int n, int k) {
 
-        if(n == 1) {
+        if (n == 1) {
             return 0;
         }
 
-        int mid = (int) Math.pow(2,(n-1))/2;
+        int mid = (int) Math.pow(2, (n - 1)) / 2;
 
-        if(k <= mid) {
+        if (k <= mid) {
             return getKthSymbol(n - 1, k);
         }
         return 1 - getKthSymbol(n - 1, k - mid);

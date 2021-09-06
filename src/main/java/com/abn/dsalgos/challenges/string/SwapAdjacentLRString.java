@@ -47,7 +47,7 @@ public class SwapAdjacentLRString {
             char sChar = start.charAt(startPtr);
             char eChar = end.charAt(endPtr);
 
-            if(sChar != eChar) {
+            if (sChar != eChar) {
                 return false;
             }
 
@@ -66,8 +66,8 @@ public class SwapAdjacentLRString {
     }
 
     private int getPos(String str, int i) {
-        while(i < str.length()) {
-            if(str.charAt(i) != 'X') {
+        while (i < str.length()) {
+            if (str.charAt(i) != 'X') {
                 return i;
             }
             i++;

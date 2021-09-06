@@ -21,19 +21,19 @@ public class UnboundedKnapsack {
         return unboundedHelper(weights, profit, cache, totalCapacity, 0);
     }
 
-    private int unboundedHelper(int[] weights, int[] profit, Integer[][]cache, int totalCapacity, int index) {
+    private int unboundedHelper(int[] weights, int[] profit, Integer[][] cache, int totalCapacity, int index) {
 
         System.out.println(index + ": " + totalCapacity);
-        if(totalCapacity <= 0 || profit.length != weights.length ||index >= profit.length) {
+        if (totalCapacity <= 0 || profit.length != weights.length || index >= profit.length) {
             return 0;
         }
 
         int p1 = 0;
 
-        if(cache[index][totalCapacity] != null) {
+        if (cache[index][totalCapacity] != null) {
             return cache[index][totalCapacity];
         }
-        if(weights[index] <= totalCapacity) {
+        if (weights[index] <= totalCapacity) {
             p1 = profit[index] + unboundedHelper(weights, profit, cache, totalCapacity - weights[index], index);
         }
 
@@ -41,11 +41,11 @@ public class UnboundedKnapsack {
 
         cache[index][totalCapacity] = Math.max(p1, p2);
 
-        return  cache[index][totalCapacity];
+        return cache[index][totalCapacity];
     }
 
     public static void main(String[] args) {
         UnboundedKnapsack unboundedKnapsack = new UnboundedKnapsack();
-        System.out.println(unboundedKnapsack.unbounded(new int[] {1,2,3}, new int[] {15, 20, 50}, 5));
+        System.out.println(unboundedKnapsack.unbounded(new int[] {1, 2, 3}, new int[] {15, 20, 50}, 5));
     }
 }

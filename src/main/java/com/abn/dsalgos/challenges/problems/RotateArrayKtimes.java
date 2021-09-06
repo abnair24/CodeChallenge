@@ -43,23 +43,23 @@ public class RotateArrayKtimes {
 
     public int[] rotateArray(int[] array, int shift, boolean shiftSide) {
         int len = array.length;
-        if(len == 0 || len == 1) {
+        if (len == 0 || len == 1) {
             return array;
         }
 
         int x = shift % len;
-        if(x == 0) {
+        if (x == 0) {
             return array;
         }
 
         reverse(array, 0, len - 1);
 
-        if(shiftSide) {
+        if (shiftSide) {
             reverse(array, 0, len - x - 1);
             reverse(array, len - x, len - 1);
         } else {
-            reverse(array, 0, x-1);
-            reverse(array, x, len-1);
+            reverse(array, 0, x - 1);
+            reverse(array, x, len - 1);
         }
 
         return array;
@@ -67,12 +67,12 @@ public class RotateArrayKtimes {
 
     private void reverse(int[] array, int start, int end) {
 
-        while(start <= end) {
+        while (start <= end) {
             int temp = array[start];
             array[start] = array[end];
             array[end] = temp;
-            start ++;
-            end --;
+            start++;
+            end--;
         }
     }
 }

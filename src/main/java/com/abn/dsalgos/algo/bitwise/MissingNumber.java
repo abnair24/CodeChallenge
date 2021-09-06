@@ -16,13 +16,13 @@ public class MissingNumber {
         int x1 = 1;
 
         // XOR all the numbers from 1 to n
-        for(int i = 2; i < array.length; i++) {
+        for (int i = 2; i < array.length; i++) {
             x1 = x1 ^ i;
         }
 
         int x2 = array[0];
         //XOR all the numbers in the input array
-        for(int i = 1; i < array.length; i++) {
+        for (int i = 1; i < array.length; i++) {
             x2 = x2 ^ array[i];
         }
 

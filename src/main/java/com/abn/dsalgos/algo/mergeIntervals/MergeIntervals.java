@@ -17,12 +17,12 @@ Intervals: [[6,7], [2,4], [5,9]]
 Output: [[2,4], [5,9]]
  */
 
-//TO-DO: tests
+//TODO: tests
 public class MergeIntervals {
 
     public List<Interval> merge(List<Interval> intervals) {
 
-        if(intervals.size() < 2) {
+        if (intervals.size() < 2) {
             return intervals;
         }
 
@@ -35,10 +35,10 @@ public class MergeIntervals {
         int start = inter.start;
         int end = inter.end;
 
-        while(iterator.hasNext()) {
+        while (iterator.hasNext()) {
             inter = iterator.next();
 
-            if(inter.start <= end) {
+            if (inter.start <= end) {
                 end = Math.max(inter.end, end);
             } else {
                 merged.add(new Interval(start, end));

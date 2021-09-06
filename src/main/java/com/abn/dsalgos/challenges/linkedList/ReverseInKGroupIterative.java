@@ -11,14 +11,14 @@ public class ReverseInKGroupIterative<T> {
     private int size;
 
     public ReverseInKGroupIterative() {
-        first =null;
+        first = null;
         last = null;
-        size=0;
+        size = 0;
     }
 
     public void insertFirst(T value) {
         LinkNode<T> newLink = new LinkNode<>(value);
-        if(isEmpty()) {
+        if (isEmpty()) {
             last = newLink;
         } else {
             newLink.next = first;
@@ -28,14 +28,14 @@ public class ReverseInKGroupIterative<T> {
     }
 
     public void insertLast(T value) {
-        LinkNode <T> newLink = new LinkNode<>(value);
-        if(isEmpty()) {
+        LinkNode<T> newLink = new LinkNode<>(value);
+        if (isEmpty()) {
             first = newLink;
         } else {
             last.next = newLink;
         }
         last = newLink;
-        size ++;
+        size++;
 
     }
 
@@ -43,8 +43,9 @@ public class ReverseInKGroupIterative<T> {
         return first == null;
     }
 
-    public T deleteFirst() throws Exception {
-        if(isEmpty()){
+    public T deleteFirst()
+            throws Exception {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
             LinkNode<T> temp = first;
@@ -74,7 +75,7 @@ public class ReverseInKGroupIterative<T> {
 
         LinkNode<T> current = first;
         LinkNode<T> prev = first;
-        if(isEmpty()) {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
             while (current.data != value) {
@@ -96,7 +97,7 @@ public class ReverseInKGroupIterative<T> {
 
     public T getFirst() {
         LinkNode<T> temp = first;
-        if(temp == null){
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp.data;
@@ -105,7 +106,7 @@ public class ReverseInKGroupIterative<T> {
 
     public T getLast() {
         LinkNode<T> temp = last;
-        if(temp == null) {
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp.data;
@@ -118,7 +119,7 @@ public class ReverseInKGroupIterative<T> {
 
     public LinkNode getFirstNode() {
         LinkNode<T> temp = first;
-        if(temp == null ){
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp;
@@ -149,27 +150,27 @@ public class ReverseInKGroupIterative<T> {
     */
 
 
-    public void reverseInBlocks(LinkNode<T> node ,int k) {
+    public void reverseInBlocks(LinkNode<T> node, int k) {
 
         LinkNode<T> current = node;
         LinkNode<T> prevNode = null;
         LinkNode<T> nextNode;
         LinkNode<T> tailNode;
-        LinkNode <T> tempTail = null;
+        LinkNode<T> tempTail = null;
 
         int blockSize = k;
 
-        int size =0;
+        int size = 0;
         int t = 0;
-        int i =0;
+        int i = 0;
 
 
-        while(node != null) {
-            size ++;
+        while (node != null) {
+            size++;
             node = node.next;
         }
 
-        while (i++ < size/k) {
+        while (i++ < size / k) {
             tailNode = current;
             while (blockSize-- > 0) {
                 nextNode = current.next;
@@ -181,14 +182,14 @@ public class ReverseInKGroupIterative<T> {
 
             blockSize = k;
 
-            if(t == k) {
+            if (t == k) {
                 first = prevNode;
                 tempTail = tailNode;
             }
 
             tempTail.next = prevNode;
 
-            if(t== size) {
+            if (t == size) {
                 tailNode.next = null;
             } else {
                 tempTail = tailNode;

@@ -9,25 +9,24 @@ public class MoveZeroesToEndSwap {
     Output: [3,12,1,0,0]
      */
 
-     public int[] pushZeroesToEnd(int[] arr) {
+    public int[] pushZeroesToEnd(int[] arr) {
 
-         int start = 0;
-         int end = arr.length-1;
+        int start = 0;
+        int end = arr.length - 1;
 
-         while(start < end)
-         {
-             if(arr[start] != 0) {
-                 ++start;
-             } else if(arr[end]==0) {
-                 --end;
-             } else if(arr[start] == 0 && arr[end]!=0) {
-                 int temp = arr[end];
-                 arr[end]=arr[start];
-                 arr[start]=temp;
-                 ++start;
-                 --end;
-             }
-         }
+        while (start < end) {
+            if (arr[start] != 0) {
+                ++start;
+            } else if (arr[end] == 0) {
+                --end;
+            } else if (arr[start] == 0 && arr[end] != 0) {
+                int temp = arr[end];
+                arr[end] = arr[start];
+                arr[start] = temp;
+                ++start;
+                --end;
+            }
+        }
         return arr;
-     }
+    }
 }

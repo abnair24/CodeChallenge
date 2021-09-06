@@ -45,4 +45,6 @@ public class MinimumStepsCoinCollect {
         int[] array = {3, 1, 1, 5, 1};
         System.out.println(minimumStepsCoinCollect.minimumSteps(array, array.length));
     }
+
+
 }

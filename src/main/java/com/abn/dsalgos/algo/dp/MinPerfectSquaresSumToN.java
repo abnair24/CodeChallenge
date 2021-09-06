@@ -52,7 +52,7 @@ public class MinPerfectSquaresSumToN {
             return Integer.MAX_VALUE;
         }
 
-        if(cache[index][target] != null) {
+        if (cache[index][target] != null) {
             return cache[index][target];
         }
 
@@ -67,7 +67,7 @@ public class MinPerfectSquaresSumToN {
             }
         }
 
-        int count1 = minimum(array, cache,index + 1, target);
+        int count1 = minimum(array, cache, index + 1, target);
         cache[index][target] = Math.min(count1, count);
 
         return cache[index][target];

@@ -15,15 +15,16 @@ You can return the answer in any order.
  */
 public class SumOfLiskisK {
 
-    public List<Integer> sumOfListIsK(int[] array,int k) throws Exception {
+    public List<Integer> sumOfListIsK(int[] array, int k)
+            throws Exception {
         int length = array.length;
 
         HashSet<Integer> hm = new HashSet<>();
         List<Integer> list = new ArrayList<>();
 
-        for(int i=0;i<length;i++) {
-            if(hm.contains(k-array[i])) {
-                System.out.println(array[i] + ":" + (k-array[i]));
+        for (int i = 0; i < length; i++) {
+            if (hm.contains(k - array[i])) {
+                System.out.println(array[i] + ":" + (k - array[i]));
             } else {
                 hm.add(array[i]);
             }

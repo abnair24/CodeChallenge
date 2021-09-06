@@ -9,16 +9,16 @@ public class ReplaceWordsUsingMap {
 
         Map<String, Integer> map = new HashMap<>();
 
-        for(String str : array) {
+        for (String str : array) {
             map.put(str, str.length());
         }
 
         String[] split = s.split("\\s+");
         StringBuilder sb = new StringBuilder();
-        for(String s1: split) {
+        for (String s1 : split) {
             for (String key : map.keySet()) {
 
-                if(s1.startsWith(key)) {
+                if (s1.startsWith(key)) {
                     s1 = key;
                 }
             }
@@ -30,6 +30,6 @@ public class ReplaceWordsUsingMap {
 
     public static void main(String[] args) {
         ReplaceWordsUsingMap rep = new ReplaceWordsUsingMap();
-        System.out.println(rep.replace("it is abnormal that this solution is accepted", new String[]{"ac","ab"}));
+        System.out.println(rep.replace("it is abnormal that this solution is accepted", new String[] {"ac", "ab"}));
     }
 }

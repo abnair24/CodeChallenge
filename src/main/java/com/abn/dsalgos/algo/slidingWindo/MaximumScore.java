@@ -53,4 +53,5 @@ public class MaximumScore {
         MaximumScore maximumScore = new MaximumScore();
         Assert.assertEquals(maximumScore.maxScore(new int[] {1, 79, 80, 1, 1, 1, 200, 1}, 3), 202);
     }
+
 }

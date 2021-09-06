@@ -15,6 +15,6 @@ So, return 1
 public class FactorialTrailingZeros {
 
     public int trailingZeros(int input) {
-        return (input == 0) ? 0 : (input/5) + trailingZeros(input/5);
+        return (input == 0) ? 0 : (input / 5) + trailingZeros(input / 5);
     }
 }

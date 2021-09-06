@@ -63,8 +63,8 @@ public class WordSearchII {
     }
 
     public static void main(String[] args) {
-        char[][] board = {{'o','a','a','n'},{'e','t','a','e'},{'i','h','k','r'},{'i','f','l','v'}};
-        String[] input = {"oath","pea","eat","rain"};
+        char[][] board = {{'o', 'a', 'a', 'n'}, {'e', 't', 'a', 'e'}, {'i', 'h', 'k', 'r'}, {'i', 'f', 'l', 'v'}};
+        String[] input = {"oath", "pea", "eat", "rain"};
 
         WordSearchII wordSearchII = new WordSearchII();
         wordSearchII.findWords(board, input);

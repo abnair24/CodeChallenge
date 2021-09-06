@@ -20,8 +20,8 @@ public class BinaryHeap<T extends Comparable<T>> {
 
 
     public void createHeap(T[] array) {
-        if(array.length > 0) {
-            for (int i =0; i < array.length; i++) {
+        if (array.length > 0) {
+            for (int i = 0; i < array.length; i++) {
                 insert(array[i]);
             }
         }
@@ -29,7 +29,7 @@ public class BinaryHeap<T extends Comparable<T>> {
     }
 
     private void insert(T x) {
-        if(length == heap.length) {
+        if (length == heap.length) {
             System.out.println("reached limit");
         }
 
@@ -45,13 +45,13 @@ public class BinaryHeap<T extends Comparable<T>> {
 
     private void heapifyUp(int index) {
 
-        if(min) {
-            while(index>0 && heap[parentIndex(index)].compareTo(heap[index]) > 0) {
-                swap(index,parentIndex(index));
-                index = (index-1)/2;
+        if (min) {
+            while (index > 0 && heap[parentIndex(index)].compareTo(heap[index]) > 0) {
+                swap(index, parentIndex(index));
+                index = (index - 1) / 2;
             }
         } else {
-            while(index>0 && heap[parentIndex(index)].compareTo(heap[index]) < 0) {
+            while (index > 0 && heap[parentIndex(index)].compareTo(heap[index]) < 0) {
                 swap(index, parentIndex(index));
                 index = (index - 1) / 2;
             }
@@ -59,25 +59,26 @@ public class BinaryHeap<T extends Comparable<T>> {
     }
 
     protected int parentIndex(int i) {
-         return (i-1)/2;
+        return (i - 1) / 2;
     }
 
     public T extract() {
-        if(length<=0) {
+        if (length <= 0) {
             return null;
-        } if(length == 1) {
-            length --;
+        }
+        if (length == 1) {
+            length--;
             return heap[0];
         }
 
         T root = heap[0];
-        heap[0] = heap[length -1];
-        heap[length-1] = null;
-        length --;
+        heap[0] = heap[length - 1];
+        heap[length - 1] = null;
+        length--;
 
-        if(min) {
+        if (min) {
             minHeapifyDown(0);
-        } else{
+        } else {
             maxHeapifyDown(0);
         }
         display();
@@ -91,39 +92,39 @@ public class BinaryHeap<T extends Comparable<T>> {
     removing the last element, and then heapfying the new top element down to maintain the heap property
      */
     private void minHeapifyDown(int index) {
-        int lIndex = 2*index +1;
-        int rIndex = 2*index +2;
+        int lIndex = 2 * index + 1;
+        int rIndex = 2 * index + 2;
 
         int small = index;
 
-        if(lIndex < length && heap[lIndex].compareTo(heap[index]) < 0) {
+        if (lIndex < length && heap[lIndex].compareTo(heap[index]) < 0) {
             small = lIndex;
         }
-        if(rIndex < length && heap[rIndex].compareTo( heap[small]) < 0) {
+        if (rIndex < length && heap[rIndex].compareTo(heap[small]) < 0) {
             small = rIndex;
         }
 
-        if(small != index) {
-            swap(index,small);
+        if (small != index) {
+            swap(index, small);
             minHeapifyDown(small);
         }
     }
 
     private void maxHeapifyDown(int index) {
-        int lIndex = 2*index +1;
-        int rIndex = 2*index +2;
+        int lIndex = 2 * index + 1;
+        int rIndex = 2 * index + 2;
 
         int large = index;
 
-        if(lIndex < length && heap[lIndex].compareTo(heap[index]) > 0) {
+        if (lIndex < length && heap[lIndex].compareTo(heap[index]) > 0) {
             large = lIndex;
         }
-        if(rIndex < length && heap[rIndex].compareTo(heap[large]) > 0) {
+        if (rIndex < length && heap[rIndex].compareTo(heap[large]) > 0) {
             large = rIndex;
         }
 
-        if(large != index) {
-            swap(index,large);
+        if (large != index) {
+            swap(index, large);
             maxHeapifyDown(large);
         }
     }
@@ -136,8 +137,8 @@ public class BinaryHeap<T extends Comparable<T>> {
 
 
     private void display() {
-        for(int i =0; i<heap.length;i++) {
-            System.out.print(heap[i]+" ");
+        for (int i = 0; i < heap.length; i++) {
+            System.out.print(heap[i] + " ");
         }
         System.out.println("");
     }

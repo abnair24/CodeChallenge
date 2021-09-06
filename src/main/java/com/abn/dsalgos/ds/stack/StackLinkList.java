@@ -8,40 +8,40 @@ import com.abn.dsalgos.utils.LinkNode;
  */
 public class StackLinkList<T> {
 
-    private LinkNode<T> top ;
+    private LinkNode<T> top;
     private int size;
-
 
     public StackLinkList() {
         top = null;
-        size=0;
+        size = 0;
     }
 
     public void push(T value) {
 
-        LinkNode<T> newLink= new LinkNode<>(value);
+        LinkNode<T> newLink = new LinkNode<>(value);
 
-        newLink.next= top;
+        newLink.next = top;
         top = newLink;
         size++;
     }
 
-    public T pop() throws Exception{
-        if(isEmpty()){
+    public T pop()
+            throws Exception {
+        if (isEmpty()) {
             throw new EmptyStackException();
         } else {
             LinkNode<T> temp = top;
             top = top.next;
-            size --;
+            size--;
             return temp.data;
         }
     }
 
     public void displayList() {
-        LinkNode<T>current = top;
-        while(current!=null) {
+        LinkNode<T> current = top;
+        while (current != null) {
             current.displayLink();
-            current=current.next;
+            current = current.next;
         }
         System.out.println(" ");
     }
@@ -50,8 +50,9 @@ public class StackLinkList<T> {
         return (top == null);
     }
 
-    public T peek() throws Exception {
-        if(isEmpty()) {
+    public T peek()
+            throws Exception {
+        if (isEmpty()) {
             throw new EmptyStackException();
         } else {
             return top.data;

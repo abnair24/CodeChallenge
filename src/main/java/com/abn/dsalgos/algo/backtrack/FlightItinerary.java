@@ -27,74 +27,11 @@ import java.util.Map;
 
 public class FlightItinerary {
 
-    Map<String, List<String>> flights ;
+    Map<String, List<String>> flights;
     Map<String, boolean[]> isVisitedMap;
 
     LinkedList<String> result;
     int size;
-
-    public List<String> findItinerary(List<List<String>> tickets) {
-
-        flights = new HashMap<>();
-        isVisitedMap = new HashMap<>();
-
-        result = new LinkedList<>();
-
-        for(List<String> ticket : tickets) {
-
-            if(!flights.containsKey(ticket.get(0))) {
-                List<String> destinationList = new LinkedList<>();
-                destinationList.add(ticket.get(1));
-                flights.put(ticket.get(0), destinationList);
-            } else {
-                List<String> destinationList = flights.get(ticket.get(0));
-                destinationList.add(ticket.get(1));
-            }
-        }
-
-        for(Map.Entry<String, List<String>> entry : flights.entrySet()) {
-            Collections.sort(entry.getValue());
-            isVisitedMap.put(entry.getKey(), new boolean[entry.getValue().size()]);
-        }
-
-        size = tickets.size();
-        LinkedList<String> routes = new LinkedList<String>();
-        routes.add("JFK");
-
-        backtrack("JFK", routes);
-        return result;
-    }
-
-    private boolean backtrack(String origin, LinkedList<String> routes) {
-
-        if(routes.size() == size + 1) {
-            result = (LinkedList<String>) routes.clone();
-            return true;
-        }
-
-        if(!flights.containsKey(origin)) {
-            return false;
-        }
-
-        int i = 0;
-        boolean[] isVisited = isVisitedMap.get(origin);
-
-        for(String destination : flights.get(origin)) {
-            if(!isVisited[i]) {
-                isVisited[i] = true;
-                routes.add(destination);
-                boolean status = backtrack(destination, routes);
-                routes.pollLast();
-                isVisited[i] = false;
-
-                if (status) {
-                    return true;
-                }
-            }
-            ++i;
-        }
-        return false;
-    }
 
     public static void main(String[] args) {
         FlightItinerary flightItinerary = new FlightItinerary();
@@ -136,5 +73,68 @@ public class FlightItinerary {
 //        input.add(pair5);
 
         flightItinerary.findItinerary(input);
+    }
+
+    public List<String> findItinerary(List<List<String>> tickets) {
+
+        flights = new HashMap<>();
+        isVisitedMap = new HashMap<>();
+
+        result = new LinkedList<>();
+
+        for (List<String> ticket : tickets) {
+
+            if (!flights.containsKey(ticket.get(0))) {
+                List<String> destinationList = new LinkedList<>();
+                destinationList.add(ticket.get(1));
+                flights.put(ticket.get(0), destinationList);
+            } else {
+                List<String> destinationList = flights.get(ticket.get(0));
+                destinationList.add(ticket.get(1));
+            }
+        }
+
+        for (Map.Entry<String, List<String>> entry : flights.entrySet()) {
+            Collections.sort(entry.getValue());
+            isVisitedMap.put(entry.getKey(), new boolean[entry.getValue().size()]);
+        }
+
+        size = tickets.size();
+        LinkedList<String> routes = new LinkedList<String>();
+        routes.add("JFK");
+
+        backtrack("JFK", routes);
+        return result;
+    }
+
+    private boolean backtrack(String origin, LinkedList<String> routes) {
+
+        if (routes.size() == size + 1) {
+            result = (LinkedList<String>) routes.clone();
+            return true;
+        }
+
+        if (!flights.containsKey(origin)) {
+            return false;
+        }
+
+        int i = 0;
+        boolean[] isVisited = isVisitedMap.get(origin);
+
+        for (String destination : flights.get(origin)) {
+            if (!isVisited[i]) {
+                isVisited[i] = true;
+                routes.add(destination);
+                boolean status = backtrack(destination, routes);
+                routes.pollLast();
+                isVisited[i] = false;
+
+                if (status) {
+                    return true;
+                }
+            }
+            ++i;
+        }
+        return false;
     }
 }

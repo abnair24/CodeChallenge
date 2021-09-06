@@ -1,6 +1,5 @@
 package com.abn.dsalgos.dailyCoding;
 
-
 /*
 
 String a3b4c1k1
@@ -10,7 +9,7 @@ Decode and output at Kth position:
 public class NthCharInDecodedString {
 
     public static void main(String[] args) {
-        System.out.println(decodeChar("a1b1c3",2));
+        System.out.println(decodeChar("a1b1c3", 2));
     }
 
 //    public static String characterAt(String input1, int input2) {
@@ -49,13 +48,13 @@ public class NthCharInDecodedString {
 
         int runLength = 0;
 
-        for(int i=1; i< input.length(); i= i+2) {
+        for (int i = 1; i < input.length(); i = i + 2) {
             runLength = runLength + Character.getNumericValue(input.charAt(i));
 //            System.out.println(runLength);
 
-            if(runLength >= pos) {
+            if (runLength >= pos) {
 
-                return Character.toString(input.charAt(i-1));
+                return Character.toString(input.charAt(i - 1));
             }
         }
         return "-1";

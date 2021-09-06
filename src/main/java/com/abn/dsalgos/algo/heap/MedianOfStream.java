@@ -35,23 +35,23 @@ public class MedianOfStream {
      */
     public void insert(int num) {
 
-        if(maxHeap.isEmpty() || maxHeap.peek() > num) {
+        if (maxHeap.isEmpty() || maxHeap.peek() > num) {
             maxHeap.add(num);
         } else {
             minHeap.add(num);
         }
 
-        if(maxHeap.size() - minHeap.size() > 1) {
+        if (maxHeap.size() - minHeap.size() > 1) {
             minHeap.add(maxHeap.poll());
-        } else if(maxHeap.size() < minHeap.size()) {
+        } else if (maxHeap.size() < minHeap.size()) {
             maxHeap.add(minHeap.poll());
         }
     }
 
     public double findMedian() {
 
-        if(minHeap.size() == maxHeap.size()) {
-            return (minHeap.peek() + maxHeap.peek())/ 2.0;
+        if (minHeap.size() == maxHeap.size()) {
+            return (minHeap.peek() + maxHeap.peek()) / 2.0;
         } else {
             return maxHeap.peek();
         }

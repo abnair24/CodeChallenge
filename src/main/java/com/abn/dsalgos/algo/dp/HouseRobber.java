@@ -27,12 +27,11 @@ public class HouseRobber {
 
     private int robMaxHelper(int[] array, int[] cache, int index) {
 
-
-        if(index >= array.length) {
+        if (index >= array.length) {
             return 0;
         }
 
-        if(cache[index] != 0) {
+        if (cache[index] != 0) {
             return cache[index];
         }
 

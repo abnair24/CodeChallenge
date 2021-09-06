@@ -15,7 +15,7 @@ public class LargestNumber {
         int maxDigit = 9;
 
 
-        for(int i = 0; i < digits; i++) {
+        for (int i = 0; i < digits; i++) {
 
             if (sum >= 9) {
                 result[i] = 9;
@@ -26,8 +26,8 @@ public class LargestNumber {
             }
         }
 
-        for(int i = digits - 1; i >= 0; i--) {
-            num += result[digits -1 - i] * Math.pow(10, i);
+        for (int i = digits - 1; i >= 0; i--) {
+            num += result[digits - 1 - i] * Math.pow(10, i);
         }
 
         return num;

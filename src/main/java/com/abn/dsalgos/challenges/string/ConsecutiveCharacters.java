@@ -11,19 +11,19 @@ public class ConsecutiveCharacters {
 
     public int consecutiveCharacters(String str) {
 
-        char current=str.charAt(0);
-        int maxCount=1;
+        char current = str.charAt(0);
+        int maxCount = 1;
         int temp = 1;
 
-        for(int i =1; i< str.length(); i++) {
-            if(current == str.charAt(i)) {
+        for (int i = 1; i < str.length(); i++) {
+            if (current == str.charAt(i)) {
                 temp += 1;
             } else {
                 current = str.charAt(i);
                 temp = 1;
             }
 
-            if(maxCount < temp) {
+            if (maxCount < temp) {
                 maxCount = temp;
             }
         }

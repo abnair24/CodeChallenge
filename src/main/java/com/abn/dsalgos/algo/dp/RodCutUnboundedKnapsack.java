@@ -19,17 +19,17 @@ public class RodCutUnboundedKnapsack {
 
     private int rodCutHelper(int[] rodLength, int[] price, Integer[][] cache, int targetLength, int index) {
 
-        if(targetLength <= 0 || price.length != rodLength.length || index >= price.length) {
+        if (targetLength <= 0 || price.length != rodLength.length || index >= price.length) {
             return 0;
         }
 
         int l1 = 0;
 
-        if(cache[index][targetLength] != null) {
+        if (cache[index][targetLength] != null) {
             return cache[index][targetLength];
         }
 
-        if(rodLength[index] <= targetLength) {
+        if (rodLength[index] <= targetLength) {
             l1 = price[index] + rodCutHelper(rodLength, price, cache, targetLength - rodLength[index], index);
         }
 
@@ -41,7 +41,6 @@ public class RodCutUnboundedKnapsack {
 
     public static void main(String[] args) {
         RodCutUnboundedKnapsack rodCutUnboundedKnapsack = new RodCutUnboundedKnapsack();
-        System.out.println(rodCutUnboundedKnapsack.rodCut(new int[]{1,3,4,5}, new int[]{2, 6, 7, 10, 13}, 5));
+        System.out.println(rodCutUnboundedKnapsack.rodCut(new int[] {1, 3, 4, 5}, new int[] {2, 6, 7, 10, 13}, 5));
     }
-
 }

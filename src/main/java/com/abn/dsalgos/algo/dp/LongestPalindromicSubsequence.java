@@ -18,26 +18,26 @@ public class LongestPalindromicSubsequence {
         int count = 0;
 
 
-        if(start > end) {
+        if (start > end) {
             return 0;
         }
 
-        if(start == end) {
+        if (start == end) {
             return 1;
         }
 
-        if(cache[start][end] != 0){
+        if (cache[start][end] != 0) {
             return cache[start][end];
         }
 
-        if(s.charAt(start) == s.charAt(end)) {
+        if (s.charAt(start) == s.charAt(end)) {
             return subsequenceHelper(s, start + 1, end - 1, cache) + 2;
         }
 
         int count1 = subsequenceHelper(s, start + 1, end, cache);
         int count2 = subsequenceHelper(s, start, end - 1, cache);
 
-        cache[start][end] =  Math.max(count1, count2);
+        cache[start][end] = Math.max(count1, count2);
         return cache[start][end];
     }
 

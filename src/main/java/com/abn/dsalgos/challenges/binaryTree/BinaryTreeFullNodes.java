@@ -18,25 +18,25 @@ public class BinaryTreeFullNodes<T> {
     }
 
     public void findFullNodes(MyTreeNode node) {
-        if(node == null) {
+        if (node == null) {
             return;
         }
 
         Queue<MyTreeNode> queue = new LinkedList<>();
         queue.add(node);
 
-        while(queue.size() > 0) {
+        while (queue.size() > 0) {
 
             MyTreeNode temp = queue.poll();
 
-            if(temp.left!=null && temp.right != null) {
+            if (temp.left != null && temp.right != null) {
                 System.out.println(temp.data);
             }
 
-            if(temp.left != null) {
+            if (temp.left != null) {
                 queue.add(temp.left);
             }
-            if(temp.right != null) {
+            if (temp.right != null) {
                 queue.add(temp.right);
             }
         }

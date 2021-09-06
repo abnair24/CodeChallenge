@@ -22,28 +22,28 @@ public class BinaryTreeNodesWithoutSiblings<T> {
     public void nodesWithoutSibling(MyTreeNode node) {
 
         if (node == null) {
-            return ;
+            return;
         }
 
         Queue<MyTreeNode> queue = new LinkedList<>();
         queue.add(node);
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
 
             MyTreeNode temp = queue.poll();
 
-            if(temp.left != null && temp.right == null ){
+            if (temp.left != null && temp.right == null) {
                 System.out.println(temp.left.data);
             }
 
-            if(temp.left == null && temp.right != null ){
+            if (temp.left == null && temp.right != null) {
                 System.out.println(temp.right.data);
             }
 
-            if(temp.left != null) {
+            if (temp.left != null) {
                 queue.add(temp.left);
             }
-            if(temp.right != null) {
+            if (temp.right != null) {
                 queue.add(temp.right);
             }
         }

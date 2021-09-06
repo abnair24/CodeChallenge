@@ -11,6 +11,11 @@ Output: "ad52", "Ad52", "aD52", "AD52"
  */
 public class StringCaseChangePermutation {
 
+    public static void main(String[] args) {
+        StringCaseChangePermutation stringCaseChangePermutation = new StringCaseChangePermutation();
+        System.out.println(stringCaseChangePermutation.permutationString("abc70S"));
+    }
+
     public List<String> permutationString(String s) {
         List<String> result = new ArrayList<>();
 
@@ -35,10 +40,5 @@ public class StringCaseChangePermutation {
             i++;
         }
         return result;
-    }
-
-    public static void main(String[] args) {
-        StringCaseChangePermutation stringCaseChangePermutation = new StringCaseChangePermutation();
-        System.out.println(stringCaseChangePermutation.permutationString("abc70S"));
     }
 }

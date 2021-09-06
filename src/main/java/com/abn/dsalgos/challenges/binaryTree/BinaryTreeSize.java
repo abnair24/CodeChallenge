@@ -6,9 +6,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 
-    /*
-     Find the size of a Binary Tree. (Size = number of nodes)
-     */
+/*
+ Find the size of a Binary Tree. (Size = number of nodes)
+ */
 public class BinaryTreeSize<T> {
 
     MyTreeNode root;
@@ -26,26 +26,26 @@ public class BinaryTreeSize<T> {
     }
 
     private int recursiveSize(MyTreeNode node) {
-        if(node == null) {
+        if (node == null) {
             return 0;
         } else {
             return (recursiveSize(node.left) + 1 + recursiveSize(node.right));
         }
     }
 
-    private  int nonRecursiveSize(MyTreeNode node) {
-        if(node!=null) {
+    private int nonRecursiveSize(MyTreeNode node) {
+        if (node != null) {
             int size = 0;
             Queue<MyTreeNode> queue = new LinkedList<>();
             queue.add(node);
-            while(!queue.isEmpty()) {
+            while (!queue.isEmpty()) {
                 MyTreeNode temp = queue.poll();
-                size++ ;
-                if(temp.left !=null) {
+                size++;
+                if (temp.left != null) {
                     queue.add(temp.left);
                 }
 
-                if(temp.right!=null) {
+                if (temp.right != null) {
                     queue.add(temp.right);
                 }
             }

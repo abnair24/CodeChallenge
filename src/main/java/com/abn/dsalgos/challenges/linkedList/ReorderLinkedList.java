@@ -16,6 +16,11 @@ public class ReorderLinkedList<T> {
     private LinkNode<T> last;
 
 
+    public ReorderLinkedList() {
+        first = null;
+        last = null;
+    }
+
     public LinkNode<T> reorderLinkedList(LinkNode<T> node) {
 
         LinkNode<T> current = node;
@@ -24,11 +29,11 @@ public class ReorderLinkedList<T> {
         LinkNode<T> fNode = node;
         LinkNode<T> sNode = node;
 
-        if(node == null) {
+        if (node == null) {
             return null;
         }
 
-        while(fNode != null && fNode.next != null) {
+        while (fNode != null && fNode.next != null) {
 
             sNode = sNode.next;
             fNode = fNode.next.next;
@@ -46,7 +51,7 @@ public class ReorderLinkedList<T> {
         /*
         Traverse both the half simultaneously and merge alternatively
          */
-        while(head2 != null) {
+        while (head2 != null) {
             LinkNode<T> temp1 = head1.next;
             LinkNode<T> temp2 = head2.next;
 
@@ -60,7 +65,6 @@ public class ReorderLinkedList<T> {
 
         return current;
     }
-
 
     private LinkNode<T> reverseLinkedList(LinkNode<T> headNode) {
         LinkNode<T> currentNode = headNode;
@@ -79,14 +83,9 @@ public class ReorderLinkedList<T> {
         return prevNode;
     }
 
-    public ReorderLinkedList() {
-        first =null;
-        last = null;
-    }
-
     public void insertFirst(T value) {
         LinkNode<T> newLink = new LinkNode<>(value);
-        if(isEmpty()) {
+        if (isEmpty()) {
             last = newLink;
         } else {
             newLink.next = first;
@@ -95,8 +94,8 @@ public class ReorderLinkedList<T> {
     }
 
     public void insertLast(T value) {
-        LinkNode <T> newLink = new LinkNode<>(value);
-        if(isEmpty()) {
+        LinkNode<T> newLink = new LinkNode<>(value);
+        if (isEmpty()) {
             first = newLink;
         } else {
             last.next = newLink;

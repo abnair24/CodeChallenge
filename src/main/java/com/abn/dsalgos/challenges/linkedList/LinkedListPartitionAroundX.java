@@ -10,13 +10,13 @@ public class LinkedListPartitionAroundX<T> {
     private LinkNode<T> last;
 
     public LinkedListPartitionAroundX() {
-        first =null;
+        first = null;
         last = null;
     }
 
     public void insertFirst(T value) {
         LinkNode<T> newLink = new LinkNode<>(value);
-        if(isEmpty()) {
+        if (isEmpty()) {
             last = newLink;
         } else {
             newLink.next = first;
@@ -25,8 +25,8 @@ public class LinkedListPartitionAroundX<T> {
     }
 
     public void insertLast(T value) {
-        LinkNode <T> newLink = new LinkNode<>(value);
-        if(isEmpty()) {
+        LinkNode<T> newLink = new LinkNode<>(value);
+        if (isEmpty()) {
             first = newLink;
         } else {
             last.next = newLink;
@@ -39,8 +39,9 @@ public class LinkedListPartitionAroundX<T> {
         return first == null;
     }
 
-    public T deleteFirst() throws Exception {
-        if(isEmpty()){
+    public T deleteFirst()
+            throws Exception {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
             LinkNode<T> temp = first;
@@ -69,7 +70,7 @@ public class LinkedListPartitionAroundX<T> {
 
         LinkNode<T> current = first;
         LinkNode<T> prev = first;
-        if(isEmpty()) {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
             while (current.data != value) {
@@ -91,7 +92,7 @@ public class LinkedListPartitionAroundX<T> {
 
     public T getFirst() {
         LinkNode<T> temp = first;
-        if(temp == null){
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp.data;
@@ -100,7 +101,7 @@ public class LinkedListPartitionAroundX<T> {
 
     public T getLast() {
         LinkNode<T> temp = last;
-        if(temp == null) {
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp.data;
@@ -113,11 +114,11 @@ public class LinkedListPartitionAroundX<T> {
      */
     public void partition(LinkNode node, int k) {
         LinkNode head = null;
-        LinkNode tail =null;
-        LinkNode headPtr =null;
+        LinkNode tail = null;
+        LinkNode headPtr = null;
         LinkNode tailPtr = null;
 
-        while(node!=null) {
+        while (node != null) {
             LinkNode current = node;
             if ((int) node.data < k) {
                 if (head == null) {
@@ -143,7 +144,7 @@ public class LinkedListPartitionAroundX<T> {
         /*
         In case when values are all higher than partition, so headptr will be always null.
          */
-        if(head==null) {
+        if (head == null) {
             headPtr = tailPtr;
         } else {
             head.next = tailPtr;
@@ -166,7 +167,7 @@ public class LinkedListPartitionAroundX<T> {
 
     public LinkNode getFirstNode() {
         LinkNode<T> temp = first;
-        if(temp == null ){
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp;

@@ -22,24 +22,24 @@ public class MazeBFSGraph {
         queue.add(start);
         isVisited[start[0]][start[1]] = true;
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
 
             int[] temp = queue.remove();
-            if(temp[0] == destination[0] && temp[1] == destination[1]) {
+            if (temp[0] == destination[0] && temp[1] == destination[1]) {
                 return true;
             }
 
-            for(int[] dir: DIRECTIONS) {
+            for (int[] dir : DIRECTIONS) {
                 int x = dir[0] + temp[0];
                 int y = dir[1] + temp[1];
 
-                while(x > -1 && y > -1 && x < maze.length && y < maze[0].length && maze[x][y] == 0) {
+                while (x > -1 && y > -1 && x < maze.length && y < maze[0].length && maze[x][y] == 0) {
                     x += dir[0];
                     y += dir[1];
                 }
 
-                if(!isVisited[x - dir[0]][y - dir[1]]) {
-                    queue.add(new int[]{ x -dir[0], y - dir[1]});
+                if (!isVisited[x - dir[0]][y - dir[1]]) {
+                    queue.add(new int[] {x - dir[0], y - dir[1]});
                     isVisited[x - dir[0]][y - dir[1]] = true;
                 }
 
@@ -49,8 +49,9 @@ public class MazeBFSGraph {
     }
 
     public static void main(String[] args) {
+
         MazeBFSGraph mazeBFSGraph = new MazeBFSGraph();
-        int[][] input = {{0,0,1,0,0},{0,0,0,0,0},{0,0,0,1,0},{1,1,0,1,1},{0,0,0,0,0}};
+        int[][] input = {{0, 0, 1, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 0, 1, 0}, {1, 1, 0, 1, 1}, {0, 0, 0, 0, 0}};
         int[] start = {0, 4};
         int[] destination = {4, 4};
 

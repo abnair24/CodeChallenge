@@ -68,24 +68,24 @@ public class StickLengthArray {
         cutTheSticks(lengths);
     }
 
-    static void cutTheSticks(List<Integer>arr) {
+    static void cutTheSticks(List<Integer> arr) {
         ArrayList<Integer> arrayCount = new ArrayList<>();
         Collections.sort(arr);
 
         arrayCount.add(arr.size());
 
-        while(arr.size()>1) {
+        while (arr.size() > 1) {
             int small = arr.get(0);
-            for(int i = 0;i<arr.size();i++) {
+            for (int i = 0; i < arr.size(); i++) {
                 arr.set(i, arr.get(i) - small);
             }
             arr.removeAll(Arrays.asList(0));
-            if(arr.size() != 0) {
+            if (arr.size() != 0) {
                 arrayCount.add(arr.size());
             }
         }
 
-        for(int i: arrayCount) {
+        for (int i : arrayCount) {
             System.out.println(i);
         }
     }

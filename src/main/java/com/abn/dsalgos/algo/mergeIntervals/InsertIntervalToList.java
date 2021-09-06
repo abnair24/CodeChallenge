@@ -21,12 +21,12 @@ Input: Intervals=[[2,3],[5,7]], New Interval=[1,4]
 Output: [[1,4], [5,7]]
  */
 
-//TO-DO: tests
+//TODO: tests
 public class InsertIntervalToList {
 
     public List<Interval> insert(List<Interval> a, Interval b) {
 
-        if(a == null || a.isEmpty()) {
+        if (a == null || a.isEmpty()) {
             return Arrays.asList(b);
         }
 
@@ -34,13 +34,13 @@ public class InsertIntervalToList {
 
         int i = 0;
 
-        while(i < a.size() && a.get(i).end < b.start) {
+        while (i < a.size() && a.get(i).end < b.start) {
             merged.add(a.get(i));
             i++;
         }
 
         // if a and b overlaps, then a.start will be less or equal to b.end
-        while(i < a.size() && a.get(i).start <= b.end) {
+        while (i < a.size() && a.get(i).start <= b.end) {
             b.start = Math.min(a.get(i).start, b.start);
             b.end = Math.max(a.get(i).end, b.end);
             i++;
@@ -49,7 +49,7 @@ public class InsertIntervalToList {
         merged.add(b);
 
         // add remaining ones to list
-        while(i < a.size()) {
+        while (i < a.size()) {
             merged.add(a.get(i++));
         }
 

@@ -1,7 +1,15 @@
 package com.abn.dsalgos.challenges.problems;
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
 
 /*
     Given an array, you must increment any duplicate elements until all its elements are unique.
@@ -19,7 +27,8 @@ import java.util.*;
 
 public class Solution {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)
+            throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 

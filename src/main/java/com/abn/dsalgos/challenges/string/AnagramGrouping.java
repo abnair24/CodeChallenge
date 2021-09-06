@@ -24,22 +24,22 @@ public class AnagramGrouping {
         Map<String, List<String>> result = new LinkedHashMap<>();
         int[] count = new int[26];
 
-        for(String str : anagrams) {
+        for (String str : anagrams) {
 
             Arrays.fill(count, 0);
 
-            for(char c : str.toCharArray()) {
-                count[c - 'a'] ++;
+            for (char c : str.toCharArray()) {
+                count[c - 'a']++;
             }
 
             StringBuilder sb = new StringBuilder();
 
-            for(int i = 0; i < 26; i++) {
+            for (int i = 0; i < 26; i++) {
                 sb.append('#');
                 sb.append(count[i]);
             }
 
-            if(!result.containsKey(sb.toString())) {
+            if (!result.containsKey(sb.toString())) {
                 result.put(sb.toString(), new ArrayList<>());
             }
             result.get(sb.toString()).add(str);

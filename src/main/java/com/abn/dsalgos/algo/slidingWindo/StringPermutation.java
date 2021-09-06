@@ -17,12 +17,12 @@ public class StringPermutation {
         int len;
         int patternLen = pattern.length();
 
-        for(int i = 0; i < patternLen; i++) {
+        for (int i = 0; i < patternLen; i++) {
             char ch = pattern.charAt(i);
             patternMap.put(ch, patternMap.getOrDefault(ch, 0) + 1);
         }
 
-        for(int i = 0; i < str.length(); i++) {
+        for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
             if (patternMap.containsKey(ch)) {
                 patternMap.put(ch, patternMap.get(ch) - 1);

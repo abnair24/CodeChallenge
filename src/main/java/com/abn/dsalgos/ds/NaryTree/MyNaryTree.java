@@ -19,17 +19,17 @@ public class MyNaryTree {
         Stack<NaryNode> stack = new Stack<>();
         LinkedList<NaryNode> st = new LinkedList<>();
 
-        if(root == null) {
+        if (root == null) {
             return list;
         }
 
         stack.push(root);
 
-        while(!stack.isEmpty()) {
+        while (!stack.isEmpty()) {
             NaryNode current = stack.pop();
             list.add(current.data);
 
-            for(int i = current.children.size() - 1; i>=0; i--) {
+            for (int i = current.children.size() - 1; i >= 0; i--) {
                 stack.push(current.children.get(i));
             }
         }
@@ -43,7 +43,7 @@ public class MyNaryTree {
         }
 
         result.add(root.data);
-        for(NaryNode child : root.children) {
+        for (NaryNode child : root.children) {
             preOrderRecursion(child);
         }
 
@@ -52,11 +52,11 @@ public class MyNaryTree {
 
     public List<Integer> postOrderRecursion(NaryNode root) {
 
-        if(root == null) {
+        if (root == null) {
             return result;
         }
 
-        for(NaryNode child: root.children) {
+        for (NaryNode child : root.children) {
             postOrderRecursion(child);
         }
 
@@ -91,28 +91,28 @@ public class MyNaryTree {
         List<List<Integer>> output = new ArrayList<>();
         Queue<NaryNode> queue = new LinkedList<>();
 
-        if(root == null) {
+        if (root == null) {
             return output;
         }
 
         queue.add(root);
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             List<Integer> temp = new ArrayList<>();
 
             int nodeCount = queue.size();
-            while(nodeCount > 0) {
+            while (nodeCount > 0) {
 
                 NaryNode current = queue.remove();
                 temp.add(current.data);
-                for(NaryNode child : current.children) {
+                for (NaryNode child : current.children) {
                     queue.add(child);
                 }
-                nodeCount --;
+                nodeCount--;
             }
 
             output.add(temp);
         }
         return output;
     }
- }
+}

@@ -24,11 +24,11 @@ public class StringRevPattern {
 
         StringBuilder sb1 = new StringBuilder();
 
-        String p1 = a+bRev;
-        String p2 = aRev+b;
+        String p1 = a + bRev;
+        String p2 = aRev + b;
 
-        for(int i = 1; i <= k; i++) {
-            if(i%2 == 0) {
+        for (int i = 1; i <= k; i++) {
+            if (i % 2 == 0) {
                 sb1.append(p2);
             } else {
                 sb1.append(p1);
@@ -42,7 +42,7 @@ public class StringRevPattern {
         StringBuilder sb = new StringBuilder();
         int len = str.length();
 
-        for(int i =len-1; i >=0; i--) {
+        for (int i = len - 1; i >= 0; i--) {
             sb.append(str.charAt(i));
         }
         return sb.toString();

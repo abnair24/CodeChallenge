@@ -8,7 +8,7 @@ public class SingleLinkedListPalindrome {
         ListNode sNode = head;
         ListNode fNode = head;
 
-        while(fNode != null && fNode.next != null) {
+        while (fNode != null && fNode.next != null) {
             sNode = sNode.next;
             fNode = fNode.next.next;
         }
@@ -16,8 +16,8 @@ public class SingleLinkedListPalindrome {
         ListNode headNodeRevSecondHalf = reverse(sNode);
         ListNode tempHead = headNodeRevSecondHalf;
 
-        while(head != null && headNodeRevSecondHalf != null) {
-            if(head.val != headNodeRevSecondHalf.val ) {
+        while (head != null && headNodeRevSecondHalf != null) {
+            if (head.val != headNodeRevSecondHalf.val) {
                 break;
             }
             head = head.next;
@@ -25,7 +25,7 @@ public class SingleLinkedListPalindrome {
         }
 
         reverse(tempHead);
-        if(head == null || headNodeRevSecondHalf == null) {
+        if (head == null || headNodeRevSecondHalf == null) {
             return true;
         }
         return false;
@@ -37,7 +37,7 @@ public class SingleLinkedListPalindrome {
         ListNode next;
         ListNode prev = null;
 
-        while(current != null) {
+        while (current != null) {
             next = current.next;
             current.next = prev;
             prev = current;

@@ -14,6 +14,7 @@ Notice that you may not slant the container.
 
 https://leetcode.com/problems/container-with-most-water/
  */
+
 public class ContainerWithMostWater {
 
     public int maximum(int[] height) {
@@ -24,17 +25,17 @@ public class ContainerWithMostWater {
         int len = 0;
         int area = 0;
 
-        while(leftIndex < rightIndex) {
+        while (leftIndex < rightIndex) {
 
             len = rightIndex - leftIndex;
             area = len * Math.min(height[leftIndex], height[rightIndex]);
 
             max = Math.max(area, max);
 
-            if(height[leftIndex] <= height[rightIndex]) {
-                leftIndex ++;
+            if (height[leftIndex] <= height[rightIndex]) {
+                leftIndex++;
             } else {
-                rightIndex --;
+                rightIndex--;
             }
         }
         return max;

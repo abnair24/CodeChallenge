@@ -37,7 +37,6 @@ public class FindAllDuplicateNumbers {
         return result;
     }
 
-
     public static void main(String[] args) {
 
         FindAllDuplicateNumbers findAllDuplicateNumbers = new FindAllDuplicateNumbers();

@@ -5,7 +5,6 @@ Given 2 sorted arrays, find the median.
  */
 public class MedianOfSortedArrays {
 
-
     // Complexity : O(m+n)
     public double findMedianOfSorted(int[] array1, int[] array2) {
 
@@ -64,35 +63,36 @@ public class MedianOfSortedArrays {
             i = (start_index + end_index) / 2;
             j = ((size1 + size2 + 1) / 2) - i;
 
-            if (i < size1 && j > 0 && array2[j - 1] > array1[i])
+            if (i < size1 && j > 0 && array2[j - 1] > array1[i]) {
                 start_index = i + 1;
-
-            else if (i > 0 && j < size2 && array2[j] < array1[i - 1])
+            } else if (i > 0 && j < size2 && array2[j] < array1[i - 1]) {
                 end_index = i - 1;
-
-            else {
-                if (i == 0)
+            } else {
+                if (i == 0) {
                     median = array2[j - 1];
-
-                else if (j == 0)
+                } else if (j == 0) {
                     median = array1[i - 1];
-                else
+                } else {
                     median = maximum(array1[i - 1],
                             array2[j - 1]);
+                }
                 break;
             }
         }
 
-        if ((size1 + size2) % 2 == 1)
+        if ((size1 + size2) % 2 == 1) {
             return (double) median;
+        }
 
 
-        if (i == size1)
+        if (i == size1) {
             return (median + array2[j]) / 2.0;
+        }
 
 
-        if (j == size2)
+        if (j == size2) {
             return (median + array1[i]) / 2.0;
+        }
 
         return (median + minimum(array1[i],
                 array2[j])) / 2.0;

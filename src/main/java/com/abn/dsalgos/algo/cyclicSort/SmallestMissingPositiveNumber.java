@@ -8,20 +8,20 @@ public class SmallestMissingPositiveNumber {
     public int smallestMissing(int[] array) {
 
         int i = 0;
-        while(i < array.length) {
-            if(array[i] > 0 && array[i] <= array.length && array[i] != array[array[i] - 1]) {
+        while (i < array.length) {
+            if (array[i] > 0 && array[i] <= array.length && array[i] != array[array[i] - 1]) {
                 int j = array[i] - 1;
                 int temp = array[i];
                 array[i] = array[j];
                 array[j] = temp;
             } else {
-                i ++;
+                i++;
             }
         }
 
-        for(int k = 0; k< array.length; k++) {
-            if(array[k] != k+1) {
-                return k+1;
+        for (int k = 0; k < array.length; k++) {
+            if (array[k] != k + 1) {
+                return k + 1;
             }
         }
 

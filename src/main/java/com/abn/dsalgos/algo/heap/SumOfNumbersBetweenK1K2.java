@@ -16,7 +16,7 @@ public class SumOfNumbersBetweenK1K2 {
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>((n1, n2) -> n1 - n2);
         int total = 0;
 
-        for(int i = 0; i < array.length; i ++) {
+        for (int i = 0; i < array.length; i++) {
 
             if (i < k2 - 1) {
                 maxHeap.add(array[i]);
@@ -26,7 +26,7 @@ public class SumOfNumbersBetweenK1K2 {
             }
         }
 
-        for(int i = 0; i < k2 - k1 - 1; i++) {
+        for (int i = 0; i < k2 - k1 - 1; i++) {
             total += maxHeap.poll();
         }
         return total;

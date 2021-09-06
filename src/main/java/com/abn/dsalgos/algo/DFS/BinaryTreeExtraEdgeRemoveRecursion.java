@@ -1,7 +1,6 @@
 package com.abn.dsalgos.algo.DFS;
 
 import com.abn.dsalgos.utils.MyTreeNode;
-import com.abn.dsalgos.utils.TreeNode;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -32,7 +31,7 @@ public class BinaryTreeExtraEdgeRemoveRecursion {
         // Duplicate addition returns false and store that node as null
 
         Set<MyTreeNode<Integer>> hs = new HashSet<>();
-        if(root == null) {
+        if (root == null) {
             return null;
         }
 
@@ -41,7 +40,7 @@ public class BinaryTreeExtraEdgeRemoveRecursion {
 
     private MyTreeNode<Integer> removeNode(MyTreeNode<Integer> root, Set<MyTreeNode<Integer>> hs) {
 
-        if(root == null || !hs.add(root)) {
+        if (root == null || !hs.add(root)) {
             return null;
         }
 

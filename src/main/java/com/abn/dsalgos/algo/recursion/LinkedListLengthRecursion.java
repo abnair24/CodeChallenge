@@ -7,7 +7,7 @@ public class LinkedListLengthRecursion {
     public int lengthOfLinkedList(LinkNode<Integer> head) {
 
         //base case
-        if(head == null) {
+        if (head == null) {
             return 0;
         }
 

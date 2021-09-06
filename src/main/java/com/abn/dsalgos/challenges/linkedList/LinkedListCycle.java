@@ -43,7 +43,8 @@ public class LinkedListCycle<T> {
         return first == null;
     }
 
-    public T deleteFirst() throws Exception {
+    public T deleteFirst()
+            throws Exception {
         if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
@@ -141,15 +142,15 @@ public class LinkedListCycle<T> {
         LinkNode<T> fNode = node;
         LinkNode<T> sNode = node;
 
-        if(node == null) {
+        if (node == null) {
             return false;
         }
 
-        while(fNode != null && fNode.next != null) {
+        while (fNode != null && fNode.next != null) {
             sNode = sNode.next;
             fNode = fNode.next.next;
 
-            if(fNode == sNode) {
+            if (fNode == sNode) {
                 return true;
             }
         }

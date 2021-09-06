@@ -69,7 +69,7 @@ public class LinkedListInsertionSort {
     }
 
     public static void printList(ListNode x) {
-        if(x != null){
+        if (x != null) {
             System.out.print(x.val + " ");
             while (x.next != null) {
                 System.out.print(x.next.val + " ");
@@ -79,14 +79,20 @@ public class LinkedListInsertionSort {
         }
 
     }
-
 }
 
 class ListNode {
     int val;
     ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
+
+    ListNode() {
+
+    }
+
+    ListNode(int val) {
+        this.val = val;
+    }
+
     ListNode(int val, ListNode next) {
         this.val = val;
         this.next = next;

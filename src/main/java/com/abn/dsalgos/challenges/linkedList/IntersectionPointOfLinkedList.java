@@ -13,13 +13,13 @@ public class IntersectionPointOfLinkedList<T> {
 
     public IntersectionPointOfLinkedList() {
 
-        first =null;
+        first = null;
         last = null;
     }
 
     public void insertFirst(T value) {
         LinkNode<T> newLink = new LinkNode<>(value);
-        if(isEmpty()) {
+        if (isEmpty()) {
             last = newLink;
         } else {
             newLink.next = first;
@@ -28,8 +28,8 @@ public class IntersectionPointOfLinkedList<T> {
     }
 
     public void insertLast(T value) {
-        LinkNode <T> newLink = new LinkNode<>(value);
-        if(isEmpty()) {
+        LinkNode<T> newLink = new LinkNode<>(value);
+        if (isEmpty()) {
             first = newLink;
         } else {
             last.next = newLink;
@@ -41,8 +41,9 @@ public class IntersectionPointOfLinkedList<T> {
         return first == null;
     }
 
-    public T deleteFirst() throws Exception {
-        if(isEmpty()){
+    public T deleteFirst()
+            throws Exception {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
             LinkNode<T> temp = first;
@@ -71,7 +72,7 @@ public class IntersectionPointOfLinkedList<T> {
 
         LinkNode<T> current = first;
         LinkNode<T> prev = first;
-        if(isEmpty()) {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
             while (current.data != value) {
@@ -93,7 +94,7 @@ public class IntersectionPointOfLinkedList<T> {
 
     public T getFirst() {
         LinkNode<T> temp = first;
-        if(temp == null){
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp.data;
@@ -102,7 +103,7 @@ public class IntersectionPointOfLinkedList<T> {
 
     public T getLast() {
         LinkNode<T> temp = last;
-        if(temp == null) {
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp.data;
@@ -112,24 +113,24 @@ public class IntersectionPointOfLinkedList<T> {
 
     public LinkNode<T> findIntersection(LinkNode<T> nodeA, LinkNode<T> nodeB) {
 
-        int lenA =0;
-        int lenB =0;
+        int lenA = 0;
+        int lenB = 0;
 
         LinkNode<T> tempA = nodeA;
         LinkNode<T> tempB = nodeB;
 
-        if(tempA == null || tempB == null) {
+        if (tempA == null || tempB == null) {
             return null;
         }
 
-        while(tempA != null) {
+        while (tempA != null) {
             tempA = tempA.next;
             lenA++;
         }
 
-        while(tempB != null) {
+        while (tempB != null) {
             tempB = tempB.next;
-            lenB ++;
+            lenB++;
         }
 
         tempA = nodeA;
@@ -137,25 +138,25 @@ public class IntersectionPointOfLinkedList<T> {
 
         int diff = lenA - lenB;
 
-        if(diff > 0) {
-            while( diff!=0) {
+        if (diff > 0) {
+            while (diff != 0) {
                 tempA = tempA.next;
-                diff --;
+                diff--;
             }
 
-        }else {
+        } else {
             diff = Math.abs(diff);
-            while(diff !=0) {
+            while (diff != 0) {
                 tempB = tempB.next;
-                diff --;
+                diff--;
             }
         }
 
-        while(tempA != null && tempB != null) {
+        while (tempA != null && tempB != null) {
             /*
             Checking the memory reference is same;
              */
-            if(tempA == tempB) {
+            if (tempA == tempB) {
                 return tempA;
             } else {
                 tempA = tempA.next;
@@ -165,7 +166,6 @@ public class IntersectionPointOfLinkedList<T> {
         return null;
     }
 
-
     /*
     Efficient solution: Traverse A and B, if tailA is reached, point to headB, and on reaching tailB point to headA
     Now when both equals, return
@@ -173,16 +173,16 @@ public class IntersectionPointOfLinkedList<T> {
 
     public T findIntersection2(LinkNode<T> nodeA, LinkNode<T> nodeB) {
 
-        if(nodeA== null || nodeB == null) {
+        if (nodeA == null || nodeB == null) {
             return null;
         }
 
         LinkNode<T> headA = nodeA;
         LinkNode<T> headB = nodeB;
 
-        while(headA != headB) {
-            headA = headA == null ? headB: headA.next;
-            headB = headB == null ? headA: headB.next;
+        while (headA != headB) {
+            headA = headA == null ? headB : headA.next;
+            headB = headB == null ? headA : headB.next;
         }
 
         return headB.data;

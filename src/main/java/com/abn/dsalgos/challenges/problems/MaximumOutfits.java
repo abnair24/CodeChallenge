@@ -19,23 +19,21 @@ Arbitary shopping
  */
 public class MaximumOutfits {
 
-    public static int getMaximumOutfits(List<Integer> outfits,int money) {
-        int[] array = outfits.stream().mapToInt(i->i).toArray();
+    public static int getMaximumOutfits(List<Integer> outfits, int money) {
+        int[] array = outfits.stream().mapToInt(i -> i).toArray();
         int size = array.length;
         int sum = 0;
         int count = 0;
         int maxCount = 0;
 
-        for(int i=0;i<size;i++){
-            if((sum + array[i])<= money) {
-                sum+= array[i];
+        for (int i = 0; i < size; i++) {
+            if ((sum + array[i]) <= money) {
+                sum += array[i];
                 count++;
+            } else if (sum != 0) {
+                sum = sum - array[i - count] + array[i];
             }
-
-            else if(sum!=0) {
-                sum = sum - array[i-count] +array[i];
-            }
-            maxCount = Math.max(count,maxCount);
+            maxCount = Math.max(count, maxCount);
         }
         return maxCount;
     }
@@ -51,6 +49,6 @@ public class MaximumOutfits {
         outfitValue.add(2);
         outfitValue.add(1);
 
-        getMaximumOutfits(outfitValue,5);
+        getMaximumOutfits(outfitValue, 5);
     }
 }

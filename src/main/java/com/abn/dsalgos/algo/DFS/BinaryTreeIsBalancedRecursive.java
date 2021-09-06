@@ -16,7 +16,7 @@ public class BinaryTreeIsBalancedRecursive {
     }
 
     private int height(MyTreeNode<Integer> root) {
-        if(root == null) {
+        if (root == null) {
             return -1;
         }
 

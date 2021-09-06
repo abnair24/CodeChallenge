@@ -13,9 +13,9 @@ public class BFSGraph {
     public List<Integer> BFS(Graph graph) {
 
         boolean[] isVisited = new boolean[graph.getVertices()];
-        for(int i = 0; i < graph.getVertices(); i++) {
+        for (int i = 0; i < graph.getVertices(); i++) {
 
-            if(!isVisited[i]) {
+            if (!isVisited[i]) {
                 return bfsHelper(graph, i, isVisited);
             }
         }
@@ -31,16 +31,16 @@ public class BFSGraph {
         isVisited[source] = true;
         queue.add(source);
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
 
             int temp = queue.poll();
             result.add(temp);
 
             Iterator<Integer> iterator = graph.getAdjacentList()[temp].listIterator();
-            while(iterator.hasNext()) {
+            while (iterator.hasNext()) {
                 int n = iterator.next();
 
-                if(!isVisited[n]) {
+                if (!isVisited[n]) {
                     isVisited[n] = true;
                     queue.add(n);
                 }

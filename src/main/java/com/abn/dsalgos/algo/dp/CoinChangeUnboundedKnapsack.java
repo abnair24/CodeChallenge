@@ -11,22 +11,22 @@ public class CoinChangeUnboundedKnapsack {
 
     private int coinChangeHelper(int[] array, Integer[][] cache, int target, int index) {
 
-        if(target == 0) {
+        if (target == 0) {
             return 1;
         }
 
-        if(array.length == 0 || index >= array.length) {
+        if (array.length == 0 || index >= array.length) {
             return 0;
         }
 
-        if(cache[index][target] != null) {
+        if (cache[index][target] != null) {
             return cache[index][target];
         }
 
         int sum1 = 0;
 
-        if(array[index] <= target) {
-            sum1 = coinChangeHelper(array, cache,target - array[index], index);
+        if (array[index] <= target) {
+            sum1 = coinChangeHelper(array, cache, target - array[index], index);
         }
 
         int sum2 = coinChangeHelper(array, cache, target, index + 1);
@@ -38,7 +38,7 @@ public class CoinChangeUnboundedKnapsack {
 
     public static void main(String[] args) {
         CoinChangeUnboundedKnapsack coinChangeUnboundedKnapsack = new CoinChangeUnboundedKnapsack();
-        System.out.println(coinChangeUnboundedKnapsack.coinChange(new int[]{1,2,3}, 5));
+        System.out.println(coinChangeUnboundedKnapsack.coinChange(new int[] {1, 2, 3}, 5));
 
     }
 }

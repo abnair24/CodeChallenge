@@ -35,10 +35,11 @@ public class LargeElementToLeft {
             temp = array[i];
 
             // if stack doesnt have values, then there is no large element to the left of current value
-            if (s.isEmpty())
+            if (s.isEmpty()) {
                 array[i] = -1;
-            else
+            } else {
                 array[i] = s.peek();
+            }
 
             s.push(temp);
         }

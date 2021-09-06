@@ -20,23 +20,23 @@ public class SingleNumber {
 
     public int singleNumberInArray(int[] array) {
 
-        int result =0;
-        Map<Integer,Integer> map = new HashMap<>();
+        int result = 0;
+        Map<Integer, Integer> map = new HashMap<>();
 
-        if(array.length == 1) {
+        if (array.length == 1) {
             return array[0];
         }
 
-        for(int i=0;i< array.length; i++) {
-            if(!map.containsKey(array[i])) {
-                map.put(array[i],1);
+        for (int i = 0; i < array.length; i++) {
+            if (!map.containsKey(array[i])) {
+                map.put(array[i], 1);
             } else {
-                map.put(array[i], map.get(array[i])+1);
+                map.put(array[i], map.get(array[i]) + 1);
             }
         }
 
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            if(entry.getValue() == 1) {
+            if (entry.getValue() == 1) {
                 result = entry.getKey();
             }
         }

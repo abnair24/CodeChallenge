@@ -12,14 +12,14 @@ public class LinkedListPalindrome<T> {
     private int size;
 
     public LinkedListPalindrome() {
-        first =null;
+        first = null;
         last = null;
-        size=0;
+        size = 0;
     }
 
     public void insertFirst(T value) {
         LinkNode<T> newLink = new LinkNode<>(value);
-        if(isEmpty()) {
+        if (isEmpty()) {
             last = newLink;
         } else {
             newLink.next = first;
@@ -29,14 +29,14 @@ public class LinkedListPalindrome<T> {
     }
 
     public void insertLast(T value) {
-        LinkNode <T> newLink = new LinkNode<>(value);
-        if(isEmpty()) {
+        LinkNode<T> newLink = new LinkNode<>(value);
+        if (isEmpty()) {
             first = newLink;
         } else {
             last.next = newLink;
         }
         last = newLink;
-        size ++;
+        size++;
 
     }
 
@@ -44,8 +44,9 @@ public class LinkedListPalindrome<T> {
         return first == null;
     }
 
-    public T deleteFirst() throws Exception {
-        if(isEmpty()){
+    public T deleteFirst()
+            throws Exception {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
             LinkNode<T> temp = first;
@@ -75,7 +76,7 @@ public class LinkedListPalindrome<T> {
 
         LinkNode<T> current = first;
         LinkNode<T> prev = first;
-        if(isEmpty()) {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
             while (current.data != value) {
@@ -97,7 +98,7 @@ public class LinkedListPalindrome<T> {
 
     public T getFirst() {
         LinkNode<T> temp = first;
-        if(temp == null){
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp.data;
@@ -106,7 +107,7 @@ public class LinkedListPalindrome<T> {
 
     public T getLast() {
         LinkNode<T> temp = last;
-        if(temp == null) {
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp.data;
@@ -115,7 +116,7 @@ public class LinkedListPalindrome<T> {
 
     public LinkNode getFirstNode() {
         LinkNode<T> temp = first;
-        if(temp == null ){
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp;
@@ -125,32 +126,32 @@ public class LinkedListPalindrome<T> {
 
     public LinkNode getLastNode() {
         LinkNode<T> temp = last;
-        if(temp == null ){
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp;
         }
     }
 
-    public boolean isPalindrome(){
+    public boolean isPalindrome() {
 
         LinkNode<T> temp = getFirstNode();
-        Stack<T> stack =new Stack<>();
+        Stack<T> stack = new Stack<>();
         boolean status = false;
 
-        for(int i =0; i<size/2;i++) {
+        for (int i = 0; i < size / 2; i++) {
             stack.push(temp.data);
             temp = temp.next;
         }
         /*
         for odd number length, skip the middle one from getting added to stack
          */
-        if(size %2 !=0) {
+        if (size % 2 != 0) {
             temp = temp.next;
         }
 
-        while(temp !=null) {
-            if(temp.data == stack.peek()) {
+        while (temp != null) {
+            if (temp.data == stack.peek()) {
                 status = true;
                 stack.pop();
                 temp = temp.next;

@@ -5,9 +5,9 @@ public class RepeatedString {
     public long repeatedCount(String str, long n) {
         long count = 0;
 
-        if(str.length() == 1 && str == "a") {
+        if (str.length() == 1 && str == "a") {
             count = str.length() * n;
-        } else if(str.length() <= n) {
+        } else if (str.length() <= n) {
             for (int i = 0; i < str.length(); i++) {
                 if (str.charAt(i) == 'a') {
                     count++;
@@ -25,8 +25,8 @@ public class RepeatedString {
                 }
             }
         } else if (str.length() > n) {
-            for( int i =0; i<n % str.length();i++) {
-                if(str.charAt(i) == 'a') {
+            for (int i = 0; i < n % str.length(); i++) {
+                if (str.charAt(i) == 'a') {
                     count++;
                 }
             }

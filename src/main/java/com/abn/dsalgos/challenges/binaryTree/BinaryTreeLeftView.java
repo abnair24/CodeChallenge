@@ -18,27 +18,27 @@ public class BinaryTreeLeftView<T> {
 
         Queue<MyTreeNode<T>> queue = new LinkedList<>();
 
-        if(node == null) {
+        if (node == null) {
             return;
         }
 
         queue.add(node);
 
-        while(!queue.isEmpty()) {
-            int i =1;
-            nodeCount= queue.size();
+        while (!queue.isEmpty()) {
+            int i = 1;
+            nodeCount = queue.size();
 
-            while( i <= nodeCount) {
+            while (i <= nodeCount) {
                 MyTreeNode<T> current = queue.poll();
-                if(i==1) {
+                if (i == 1) {
                     System.out.println(current.data);
                 }
 
-                if(current.left!=null) {
+                if (current.left != null) {
                     queue.add(current.left);
                 }
 
-                if(current.right!=null) {
+                if (current.right != null) {
                     queue.add(current.right);
                 }
                 i++;
@@ -49,19 +49,27 @@ public class BinaryTreeLeftView<T> {
 
     public void rightView(MyTreeNode<T> node) {
         Queue<MyTreeNode<T>> queue = new LinkedList<>();
-        if(node == null) return;
+        if (node == null) {
+            return;
+        }
 
         queue.add(node);
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             int i = 1;
             nodeCount = queue.size();
-            while(i <= nodeCount) {
+            while (i <= nodeCount) {
                 MyTreeNode<T> current = queue.poll();
-                if(i == nodeCount ) System.out.println(current.data);
+                if (i == nodeCount) {
+                    System.out.println(current.data);
+                }
 
-                if(current.left != null) queue.add(current.left);
+                if (current.left != null) {
+                    queue.add(current.left);
+                }
 
-                if(current.right != null) queue.add(current.right);
+                if (current.right != null) {
+                    queue.add(current.right);
+                }
 
                 i++;
             }

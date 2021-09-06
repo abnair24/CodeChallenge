@@ -1,7 +1,13 @@
 package com.abn.dsalgos.challenges.graph;
 
 import com.abn.dsalgos.utils.GraphNode;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Queue;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class GraphBreadthFirstSearch<T> {
@@ -18,14 +24,12 @@ public class GraphBreadthFirstSearch<T> {
 
         List<GraphNode<T>> adjVertices = vertexMap.get(source);
 
-        if(adjVertices == null || adjVertices.isEmpty()) {
+        if (adjVertices == null || adjVertices.isEmpty()) {
             adjVertices = new ArrayList<>();
-            adjVertices.add(destination);
-        } else {
-            adjVertices.add(destination);
         }
+        adjVertices.add(destination);
 
-        vertexMap.put(source,adjVertices);
+        vertexMap.put(source, adjVertices);
         vertices.add(source);
         vertices.add(destination);
     }
@@ -47,14 +51,14 @@ public class GraphBreadthFirstSearch<T> {
         queue.add(startNode);
         startNode.visited = true;
 
-        while(!queue.isEmpty()){
+        while (!queue.isEmpty()) {
 
             GraphNode<T> temp = queue.poll();
             System.out.println(temp.data);
 
             List<GraphNode<T>> adjVertexList = vertexMap.get(temp);
-            for(GraphNode<T> v : adjVertexList) {
-                if(!v.visited) {
+            for (GraphNode<T> v : adjVertexList) {
+                if (!v.visited) {
                     v.visited = true;
                     queue.add(v);
                 }

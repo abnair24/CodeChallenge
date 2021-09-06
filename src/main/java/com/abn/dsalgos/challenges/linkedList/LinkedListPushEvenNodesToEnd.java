@@ -1,6 +1,7 @@
 package com.abn.dsalgos.challenges.linkedList;
 
 import com.abn.dsalgos.utils.Node;
+
 import java.util.NoSuchElementException;
 
 public class LinkedListPushEvenNodesToEnd<Integer> {
@@ -10,14 +11,14 @@ public class LinkedListPushEvenNodesToEnd<Integer> {
     private int size;
 
     public LinkedListPushEvenNodesToEnd() {
-        first =null;
+        first = null;
         last = null;
-        size=0;
+        size = 0;
     }
 
     public void insertFirst(int value) {
         Node newLink = new Node(value);
-        if(isEmpty()) {
+        if (isEmpty()) {
             last = newLink;
         } else {
             newLink.next = first;
@@ -27,14 +28,14 @@ public class LinkedListPushEvenNodesToEnd<Integer> {
     }
 
     public void insertLast(int value) {
-        Node  newLink = new Node(value);
-        if(isEmpty()) {
+        Node newLink = new Node(value);
+        if (isEmpty()) {
             first = newLink;
         } else {
             last.next = newLink;
         }
         last = newLink;
-        size ++;
+        size++;
 
     }
 
@@ -42,8 +43,9 @@ public class LinkedListPushEvenNodesToEnd<Integer> {
         return first == null;
     }
 
-    public int deleteFirst() throws Exception {
-        if(isEmpty()){
+    public int deleteFirst()
+            throws Exception {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
             Node temp = first;
@@ -73,7 +75,7 @@ public class LinkedListPushEvenNodesToEnd<Integer> {
 
         Node current = first;
         Node prev = first;
-        if(isEmpty()) {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
             while (current.data != value) {
@@ -95,7 +97,7 @@ public class LinkedListPushEvenNodesToEnd<Integer> {
 
     public int getFirst() {
         Node temp = first;
-        if(temp == null){
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp.data;
@@ -104,7 +106,7 @@ public class LinkedListPushEvenNodesToEnd<Integer> {
 
     public int getLast() {
         Node temp = last;
-        if(temp == null) {
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp.data;
@@ -117,7 +119,7 @@ public class LinkedListPushEvenNodesToEnd<Integer> {
 
     public Node getFirstNode() {
         Node temp = first;
-        if(temp == null ){
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp;
@@ -144,9 +146,9 @@ public class LinkedListPushEvenNodesToEnd<Integer> {
         Node oddTail = null;
         Node current = first;
 
-        while(current != null) {
-            if(current.data %2 == 0) {
-                if(evenHead == null) {
+        while (current != null) {
+            if (current.data % 2 == 0) {
+                if (evenHead == null) {
                     evenHead = current;
                     evenTail = evenHead;
                 } else {
@@ -154,7 +156,7 @@ public class LinkedListPushEvenNodesToEnd<Integer> {
                     evenTail = evenTail.next;
                 }
             } else {
-                if(oddHead == null) {
+                if (oddHead == null) {
                     oddHead = current;
                     oddTail = oddHead;
                 } else {
@@ -165,7 +167,7 @@ public class LinkedListPushEvenNodesToEnd<Integer> {
             current = current.next;
         }
 
-        if(oddHead == null ) {
+        if (oddHead == null) {
             evenTail.next = null;
             first = evenHead;
         } else if (evenHead == null) {

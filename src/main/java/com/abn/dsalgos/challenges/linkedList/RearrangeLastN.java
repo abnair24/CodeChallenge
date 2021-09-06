@@ -2,7 +2,6 @@ package com.abn.dsalgos.challenges.linkedList;
 
 import com.abn.dsalgos.utils.LinkNode;
 
-
 import java.util.NoSuchElementException;
 
 public class RearrangeLastN<T> {
@@ -11,13 +10,13 @@ public class RearrangeLastN<T> {
     private LinkNode<T> last;
 
     public RearrangeLastN() {
-        first =null;
+        first = null;
         last = null;
     }
 
     public void insertFirst(T value) {
         LinkNode<T> newLink = new LinkNode<>(value);
-        if(isEmpty()) {
+        if (isEmpty()) {
             last = newLink;
         } else {
             newLink.next = first;
@@ -26,8 +25,8 @@ public class RearrangeLastN<T> {
     }
 
     public void insertLast(T value) {
-        LinkNode <T> newLink = new LinkNode<>(value);
-        if(isEmpty()) {
+        LinkNode<T> newLink = new LinkNode<>(value);
+        if (isEmpty()) {
             first = newLink;
         } else {
             last.next = newLink;
@@ -39,8 +38,9 @@ public class RearrangeLastN<T> {
         return first == null;
     }
 
-    public T deleteFirst() throws Exception {
-        if(isEmpty()){
+    public T deleteFirst()
+            throws Exception {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
             LinkNode<T> temp = first;
@@ -69,7 +69,7 @@ public class RearrangeLastN<T> {
 
         LinkNode<T> current = first;
         LinkNode<T> prev = first;
-        if(isEmpty()) {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
             while (current.data != value) {
@@ -91,7 +91,7 @@ public class RearrangeLastN<T> {
 
     public T getFirst() {
         LinkNode<T> temp = first;
-        if(temp == null){
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp.data;
@@ -100,7 +100,7 @@ public class RearrangeLastN<T> {
 
     public LinkNode<T> getFirstNode() {
         LinkNode<T> temp = first;
-        if(temp == null) {
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp;
@@ -109,7 +109,7 @@ public class RearrangeLastN<T> {
 
     public T getLast() {
         LinkNode<T> temp = last;
-        if(temp == null) {
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp.data;
@@ -136,7 +136,7 @@ rearrangeLastN(l, n) = [7, 1, 2, 3, 4, 5, 6].
         LinkNode<T> tail = null;
 
         if (l == null) {
-            return ;
+            return;
         }
 
 //        if (k == 0) {

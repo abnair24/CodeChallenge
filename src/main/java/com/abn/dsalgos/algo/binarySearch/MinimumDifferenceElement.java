@@ -24,10 +24,10 @@ public class MinimumDifferenceElement {
         int high = array.length - 1;
         int low = 0;
 
-        while(low <= high) {
+        while (low <= high) {
             int mid = low + (high - low) / 2;
 
-            if(target == array[mid]) {
+            if (target == array[mid]) {
                 return array[mid];
             } else if (target > array[mid]) {
                 low = mid + 1;
@@ -36,7 +36,7 @@ public class MinimumDifferenceElement {
             }
         }
 
-        if((array[low] - target) < (target - array[high])) {
+        if ((array[low] - target) < (target - array[high])) {
             return array[low];
         }
         return array[high];
@@ -46,6 +46,4 @@ public class MinimumDifferenceElement {
         MinimumDifferenceElement minimumDifferenceElement = new MinimumDifferenceElement();
         System.out.println(minimumDifferenceElement.minimumDifference(new int[] {2, 5, 10, 12, 15}, 8));
     }
-
-
 }

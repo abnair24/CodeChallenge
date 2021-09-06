@@ -26,11 +26,11 @@ public class FindDuplicateNumber {
         do {
             slow = array[slow];
             fast = array[array[fast]];
-        } while(slow != fast);
+        } while (slow != fast);
 
         slow = array[0];
 
-        while(slow != fast) {
+        while (slow != fast) {
             slow = array[slow];
             fast = array[fast];
         }

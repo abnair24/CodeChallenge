@@ -14,6 +14,6 @@ public class LinkNode<T> {
     }
 
     public void displayLink() {
-        System.out.println("{ "+ data.toString());
+        System.out.println("{ " + data.toString());
     }
 }
