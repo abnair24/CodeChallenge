@@ -1,4 +1,4 @@
-package  com.abn.dsalgos.challenges.problems;
+package com.abn.dsalgos.challenges.problems;
 
 import java.util.HashMap;
 /*
@@ -23,22 +23,22 @@ public class ContainsCloseNums {
 
     public static void main(String[] args) {
 
-        int[] num = {1,0,1,1};
-        System.out.println(containsCloseNums(num,1));
+        int[] num = {1, 0, 1, 1};
+        System.out.println(containsCloseNums(num, 1));
     }
 
-    public static boolean containsCloseNums(int[] nums,int k) {
-        HashMap<Integer,Integer> map = new HashMap<>();
+    public static boolean containsCloseNums(int[] nums, int k) {
+        HashMap<Integer, Integer> map = new HashMap<>();
 
-        for(int i=0;i<nums.length;i++) {
-            if(map.get(nums[i])==null) {
-                map.put(nums[i],i);
+        for (int i = 0; i < nums.length; i++) {
+            if (map.get(nums[i]) == null) {
+                map.put(nums[i], i);
             } else {
                 int j = map.get(nums[i]);
-                if(Math.abs(j-i)<=k){
+                if (Math.abs(j - i) <= k) {
                     return true;
                 } else {
-                    map.put(nums[i],i);
+                    map.put(nums[i], i);
                 }
             }
         }

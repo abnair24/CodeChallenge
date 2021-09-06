@@ -2,7 +2,10 @@ package com.abn.dsalgos.ds.graph;
 
 import com.abn.dsalgos.utils.GraphNode;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class MyGraph<T> {
@@ -23,14 +26,14 @@ public class MyGraph<T> {
 
         List<GraphNode<T>> adjVertices = vertexMap.get(source);
 
-        if(adjVertices == null || adjVertices.isEmpty()) {
+        if (adjVertices == null || adjVertices.isEmpty()) {
             adjVertices = new ArrayList<>();
             adjVertices.add(destination);
         } else {
             adjVertices.add(destination);
         }
 
-        vertexMap.put(source,adjVertices);
+        vertexMap.put(source, adjVertices);
         vertices.add(source);
         vertices.add(destination);
     }
@@ -56,12 +59,12 @@ public class MyGraph<T> {
             return;
         }
 
-        vertexMap.forEach((key,value)->{
+        vertexMap.forEach((key, value) -> {
             /*
             Removes the vertex if it in the values
              */
-            List<GraphNode<T>> vertexAdjList =value;
-            vertexAdjList.removeIf(item ->vertex.equals(item));
+            List<GraphNode<T>> vertexAdjList = value;
+            vertexAdjList.removeIf(item -> vertex.equals(item));
 
             /*
             Removes the vertex if its a key
@@ -80,10 +83,10 @@ public class MyGraph<T> {
     }
 
     public void printGraph() {
-        for(GraphNode<T> vertex : vertexMap.keySet()) {
+        for (GraphNode<T> vertex : vertexMap.keySet()) {
             List<GraphNode<T>> adjVertex = vertexMap.get(vertex);
             for (GraphNode<T> v : adjVertex) {
-                System.out.println(vertex.data + "-->"+ v.data);
+                System.out.println(vertex.data + "-->" + v.data);
             }
             System.out.println();
         }

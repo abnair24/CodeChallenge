@@ -25,11 +25,11 @@ public class BinaryTreeIdentical {
 
     public boolean isIdentical(TreeNode root1, TreeNode root2) {
 
-        if(root1 == null && root2 == null) {
+        if (root1 == null && root2 == null) {
             return true;
         }
 
-        if(root1 == null || root2 == null) {
+        if (root1 == null || root2 == null) {
             return false;
         }
 

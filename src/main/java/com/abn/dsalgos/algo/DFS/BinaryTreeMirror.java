@@ -16,7 +16,7 @@ public class BinaryTreeMirror {
 
     public boolean isMirror(MyTreeNode root) {
 
-        if(root == null) {
+        if (root == null) {
             return true;
         }
         return isMirror(root.left, root.right);
@@ -24,15 +24,15 @@ public class BinaryTreeMirror {
 
     private boolean isMirror(MyTreeNode leftNode, MyTreeNode rightNode) {
 
-        if(leftNode == null && rightNode == null) {
+        if (leftNode == null && rightNode == null) {
             return true;
         }
 
-        if(leftNode == null || rightNode == null) {
+        if (leftNode == null || rightNode == null) {
             return false;
         }
 
-        if(leftNode.data != rightNode.data) {
+        if (leftNode.data != rightNode.data) {
             return false;
         }
 

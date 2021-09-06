@@ -20,17 +20,17 @@ public class PivotIndex {
 
     public int pivotIndex(int[] array) {
         int sum = 0;
-        for(int i = 0; i < array.length; i ++) {
+        for (int i = 0; i < array.length; i++) {
             sum += array[i];
         }
 
         int leftSum = 0;
         int index = -1;
-        for(int i = 0; i< array.length; i++) {
-            if((sum - array[i]) != leftSum) {
+        for (int i = 0; i < array.length; i++) {
+            if ((sum - array[i]) != leftSum) {
                 leftSum += array[i];
                 sum = sum - array[i];
-            } else if((sum - array[i]) == leftSum) {
+            } else if ((sum - array[i]) == leftSum) {
                 index = i;
                 break;
             }
@@ -40,6 +40,6 @@ public class PivotIndex {
 
     public static void main(String[] args) {
         PivotIndex pivotIndex = new PivotIndex();
-        System.out.println(pivotIndex.pivotIndex(new int[] {-1,-1,-1,-1,-1,0}));
+        System.out.println(pivotIndex.pivotIndex(new int[] {-1, -1, -1, -1, -1, 0}));
     }
 }

@@ -22,22 +22,22 @@ public class SubArraySumPrefix {
         Map<Integer, Integer> map = new HashMap<>();
         map.put(0, 0);
 
-        for(int i = 0; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
 
             currentSum += array[i];
             int diff = currentSum - target;
-            if(map.containsKey(diff)) {
+            if (map.containsKey(diff)) {
                 result[0] = map.get(diff);
                 result[1] = i + 1;
                 return result;
             }
-            map.put(currentSum, i+1);
+            map.put(currentSum, i + 1);
         }
         return result;
     }
 
     public static void main(String[] args) {
         SubArraySumPrefix subArraySumPrefix = new SubArraySumPrefix();
-        subArraySumPrefix.subarray(new int[] {1 ,-20, -3, 30, 5, 4}, 7);
+        subArraySumPrefix.subarray(new int[] {1, -20, -3, 30, 5, 4}, 7);
     }
 }

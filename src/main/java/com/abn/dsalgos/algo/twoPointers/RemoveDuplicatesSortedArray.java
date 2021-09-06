@@ -19,12 +19,12 @@ public class RemoveDuplicatesSortedArray {
         int nextPtr = 0;
         int len = array.length;
 
-        while(nextPtr < len) {
+        while (nextPtr < len) {
             if (array[startPtr] != array[nextPtr]) {
                 startPtr++;
                 array[startPtr] = array[nextPtr];
             }
-            nextPtr ++;
+            nextPtr++;
         }
         return startPtr + 1;
     }

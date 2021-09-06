@@ -1,7 +1,6 @@
 package com.abn.dsalgos.ds.queue;
 
 import com.abn.dsalgos.exceptions.EmptyQException;
-import com.abn.dsalgos.exceptions.EmptyStackException;
 import com.abn.dsalgos.utils.LinkNode;
 
 import java.util.NoSuchElementException;
@@ -19,26 +18,27 @@ public class QLinkList<T> {
     public QLinkList() {
         front = null;
         rear = null;
-        size =0;
+        size = 0;
     }
 
     public void insertLast(T value) {
         LinkNode<T> newLink = new LinkNode<>(value);
-        if(isEmpty()) {
+        if (isEmpty()) {
             front = newLink;
         } else {
             rear.next = newLink;
         }
         rear = newLink;
-        size ++;
+        size++;
     }
 
     public boolean isEmpty() {
         return front == null;
     }
 
-    public T deleteFirst() throws Exception {
-        if(isEmpty()) {
+    public T deleteFirst()
+            throws Exception {
+        if (isEmpty()) {
             throw new EmptyQException();
         } else {
             LinkNode<T> temp = front;
@@ -56,8 +56,9 @@ public class QLinkList<T> {
     }
 
 
-    public T peek() throws Exception {
-        if(isEmpty()) {
+    public T peek()
+            throws Exception {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
             return front.data;

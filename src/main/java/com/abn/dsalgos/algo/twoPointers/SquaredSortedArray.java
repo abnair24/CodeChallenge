@@ -21,9 +21,9 @@ public class SquaredSortedArray {
         int len = array.length;
         int[] sqArray = new int[len];
         int startPtr = 0;
-        int endPtr = array.length -1;
+        int endPtr = array.length - 1;
 
-        for(int i = len-1; i >=0; i--) {
+        for (int i = len - 1; i >= 0; i--) {
             int leftSquare = array[startPtr] * array[startPtr];
             int rightSquare = array[endPtr] * array[endPtr];
 

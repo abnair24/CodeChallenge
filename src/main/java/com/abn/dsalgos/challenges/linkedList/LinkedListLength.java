@@ -20,7 +20,7 @@ public class LinkedListLength<T> {
     public void insertFirst(T value) {
 
         LinkNode<T> node = new LinkNode<>(value);
-        if(isEmpty()) {
+        if (isEmpty()) {
             last = node;
         } else {
             node.next = first;
@@ -29,8 +29,8 @@ public class LinkedListLength<T> {
     }
 
     public void insertLast(T value) {
-        LinkNode<T>node = new LinkNode<>(value);
-        if(isEmpty()) {
+        LinkNode<T> node = new LinkNode<>(value);
+        if (isEmpty()) {
             first = node;
         } else {
             last.next = node;
@@ -43,14 +43,14 @@ public class LinkedListLength<T> {
     }
 
     public int length() {
-        int count =0 ;
+        int count = 0;
 
         LinkNode temp = first;
-        if(temp == null) {
+        if (temp == null) {
             return 0;
         }
 
-        while(temp!=null) {
+        while (temp != null) {
             count++;
             temp = temp.next;
         }

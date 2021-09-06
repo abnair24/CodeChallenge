@@ -11,7 +11,7 @@ public class MyBinaryTree<T> {
     }
 
     public void inOrder(MyTreeNode<T> node) {
-        if(node == null) {
+        if (node == null) {
             return;
         }
 
@@ -21,7 +21,7 @@ public class MyBinaryTree<T> {
     }
 
     public void preOrder(MyTreeNode<T> node) {
-        if(node == null) {
+        if (node == null) {
             return;
         }
 
@@ -31,7 +31,7 @@ public class MyBinaryTree<T> {
     }
 
     public void postOrder(MyTreeNode<T> node) {
-        if(node == null) {
+        if (node == null) {
             return;
         }
 

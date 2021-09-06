@@ -16,6 +16,7 @@ Output: 3
 public class DiameterOfBinaryTree {
 
     int maxDiameter = Integer.MIN_VALUE;
+
     public int diameterOfBinaryTree(TreeNode root) {
 
         getDiameter(root);
@@ -24,7 +25,7 @@ public class DiameterOfBinaryTree {
 
     private int getDiameter(TreeNode root) {
 
-        if(root == null) {
+        if (root == null) {
             return 0;
         }
 
@@ -33,6 +34,6 @@ public class DiameterOfBinaryTree {
 
         maxDiameter = Math.max(maxDiameter, leftLen + rightLen);
 
-        return 1+ Math.max(leftLen, rightLen);
+        return 1 + Math.max(leftLen, rightLen);
     }
 }

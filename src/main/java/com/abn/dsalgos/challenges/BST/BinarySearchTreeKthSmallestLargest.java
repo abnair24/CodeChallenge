@@ -25,19 +25,19 @@ public class BinarySearchTreeKthSmallestLargest<T extends Comparable<T>> {
         MyBSTNode<T> current = root;
         MyBSTNode<T> parent;
 
-        while(current != null) {
+        while (current != null) {
             parent = current;
 
-            if(node.data.compareTo(current.data) < 0) {
+            if (node.data.compareTo(current.data) < 0) {
 
                 current = current.left;
-                if(current == null) {
+                if (current == null) {
                     parent.left = node;
                     return;
                 }
             } else {
                 current = current.right;
-                if(current == null) {
+                if (current == null) {
                     parent.right = node;
                     return;
                 }
@@ -50,26 +50,26 @@ public class BinarySearchTreeKthSmallestLargest<T extends Comparable<T>> {
     Return node value when k becomes zero
      */
 
-    public T kthSmallest(MyBSTNode<T> root,int k) {
+    public T kthSmallest(MyBSTNode<T> root, int k) {
         Stack<MyBSTNode<T>> stack = new Stack<>();
 
         MyBSTNode<T> temp = root;
         int num = k;
 
-        while(true) {
-            while(temp != null) {
+        while (true) {
+            while (temp != null) {
                 stack.add(temp);
                 temp = temp.left;
             }
 
-            if(stack.isEmpty()){
+            if (stack.isEmpty()) {
                 return null;
             }
 
             temp = stack.pop();
-            num --;
+            num--;
 
-            if(num == 0) {
+            if (num == 0) {
                 return temp.data;
             }
             temp = temp.right;
@@ -77,7 +77,7 @@ public class BinarySearchTreeKthSmallestLargest<T extends Comparable<T>> {
     }
 
     public void display(MyBSTNode<T> node) {
-        if(node != null) {
+        if (node != null) {
             display(node.left);
             System.out.print(node.data + " ");
             display(node.right);
@@ -85,25 +85,25 @@ public class BinarySearchTreeKthSmallestLargest<T extends Comparable<T>> {
     }
 
     public T kthLargest(MyBSTNode<T> root, int k) {
-        Stack<MyBSTNode<T>>stack = new Stack<>();
+        Stack<MyBSTNode<T>> stack = new Stack<>();
 
         MyBSTNode<T> temp = root;
         int num = k;
 
-        while(true) {
-            while(temp != null) {
+        while (true) {
+            while (temp != null) {
                 stack.add(temp);
                 temp = temp.right;
             }
 
-            if(stack.isEmpty()) {
+            if (stack.isEmpty()) {
                 return null;
             }
 
             temp = stack.pop();
-            num --;
+            num--;
 
-            if(num == 0) {
+            if (num == 0) {
                 return temp.data;
             }
 

@@ -8,7 +8,7 @@ public class MiddleOfLinkedList {
         ListNode fastPtr = head;
         ListNode slowPtr = head;
 
-        while(fastPtr != null && fastPtr.next !=null) {
+        while (fastPtr != null && fastPtr.next != null) {
             fastPtr = fastPtr.next.next;
             slowPtr = slowPtr.next;
         }

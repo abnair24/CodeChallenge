@@ -71,4 +71,5 @@ public class AddAndsearchWord {
         System.out.println(addAndsearchWord.search(".ad"));
         System.out.println(addAndsearchWord.search("ba."));
     }
+
 }

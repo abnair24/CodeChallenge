@@ -24,9 +24,9 @@ public class SortLinkedListAbsoluteValues {
         LinkNode<Integer> prev = head;
         LinkNode<Integer> current = head.next;
 
-        while(current != null) {
+        while (current != null) {
 
-            if(current.data < prev.data) {
+            if (current.data < prev.data) {
 
                 prev.next = current.next;
                 current.next = head;

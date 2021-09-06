@@ -16,7 +16,6 @@ public class BinaryTreeLeftLeafSum<T> {
         root = null;
     }
 
-
     public int sumOfLeftLeafNode(MyTreeNode node) {
         int sum = 0;
 
@@ -32,7 +31,7 @@ public class BinaryTreeLeftLeafSum<T> {
             if (temp.left != null) {
                 stack.push(temp.left);
             }
-            if(temp.right != null) {
+            if (temp.right != null) {
                 stack.push(temp.right);
             }
         }

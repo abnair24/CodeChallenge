@@ -4,11 +4,11 @@ import java.util.Stack;
 
 public class SortStack {
 
-    Stack<Integer>original;
+    Stack<Integer> original;
     Stack<Integer> result;
 
     public SortStack() {
-        original =  new Stack<>();
+        original = new Stack<>();
         result = new Stack<>();
     }
 

@@ -28,33 +28,33 @@ public class BinaryTreeLevelOrderConnect {
         TreeNodeConnect previous;
         int nodeCount;
 
-        if(root == null) {
+        if (root == null) {
             return null;
         }
 
         queue.add(root);
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             previous = null;
             nodeCount = queue.size();
 
-            while(nodeCount > 0) {
+            while (nodeCount > 0) {
 
                 TreeNodeConnect current = queue.remove();
 
-                if(previous != null) {
+                if (previous != null) {
                     previous.next = current;
                 }
                 previous = current;
 
-                if(current.left != null) {
+                if (current.left != null) {
                     queue.add(current.left);
                 }
 
-                if(current.right != null) {
+                if (current.right != null) {
                     queue.add(current.right);
                 }
-                nodeCount --;
+                nodeCount--;
             }
         }
         return root;

@@ -24,7 +24,7 @@ public class PowerOfNumberRecursion {
 
     private double getPower(double x, long n) {
 
-        if (n == 0 ) {
+        if (n == 0) {
             return 1.0;
         }
 

@@ -26,24 +26,24 @@ public class LongestPalindromicSubstringCount {
 
     private int palindromeHelper(int start, int end, String s, int[][] cache) {
 
-        if(start > end) {
+        if (start > end) {
             return 0;
         }
 
-        if(start == end) {
+        if (start == end) {
             return 1;
         }
 
-        if(cache[start][end] != 0) {
+        if (cache[start][end] != 0) {
             return cache[start][end];
         }
 
-        if(s.charAt(start) == s.charAt(end)) {
+        if (s.charAt(start) == s.charAt(end)) {
             // if 2 char at both ends are equal, find the string inside those chars are palindrome.
             int subStrLen = end - start - 1;
             int count = palindromeHelper(start + 1, end - 1, s, cache);
 
-            if(subStrLen == count) {
+            if (subStrLen == count) {
                 return subStrLen + 2;
             }
         }

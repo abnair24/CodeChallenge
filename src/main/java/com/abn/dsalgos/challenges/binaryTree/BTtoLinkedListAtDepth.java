@@ -1,7 +1,12 @@
 package com.abn.dsalgos.challenges.binaryTree;
 
 import com.abn.dsalgos.utils.MyTreeNode;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
     /*
     Given a binary tree, design an algorithm which creates a linked list of all the nodes
@@ -17,30 +22,29 @@ public class BTtoLinkedListAtDepth {
         root = null;
     }
 
-
     public void linkedListAtDept(MyTreeNode node) {
-        if(node == null) {
+        if (node == null) {
             return;
         }
 
         Queue<MyTreeNode> queue = new LinkedList<>();
         queue.add(node);
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
 
             int nodesCount = queue.size();
             LinkedList<MyTreeNode> linkedList = new LinkedList<>();
 
-            while(nodesCount >0) {
+            while (nodesCount > 0) {
                 MyTreeNode temp = queue.poll();
 
                 linkedList.add(temp);
 
-                if(temp.left!=null) {
+                if (temp.left != null) {
                     queue.add(temp.left);
                 }
 
-                if(temp.right!=null) {
+                if (temp.right != null) {
                     queue.add(temp.right);
                 }
 
@@ -53,11 +57,11 @@ public class BTtoLinkedListAtDepth {
 
     private void displayArrayList(List<LinkedList<MyTreeNode>> array) {
         Iterator iterator = array.iterator();
-        while(iterator.hasNext()) {
+        while (iterator.hasNext()) {
             LinkedList list = (LinkedList) iterator.next();
-            while(!list.isEmpty()) {
-                 MyTreeNode node = (MyTreeNode) list.pollFirst();
-                System.out.print(" -> "+ node.data);
+            while (!list.isEmpty()) {
+                MyTreeNode node = (MyTreeNode) list.pollFirst();
+                System.out.print(" -> " + node.data);
 
             }
             System.out.println();
@@ -71,27 +75,27 @@ public class BTtoLinkedListAtDepth {
 
     public void binaryTreeLinkedList(MyTreeNode node) {
 
-        List<LinkedList<MyTreeNode>>lists = new ArrayList<>();
+        List<LinkedList<MyTreeNode>> lists = new ArrayList<>();
 
         LinkedList<MyTreeNode> linkedList = new LinkedList<>();
 
-        if(node != null) {
+        if (node != null) {
             linkedList.add(node);
         }
 
-        while(linkedList.size() > 0) {
+        while (linkedList.size() > 0) {
             lists.add(linkedList);
 
             LinkedList<MyTreeNode> temp = linkedList;
 
             linkedList = new LinkedList<>();
 
-            for(MyTreeNode t : temp) {
-                if(t.left != null) {
+            for (MyTreeNode t : temp) {
+                if (t.left != null) {
                     linkedList.add(t.left);
                 }
 
-                if(t.right != null) {
+                if (t.right != null) {
                     linkedList.add(t.right);
                 }
             }

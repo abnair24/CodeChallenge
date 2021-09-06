@@ -22,30 +22,30 @@ public class MinimumDeletionsMakePalindrom {
 
         int[][] cache = new int[s.length()][s.length()];
 
-        int countLps = lpsHelper(s, 0, s.length() -1, cache);
+        int countLps = lpsHelper(s, 0, s.length() - 1, cache);
 
         return s.length() - countLps;
     }
 
     private int lpsHelper(String s, int start, int end, int[][] cache) {
 
-        if(start > end) {
+        if (start > end) {
             return 0;
         }
 
-        if(start == end) {
+        if (start == end) {
             return 1;
         }
 
-        if(cache[start][end] != 0) {
+        if (cache[start][end] != 0) {
             return cache[start][end];
         }
 
-        if(s.charAt(start) == s.charAt(end)) {
+        if (s.charAt(start) == s.charAt(end)) {
             return 2 + lpsHelper(s, start + 1, end - 1, cache);
         }
 
-        int count1 = lpsHelper(s,start + 1, end, cache);
+        int count1 = lpsHelper(s, start + 1, end, cache);
         int count2 = lpsHelper(s, start, end - 1, cache);
 
         cache[start][end] = Math.max(count1, count2);
@@ -57,6 +57,6 @@ public class MinimumDeletionsMakePalindrom {
         Assert.assertEquals(minimumDeletionsMakePalindrom.minimumDeletions("cddpd"), 2);
         Assert.assertEquals(minimumDeletionsMakePalindrom.minimumDeletions("pqr"), 2);
         Assert.assertEquals(minimumDeletionsMakePalindrom.minimumDeletions("zzazz"), 0);
-
     }
+
 }

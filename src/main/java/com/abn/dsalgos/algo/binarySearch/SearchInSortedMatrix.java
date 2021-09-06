@@ -36,14 +36,14 @@ public class SearchInSortedMatrix {
 
         int mid, midElement;
 
-        while(start <= end) {
+        while (start <= end) {
 
             mid = (start + end) / 2;
             midElement = matrix[mid / col][mid % col];
 
-            if(target < midElement) {
+            if (target < midElement) {
                 end = mid - 1;
-            } else if(target > midElement) {
+            } else if (target > midElement) {
                 start = mid + 1;
             } else {
                 return true;

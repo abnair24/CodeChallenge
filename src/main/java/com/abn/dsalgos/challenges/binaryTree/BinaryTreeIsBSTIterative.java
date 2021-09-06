@@ -13,11 +13,11 @@ public class BinaryTreeIsBSTIterative<T extends Comparable<T>> {
         root = null;
     }
 
-    public boolean isBST(MyBTBSTNode<T> root){
+    public boolean isBST(MyBTBSTNode<T> root) {
         Queue<MyBTBSTNode<T>> queue = new LinkedList<>();
         queue.add(root);
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
 
             MyBTBSTNode<T> temp = queue.poll();
 
@@ -25,12 +25,12 @@ public class BinaryTreeIsBSTIterative<T extends Comparable<T>> {
                 return false;
             }
 
-            if(temp.left != null) {
+            if (temp.left != null) {
                 temp.left.max = (Integer) temp.data;
                 temp.left.min = temp.min;
                 queue.add(temp.left);
             }
-            if(temp.right != null) {
+            if (temp.right != null) {
                 temp.right.max = temp.max;
                 temp.right.min = (Integer) temp.data;
                 queue.add(temp.right);

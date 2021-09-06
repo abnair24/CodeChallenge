@@ -20,11 +20,11 @@ public class MinimumStepsFee {
     private int minimumStepsHelper(int[] array, int index, int cost, int[] cache) {
 
 
-        if(index >= array.length-1) {
+        if (index >= array.length - 1) {
             return 0;
         }
 
-        if(cache[index] != 0) {
+        if (cache[index] != 0) {
             return cache[index];
         }
 

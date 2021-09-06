@@ -14,6 +14,11 @@ Output: [], [1], [5], [3], [1,5], [1,3], [5,3], [1,5,3]
  */
 public class Subsets {
 
+    public static void main(String[] args) {
+        Subsets subsets = new Subsets();
+        subsets.findSubset(new int[] {1, 5});
+    }
+
     public List<List<Integer>> findSubset(int[] array) {
         List<List<Integer>> result = new ArrayList<>();
         result.add(new ArrayList<>());
@@ -31,10 +36,5 @@ public class Subsets {
         }
 
         return result;
-    }
-
-    public static void main(String[] args) {
-        Subsets subsets = new Subsets();
-        subsets.findSubset(new int[] {1, 5});
     }
 }

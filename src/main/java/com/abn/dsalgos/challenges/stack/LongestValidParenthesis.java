@@ -26,19 +26,19 @@ public class LongestValidParenthesis {
         int max = 0;
         int index = 0;
 
-        while(index < str.length()) {
+        while (index < str.length()) {
 
-            if(str.charAt(index) == '(') {
+            if (str.charAt(index) == '(') {
                 stack.push(index);
             } else {
                 stack.pop();
-                if(stack.isEmpty()) {
+                if (stack.isEmpty()) {
                     stack.push(index);
                 } else {
                     max = Math.max(index - stack.peek(), max);
                 }
             }
-            index ++;
+            index++;
         }
 
         return max;

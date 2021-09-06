@@ -1,6 +1,7 @@
 package com.abn.dsalgos.challenges.linkedList;
 
 import com.abn.dsalgos.utils.LinkNode;
+
 import java.util.NoSuchElementException;
 
 /*
@@ -17,14 +18,14 @@ public class LinkedListRemoveAllKvalue<T> {
     private int size;
 
     public LinkedListRemoveAllKvalue() {
-        first =null;
+        first = null;
         last = null;
-        size=0;
+        size = 0;
     }
 
     public void insertFirst(T value) {
         LinkNode<T> newLink = new LinkNode<>(value);
-        if(isEmpty()) {
+        if (isEmpty()) {
             last = newLink;
         } else {
             newLink.next = first;
@@ -34,14 +35,14 @@ public class LinkedListRemoveAllKvalue<T> {
     }
 
     public void insertLast(T value) {
-        LinkNode <T> newLink = new LinkNode<>(value);
-        if(isEmpty()) {
+        LinkNode<T> newLink = new LinkNode<>(value);
+        if (isEmpty()) {
             first = newLink;
         } else {
             last.next = newLink;
         }
         last = newLink;
-        size ++;
+        size++;
 
     }
 
@@ -49,8 +50,9 @@ public class LinkedListRemoveAllKvalue<T> {
         return first == null;
     }
 
-    public T deleteFirst() throws Exception {
-        if(isEmpty()){
+    public T deleteFirst()
+            throws Exception {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
             LinkNode<T> temp = first;
@@ -80,7 +82,7 @@ public class LinkedListRemoveAllKvalue<T> {
 
         LinkNode<T> current = first;
         LinkNode<T> prev = first;
-        if(isEmpty()) {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
             while (current.data != value) {
@@ -102,7 +104,7 @@ public class LinkedListRemoveAllKvalue<T> {
 
     public T getFirst() {
         LinkNode<T> temp = first;
-        if(temp == null){
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp.data;
@@ -111,7 +113,7 @@ public class LinkedListRemoveAllKvalue<T> {
 
     public T getLast() {
         LinkNode<T> temp = last;
-        if(temp == null) {
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp.data;
@@ -125,7 +127,7 @@ public class LinkedListRemoveAllKvalue<T> {
 
     public LinkNode getFirstNode() {
         LinkNode<T> temp = first;
-        if(temp == null ){
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp;
@@ -148,12 +150,12 @@ public class LinkedListRemoveAllKvalue<T> {
     Method to remove duplicates from a linked list. Need to pass first node or head node when method is called.
      O(N) solution
      */
-    public void removeKValues(LinkNode head, T k){
+    public void removeKValues(LinkNode head, T k) {
 
         LinkNode<T> previous = head;
         LinkNode<T> current = head;
 
-        while(current != null) {
+        while (current != null) {
             if (current.data == k) {
                 if (current == first) {
                     first = first.next;

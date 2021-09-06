@@ -20,7 +20,7 @@ public class BinaryTreeMirrorIteration {
 
     public boolean isMirror(MyTreeNode<Integer> root) {
 
-        if(root == null) {
+        if (root == null) {
             return true;
         }
 
@@ -28,20 +28,20 @@ public class BinaryTreeMirrorIteration {
         queue.add(root);
         queue.add(root);
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
 
             MyTreeNode<Integer> leftNode = queue.remove();
             MyTreeNode<Integer> rightNode = queue.remove();
 
-            if(leftNode == null && rightNode == null) {
+            if (leftNode == null && rightNode == null) {
                 return true;
             }
 
-            if(leftNode == null || rightNode == null) {
+            if (leftNode == null || rightNode == null) {
                 return false;
             }
 
-            if(!leftNode.data.equals(rightNode.data)) {
+            if (!leftNode.data.equals(rightNode.data)) {
                 return false;
             }
 

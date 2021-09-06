@@ -1,8 +1,6 @@
 package com.abn.dsalgos.ds.graph;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 /*
         0 --- 1
@@ -24,7 +22,7 @@ public class Graph {
         this.vertices = vertices;
         this.adjacentList = new LinkedList[vertices];
 
-        for(int i = 0; i < vertices; i++) {
+        for (int i = 0; i < vertices; i++) {
             adjacentList[i] = new LinkedList<>();
         }
     }
@@ -37,7 +35,7 @@ public class Graph {
         return this.vertices;
     }
 
-    public LinkedList < Integer > [] getAdjacentList() {
+    public LinkedList<Integer>[] getAdjacentList() {
         return this.adjacentList;
     }
 }

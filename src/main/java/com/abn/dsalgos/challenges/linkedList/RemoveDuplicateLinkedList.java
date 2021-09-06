@@ -12,14 +12,14 @@ public class RemoveDuplicateLinkedList<T> {
     private int size;
 
     public RemoveDuplicateLinkedList() {
-        first =null;
+        first = null;
         last = null;
-        size=0;
+        size = 0;
     }
 
     public void insertFirst(T value) {
         LinkNode<T> newLink = new LinkNode<>(value);
-        if(isEmpty()) {
+        if (isEmpty()) {
             last = newLink;
         } else {
             newLink.next = first;
@@ -29,14 +29,14 @@ public class RemoveDuplicateLinkedList<T> {
     }
 
     public void insertLast(T value) {
-        LinkNode <T> newLink = new LinkNode<>(value);
-        if(isEmpty()) {
+        LinkNode<T> newLink = new LinkNode<>(value);
+        if (isEmpty()) {
             first = newLink;
         } else {
             last.next = newLink;
         }
         last = newLink;
-        size ++;
+        size++;
 
     }
 
@@ -44,8 +44,9 @@ public class RemoveDuplicateLinkedList<T> {
         return first == null;
     }
 
-    public T deleteFirst() throws Exception {
-        if(isEmpty()){
+    public T deleteFirst()
+            throws Exception {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
             LinkNode<T> temp = first;
@@ -75,7 +76,7 @@ public class RemoveDuplicateLinkedList<T> {
 
         LinkNode<T> current = first;
         LinkNode<T> prev = first;
-        if(isEmpty()) {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
             while (current.data != value) {
@@ -97,7 +98,7 @@ public class RemoveDuplicateLinkedList<T> {
 
     public T getFirst() {
         LinkNode<T> temp = first;
-        if(temp == null){
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp.data;
@@ -106,7 +107,7 @@ public class RemoveDuplicateLinkedList<T> {
 
     public T getLast() {
         LinkNode<T> temp = last;
-        if(temp == null) {
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp.data;
@@ -119,7 +120,7 @@ public class RemoveDuplicateLinkedList<T> {
 
     public LinkNode getFirstNode() {
         LinkNode<T> temp = first;
-        if(temp == null ){
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp;
@@ -142,16 +143,16 @@ public class RemoveDuplicateLinkedList<T> {
     Method to remove duplicates from a linked list. Need to pass first node or head node when method is called.
      O(N) solution
      */
-    public void removeDuplicate(LinkNode n){
+    public void removeDuplicate(LinkNode n) {
 
         LinkNode<T> previous = null;
         HashSet<T> set = new HashSet<>();
-        while(n!=null) {
-            if(set.contains(n.data)) {
+        while (n != null) {
+            if (set.contains(n.data)) {
                 previous.next = n.next;
             } else {
                 set.add((T) n.data);
-                previous =n;
+                previous = n;
             }
             n = n.next;
         }

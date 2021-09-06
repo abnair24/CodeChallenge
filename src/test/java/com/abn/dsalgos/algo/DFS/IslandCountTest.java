@@ -1,4 +1,4 @@
-package com.abn.dsalgos.challenges.graph;
+package com.abn.dsalgos.algo.DFS;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;

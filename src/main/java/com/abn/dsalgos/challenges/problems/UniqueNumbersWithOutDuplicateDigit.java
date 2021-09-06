@@ -22,7 +22,37 @@ import java.util.List;
 
 public class UniqueNumbersWithOutDuplicateDigit {
 
-    public static void main(String[] args) throws IOException {
+    static void countNumbers(List<List<Integer>> arr) {
+        List<Integer> countArray = new ArrayList<>();
+
+        for (List<Integer> array : arr) {
+            int count = 0;
+            for (int i = array.get(0); i <= array.get(1); i++) {
+                int number = i;
+                boolean[] numVisited = new boolean[10];
+
+                while (number != 0) {
+                    if (numVisited[number % 10]) {
+                        break;
+                    }
+
+                    numVisited[number % 10] = true;
+                    number = number / 10;
+                }
+                if (number == 0) {
+                    count++;
+                }
+            }
+            countArray.add(count);
+        }
+
+        for (int i : countArray) {
+            System.out.println(i);
+        }
+    }
+
+    public static void main(String[] args)
+            throws IOException {
         List<Integer> list1 = new ArrayList<>();
         List<Integer> list2 = new ArrayList<>();
         List<List<Integer>> list3 = new ArrayList<>();
@@ -35,35 +65,4 @@ public class UniqueNumbersWithOutDuplicateDigit {
 
         countNumbers(list3);
     }
-
-    static void countNumbers(List<List<Integer>> arr) {
-        List<Integer> countArray = new ArrayList<>();
-
-        for(List<Integer> array: arr){
-            int count =0;
-            for (int i= array.get(0); i<= array.get(1);i++) {
-                int number = i;
-                boolean[] numVisited = new boolean[10];
-
-                while(number != 0){
-                    if(numVisited[number%10]) {
-                        break;
-                    }
-
-                    numVisited[number%10] = true;
-                    number = number/10;
-                }
-                if(number == 0){
-                    count++;
-                }
-            }
-            countArray.add(count);
-        }
-
-        for(int i : countArray) {
-            System.out.println(i);
-        }
-    }
-
-
 }

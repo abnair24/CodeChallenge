@@ -21,29 +21,29 @@ public class LongestIncreasingSequence {
 
     private int longestrec(int[] array, int index, int previous, int[][] cache) {
 
-        if(index >= array.length) {
+        if (index >= array.length) {
             return 0;
         }
 
-        if(cache[index][previous + 1] != 0) {
-            return cache[index][previous +1];
+        if (cache[index][previous + 1] != 0) {
+            return cache[index][previous + 1];
         }
 
         int count1 = 0;
-        if(previous == -1 || array[index] > array[previous]) {
+        if (previous == -1 || array[index] > array[previous]) {
             count1 = 1 + longestrec(array, index + 1, index, cache);
         }
         int count2 = longestrec(array, index + 1, previous, cache);
 
-        cache[index][previous+1] = Math.max(count1, count2);
+        cache[index][previous + 1] = Math.max(count1, count2);
 
-        return cache[index][previous+1];
+        return cache[index][previous + 1];
     }
 
     public static void main(String[] args) {
 
         LongestIncreasingSequence longestIncreasingSequence = new LongestIncreasingSequence();
-        System.out.println(longestIncreasingSequence.longest(new int[] {4,2,3,6,10,1,12}));
-        System.out.println(longestIncreasingSequence.longest(new int[] {-4,3,7,15}));
+        System.out.println(longestIncreasingSequence.longest(new int[] {4, 2, 3, 6, 10, 1, 12}));
+        System.out.println(longestIncreasingSequence.longest(new int[] {-4, 3, 7, 15}));
     }
 }

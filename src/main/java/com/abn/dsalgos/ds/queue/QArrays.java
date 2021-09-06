@@ -1,11 +1,11 @@
 package com.abn.dsalgos.ds.queue;
 
-import java.util.*;
+import java.util.Arrays;
 
 public class QArrays<T> {
-    private int size ;
-    private static final int MAX_SIZE=10;
-    private Object[] element ;
+    private static final int MAX_SIZE = 10;
+    private int size;
+    private Object[] element;
     private int front;
     private int rear;
 
@@ -21,10 +21,10 @@ public class QArrays<T> {
         return (element.length == 0);
     }
 
-    public void enqueue(T t)  {
-        if(size == element.length) {
+    public void enqueue(T t) {
+        if (size == element.length) {
             int newSize = element.length * 2;
-            element = Arrays.copyOf(element,newSize);
+            element = Arrays.copyOf(element, newSize);
         }
         element[size++] = t;
     }
@@ -32,8 +32,8 @@ public class QArrays<T> {
     public T dequeue() {
         T t = (T) element[front];
         front++;
-        if(front == element.length -1) {
-            front =0;
+        if (front == element.length - 1) {
+            front = 0;
         }
         size--;
         return t;

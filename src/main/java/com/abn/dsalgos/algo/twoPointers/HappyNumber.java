@@ -40,9 +40,9 @@ public class HappyNumber {
         int slow = num;
         int fast = num;
 
-        if(num == 0) {
+        if (num == 0) {
             return false;
-        } else if(num == 1) {
+        } else if (num == 1) {
             return true;
         } else {
             do {
@@ -57,8 +57,8 @@ public class HappyNumber {
     private int findSquareSum(int num) {
         int sum = 0;
         int digit;
-        while(num > 0) {
-            digit = num %10;
+        while (num > 0) {
+            digit = num % 10;
             sum += digit * digit;
             num = num / 10;
         }

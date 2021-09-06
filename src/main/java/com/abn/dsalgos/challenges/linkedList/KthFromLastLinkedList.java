@@ -1,6 +1,7 @@
 package com.abn.dsalgos.challenges.linkedList;
 
 import com.abn.dsalgos.utils.LinkNode;
+
 import java.util.NoSuchElementException;
 
 public class KthFromLastLinkedList<T> {
@@ -9,13 +10,13 @@ public class KthFromLastLinkedList<T> {
     private LinkNode<T> last;
 
     public KthFromLastLinkedList() {
-        first =null;
+        first = null;
         last = null;
     }
 
     public void insertFirst(T value) {
         LinkNode<T> newLink = new LinkNode<>(value);
-        if(isEmpty()) {
+        if (isEmpty()) {
             last = newLink;
         } else {
             newLink.next = first;
@@ -24,8 +25,8 @@ public class KthFromLastLinkedList<T> {
     }
 
     public void insertLast(T value) {
-        LinkNode <T> newLink = new LinkNode<>(value);
-        if(isEmpty()) {
+        LinkNode<T> newLink = new LinkNode<>(value);
+        if (isEmpty()) {
             first = newLink;
         } else {
             last.next = newLink;
@@ -37,8 +38,9 @@ public class KthFromLastLinkedList<T> {
         return first == null;
     }
 
-    public T deleteFirst() throws Exception {
-        if(isEmpty()){
+    public T deleteFirst()
+            throws Exception {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
             LinkNode<T> temp = first;
@@ -67,7 +69,7 @@ public class KthFromLastLinkedList<T> {
 
         LinkNode<T> current = first;
         LinkNode<T> prev = first;
-        if(isEmpty()) {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else {
             while (current.data != value) {
@@ -89,7 +91,7 @@ public class KthFromLastLinkedList<T> {
 
     public T getFirst() {
         LinkNode<T> temp = first;
-        if(temp == null){
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp.data;
@@ -98,7 +100,7 @@ public class KthFromLastLinkedList<T> {
 
     public T getLast() {
         LinkNode<T> temp = last;
-        if(temp == null) {
+        if (temp == null) {
             throw new NoSuchElementException();
         } else {
             return temp.data;
@@ -112,15 +114,15 @@ public class KthFromLastLinkedList<T> {
         LinkNode<T> p1 = first;
         LinkNode<T> p2 = first;
 
-        for(int i =0; i<k;i++) {
-            if(p1==null) {
+        for (int i = 0; i < k; i++) {
+            if (p1 == null) {
                 return null;
             } else {
                 p1 = p1.next;
             }
         }
 
-        while(p1!=null) {
+        while (p1 != null) {
             p1 = p1.next;
             p2 = p2.next;
         }

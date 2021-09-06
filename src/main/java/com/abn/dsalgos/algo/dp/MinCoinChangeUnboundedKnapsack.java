@@ -29,39 +29,39 @@ public class MinCoinChangeUnboundedKnapsack {
 
     private int minimum(int[] array, Integer[][] cache, int target, int index) {
 
-        if(target == 0) {
+        if (target == 0) {
             return 0;
         }
 
-        if(index >= array.length || array.length == 0) {
+        if (index >= array.length || array.length == 0) {
             return Integer.MAX_VALUE;
         }
 
-        if(cache[index][target] != null) {
+        if (cache[index][target] != null) {
             return cache[index][target];
         }
 
         int res = 0;
         int count = Integer.MAX_VALUE;
 
-        if(array[index] <= target) {
-            res = minimum(array, cache,target - array[index], index);
+        if (array[index] <= target) {
+            res = minimum(array, cache, target - array[index], index);
 
-            if(res != Integer.MAX_VALUE) {
+            if (res != Integer.MAX_VALUE) {
                 count = res + 1;
             }
         }
-        int count1  = minimum(array, cache, target, index + 1);
+        int count1 = minimum(array, cache, target, index + 1);
         cache[index][target] = Math.min(count, count1);
 
         return cache[index][target];
     }
 
-
     public static void main(String[] args) {
         MinCoinChangeUnboundedKnapsack minCoinChangeUnboundedKnapsack = new MinCoinChangeUnboundedKnapsack();
-        Assert.assertEquals(minCoinChangeUnboundedKnapsack.minimumCoins(new int[]{2}, 3), -1);
-        Assert.assertEquals(minCoinChangeUnboundedKnapsack.minimumCoins(new int[]{1, 2}, 5), 3);
-        Assert.assertEquals(minCoinChangeUnboundedKnapsack.minimumCoins(new int[]{1, 2, 5}, 11), 3);
+        Assert.assertEquals(minCoinChangeUnboundedKnapsack.minimumCoins(new int[] {2}, 3), -1);
+        Assert.assertEquals(minCoinChangeUnboundedKnapsack.minimumCoins(new int[] {1, 2}, 5), 3);
+        Assert.assertEquals(minCoinChangeUnboundedKnapsack.minimumCoins(new int[] {1, 2, 5}, 11), 3);
     }
+
 }

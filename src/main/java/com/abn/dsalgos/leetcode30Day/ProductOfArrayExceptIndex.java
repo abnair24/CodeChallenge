@@ -1,8 +1,5 @@
 package com.abn.dsalgos.leetcode30Day;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class ProductOfArrayExceptIndex {
 
     // [1,2,3,4,5]
@@ -30,5 +27,4 @@ public class ProductOfArrayExceptIndex {
 
         return ouput;
     }
-
 }

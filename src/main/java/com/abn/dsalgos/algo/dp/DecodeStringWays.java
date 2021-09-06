@@ -17,6 +17,7 @@ Input: "18"
 Output: 2
 Explanation: "18" can be decoded as "AH" or "R"
  */
+
 public class DecodeStringWays {
 
     public int decode(String str) {
@@ -54,8 +55,8 @@ public class DecodeStringWays {
         return cache.get(index);
     }
 
-   public static void main(String[] args) {
-      DecodeStringWays decodeStringWays = new DecodeStringWays();
-      System.out.println(decodeStringWays.decode("1234"));
-   }
+    public static void main(String[] args) {
+        DecodeStringWays decodeStringWays = new DecodeStringWays();
+        System.out.println(decodeStringWays.decode("1234"));
+    }
 }

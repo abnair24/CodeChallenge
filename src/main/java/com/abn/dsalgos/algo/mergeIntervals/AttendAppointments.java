@@ -19,7 +19,7 @@ Output: false
 If overlapping appointments are there, then he cant attend all appointments
  */
 
-//TO-DO: tests
+//TODO: tests
 public class AttendAppointments {
 
     public boolean canAttend(Interval[] appointments) {

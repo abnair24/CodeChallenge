@@ -2,7 +2,7 @@ package com.abn.dsalgos.utils;
 
 import java.util.Objects;
 
-public class GraphNode<T>{
+public class GraphNode<T> {
 
     public T data;
     public Integer weight;
@@ -19,8 +19,12 @@ public class GraphNode<T>{
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         GraphNode<?> graphNode = (GraphNode<?>) o;
         return Objects.equals(data, graphNode.data);
     }

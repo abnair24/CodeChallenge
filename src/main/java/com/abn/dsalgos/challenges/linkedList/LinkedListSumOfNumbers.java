@@ -6,35 +6,35 @@ import java.util.NoSuchElementException;
 
 public class LinkedListSumOfNumbers {
 
-   /* Given two number represent by linked list, calculate sum of the numbers and store
-    result in new linked list. Each node of linked list is represented by single digit and
-     head node is most significant digit.
+    /* Given two number represent by linked list, calculate sum of the numbers and store
+     result in new linked list. Each node of linked list is represented by single digit and
+      head node is most significant digit.
 
-    For example:
-    Sum of two number:
-            56712
-            +6359
+     For example:
+     Sum of two number:
+             56712
+             +6359
 
-            63071
+             63071
 
-Algorithm:
- * Create two linkedlist which will represent above two numbers.
- * Reverse both linked list.
- * Add two node values (Each node is being represented as single digit)  starting from heads of two linkedlist.
- * If sum is of above two node values is more than 10, then forward the carry.
+ Algorithm:
+  * Create two linkedlist which will represent above two numbers.
+  * Reverse both linked list.
+  * Add two node values (Each node is being represented as single digit)  starting from heads of two linkedlist.
+  * If sum is of above two node values is more than 10, then forward the carry.
 
- */
-   private Node first;
+  */
+    private Node first;
     private Node last;
 
     public LinkedListSumOfNumbers() {
-        first =null;
+        first = null;
         last = null;
     }
 
     public void insertFirst(Integer value) {
         Node newLink = new Node(value);
-        if(isEmpty()) {
+        if (isEmpty()) {
             last = newLink;
         } else {
             newLink.next = first;
@@ -43,8 +43,8 @@ Algorithm:
     }
 
     public void insertLast(Integer value) {
-        Node  newLink = new Node(value);
-        if(isEmpty()) {
+        Node newLink = new Node(value);
+        if (isEmpty()) {
             first = newLink;
         } else {
             last.next = newLink;
@@ -116,32 +116,32 @@ Algorithm:
         Node head1 = reverseLinkedList(l1.getFirstNode());
         Node head2 = reverseLinkedList(l2.getFirstNode());
 
-        int carry =0;
+        int carry = 0;
         int sum;
 
         Node sumHead = null;
         Node sumNode = null;
 
-        int count =0;
+        int count = 0;
 
-        while( head1 !=null ||head2 != null) {
+        while (head1 != null || head2 != null) {
             count++;
 
             sum = carry;
-            if(head1 != null) {
+            if (head1 != null) {
                 sum = sum + head1.data;
                 head1 = head1.next;
             }
 
-            if(head2 != null) {
+            if (head2 != null) {
                 sum = sum + head2.data;
                 head2 = head2.next;
             }
 
-            carry = sum/10;
-            sum = sum %10;
+            carry = sum / 10;
+            sum = sum % 10;
 
-            if(count == 1) {
+            if (count == 1) {
                 sumNode = new Node(sum);
                 sumHead = sumNode;
             } else {
@@ -151,7 +151,7 @@ Algorithm:
             }
         }
 
-        if(carry !=0) {
+        if (carry != 0) {
             sumNode.next = new Node(carry);
         }
 

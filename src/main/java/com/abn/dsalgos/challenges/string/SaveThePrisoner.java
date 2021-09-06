@@ -22,15 +22,15 @@ public class SaveThePrisoner {
 
     public int save(int n, int m, int s) {
 
-        int  t;
+        int t;
 
-        if(s == 1) {
+        if (s == 1) {
             t = m % n;
         } else {
             t = (m + s - 1) % n;
         }
 
-        if( t == 0) {
+        if (t == 0) {
             return n;
         } else {
             return t;

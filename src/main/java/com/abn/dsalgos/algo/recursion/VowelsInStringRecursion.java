@@ -6,7 +6,7 @@ public class VowelsInStringRecursion {
 
         String vowel = "aeiou";
 
-        if(str.length() == 0) {
+        if (str.length() == 0) {
             return 0;
         }
 

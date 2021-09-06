@@ -27,11 +27,11 @@ import java.util.Set;
 public class DuplicateWithLowerSecondIndex {
 
     public static void main(String[] args) {
-        int [] a = {2, 1, 3, 5, 3, 2};
+        int[] a = {2, 1, 3, 5, 3, 2};
         System.out.println(firstDuplicate(a));
     }
 
-    public static int firstDuplicate (int[] input) {
+    public static int firstDuplicate(int[] input) {
         Set<Integer> set = new HashSet<>();
 
         return Arrays.stream(input).filter(i -> !set.add(i)).findFirst().orElse(-1);

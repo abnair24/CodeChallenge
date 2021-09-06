@@ -6,7 +6,7 @@ import java.util.Stack;
     Max value in a stack implementation.
  */
 
-class Wrapper{
+class Wrapper {
     int data;
     int maxData;
 
@@ -34,15 +34,15 @@ class Wrapper{
 
 public class MaxStack {
 
-    private Stack<Wrapper> stack=new Stack<>();
+    private Stack<Wrapper> stack = new Stack<>();
 
     public void insert(int data) {
-        int max= stack.isEmpty()? data : data>getMaxData() ? data : getMaxData();
-        stack.push(new Wrapper(data,max));
+        int max = stack.isEmpty() ? data : data > getMaxData() ? data : getMaxData();
+        stack.push(new Wrapper(data, max));
     }
 
     public int getMaxData() {
-        return stack.peek().getMaxData()  ;
+        return stack.peek().getMaxData();
     }
 
     public int pop() {

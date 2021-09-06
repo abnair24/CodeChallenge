@@ -6,7 +6,7 @@ public class MergeSortRecursion {
 
     public int[] mergeSort(int[] input) {
 
-        if(input.length <= 1) {
+        if (input.length <= 1) {
             return input;
         }
         int middle = input.length / 2;
@@ -26,23 +26,24 @@ public class MergeSortRecursion {
         int rightIndex = 0;
         int resultIndex = 0;
 
-        while(leftIndex < left.length && rightIndex < right.length) {
-            if(left[leftIndex] < right[rightIndex]) {
-                result[resultIndex ++] = left[leftIndex ++];
+        while (leftIndex < left.length && rightIndex < right.length) {
+            if (left[leftIndex] < right[rightIndex]) {
+                result[resultIndex++] = left[leftIndex++];
             } else {
-                result[resultIndex ++] = right[rightIndex ++];
+                result[resultIndex++] = right[rightIndex++];
             }
         }
 
-        while(leftIndex < left.length) {
-            result[resultIndex ++] = left[leftIndex ++];
+        while (leftIndex < left.length) {
+            result[resultIndex++] = left[leftIndex++];
         }
-        while(rightIndex < right.length) {
-            result[resultIndex ++] = right[rightIndex ++];
+        while (rightIndex < right.length) {
+            result[resultIndex++] = right[rightIndex++];
         }
 
         return result;
     }
+
 
     public static void main(String[] args) {
 

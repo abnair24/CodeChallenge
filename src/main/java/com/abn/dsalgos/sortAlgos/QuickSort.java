@@ -5,13 +5,13 @@ package com.abn.dsalgos.sortAlgos;
  */
 public class QuickSort {
 
-    public void quickSort(int [] lst) {
+    public void quickSort(int[] lst) {
         /* Sorts an array in the ascending order in O(n log n) time */
         int n = lst.length;
         qSort(lst, 0, n - 1);
     }
 
-    private void qSort(int [] lst, int lo, int hi) {
+    private void qSort(int[] lst, int lo, int hi) {
         if (lo < hi) {
             int p = partition(lst, lo, hi);
             qSort(lst, lo, p - 1);
@@ -19,7 +19,7 @@ public class QuickSort {
         }
     }
 
-    private int partition(int [] lst, int lo, int hi) {
+    private int partition(int[] lst, int lo, int hi) {
     /*
       Picks the last element hi as a pivot
       and returns the index of pivot value in the sorted array */
@@ -45,5 +45,4 @@ public class QuickSort {
 
         quickSort.quickSort(new int[] {1, 5, 3, 2, 8, 7, 6, 4});
     }
-
 }

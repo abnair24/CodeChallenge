@@ -15,7 +15,7 @@ public class FrequencySort {
 
         Map<Character, Integer> map = new HashMap<>();
 
-        for(int i = 0; i < s.length(); i++) {
+        for (int i = 0; i < s.length(); i++) {
             map.put(s.charAt(i), map.getOrDefault(s.charAt(i), 0) + 1);
         }
 
@@ -25,9 +25,9 @@ public class FrequencySort {
 
         StringBuilder sb = new StringBuilder();
 
-        while(!maxHeap.isEmpty()) {
+        while (!maxHeap.isEmpty()) {
             Map.Entry<Character, Integer> entry = maxHeap.poll();
-            for(int i = 0; i < entry.getValue(); i++) {
+            for (int i = 0; i < entry.getValue(); i++) {
                 sb.append(entry.getKey());
             }
         }

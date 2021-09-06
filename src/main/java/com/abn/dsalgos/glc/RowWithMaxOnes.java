@@ -17,25 +17,25 @@ public class RowWithMaxOnes {
 
     public int rowWithMax(int[][] matrix) {
 
-       int rows = matrix.length;
-       int cols = matrix[0].length;
-       int current_col = cols - 1;
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+        int current_col = cols - 1;
 
-       int maxRowIndex = -1;
-       int maxCount = 0;
+        int maxRowIndex = -1;
+        int maxCount = 0;
 
-       for(int i = 0; i < rows; i++) {
+        for (int i = 0; i < rows; i++) {
 
-           while(current_col >= 0 && matrix[i][current_col] == 1) {
-               current_col --;
-               maxRowIndex = i;
-               maxCount++;
-           }
+            while (current_col >= 0 && matrix[i][current_col] == 1) {
+                current_col--;
+                maxRowIndex = i;
+                maxCount++;
+            }
 
-           if(maxCount == cols) {
-               return maxRowIndex;
-           }
-       }
-       return maxRowIndex;
+            if (maxCount == cols) {
+                return maxRowIndex;
+            }
+        }
+        return maxRowIndex;
     }
 }

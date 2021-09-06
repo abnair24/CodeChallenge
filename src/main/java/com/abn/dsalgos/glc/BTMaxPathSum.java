@@ -39,7 +39,7 @@ public class BTMaxPathSum {
     }
 
     private int findPath(TreeNode root) {
-        if(root == null) {
+        if (root == null) {
             return 0;
         } else {
             int leftSum = findPath(root.left);
@@ -58,7 +58,7 @@ public class BTMaxPathSum {
     private int maxOfChildNodes(int val, int leftSum, int rightSum) {
         int max = Math.max(leftSum, rightSum);
 
-        if(val + max > val) {
+        if (val + max > val) {
             return val + max;
         } else {
             return val;

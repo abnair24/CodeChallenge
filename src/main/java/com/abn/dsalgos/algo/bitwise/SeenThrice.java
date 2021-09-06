@@ -2,6 +2,12 @@ package com.abn.dsalgos.algo.bitwise;
 
 public class SeenThrice {
 
+    public static void main(String[] args) {
+
+        SeenThrice seenThrice = new SeenThrice();
+        seenThrice.singleNumber(new int[] {2, 2, 2});
+    }
+
     public int singleNumber(int[] nums) {
         int seenOnce = 0, seenTwice = 0;
 
@@ -11,11 +17,5 @@ public class SeenThrice {
         }
 
         return seenOnce;
-    }
-
-    public static void main(String[] args) {
-
-        SeenThrice seenThrice = new SeenThrice();
-        seenThrice.singleNumber(new int[] {2,2,2});
     }
 }

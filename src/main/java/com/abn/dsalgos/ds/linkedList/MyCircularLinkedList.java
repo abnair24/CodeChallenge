@@ -6,7 +6,7 @@ public class MyCircularLinkedList<T> {
 
     private LinkNode<T> first;
     private LinkNode<T> last;
-    private int size ;
+    private int size;
 
     public MyCircularLinkedList() {
         first = null;
@@ -22,7 +22,7 @@ public class MyCircularLinkedList<T> {
 
         LinkNode<T> newLink = new LinkNode<>(value);
 
-        if(isEmpty()) {
+        if (isEmpty()) {
             first = newLink;
             last = newLink;
             newLink.next = first;
@@ -37,8 +37,8 @@ public class MyCircularLinkedList<T> {
 
 
     public void insertLast(T value) {
-        LinkNode<T> newLink  = new LinkNode<>(value);
-        if(isEmpty()) {
+        LinkNode<T> newLink = new LinkNode<>(value);
+        if (isEmpty()) {
             insertFirst(value);
         } else {
             LinkNode<T> temp = last;
@@ -50,7 +50,7 @@ public class MyCircularLinkedList<T> {
     }
 
     public void deleteFirst() {
-        if(isEmpty()) {
+        if (isEmpty()) {
             System.out.println("Empty list");
         } else {
             first = first.next;
@@ -61,19 +61,19 @@ public class MyCircularLinkedList<T> {
 
     public T elementAt(int index) {
         LinkNode<T> temp = first;
-        while(index - 1 !=0) {
+        while (index - 1 != 0) {
             temp = temp.next;
-            index --;
+            index--;
         }
         return temp.data;
     }
 
-    public void print(){
+    public void print() {
         LinkNode<T> temp = first;
 
         do {
             System.out.println(temp.data + " ");
             temp = temp.next;
-        } while(temp!=first);
+        } while (temp != first);
     }
 }

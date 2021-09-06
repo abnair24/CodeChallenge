@@ -18,13 +18,6 @@ nearestGreater(a) = [1, 4, 1, 2, -1, 4].
 
 public class NearestGreater {
 
-    public static void main(String[] args) {
-        int[] array = new int[]{1,9,4,5,6,7,8};
-
-        NearestGreater nearestGreater = new NearestGreater();
-        nearestGreater.nearestGreater(array);
-    }
-
     public void nearestGreater(int[] array) {
 
         int[] result = new int[array.length];
@@ -34,17 +27,17 @@ public class NearestGreater {
         Find the nearest bigger value in the left side of the number
          */
 
-        for(int i =0; i< array.length;i++) {
-            while(!stack.isEmpty() && array[i] >= array[stack.peek()]) {
+        for (int i = 0; i < array.length; i++) {
+            while (!stack.isEmpty() && array[i] >= array[stack.peek()]) {
                 stack.pop();
             }
 
-            result[i] = stack.isEmpty() ? -1:stack.peek();
+            result[i] = stack.isEmpty() ? -1 : stack.peek();
             stack.push(i);
         }
 
-        for(int i = array.length-1 ; i >=0; i--) {
-            while(!stack.isEmpty() && array[i] >= array[stack.peek()]) {
+        for (int i = array.length - 1; i >= 0; i--) {
+            while (!stack.isEmpty() && array[i] >= array[stack.peek()]) {
                 stack.pop();
             }
 
@@ -53,13 +46,20 @@ public class NearestGreater {
             ie; i - result[i] > stack.peek() -i -> true, then set stack.peek() as result[i];
 
              */
-            if(result[i] == -1 || ((i - result[i]) > (stack.peek() - i))) {
-                result[i] = stack.isEmpty() ?-1 : stack.peek();
+            if (result[i] == -1 || ((i - result[i]) > (stack.peek() - i))) {
+                result[i] = stack.isEmpty() ? -1 : stack.peek();
             }
             stack.push(i);
         }
-        for(int k =0; k<array.length;k++) {
+        for (int k = 0; k < array.length; k++) {
             System.out.print(result[k] + ", ");
         }
+    }
+
+    public static void main(String[] args) {
+        int[] array = new int[] {1, 9, 4, 5, 6, 7, 8};
+
+        NearestGreater nearestGreater = new NearestGreater();
+        nearestGreater.nearestGreater(array);
     }
 }

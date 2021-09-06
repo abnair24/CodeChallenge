@@ -15,18 +15,18 @@ public class BSTDeleteNode {
     //WIP
     public MyBSTNode<Integer> deleteNode(MyBSTNode<Integer> root, int val) {
 
-        if(root == null) {
+        if (root == null) {
             return root;
         }
 
-        if(root.data == val) {
+        if (root.data == val) {
 
             //If there is only one child
-            if(root.left == null) {
+            if (root.left == null) {
                 return root.right;
             }
 
-            if(root.right == null) {
+            if (root.right == null) {
                 return root.left;
             }
 
@@ -42,7 +42,7 @@ public class BSTDeleteNode {
             root.right = deleteNode(root.right, val);
         }
 
-        if(val > root.data) {
+        if (val > root.data) {
             root.right = deleteNode(root.right, val);
         } else {
             root.left = deleteNode(root.left, val);
@@ -53,12 +53,12 @@ public class BSTDeleteNode {
 
     private MyBSTNode<Integer> findSuccessor(MyBSTNode<Integer> root, int value) {
 
-        if(root == null) {
+        if (root == null) {
             return null;
         }
         MyBSTNode<Integer> successor = null;
-        while(root != null) {
-            if(root.data <= value) {
+        while (root != null) {
+            if (root.data <= value) {
                 root = root.right;
             } else {
                 successor = root;

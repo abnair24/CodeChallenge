@@ -13,6 +13,12 @@ Output: [], [1], [3], [1,3], [3,3], [1,3,3]
  */
 public class DistinctSubsets {
 
+    public static void main(String[] args) {
+
+        DistinctSubsets distinctSubsets = new DistinctSubsets();
+        distinctSubsets.distinct(new int[] {3, 1, 3});
+    }
+
     public List<List<Integer>> distinct(int[] array) {
 
         Arrays.sort(array);
@@ -24,15 +30,15 @@ public class DistinctSubsets {
         int start = 0;
         int end = 0;
 
-        while(i < array.length) {
+        while (i < array.length) {
             start = 0;
 
-            if(i > 0 && array[i] == array[i - 1]) {
+            if (i > 0 && array[i] == array[i - 1]) {
                 start = end + 1;
             }
 
             end = result.size() - 1;
-            for(int j = start; j <= end; j ++) {
+            for (int j = start; j <= end; j++) {
 
                 List<Integer> set = new ArrayList<>(result.get(j));
                 set.add(array[i]);
@@ -42,11 +48,5 @@ public class DistinctSubsets {
         }
 
         return result;
-    }
-
-    public static void main(String[] args) {
-
-        DistinctSubsets distinctSubsets = new DistinctSubsets();
-        distinctSubsets.distinct(new int[] {3, 1, 3});
     }
 }

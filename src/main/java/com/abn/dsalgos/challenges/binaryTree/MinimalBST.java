@@ -19,19 +19,19 @@ public class MinimalBST {
 
     public MyTreeNode<Integer> arrayToBST(int[] array) {
 
-        return binarySearchTree(array,0,array.length -1);
+        return binarySearchTree(array, 0, array.length - 1);
     }
 
     private MyTreeNode<Integer> binarySearchTree(int[] arr, int start, int end) {
-        if(start > end) {
+        if (start > end) {
             return null;
         }
 
         int mid = (start + end) / 2;
         MyTreeNode<Integer> node = new MyTreeNode<>(arr[mid]);
 
-        node.left =  binarySearchTree(arr,start,mid-1);
-        node.right = binarySearchTree(arr,mid+1,end);
+        node.left = binarySearchTree(arr, start, mid - 1);
+        node.right = binarySearchTree(arr, mid + 1, end);
         return node;
     }
 
@@ -39,8 +39,7 @@ public class MinimalBST {
         if (node == null) {
             return;
         }
-
-        System.out.print( node.data + " ");
+        System.out.print(node.data + " ");
         preOrder(node.left);
         preOrder(node.right);
 

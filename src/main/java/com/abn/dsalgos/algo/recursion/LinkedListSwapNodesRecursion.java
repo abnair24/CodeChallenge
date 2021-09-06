@@ -14,7 +14,7 @@ public class LinkedListSwapNodesRecursion {
 
     public LinkNode<Integer> swapNodesInPairs(LinkNode<Integer> head) {
 
-        if(head == null || head.next == null) {
+        if (head == null || head.next == null) {
             return head;
         }
 

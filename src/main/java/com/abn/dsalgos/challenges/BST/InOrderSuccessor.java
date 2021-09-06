@@ -23,24 +23,24 @@ public class InOrderSuccessor<T extends Comparable<T>> {
     }
 
     public void insertNode(MyBSTNode<T> node) {
-        if(root == null) {
+        if (root == null) {
             root = node;
             return;
         }
         MyBSTNode<T> current = root;
         MyBSTNode<T> parent;
-        while(current != null) {
+        while (current != null) {
             parent = current;
 
-            if(node.data.compareTo(current.data)<0) {
+            if (node.data.compareTo(current.data) < 0) {
                 current = current.left;
-                if(current == null) {
+                if (current == null) {
                     parent.left = node;
                     return;
                 }
             } else {
                 current = current.right;
-                if(current == null) {
+                if (current == null) {
                     parent.right = node;
                     return;
                 }
@@ -56,8 +56,8 @@ public class InOrderSuccessor<T extends Comparable<T>> {
         /*
         Case 1:
          */
-        if(successor != null) {
-            while(successor.left != null) {
+        if (successor != null) {
+            while (successor.left != null) {
 
                 successor = successor.left;
             }

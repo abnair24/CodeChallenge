@@ -43,7 +43,8 @@ public class ReverseLinkedListIterative<T> {
         return first == null;
     }
 
-    public T deleteFirst() throws Exception {
+    public T deleteFirst()
+            throws Exception {
         if (isEmpty()) {
             throw new NoSuchElementException();
         } else {

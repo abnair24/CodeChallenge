@@ -16,13 +16,13 @@ public class BinaryTreeNonRecursive<T> {
     public void inOrder(MyTreeNode node) {
         Stack<MyTreeNode> stack = new Stack<>();
 
-        while(true) {
-            while(node !=null){
+        while (true) {
+            while (node != null) {
                 stack.push(node);
                 node = node.left;
             }
 
-            if(stack.isEmpty()) {
+            if (stack.isEmpty()) {
                 return;
             }
             node = stack.pop();
@@ -34,14 +34,14 @@ public class BinaryTreeNonRecursive<T> {
     public void preOrder(MyTreeNode node) {
         Stack<MyTreeNode> stack = new Stack<>();
 
-        while(true) {
-            while(node!=null) {
+        while (true) {
+            while (node != null) {
                 System.out.println(node.data);
                 stack.push(node);
                 node = node.left;
             }
 
-            if(stack.isEmpty()){
+            if (stack.isEmpty()) {
                 return;
             }
 
@@ -53,13 +53,13 @@ public class BinaryTreeNonRecursive<T> {
     public void postOrder(MyTreeNode node) {
         Stack<MyTreeNode> stack = new Stack<>();
 
-        while(true) {
-            while(node!=null) {
+        while (true) {
+            while (node != null) {
                 stack.push(node);
                 node = node.left;
             }
 
-            if(stack.isEmpty()){
+            if (stack.isEmpty()) {
                 return;
             }
 
@@ -86,7 +86,7 @@ public class BinaryTreeNonRecursive<T> {
                 temp = stack.pop();
                 System.out.println(temp.data);
             }
-            if(!stack.isEmpty()) {
+            if (!stack.isEmpty()) {
                 node = stack.peek().right;
             }
         }

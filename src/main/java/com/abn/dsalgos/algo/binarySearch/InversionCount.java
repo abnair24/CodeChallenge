@@ -1,7 +1,5 @@
 package com.abn.dsalgos.algo.binarySearch;
 
-import java.util.Arrays;
-
 /*
 Inversion count represents how far or close an array is from being sorted.
  If an array is sorted, the inversion count is 0. But if it’s sorted in the reverse order,

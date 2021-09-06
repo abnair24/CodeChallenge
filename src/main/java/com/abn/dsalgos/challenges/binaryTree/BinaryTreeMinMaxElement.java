@@ -5,7 +5,6 @@ import com.abn.dsalgos.utils.MyTreeNode;
 import java.util.LinkedList;
 import java.util.Queue;
 
-
 /*
     Find the minimum and maximum nodes in a binary tree.
 
@@ -29,16 +28,16 @@ public class BinaryTreeMinMaxElement<T> {
         Queue<MyTreeNode> queue = new LinkedList<>();
         queue.add(node);
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
 
             MyTreeNode temp = queue.poll();
-            if(max < (int) temp.data) {
+            if (max < (int) temp.data) {
                 max = (int) temp.data;
             }
-            if(temp.left != null) {
+            if (temp.left != null) {
                 queue.add(temp.left);
             }
-            if(temp.right != null) {
+            if (temp.right != null) {
                 queue.add(temp.right);
             }
         }
@@ -56,16 +55,16 @@ public class BinaryTreeMinMaxElement<T> {
         Queue<MyTreeNode> queue = new LinkedList<>();
         queue.add(node);
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
 
             MyTreeNode temp = queue.poll();
-            if(min > (int) temp.data) {
+            if (min > (int) temp.data) {
                 min = (int) temp.data;
             }
-            if(temp.left != null) {
+            if (temp.left != null) {
                 queue.add(temp.left);
             }
-            if(temp.right != null) {
+            if (temp.right != null) {
                 queue.add(temp.right);
             }
         }

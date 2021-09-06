@@ -24,11 +24,11 @@ public class SumOfSquaresOfDigits {
 
     public boolean isHappy(int n) {
         int digit;
-        int sum =0;
+        int sum = 0;
 
 
-        while(n/10 > 0) {
-            digit = n%10;
+        while (n / 10 > 0) {
+            digit = n % 10;
             sum += digit * digit;
             n /= 10;
         }

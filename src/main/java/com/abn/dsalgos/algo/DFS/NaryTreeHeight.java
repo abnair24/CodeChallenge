@@ -35,13 +35,13 @@ public class NaryTreeHeight {
     // Bottom up recursion
     public int naryHeightBottomUp(NaryNode root) {
 
-        if(root == null) {
-           return 0;
+        if (root == null) {
+            return 0;
         }
 
         int currentHeight = 0;
 
-        for(NaryNode child : root.children) {
+        for (NaryNode child : root.children) {
             currentHeight = Math.max(currentHeight, naryHeightBottomUp(child));
         }
 
@@ -56,16 +56,16 @@ public class NaryTreeHeight {
         queue.add(root);
         int height = 0;
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             int nodeCount = queue.size();
-            height ++;
-            while(nodeCount > 0) {
+            height++;
+            while (nodeCount > 0) {
                 NaryNode current = queue.remove();
 
-                for(NaryNode child : current.children) {
+                for (NaryNode child : current.children) {
                     queue.add(child);
                 }
-                nodeCount --;
+                nodeCount--;
             }
         }
 

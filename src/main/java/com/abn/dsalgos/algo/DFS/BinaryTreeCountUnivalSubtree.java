@@ -31,7 +31,7 @@ public class BinaryTreeCountUnivalSubtree {
 
         //Condition 1 check for unival
         if (root.left == null && root.right == null) {
-            count ++;
+            count++;
             return true;
         }
 
@@ -45,7 +45,7 @@ public class BinaryTreeCountUnivalSubtree {
 
         // Condition 2 check for unival
         if ((leftChildren && rightChildren) && (leftIsEqual && rightIsEqual)) {
-            count ++;
+            count++;
             return true;
         } else {
             return false;

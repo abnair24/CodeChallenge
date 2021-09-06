@@ -3,7 +3,9 @@ package com.abn.dsalgos.algo.binarySearch;
 public class MinimumDaysToBloom {
 
     public int minDaysBloom(int[] a, int k, int n) {
-        if (a == null || n == 0 || k == 0) return 0;
+        if (a == null || n == 0 || k == 0) {
+            return 0;
+        }
 
         if (n * k > a.length) {
             return -1;
@@ -20,8 +22,7 @@ public class MinimumDaysToBloom {
             int mid = l + (r - l) / 2;
             if (isValid(a, k, n, mid)) {
                 r = mid - 1;
-            }
-            else {
+            } else {
                 l = mid + 1;
             }
         }
@@ -42,14 +43,16 @@ public class MinimumDaysToBloom {
                 cursize = 0;
                 curcount++;
             }
-            if (curcount == count)
+            if (curcount == count) {
                 return true;
+            }
         }
         return false;
     }
 
     public static void main(String[] args) {
         MinimumDaysToBloom minimumDaysToBloom = new MinimumDaysToBloom();
-        minimumDaysToBloom.minDaysBloom(new int[] {1,10,2,9,3,8,4,7,5,6}, 4, 2);
+        minimumDaysToBloom.minDaysBloom(new int[] {1, 10, 2, 9, 3, 8, 4, 7, 5, 6}, 4, 2);
     }
+
 }

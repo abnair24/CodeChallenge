@@ -18,7 +18,7 @@ public class MinimumJumpsToEnd {
 
     public int minJumps(int[] array) {
 
-        if(array[0] == 0 || array.length == 1) {
+        if (array[0] == 0 || array.length == 1) {
             return 0;
         }
 
@@ -26,20 +26,20 @@ public class MinimumJumpsToEnd {
         int count = 1;
         int indexToStart = 0;
 
-        while(windowStartIndex < array.length - 1 && (windowStartIndex + array[windowStartIndex] < array.length-1)) {
+        while (windowStartIndex < array.length - 1 && (windowStartIndex + array[windowStartIndex] < array.length - 1)) {
 
             int size = windowStartIndex + array[windowStartIndex];
             int maxIndex = 0;
-            for(int j = 1; j <= size; j++) {
+            for (int j = 1; j <= size; j++) {
                 int temp = j + array[j];
 
-                if(temp > maxIndex) {
+                if (temp > maxIndex) {
                     maxIndex = temp;
                     indexToStart = j;
                 }
             }
             windowStartIndex = indexToStart;
-            count ++;
+            count++;
         }
         return count;
     }

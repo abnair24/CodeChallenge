@@ -67,7 +67,7 @@ public class PairWithMaxGold {
     public static void main(String[] args) {
 
         PairWithMaxGold pairWithMaxGold = new PairWithMaxGold();
-        int[][] input = {{0, 6, 0}, {5, 8, 7}, {0,9,0}};
+        int[][] input = {{0, 6, 0}, {5, 8, 7}, {0, 9, 0}};
         pairWithMaxGold.getMaximumGold(input);
     }
 }

@@ -37,15 +37,15 @@ public class MoveZeroesToEndInPlace {
         int writeIndex = 0;
         int len = arr.length;
 
-        while(readIndex < len) {
-            if(arr[readIndex] != 0) {
+        while (readIndex < len) {
+            if (arr[readIndex] != 0) {
                 arr[writeIndex] = arr[readIndex];
-                writeIndex ++;
+                writeIndex++;
             }
-            readIndex ++;
+            readIndex++;
         }
 
-        while(writeIndex < len) {
+        while (writeIndex < len) {
             arr[writeIndex++] = 0;
         }
 

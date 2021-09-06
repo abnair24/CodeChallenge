@@ -19,10 +19,9 @@ public class MyNarrayTreeNode<T> {
         children = new ArrayList<>();
     }
 
-    public int getNumberOfChildren(){
+    public int getNumberOfChildren() {
         return getChildren().size();
     }
-
 
 
 }

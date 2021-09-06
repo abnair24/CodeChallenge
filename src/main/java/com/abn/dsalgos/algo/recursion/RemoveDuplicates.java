@@ -18,10 +18,9 @@ public class RemoveDuplicates {
             return text;
         }
 
-        if (text.substring(0,1).equals(text.substring(1,2))) {
+        if (text.substring(0, 1).equals(text.substring(1, 2))) {
             return remDuplicates(text.substring(1));
-        }
-        else {
+        } else {
             return text.charAt(0) + remDuplicates(text.substring(1));
         }
     }

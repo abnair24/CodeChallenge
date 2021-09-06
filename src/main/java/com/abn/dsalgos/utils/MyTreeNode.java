@@ -13,8 +13,7 @@ public class MyTreeNode<T> {
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return data.toString();
     }
 }

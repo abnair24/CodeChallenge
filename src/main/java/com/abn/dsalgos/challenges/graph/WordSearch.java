@@ -12,6 +12,13 @@ public class WordSearch {
 
     int[][] DIRECTIONS = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
 
+    public static void main(String[] args) {
+        WordSearch wordSearch = new WordSearch();
+//        char[][] input = {{'A','B','C','E'},{'S','F','C','S'},{'A','D','E','E'}};
+        char[][] input = {{'C', 'A', 'A'}, {'A', 'A', 'A'}, {'B', 'C', 'D'}};
+        System.out.println(wordSearch.exist(input, "AAB"));
+    }
+
     public boolean exist(char[][] board, String word) {
 
         boolean status = false;
@@ -26,7 +33,7 @@ public class WordSearch {
             for (int j = 0; j < cols; j++) {
                 if (board[i][j] == word.charAt(charIndex)) {
                     status = wordHelper(board, rows, cols, i, j, isVisited, charIndex, word);
-                    if(status)  {
+                    if (status) {
                         return true;
                     }
                 }
@@ -37,7 +44,7 @@ public class WordSearch {
 
     private boolean wordHelper(char[][] board, int m, int n, int i, int j, boolean[][] isVisited, int charIndex, String word) {
 
-        if (charIndex >= word.length()-1) {
+        if (charIndex >= word.length() - 1) {
             return true;
         }
 
@@ -52,19 +59,12 @@ public class WordSearch {
 
             if (x > -1 && y > -1 && x < m && y < n && !isVisited[x][y] && board[x][y] == word.charAt(charIndex)) {
                 status = wordHelper(board, m, n, x, y, isVisited, charIndex, word);
-                if(status) {
+                if (status) {
                     return true;
                 }
             }
         }
         isVisited[i][j] = false;
         return status;
-    }
-
-    public static void main(String[] args) {
-        WordSearch wordSearch = new WordSearch();
-//        char[][] input = {{'A','B','C','E'},{'S','F','C','S'},{'A','D','E','E'}};
-        char[][] input = {{'C','A','A'},{'A','A','A'},{'B','C','D'}};
-        System.out.println(wordSearch.exist(input, "AAB"));
     }
 }

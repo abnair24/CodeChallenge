@@ -20,13 +20,12 @@ public class StringStartAndEndWithOne {
 
         count = (int) IntStream.range(0, len).filter(i -> (str.charAt(i) - '0') == 1).count();
 
-        if(count!=0) {
-            totalStringCount = count * (count -1) /2;
+        if (count != 0) {
+            totalStringCount = count * (count - 1) / 2;
         } else {
             totalStringCount = 0;
         }
 
         return totalStringCount;
     }
-
 }

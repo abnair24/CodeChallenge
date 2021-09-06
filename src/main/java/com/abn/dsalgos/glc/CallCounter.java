@@ -23,19 +23,18 @@ public class CallCounter {
         queue = new LinkedList<>();
     }
 
+    public static void main(String[] args) {
+
+    }
+
     public int ping(int time) {
 
         queue.add(time);
 
-        while(queue.peek() < time - 3000) {
+        while (queue.peek() < time - 3000) {
             queue.remove();
         }
 
         return queue.size();
     }
-
-    public static void main(String[] args) {
-
-    }
-
 }

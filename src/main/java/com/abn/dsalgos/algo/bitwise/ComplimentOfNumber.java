@@ -21,8 +21,8 @@ public class ComplimentOfNumber {
         int count = 0;
         int temp = num;
 
-        while(temp > 0) {
-            count ++;
+        while (temp > 0) {
+            count++;
             temp = temp >> 1;
         }
 

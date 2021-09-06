@@ -1,8 +1,5 @@
 package com.abn.dsalgos.algo.slidingWindo;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /*
 Given a binary array nums and an integer k, return the maximum number of consecutive 1's
 in the array if you can flip at most k 0's.
@@ -28,17 +25,17 @@ public class LongestOnes {
         int count = 0;
         int window = 0;
 
-        for(int i = 0; i < len; i++) {
+        for (int i = 0; i < len; i++) {
 
-            if(array[i] == 0) {
-                count ++;
+            if (array[i] == 0) {
+                count++;
             }
 
-            while(count > k) {
+            while (count > k) {
                 int temp = array[start];
-                start ++;
-                if(temp == 0) {
-                    count --;
+                start++;
+                if (temp == 0) {
+                    count--;
                 }
             }
             window = i - start + 1;

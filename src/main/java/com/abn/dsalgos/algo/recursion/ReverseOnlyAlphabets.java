@@ -14,6 +14,14 @@ sea!$hells3 => sll!$ehaes3
  */
 public class ReverseOnlyAlphabets {
 
+    public static void main(String[] args) {
+
+        ReverseOnlyAlphabets reverseOnlyAlphabets = new ReverseOnlyAlphabets();
+        Assert.assertEquals(reverseOnlyAlphabets.reverse("B!FDCEA2"), "A!ECDFB2");
+        Assert.assertEquals(reverseOnlyAlphabets.reverse("sea!$hells3"), "sll!$ehaes3");
+        Assert.assertEquals(reverseOnlyAlphabets.reverse("7_28]"), "7_28]");
+    }
+
     public String reverse(String str) {
 
         int len = str.length();
@@ -22,31 +30,23 @@ public class ReverseOnlyAlphabets {
 
         StringBuilder sb = new StringBuilder(str);
 
-        while(start < end) {
+        while (start < end) {
 
-            while(!Character.isLetter(str.charAt(start)) && start < end) {
+            while (!Character.isLetter(str.charAt(start)) && start < end) {
                 sb.setCharAt(start, str.charAt(start));
-                start ++;
+                start++;
             }
 
-            while(!Character.isLetter(str.charAt(end)) && end > start) {
+            while (!Character.isLetter(str.charAt(end)) && end > start) {
                 sb.setCharAt(end, str.charAt(end));
-                end --;
+                end--;
             }
 
             sb.setCharAt(start, str.charAt(end));
             sb.setCharAt(end, str.charAt(start));
             start++;
-            end --;
+            end--;
         }
         return sb.toString();
-    }
-
-    public static void main(String[] args) {
-
-        ReverseOnlyAlphabets reverseOnlyAlphabets = new ReverseOnlyAlphabets();
-        Assert.assertEquals(reverseOnlyAlphabets.reverse("B!FDCEA2"), "A!ECDFB2");
-        Assert.assertEquals(reverseOnlyAlphabets.reverse("sea!$hells3"), "sll!$ehaes3");
-        Assert.assertEquals(reverseOnlyAlphabets.reverse("7_28]"), "7_28]");
     }
 }

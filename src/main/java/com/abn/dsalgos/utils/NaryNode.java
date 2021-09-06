@@ -7,7 +7,8 @@ public class NaryNode {
     public int data;
     public List<NaryNode> children;
 
-    public NaryNode() { }
+    public NaryNode() {
+    }
 
     public NaryNode(int data) {
         this.data = data;

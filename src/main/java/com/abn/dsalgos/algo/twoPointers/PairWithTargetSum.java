@@ -19,19 +19,19 @@ public class PairWithTargetSum {
     public int[] search(int[] arr, int targetSum) {
 
         int startPtr = 0;
-        int endPtr = arr.length-1;
+        int endPtr = arr.length - 1;
         int sum;
 
-        for(int i = 0; i < arr.length; i ++) {
+        for (int i = 0; i < arr.length; i++) {
             sum = arr[startPtr] + arr[endPtr];
-            if(sum > targetSum) {
-                endPtr --;
-            } else if(sum < targetSum) {
+            if (sum > targetSum) {
+                endPtr--;
+            } else if (sum < targetSum) {
                 startPtr++;
             } else {
                 return new int[] {startPtr, endPtr};
             }
         }
-        return new int[] { -1, -1 };
+        return new int[] {-1, -1};
     }
 }

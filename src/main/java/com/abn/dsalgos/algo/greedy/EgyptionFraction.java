@@ -14,20 +14,20 @@ public class EgyptionFraction {
 
     public String[] getUnitFraction(int numerator, int denominator) {
 
-        if(denominator == 0 || numerator == 0) {
+        if (denominator == 0 || numerator == 0) {
             return null;
         }
 
-        if(denominator % numerator == 0) {
-            result.add("1/" + denominator/numerator);
+        if (denominator % numerator == 0) {
+            result.add("1/" + denominator / numerator);
             return result.toArray(new String[0]);
         }
 
-        if(numerator % denominator == 0) {
+        if (numerator % denominator == 0) {
             return null;
         }
 
-        if(numerator > denominator) {
+        if (numerator > denominator) {
             return getUnitFraction(numerator % denominator, denominator);
         }
 

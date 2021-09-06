@@ -19,19 +19,19 @@ public class BinarySearchTreeArrayOfNodesDeletion<T> {
         MyBSTNode<Integer> current = root;
         MyBSTNode<Integer> parent;
 
-        while(current != null) {
+        while (current != null) {
             parent = current;
 
-            if(node.data.compareTo(current.data) < 0) {
+            if (node.data.compareTo(current.data) < 0) {
 
                 current = current.left;
-                if(current == null) {
+                if (current == null) {
                     parent.left = node;
                     return;
                 }
             } else {
                 current = current.right;
-                if(current == null) {
+                if (current == null) {
                     parent.right = node;
                     return;
                 }
@@ -41,13 +41,13 @@ public class BinarySearchTreeArrayOfNodesDeletion<T> {
 
     public void deleteArray(MyBSTNode<Integer> root, int[] queries) {
 
-        for(int i : queries) {
-            delete(root,i);
+        for (int i : queries) {
+            delete(root, i);
         }
         display(root);
     }
 
-    public boolean delete(MyBSTNode<Integer> node ,int query) {
+    public boolean delete(MyBSTNode<Integer> node, int query) {
 
         Integer q = query;
         MyBSTNode<Integer> temp = node;
@@ -61,12 +61,10 @@ public class BinarySearchTreeArrayOfNodesDeletion<T> {
             if (q.compareTo(temp.data) == 0) {
                 isNodePresent = true;
                 break;
-            }
-            else if (q.compareTo(temp.data) > 0) {
+            } else if (q.compareTo(temp.data) > 0) {
                 parent = temp;
                 temp = temp.right;
-            }
-            else if(q.compareTo(temp.data) < 0) {
+            } else if (q.compareTo(temp.data) < 0) {
                 parent = temp;
                 temp = temp.left;
             }
@@ -116,11 +114,11 @@ public class BinarySearchTreeArrayOfNodesDeletion<T> {
         MyBSTNode<Integer> current = successor;
         MyBSTNode<Integer> parent = n.right;
 
-        if(successor.right != null && successor.left == null) {
+        if (successor.right != null && successor.left == null) {
             n.data = successor.data;
             n.right = successor.right;
         } else {
-            while(successor.left !=  null) {
+            while (successor.left != null) {
                 parent = successor;
                 successor = successor.left;
             }
@@ -132,7 +130,7 @@ public class BinarySearchTreeArrayOfNodesDeletion<T> {
     }
 
     public void display(MyBSTNode<Integer> node) {
-        if(node != null) {
+        if (node != null) {
             display(node.left);
             System.out.print(node.data + " ");
             display(node.right);

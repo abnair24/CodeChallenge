@@ -9,6 +9,7 @@ import java.util.List;
 public class DFSGraph {
 
     List<Integer> result = new ArrayList<>();
+
     public List<Integer> dfs(Graph graph, int vertex) {
 
         boolean[] isVisited = new boolean[graph.getVertices()];

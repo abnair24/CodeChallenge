@@ -32,18 +32,17 @@ public class PoliceCatchThieves {
 
         int ti = 0;
         int pi = 0;
-        while(ti < thievesIndexes.size() && pi < policeIndexes.size()) {
-            if(Math.abs(thievesIndexes.get(ti) - policeIndexes.get(pi)) <= k) {
-                ti ++;
-                pi ++;
-                count ++;
+        while (ti < thievesIndexes.size() && pi < policeIndexes.size()) {
+            if (Math.abs(thievesIndexes.get(ti) - policeIndexes.get(pi)) <= k) {
+                ti++;
+                pi++;
+                count++;
             } else if (thievesIndexes.get(ti) < policeIndexes.get(pi)) {
-                ti ++;
+                ti++;
             } else {
-                pi ++;
+                pi++;
             }
         }
-
         return count;
     }
 }

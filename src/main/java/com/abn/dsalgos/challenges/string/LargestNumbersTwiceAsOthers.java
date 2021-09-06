@@ -20,15 +20,15 @@ public class LargestNumbersTwiceAsOthers {
         int max = Integer.MIN_VALUE;
         boolean status = true;
 
-        for(int i = 0; i < array.length; i++) {
-            if(array[i] > max) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > max) {
                 max = array[i];
                 maxIndex = i;
             }
         }
 
-        for(int i = 0; i < array.length; i ++) {
-            if(i != maxIndex && array[i] * 2 > max) {
+        for (int i = 0; i < array.length; i++) {
+            if (i != maxIndex && array[i] * 2 > max) {
                 status = false;
                 break;
             }

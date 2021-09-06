@@ -21,9 +21,9 @@ public class KsmallestInSortedMLists {
 
         PriorityQueue<Node> minHeap = new PriorityQueue<>((n1, n2) -> lists.get(n1.arrayIndex)[n1.elementIndex] - lists.get(n2.arrayIndex)[n2.elementIndex]);
 
-        for(int i = 0; i < lists.size(); i++) {
+        for (int i = 0; i < lists.size(); i++) {
 
-            if(lists.get(i) != null) {
+            if (lists.get(i) != null) {
                 minHeap.add(new Node(0, i));
             }
         }
@@ -31,16 +31,16 @@ public class KsmallestInSortedMLists {
         int count = 0;
         int result = 0;
 
-        while(!minHeap.isEmpty()) {
+        while (!minHeap.isEmpty()) {
 
             Node temp = minHeap.poll();
-            if(++count == k) {
+            if (++count == k) {
                 result = lists.get(temp.arrayIndex)[temp.elementIndex];
                 break;
             }
 
-            temp.elementIndex ++;
-            if(lists.get(temp.arrayIndex).length > temp.elementIndex)  {
+            temp.elementIndex++;
+            if (lists.get(temp.arrayIndex).length > temp.elementIndex) {
                 minHeap.add(temp);
             }
         }

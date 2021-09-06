@@ -25,15 +25,15 @@ public class MinimumWindowSubstring {
         int start = 0;
         int count = 0;
         int patternLen = pattern.length();
-        int minCount =Integer.MAX_VALUE;
+        int minCount = Integer.MAX_VALUE;
         int minStartIndex = 0;
 
-        for(int i = 0; i < patternLen; i++) {
+        for (int i = 0; i < patternLen; i++) {
             char ch = pattern.charAt(i);
             patternMap.put(ch, patternMap.getOrDefault(ch, 0) + 1);
         }
 
-        for(int i = 0; i < str.length(); i++) {
+        for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
             if (patternMap.containsKey(ch)) {
                 patternMap.put(ch, patternMap.get(ch) - 1);
@@ -44,8 +44,8 @@ public class MinimumWindowSubstring {
             }
 
             while (count == patternLen) {
-                if(minCount > i-start +1) {
-                    minCount = i-start+1;
+                if (minCount > i - start + 1) {
+                    minCount = i - start + 1;
                     minStartIndex = start;
                 }
 
@@ -59,6 +59,6 @@ public class MinimumWindowSubstring {
                 start++;
             }
         }
-        return minCount> str.length()? "" : str.substring(minStartIndex, minStartIndex+minCount);
+        return minCount > str.length() ? "" : str.substring(minStartIndex, minStartIndex + minCount);
     }
 }

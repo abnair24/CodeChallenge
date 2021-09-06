@@ -20,21 +20,21 @@ public class NumberFactors {
 
     public int numberfactor(int[] cache, int n) {
 
-        if(n == 0) {
+        if (n == 0) {
             return 1;
         }
 
-        if(n < 0) {
+        if (n < 0) {
             return 0;
         }
 
-        if(cache[n] != 0) {
+        if (cache[n] != 0) {
             return cache[n];
         }
 
-        int countOne = numberfactor(cache, n -1);
+        int countOne = numberfactor(cache, n - 1);
         int countThree = numberfactor(cache, n - 3);
-        int countFour = numberfactor(cache,n - 4);
+        int countFour = numberfactor(cache, n - 4);
 
         cache[n] = countOne + countThree + countFour;
 
