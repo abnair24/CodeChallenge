@@ -53,7 +53,9 @@ public class CombinationSum {
 
     public static void main(String[] args) {
         int[] input = {2, 4, 6 ,3};
-        CombinationSum combinationSum = new CombinationSum();
-        combinationSum.combinationSum(input, 6);
+        new CombinationSum().combinationSum(input, 6);
+
+        int[] input1 = {3, 4, 5};
+        new CombinationSum().combinationSum(input1, 8);
     }
 }
