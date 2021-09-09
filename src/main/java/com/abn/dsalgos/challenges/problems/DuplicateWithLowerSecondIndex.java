@@ -23,7 +23,6 @@ import java.util.Set;
         # firstDuplicate(a) = -1.
 */
 
-
 public class DuplicateWithLowerSecondIndex {
 
     public static void main(String[] args) {
