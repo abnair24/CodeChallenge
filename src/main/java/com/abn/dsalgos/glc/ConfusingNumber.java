@@ -34,14 +34,6 @@ public class ConfusingNumber {
 
     Map<Integer, Integer> map = new HashMap<>();
 
-    public static void main(String[] args) {
-
-        ConfusingNumber confusingNumber = new ConfusingNumber();
-        Assert.assertFalse(confusingNumber.isConfusing(56));
-        Assert.assertTrue(confusingNumber.isConfusing(86));
-        Assert.assertTrue(confusingNumber.isConfusing(186));
-    }
-
     public boolean isConfusing(int n) {
 
         map.put(0, 0);
@@ -77,5 +69,13 @@ public class ConfusingNumber {
         }
 
         return result != number ? true : false;
+    }
+
+    public static void main(String[] args) {
+
+        ConfusingNumber confusingNumber = new ConfusingNumber();
+        Assert.assertFalse(confusingNumber.isConfusing(56));
+        Assert.assertTrue(confusingNumber.isConfusing(86));
+        Assert.assertTrue(confusingNumber.isConfusing(186));
     }
 }
