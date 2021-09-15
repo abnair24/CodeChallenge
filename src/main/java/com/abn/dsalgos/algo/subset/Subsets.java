@@ -11,6 +11,8 @@ Output: [], [1], [3], [1,3]
 
 Input: [1, 5, 3]
 Output: [], [1], [5], [3], [1,5], [1,3], [5,3], [1,5,3]
+
+Note: can be done using backtracking combination also.
  */
 public class Subsets {
 

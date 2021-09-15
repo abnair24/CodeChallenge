@@ -25,6 +25,8 @@ i.e two nodes in the tree have the same child. Identify the defective node and r
  */
 public class BinaryTreeExtraEdgeRemoveRecursion {
 
+    MyTreeNode<Integer> result = null;
+
     public MyTreeNode<Integer> removeExtraNode(MyTreeNode<Integer> root) {
 
         // DFS and Store the visited nodes in hashset.
@@ -35,18 +37,40 @@ public class BinaryTreeExtraEdgeRemoveRecursion {
             return null;
         }
 
-        return removeNode(root, hs);
+        removeNode(root);
+        return result;
     }
 
-    private MyTreeNode<Integer> removeNode(MyTreeNode<Integer> root, Set<MyTreeNode<Integer>> hs) {
+    private void removeNode(MyTreeNode<Integer> root) {
 
-        if (root == null || !hs.add(root)) {
-            return null;
+        if (root == null) {
+            return;
         }
 
-        removeNode(root.left, hs);
-        removeNode(root.right, hs);
+        if(root.left != null && root.left.isVisited) {
+            result = root.left;
+            root.left = null;
+        }
 
-        return root;
+        if(root.right != null && root.right.isVisited) {
+            result = root.right;
+            root.right = null;
+        }
+
+        removeNode(root.left);
+        root.isVisited = true;
+        removeNode(root.right);
+
+    }
+
+    public static void main(String[] args) {
+        MyTreeNode<Integer> root = new MyTreeNode<>(1);
+        root.left = new MyTreeNode<>(2);
+        root.right = new MyTreeNode<>(3);
+        root.left.left = new MyTreeNode<>(4);
+        root.left.right = new MyTreeNode<>(5);
+        root.right.left = root.left.right;
+
+        new BinaryTreeExtraEdgeRemoveRecursion().removeExtraNode(root);
     }
 }

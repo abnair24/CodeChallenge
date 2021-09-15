@@ -39,12 +39,6 @@ public class Combinations {
 
         for (int i = start; i <= n; ++i) {
 
-            // pruning cases of unwanted combinations.
-            // Here checking if current index "i" and first item in track index is greater than or equal to k
-            if (k > 1 && track.size() >= 1 && (i - track.get(0) >= k)) {
-                continue;
-            }
-
             track.add(i);
             backtrack(n, k, i + 1, track);
             track.removeLast();
@@ -54,6 +48,6 @@ public class Combinations {
     public static void main(String[] args) {
 
         Combinations combinations = new Combinations();
-        combinations.combine(4, 4);
+        combinations.combine(4, 3);
     }
 }

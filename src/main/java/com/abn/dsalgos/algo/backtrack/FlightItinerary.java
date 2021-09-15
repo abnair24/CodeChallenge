@@ -33,48 +33,6 @@ public class FlightItinerary {
     LinkedList<String> result;
     int size;
 
-    public static void main(String[] args) {
-        FlightItinerary flightItinerary = new FlightItinerary();
-
-        List<List<String>> input = new ArrayList<>();
-        List<String> pair1 = new ArrayList<>();
-//        pair1.add("JFK");
-//        pair1.add("SFO");
-        pair1.add("JFK");
-        pair1.add("AAA");
-
-
-        List<String> pair2 = new ArrayList<>();
-//        pair2.add("JFK");
-//        pair2.add("ATL");
-        pair2.add("BBB");
-        pair2.add("CCC");
-
-        List<String> pair3 = new ArrayList<>();
-//        pair3.add("SFO");
-//        pair3.add("ATL");
-        pair3.add("JFK");
-        pair3.add("BBB");
-
-        List<String> pair4 = new ArrayList<>();
-//        pair4.add("ATL");
-//        pair4.add("JFK");
-        pair4.add("CCC");
-        pair4.add("JFK");
-
-//        List<String> pair5 = new ArrayList<>();
-//        pair5.add("ATL");
-//        pair5.add("SFO");
-
-        input.add(pair1);
-        input.add(pair2);
-        input.add(pair3);
-        input.add(pair4);
-//        input.add(pair5);
-
-        flightItinerary.findItinerary(input);
-    }
-
     public List<String> findItinerary(List<List<String>> tickets) {
 
         flights = new HashMap<>();
@@ -136,5 +94,47 @@ public class FlightItinerary {
             ++i;
         }
         return false;
+    }
+
+    public static void main(String[] args) {
+        FlightItinerary flightItinerary = new FlightItinerary();
+
+        List<List<String>> input = new ArrayList<>();
+        List<String> pair1 = new ArrayList<>();
+//        pair1.add("JFK");
+//        pair1.add("SFO");
+        pair1.add("JFK");
+        pair1.add("AAA");
+
+
+        List<String> pair2 = new ArrayList<>();
+//        pair2.add("JFK");
+//        pair2.add("ATL");
+        pair2.add("BBB");
+        pair2.add("CCC");
+
+        List<String> pair3 = new ArrayList<>();
+//        pair3.add("SFO");
+//        pair3.add("ATL");
+        pair3.add("JFK");
+        pair3.add("BBB");
+
+        List<String> pair4 = new ArrayList<>();
+//        pair4.add("ATL");
+//        pair4.add("JFK");
+        pair4.add("CCC");
+        pair4.add("JFK");
+
+//        List<String> pair5 = new ArrayList<>();
+//        pair5.add("ATL");
+//        pair5.add("SFO");
+
+        input.add(pair1);
+        input.add(pair2);
+        input.add(pair3);
+        input.add(pair4);
+//        input.add(pair5);
+
+        flightItinerary.findItinerary(input);
     }
 }

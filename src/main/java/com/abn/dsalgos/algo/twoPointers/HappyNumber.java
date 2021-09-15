@@ -64,4 +64,9 @@ public class HappyNumber {
         }
         return sum;
     }
+
+    public static void main(String[] args) {
+        HappyNumber happyNumber = new HappyNumber();
+        happyNumber.isHappyNumber(12);
+    }
 }
