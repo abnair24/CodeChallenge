@@ -10,17 +10,6 @@ are no other nodes between the root and itself. Given a binary tree, count the n
  */
 public class BinaryTreeVisibleTreeNode {
 
-    public static void main(String[] args) {
-        BinaryTreeVisibleTreeNode binaryTreeVisibleTreeNode = new BinaryTreeVisibleTreeNode();
-        MyTreeNode<Integer> root = new MyTreeNode<>(9);
-        root.left = new MyTreeNode(8);
-        root.right = new MyTreeNode(11);
-        root.right.left = new MyTreeNode(20);
-        root.right.left.right = new MyTreeNode(6);
-
-        System.out.println(binaryTreeVisibleTreeNode.visibleNodeCount(root));
-    }
-
     public int visibleNodeCount(MyTreeNode<Integer> root) {
 
         return visibleNodeCountHelper(root, Integer.MIN_VALUE);
@@ -41,5 +30,16 @@ public class BinaryTreeVisibleTreeNode {
         total += visibleNodeCountHelper(root.right, Math.max(root.data, maxValue));
 
         return total;
+    }
+
+    public static void main(String[] args) {
+        BinaryTreeVisibleTreeNode binaryTreeVisibleTreeNode = new BinaryTreeVisibleTreeNode();
+        MyTreeNode<Integer> root = new MyTreeNode<>(9);
+        root.left = new MyTreeNode(8);
+        root.right = new MyTreeNode(11);
+        root.right.left = new MyTreeNode(20);
+        root.right.left.right = new MyTreeNode(6);
+
+        System.out.println(binaryTreeVisibleTreeNode.visibleNodeCount(root));
     }
 }

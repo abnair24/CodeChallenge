@@ -17,29 +17,6 @@ public class FloodFillDFS {
 
     int[][] DIRECTIONS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
-    public static void main(String[] args) {
-        FloodFillDFS floodFillDFS = new FloodFillDFS();
-
-        int[][] image = {{0, 0, 0}, {0, 1, 1}};
-        floodFillDFS.floodFill(image, 1, 1, 2);
-
-
-        int[][] image1 = {{0, 0, 0}, {0, 1, 1}};
-
-
-        floodFillDFS.floodFill(image1, 1, 1, 1);
-
-        int[][] image2 = {{1, 1, 1}, {1, 1, 0}, {1, 0, 1}};
-        int[][] result = floodFillDFS.floodFill(image2, 1, 1, 2);
-
-        for (int i = 0; i < result.length; i++) {
-            for (int j = 0; j < result[0].length; j++) {
-                System.out.print(result[i][j] + " ");
-            }
-            System.out.println();
-        }
-    }
-
     public int[][] floodFill(int[][] image, int sourceRow, int sourceCol, int color) {
 
         int currentColor = image[sourceRow][sourceCol];
@@ -63,6 +40,29 @@ public class FloodFillDFS {
                 image[x][y] = color;
                 dfsHelper(image, x, y, m, n, currentColor, color);
             }
+        }
+    }
+
+    public static void main(String[] args) {
+        FloodFillDFS floodFillDFS = new FloodFillDFS();
+
+        int[][] image = {{0, 0, 0}, {0, 1, 1}};
+        floodFillDFS.floodFill(image, 1, 1, 2);
+
+
+        int[][] image1 = {{0, 0, 0}, {0, 1, 1}};
+
+
+        floodFillDFS.floodFill(image1, 1, 1, 1);
+
+        int[][] image2 = {{1, 1, 1}, {1, 1, 0}, {1, 0, 1}};
+        int[][] result = floodFillDFS.floodFill(image2, 1, 1, 2);
+
+        for (int i = 0; i < result.length; i++) {
+            for (int j = 0; j < result[0].length; j++) {
+                System.out.print(result[i][j] + " ");
+            }
+            System.out.println();
         }
     }
 }

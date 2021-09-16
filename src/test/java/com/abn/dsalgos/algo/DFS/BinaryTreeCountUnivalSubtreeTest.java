@@ -47,4 +47,21 @@ public class BinaryTreeCountUnivalSubtreeTest {
         BinaryTreeCountUnivalSubtree binaryTreeCountUnivalSubtree = new BinaryTreeCountUnivalSubtree();
         Assert.assertEquals(binaryTreeCountUnivalSubtree.countUnivalSubtrees(root), 1);
     }
+
+    @Test
+    public void test4() {
+
+        MyTreeNode<Integer> root = new MyTreeNode<>(1);
+        root.left = new MyTreeNode(2);
+        root.right = new MyTreeNode(3);
+        root.left.left = new MyTreeNode(4);
+        root.left.left.left = new MyTreeNode(4);
+        root.right.left = new MyTreeNode(5);
+        root.right.left.left = new MyTreeNode(5);
+        root.right.left.right = new MyTreeNode(5);
+        root.right.right = new MyTreeNode(6);
+        root.right.right.right = new MyTreeNode(7);
+
+        Assert.assertEquals(new BinaryTreeCountUnivalSubtree().countUnivalSubtrees(root), 6);
+    }
 }

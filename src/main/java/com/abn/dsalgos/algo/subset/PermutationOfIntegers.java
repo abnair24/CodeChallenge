@@ -7,12 +7,6 @@ public class PermutationOfIntegers {
 
     List<List<Integer>> result = new ArrayList<>();
 
-    public static void main(String[] args) {
-
-        PermutationOfIntegers permutationOfIntegers = new PermutationOfIntegers();
-        System.out.print(permutationOfIntegers.permutations(new int[] {1, 3, 4}));
-    }
-
     public List<List<Integer>> permutations(int[] array) {
         permutationsHelper(array, 0, new ArrayList<>(), result);
         return result;
@@ -29,5 +23,11 @@ public class PermutationOfIntegers {
                 permutationsHelper(array, index + 1, set, result);
             }
         }
+    }
+
+    public static void main(String[] args) {
+
+        PermutationOfIntegers permutationOfIntegers = new PermutationOfIntegers();
+        System.out.print(permutationOfIntegers.permutations(new int[] {1, 3, 4}));
     }
 }

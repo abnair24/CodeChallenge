@@ -33,17 +33,6 @@ public class MinimumDistanceWordKeyboard {
 
     String ALPHABETS = "abcdefghijklmnopqrstuvwxyz";
 
-    public static void main(String[] args) {
-
-        MinimumDistanceWordKeyboard minimumDistanceWordKeyboard = new MinimumDistanceWordKeyboard();
-        Assert.assertEquals(minimumDistanceWordKeyboard.minimum("happy"), 6);
-        Assert.assertEquals(minimumDistanceWordKeyboard.minimum("new"), 3);
-        Assert.assertEquals(minimumDistanceWordKeyboard.minimum("year"), 7);
-        Assert.assertEquals(minimumDistanceWordKeyboard.minimum("CAKE"), 3);
-        Assert.assertEquals(minimumDistanceWordKeyboard.minimum("khxkw"), 7);
-    }
-
-
     // Each character has an option to opt for F1 or F2 at any point.
     // Also every character has equal possibility for becoming starting point for f1 / f2.
 
@@ -116,5 +105,15 @@ public class MinimumDistanceWordKeyboard {
             }
         }
         return map;
+    }
+
+    public static void main(String[] args) {
+
+        MinimumDistanceWordKeyboard minimumDistanceWordKeyboard = new MinimumDistanceWordKeyboard();
+        Assert.assertEquals(minimumDistanceWordKeyboard.minimum("happy"), 6);
+        Assert.assertEquals(minimumDistanceWordKeyboard.minimum("new"), 3);
+        Assert.assertEquals(minimumDistanceWordKeyboard.minimum("year"), 7);
+        Assert.assertEquals(minimumDistanceWordKeyboard.minimum("CAKE"), 3);
+        Assert.assertEquals(minimumDistanceWordKeyboard.minimum("khxkw"), 7);
     }
 }

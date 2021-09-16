@@ -32,7 +32,6 @@ public class PermutationOfDigits {
             if (track.contains(arr[i])) {
                 continue;
             }
-
             track.add(arr[i]);
             backtrack(arr, track);
             track.removeLast();
@@ -41,7 +40,7 @@ public class PermutationOfDigits {
 
     public static void main(String[] args) {
 
-        int[] input = {1, 2, 4, 5};
+        int[] input = {1, 2, 3, 4};
         PermutationOfDigits permutationOfDigits = new PermutationOfDigits();
         permutationOfDigits.permutation(input);
     }

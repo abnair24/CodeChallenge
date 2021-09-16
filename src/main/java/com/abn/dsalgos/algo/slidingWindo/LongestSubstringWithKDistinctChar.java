@@ -33,14 +33,14 @@ public class LongestSubstringWithKDistinctChar {
             hm.put(ch, hm.getOrDefault(ch, 0) + 1);
 
             while (hm.size() > k) {
-                size = i - start;
-                maxSize = Math.max(size, maxSize);
                 hm.put(str.charAt(start), hm.get(str.charAt(start)) - 1);
                 if (hm.get(str.charAt(start)) == 0) {
                     hm.remove(str.charAt(start));
                 }
                 start++;
             }
+            size = i - start + 1;
+            maxSize = Math.max(size, maxSize);
         }
         return Math.max(maxSize, str.length() - start);
     }

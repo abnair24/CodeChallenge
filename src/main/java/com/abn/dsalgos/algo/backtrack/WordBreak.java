@@ -1,13 +1,11 @@
-package com.abn.dsalgos.algo.dp;
+package com.abn.dsalgos.algo.backtrack;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 /*
 Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a
- space-separated sequence of one or more dictionary words.
+space-separated sequence of one or more dictionary words.
 
 Note that the same word in the dictionary may be reused multiple times in the segmentation.
 
@@ -19,29 +17,46 @@ Output: true
 
 Input: s = "catsandog", wordDict = ["cats","dog","sand","and","cat"]
 Output: false
- */
+
+*/
 
 public class WordBreak {
 
-    public boolean wordBreak(String s, List<String> wordDict) {
-        return wordBreakRecur(s, new HashSet<>(wordDict), 0);
+    boolean status = false;
+
+    public boolean combinations(String s, List<String> words) {
+
+        Boolean[] cache = new Boolean[s.length() - 1];
+        status = backtrack(s, words, 0, cache);
+        return status;
     }
 
-    private boolean wordBreakRecur(String s, Set<String> wordDict, int start) {
+    private boolean backtrack(String s, List<String> words, int index, Boolean[] cache) {
 
-        if (start == s.length()) {
+        if (index == s.length()) {
             return true;
         }
 
-        for (int end = start + 1; end <= s.length(); end++) {
-            if (wordDict.contains(s.substring(start, end)) && wordBreakRecur(s, wordDict, end)) {
-                return true;
+        if (cache[index] != null) {
+            return cache[index];
+        }
+
+        String currentWord = s.substring(index);
+
+        for (String word : words) {
+            if (currentWord.startsWith(word)) {
+                if (backtrack(s, words, index + word.length(), cache)) {
+                    cache[index] = true;
+                    return cache[index];
+                }
             }
         }
-        return false;
+        cache[index] = false;
+        return cache[index];
     }
 
     public static void main(String[] args) {
+
         WordBreak wordBreak = new WordBreak();
         List<String> ll = new ArrayList<>();
         ll.add("cats");
@@ -49,7 +64,7 @@ public class WordBreak {
         ll.add("sand");
         ll.add("and");
         ll.add("cat");
-        wordBreak.wordBreak("catsandog", ll);
+        wordBreak.combinations("catsandog", ll);
 
         String input = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab";
         List<String> ll1 = new ArrayList<>();
@@ -63,6 +78,6 @@ public class WordBreak {
         ll1.add("aaaaaaaa");
         ll1.add("aaaaaaaaa");
         ll1.add("aaaaaaaaaa");
-        wordBreak.wordBreak(input, ll1);
+        wordBreak.combinations(input, ll1);
     }
 }
