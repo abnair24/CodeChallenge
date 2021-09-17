@@ -17,11 +17,12 @@ public class PermutationOfDigits {
     public List<List<Integer>> permutation(int[] array) {
 
         LinkedList<Integer> track = new LinkedList<>();
-        backtrack(array, track);
+        boolean[] used = new boolean[array.length];
+        backtrack(array, track, used);
         return result;
     }
 
-    private void backtrack(int[] arr, LinkedList<Integer> track) {
+    private void backtrack(int[] arr, LinkedList<Integer> track, boolean[] used) {
 
         if (track.size() == arr.length) {
             result.add(new LinkedList<>(track));
@@ -29,19 +30,21 @@ public class PermutationOfDigits {
         }
 
         for (int i = 0; i < arr.length; i++) {
-            if (track.contains(arr[i])) {
+            if (used[i]) {
                 continue;
             }
             track.add(arr[i]);
-            backtrack(arr, track);
+            used[i] = true;
+            backtrack(arr, track, used);
             track.removeLast();
+            used[i] = false;
         }
     }
 
     public static void main(String[] args) {
 
-        int[] input = {1, 2, 3, 4};
+        int[] input = {1, 1};
         PermutationOfDigits permutationOfDigits = new PermutationOfDigits();
-        permutationOfDigits.permutation(input);
+        System.out.println(permutationOfDigits.permutation(input));
     }
 }
