@@ -185,3 +185,16 @@
     * [Smallest subarray with sum](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/algo/slidingWindo/SmallestSubarrayWithGivenSum.java)
     * [String permutation](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/algo/slidingWindo/StringPermutation.java)
     * [String permutation index list](https://github.com/abnair24/CodeChallenge/blob/master/src/main/java/com/abn/dsalgos/algo/slidingWindo/StringPermutationsIndexList.java)
+
+ 6. [Two Pointer](https://github.com/abnair24/CodeChallenge/tree/master/src/main/java/com/abn/dsalgos/algo/twoPointers)
+    * [ContainerWithMostWater](https://github.com/abnair24/CodeChallenge/tree/master/src/main/java/com/abn/dsalgos/algo/twoPointers/ContainerWithMostWater.java)
+    * [HappyNumber](https://github.com/abnair24/CodeChallenge/tree/master/src/main/java/com/abn/dsalgos/algo/twoPointers/HappyNumber.java)
+    * [LargeElementToLeft](https://github.com/abnair24/CodeChallenge/tree/master/src/main/java/com/abn/dsalgos/algo/twoPointers/LargeElementToLeft.java)
+    * [MiddleOfLinkedList](https://github.com/abnair24/CodeChallenge/tree/master/src/main/java/com/abn/dsalgos/algo/twoPointers/MiddleOfLinkedList.java)
+    * [PairWithTargetSum](https://github.com/abnair24/CodeChallenge/tree/master/src/main/java/com/abn/dsalgos/algo/twoPointers/PairWithTargetSum.java)
+    * [RemoveDuplicatesSortedArray](https://github.com/abnair24/CodeChallenge/tree/master/src/main/java/com/abn/dsalgos/algo/twoPointers/RemoveDuplicatesSortedArray.java)
+    * [RotateSingleLinkedListKTimes](https://github.com/abnair24/CodeChallenge/tree/master/src/main/java/com/abn/dsalgos/algo/twoPointers/RotateSingleLinkedListKTimes.java)
+    * [SingleLinkedListPalindrome](https://github.com/abnair24/CodeChallenge/tree/master/src/main/java/com/abn/dsalgos/algo/twoPointers/SingleLinkedListPalindrome.java)
+    * [SquaredSortedArray](https://github.com/abnair24/CodeChallenge/tree/master/src/main/java/com/abn/dsalgos/algo/twoPointers/SquaredSortedArray.java)
+    
+    
