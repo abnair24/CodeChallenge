@@ -16,6 +16,7 @@ public class RemoveDuplicatesSortedArrayTest {
     @DataProvider
     public Iterator<Object[]> dp() {
         List<Object[]> lst = Lists.newLinkedList();
+        lst.add(new Object[] {new int[] {0, 1, 1, 2, 2, 2, 3, 3}, 4});
         lst.add(new Object[] {new int[] {0,0,1,1,1,2,2,3,3,4}, 5});
         lst.add(new Object[] {new int[] {1,1,2}, 2});
         lst.add(new Object[] {new int[] {2, 3, 3, 3, 6, 9, 9}, 4});
