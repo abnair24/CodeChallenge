@@ -24,9 +24,10 @@ public class LongestSubstringWithSameLetterAfterReplacement {
             maxRepeatedCount = Math.max(hm.get(str.charAt(i)), maxRepeatedCount);
             windowSize = i - start + 1;
 
-            if (windowSize - maxRepeatedCount > k) {
+            while (windowSize - maxRepeatedCount > k) {
                 hm.put(str.charAt(start), hm.get(str.charAt(start)) - 1);
                 start++;
+                windowSize =  i - start + 1;
             }
             len = i - start + 1;
             maxLen = Math.max(maxLen, len);
