@@ -36,6 +36,7 @@ public class MaximumScore {
             currentSum += cardPoints[i];
         }
 
+        maxSum = currentSum;
         endPtr = 0;
         while (startPtr < len) {
 
@@ -47,11 +48,6 @@ public class MaximumScore {
         }
 
         return maxSum;
-    }
-
-    public static void main(String[] args) {
-        MaximumScore maximumScore = new MaximumScore();
-        Assert.assertEquals(maximumScore.maxScore(new int[] {1, 79, 80, 1, 1, 1, 200, 1}, 3), 202);
     }
 
 }
