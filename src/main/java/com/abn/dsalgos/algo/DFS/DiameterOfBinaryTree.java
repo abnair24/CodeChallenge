@@ -1,4 +1,4 @@
-package com.abn.dsalgos.glc;
+package com.abn.dsalgos.algo.DFS;
 
 import com.abn.dsalgos.utils.TreeNode;
 
@@ -16,6 +16,8 @@ Output: 3
 public class DiameterOfBinaryTree {
 
     int maxDiameter = Integer.MIN_VALUE;
+
+    TreeNode root;
 
     public int diameterOfBinaryTree(TreeNode root) {
 
