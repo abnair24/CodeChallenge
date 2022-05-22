@@ -7,6 +7,7 @@ Given an array of unique positive integers, for each integer,
 return the first larger element in the array to the left. If there's no larger element, return -1 for it.
 
 arr = [70, 90, 40, 35, 30, 39, 10]
+
 ans = [-1, -1, 90, 40, 35, 40, 39]
 
 In place swapping is done.
