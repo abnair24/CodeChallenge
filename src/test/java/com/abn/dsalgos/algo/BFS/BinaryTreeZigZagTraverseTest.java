@@ -1,5 +1,6 @@
-package com.abn.dsalgos.challenges.binaryTree;
+package com.abn.dsalgos.algo.BFS;
 
+import com.abn.dsalgos.algo.BFS.BinaryTreeZigZagTraverse;
 import com.abn.dsalgos.utils.TreeNode;
 import org.testng.annotations.Test;
 
