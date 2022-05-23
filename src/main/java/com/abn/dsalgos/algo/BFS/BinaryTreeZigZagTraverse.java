@@ -1,4 +1,4 @@
-package com.abn.dsalgos.challenges.binaryTree;
+package com.abn.dsalgos.algo.BFS;
 
 import com.abn.dsalgos.utils.TreeNode;
 
@@ -49,6 +49,5 @@ public class BinaryTreeZigZagTraverse {
 
             list.add(tempList);
         }
-        System.out.println(list);
     }
 }
