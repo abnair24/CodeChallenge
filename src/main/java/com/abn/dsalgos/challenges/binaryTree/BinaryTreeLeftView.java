@@ -2,7 +2,9 @@ package com.abn.dsalgos.challenges.binaryTree;
 
 import com.abn.dsalgos.utils.MyTreeNode;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 public class BinaryTreeLeftView<T> {
@@ -14,12 +16,13 @@ public class BinaryTreeLeftView<T> {
         root = null;
     }
 
-    public void leftView(MyTreeNode<T> node) {
+    public List<Integer> leftView(MyTreeNode<T> node) {
 
         Queue<MyTreeNode<T>> queue = new LinkedList<>();
+        List<Integer> leftViewResult = new ArrayList<>();
 
         if (node == null) {
-            return;
+            return leftViewResult;
         }
 
         queue.add(node);
@@ -31,7 +34,7 @@ public class BinaryTreeLeftView<T> {
             while (i <= nodeCount) {
                 MyTreeNode<T> current = queue.poll();
                 if (i == 1) {
-                    System.out.println(current.data);
+                    leftViewResult.add((Integer) current.data);
                 }
 
                 if (current.left != null) {
@@ -44,13 +47,16 @@ public class BinaryTreeLeftView<T> {
                 i++;
             }
         }
+        return leftViewResult;
 
     }
 
-    public void rightView(MyTreeNode<T> node) {
+    public List<Integer> rightView(MyTreeNode<T> node) {
         Queue<MyTreeNode<T>> queue = new LinkedList<>();
+
+        List<Integer> rightViewResult = new ArrayList<>();
         if (node == null) {
-            return;
+            return rightViewResult;
         }
 
         queue.add(node);
@@ -60,7 +66,7 @@ public class BinaryTreeLeftView<T> {
             while (i <= nodeCount) {
                 MyTreeNode<T> current = queue.poll();
                 if (i == nodeCount) {
-                    System.out.println(current.data);
+                    rightViewResult.add((Integer) current.data);
                 }
 
                 if (current.left != null) {
@@ -74,5 +80,6 @@ public class BinaryTreeLeftView<T> {
                 i++;
             }
         }
+        return rightViewResult;
     }
 }

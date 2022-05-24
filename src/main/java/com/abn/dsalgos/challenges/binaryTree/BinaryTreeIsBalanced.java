@@ -11,7 +11,7 @@ import java.util.Queue;
  */
 public class BinaryTreeIsBalanced {
 
-    //WIP : fix the code for failing test
+    //ToDO : fix the code for failing test
     public boolean isBalanced(MyTreeNode<Integer> node) {
         if (node == null) {
             return true;
