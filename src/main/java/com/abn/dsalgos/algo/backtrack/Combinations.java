@@ -23,9 +23,9 @@ public class Combinations {
         }
 
         LinkedList<Integer> track = new LinkedList<>();
-        for (int i = 1; i <= k; i++) {
-            backtrack(n, i, 1, track);
-        }
+//        for (int i = 1; i <= k; i++) {
+            backtrack(n, k, 1, track);
+//        }
 
         return result;
     }
@@ -48,6 +48,6 @@ public class Combinations {
     public static void main(String[] args) {
 
         Combinations combinations = new Combinations();
-        combinations.combine(4, 3);
+        combinations.combine(4, 2);
     }
 }
