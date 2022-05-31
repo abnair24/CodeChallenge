@@ -1,6 +1,7 @@
 package com.abn.dsalgos.algo.subset;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /*
@@ -10,38 +11,35 @@ Input: "ad52"
 Output: "ad52", "Ad52", "aD52", "AD52"
  */
 
-//TODO : Try backtracking
 public class StringCaseChangePermutation {
 
+    List<String> result = new ArrayList<>();
+
     public List<String> permutationString(String s) {
-        List<String> result = new ArrayList<>();
 
-        int i = 0;
-        result.add(s);
-
-        while (i < s.length()) {
-
-            if (Character.isLetter(s.charAt(i))) {
-                int size = result.size();
-
-                for (int j = 0; j < size; j++) {
-                    char[] chs = result.get(j).toCharArray();
-                    if (Character.isUpperCase(chs[i])) {
-                        chs[i] = Character.toLowerCase(chs[i]);
-                    } else {
-                        chs[i] = Character.toUpperCase(chs[i]);
-                    }
-                    result.add(String.valueOf(chs));
-                }
-            }
-            i++;
-        }
+        char[] ch = s.toCharArray();
+        backtrack(ch, 0);
         return result;
+    }
+
+    private void backtrack(char[] ch, int start) {
+
+        System.out.println(result);
+        result.add(new String(ch));
+
+        for(int i = start; i < ch.length; i++) {
+            char c = ch[i];
+            if (Character.isLetter(c)) {
+                ch[i] = Character.isUpperCase(c) ? Character.toLowerCase(c) : Character.toUpperCase(c);
+                backtrack(ch, i + 1);
+                ch[i] = c;
+            }
+        }
     }
 
     public static void main(String[] args) {
         StringCaseChangePermutation stringCaseChangePermutation = new StringCaseChangePermutation();
-        System.out.println(stringCaseChangePermutation.permutationString("abc70S"));
+        System.out.println(stringCaseChangePermutation.permutationString("abc"));
     }
 
 }
