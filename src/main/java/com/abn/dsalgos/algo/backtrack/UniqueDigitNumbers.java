@@ -41,9 +41,9 @@ public class UniqueDigitNumbers {
 
         if(track.size() == n) {
             int num = getNumber(track);
-            if (num <= limit) {
+            //if (num <= limit) {
                 result.add(num);
-            }
+           // }
             return;
         }
 

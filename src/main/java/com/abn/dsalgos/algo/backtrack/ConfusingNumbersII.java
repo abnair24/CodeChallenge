@@ -27,12 +27,19 @@ public class ConfusingNumbersII {
     int[] rotateValues = {0, 1, -1, -1, -1, -1, 9, -1, 8, 6};
 
     public int permute(int n) {
+        int size = 0;
 
         LinkedList<Integer> track = new LinkedList<>();
 
         int[] valid = {0, 1, 6, 8, 9};
 
+        if(n == 1000000000) {
+            n = n - 1;
+            size ++;
+        }
+
         backtrack(n, valid, 0, track);
+        size = size + result.size();
         return result.size();
     }
 

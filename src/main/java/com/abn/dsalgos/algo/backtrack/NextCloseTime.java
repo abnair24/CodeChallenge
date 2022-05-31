@@ -21,7 +21,6 @@ Explanation: The next closest time choosing from digits 2, 3, 5, 9, is 22:22.
 
 public class NextCloseTime {
 
-    List<List<Integer>> result = new LinkedList<>();
     int min = Integer.MAX_VALUE;
     int minTime = 0;
 
@@ -46,13 +45,12 @@ public class NextCloseTime {
             }
         }
 
-        backtrack(digits, track, 0, originalMinutes);
-        result.size();
+        backtrack(digits, track, originalMinutes);
 
         return String.format("%02d:%02d", minTime / 60, minTime % 60);
     }
 
-    private void backtrack(LinkedList<Integer> digits, LinkedList<Integer> track, int index, int originalMinutes) {
+    private void backtrack(LinkedList<Integer> digits, LinkedList<Integer> track, int originalMinutes) {
 
         if (track.size() == digits.size()) {
 
@@ -72,7 +70,6 @@ public class NextCloseTime {
 
                 min = diff;
                 minTime = nextNewTime;
-                result.add(new LinkedList<>(track));
             }
             return;
         }
@@ -92,7 +89,7 @@ public class NextCloseTime {
             }
 
             track.add(digits.get(i));
-            backtrack(digits, track, index + 1, originalMinutes);
+            backtrack(digits, track, originalMinutes);
             track.removeLast();
         }
     }
