@@ -16,7 +16,6 @@ public class PalindromePartitions {
     private void helper(String s, LinkedList<String> track, int start) {
 
         if(start >= s.length()) {
-            System.out.println(track);
             result.add(new LinkedList<>(track));
             return;
         }
@@ -32,9 +31,7 @@ public class PalindromePartitions {
 
     private boolean isPalindrome(String s, int left, int right) {
         while(left < right)
-            if(s.charAt(left) != s.charAt(right)) {
-                left ++;
-                right --;
+            if(s.charAt(left++) != s.charAt(right--)) {
                 return false;
             }
 
@@ -43,6 +40,6 @@ public class PalindromePartitions {
 
     public static void main(String[] args) {
 
-        new PalindromePartitions().partition("aabcd");
+        new PalindromePartitions().partition("aabcdc");
     }
 }

@@ -1,6 +1,7 @@
 package com.abn.dsalgos.algo.mergeIntervals;
 
 import com.abn.dsalgos.utils.Interval;
+import org.testng.Assert;
 import org.testng.collections.Lists;
 
 import java.util.Arrays;
@@ -21,7 +22,6 @@ Input: Intervals=[[2,3],[5,7]], New Interval=[1,4]
 Output: [[1,4], [5,7]]
  */
 
-//TODO: tests
 public class InsertIntervalToList {
 
     public List<Interval> insert(List<Interval> a, Interval b) {
@@ -54,5 +54,16 @@ public class InsertIntervalToList {
         }
 
         return merged;
+    }
+
+    public static void main(String[] args) {
+
+        Interval inter1 = new Interval(1, 3);
+        Interval inter2 = new Interval(5, 7);
+        Interval inter3 = new Interval(8, 12);
+
+        List<Interval> input = Arrays.asList(inter1, inter2, inter3);
+
+        new InsertIntervalToList().insert(input, new Interval(4, 6));
     }
 }

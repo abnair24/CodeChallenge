@@ -17,7 +17,6 @@ Intervals: [[6,7], [2,4], [5,9]]
 Output: [[2,4], [5,9]]
  */
 
-//TODO: tests
 public class MergeIntervals {
 
     public List<Interval> merge(List<Interval> intervals) {
@@ -29,23 +28,19 @@ public class MergeIntervals {
         List<Interval> merged = new LinkedList<>();
         Collections.sort(intervals, (a, b) -> Integer.compare(a.start, b.start));
 
-        Iterator<Interval> iterator = intervals.iterator();
-        Interval inter = iterator.next();
+        int start = intervals.get(0).start;
+        int end = intervals.get(0).end;
 
-        int start = inter.start;
-        int end = inter.end;
-
-        while (iterator.hasNext()) {
-            inter = iterator.next();
-
-            if (inter.start <= end) {
-                end = Math.max(inter.end, end);
+        for(int i = 1; i < intervals.size(); i++) {
+            if(intervals.get(i).start <= end) {
+                end = Math.max(intervals.get(i).end, end);
             } else {
                 merged.add(new Interval(start, end));
-                start = inter.start;
-                end = inter.end;
+                start = intervals.get(i).start;
+                end = intervals.get(i).end;
             }
         }
+
         merged.add(new Interval(start, end));
         return merged;
     }
