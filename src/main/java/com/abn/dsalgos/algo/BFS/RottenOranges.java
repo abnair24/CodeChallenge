@@ -26,18 +26,23 @@ public class RottenOranges {
             }
         }
 
-        queue.add(new int[] {-1, -1});
+//        queue.add(new int[] {-1, -1});
 
         while (!queue.isEmpty()) {
-            int[] visitNode = queue.remove();
+            int size = queue.size();
 
-            if (visitNode[0] == -1) {
-                minutes++;
-                if (!queue.isEmpty()) {
-                    queue.add(new int[] {-1, -1});
-                }
 
-            } else {
+            while(size > 0) {
+
+                int[] visitNode = queue.remove();
+//
+//            if (visitNode[0] == -1) {
+//                minutes++;
+//                if (!queue.isEmpty()) {
+//                    queue.add(new int[] {-1, -1});
+//                }
+//
+//            } else {
                 for (int[] dir : DIRECTIONS) {
                     int x = dir[0] + visitNode[0];
                     int y = dir[1] + visitNode[1];
@@ -48,7 +53,9 @@ public class RottenOranges {
                         queue.add(new int[] {x, y});
                     }
                 }
+                size --;
             }
+            minutes ++;
         }
 
         if (freshOrangeCount > 0) {

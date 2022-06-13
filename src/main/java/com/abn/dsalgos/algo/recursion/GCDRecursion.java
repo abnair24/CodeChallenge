@@ -24,4 +24,10 @@ public class GCDRecursion {
             return gcd(num1, num2 - num1);
         }
     }
+
+    public static void main(String[] args) {
+
+        GCDRecursion gcdRecursion = new GCDRecursion();
+        System.out.println(gcdRecursion.gcd(25, 60));
+    }
 }
