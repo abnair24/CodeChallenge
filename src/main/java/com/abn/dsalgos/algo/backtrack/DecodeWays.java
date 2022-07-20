@@ -39,8 +39,6 @@ public class DecodeWays {
     char[] alphabetArray = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
     Map<String, String> charMap = new HashMap<>();
 
-
-
     public int combination(String digits) {
 
         String[] cache = new String[LETTERS.size()];
@@ -91,6 +89,6 @@ public class DecodeWays {
     public static void main(String[] args) {
 
         DecodeWays decode = new DecodeWays();
-        decode.combination("123");
+        decode.combination("2241");
     }
 }

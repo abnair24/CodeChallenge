@@ -42,7 +42,11 @@ public class ValidTriangleNumbers {
 
         for (int i = index; i < array.length; ++i) {
 
-            if (track.size() == 2 && (array[i] >= (track.get(0) + track.get(1)) || track.get(0) >= (array[i] + track.get(1)) || track.get(1) >= (array[i] + track.get(0)))) {
+            if (track.size() == 2 && !isValidTriangle(array[i], track.get(0), track.get(1))) {
+                continue;
+            }
+
+            if(array[i] == 0) {
                 continue;
             }
 
@@ -52,10 +56,18 @@ public class ValidTriangleNumbers {
         }
     }
 
+    private boolean isValidTriangle(int firstSide, int secondSide, int thirdSide) {
+
+        if(firstSide + secondSide > thirdSide && secondSide + thirdSide > firstSide && thirdSide + firstSide > secondSide) {
+            return true;
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
 
-        System.out.println(new ValidTriangleNumbers().permute(new int[] {4, 6, 3, 7}));
-        System.out.println(new ValidTriangleNumbers().permute(new int[] {10, 21, 22, 100, 101, 200, 300}));
+//        System.out.println(new ValidTriangleNumbers().permute(new int[] {4, 6, 3, 7}));
+//        System.out.println(new ValidTriangleNumbers().permute(new int[] {10, 21, 22, 100, 101, 200, 300}));
         System.out.println(new ValidTriangleNumbers().permute(new int[] {2, 2, 3, 4}));
     }
 }

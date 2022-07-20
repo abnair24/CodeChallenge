@@ -1,6 +1,7 @@
 package com.abn.dsalgos.algo.subset;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /*
@@ -19,24 +20,27 @@ public class Subsets {
     public static void main(String[] args) {
         Subsets subsets = new Subsets();
         subsets.findSubset(new int[] {1, 5});
+        subsets.findSubset(new int[] {1, 5, 3});
     }
 
+    List<List<Integer>> result = new LinkedList<>();
+
     public List<List<Integer>> findSubset(int[] array) {
-        List<List<Integer>> result = new ArrayList<>();
-        result.add(new ArrayList<>());
 
-        int i = 0;
-        while (i < array.length) {
-            int currentSubsetSize = result.size();
-
-            for (int j = 0; j < currentSubsetSize; j++) {
-                List<Integer> set = new ArrayList<>(result.get(j));
-                set.add(array[i]);
-                result.add(set);
-            }
-            i++;
-        }
-
+        LinkedList<Integer> track = new LinkedList<>();
+        backtrack(array, track, 0);
         return result;
+    }
+
+    private void backtrack(int[] array, LinkedList<Integer> track, int start) {
+
+        result.add(new LinkedList<>(track));
+
+        for(int i = start; i < array.length; i++) {
+
+            track.add(array[i]);
+            backtrack(array, track, start + 1);
+            track.removeLast();
+        }
     }
 }

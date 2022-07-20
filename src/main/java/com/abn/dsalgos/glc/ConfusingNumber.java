@@ -29,6 +29,8 @@ Explanation: We get 68 after rotating 89, 86 is a valid number and 86 != 89.
 Input: n = 25
 Output: false
 Explanation: We get an invalid number after rotating 25.
+
+https://leetcode.com/problems/confusing-number/
  */
 public class ConfusingNumber {
 
@@ -49,23 +51,17 @@ public class ConfusingNumber {
         int r = 0;
         int result = 0;
         int number = num;
-        LinkedList<Integer> list = new LinkedList<>();
 
         // Extract digits
         while (num > 0) {
 
             r = num % 10;
             if (map.containsKey(r)) {
-                list.add(map.get(r));
+                result = result * 10 + map.get(r);
             } else {
                 return false;
             }
             num /= 10;
-        }
-
-        // Form rotated number
-        for (int i = 0; i < list.size(); i++) {
-            result = result * 10 + list.get(i);
         }
 
         return result != number ? true : false;
@@ -77,5 +73,6 @@ public class ConfusingNumber {
         Assert.assertFalse(confusingNumber.isConfusing(56));
         Assert.assertTrue(confusingNumber.isConfusing(86));
         Assert.assertTrue(confusingNumber.isConfusing(186));
+        Assert.assertFalse(confusingNumber.isConfusing(218));
     }
 }
