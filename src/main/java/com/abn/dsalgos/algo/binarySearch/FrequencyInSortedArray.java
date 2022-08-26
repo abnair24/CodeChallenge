@@ -6,6 +6,7 @@ If the value is not found in the array at all, return 0.
  */
 public class FrequencyInSortedArray {
 
+    //1, 2, 3, 4, 4, 4, 4, 4, 4, 4, 4, 5, 6, 7, 8, 9, 10, 11
     public int frequency(int[] array, int key) {
 
         int start = 0;
