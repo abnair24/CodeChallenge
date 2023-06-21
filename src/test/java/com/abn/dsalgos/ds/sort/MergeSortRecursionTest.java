@@ -1,7 +1,7 @@
 package com.abn.dsalgos.ds.sort;
 
 import com.abn.dsalgos.sortAlgos.MergeSortRecursion;
-import org.junit.Assert;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.collections.Lists;
@@ -29,7 +29,7 @@ public class MergeSortRecursionTest {
 
     @Test(dataProvider = "dp")
     public void test(int[] actual, int[] expected) {
-        Assert.assertArrayEquals(mergeSortRecursion.mergeSort(actual), expected);
+        Assert.assertEquals(mergeSortRecursion.mergeSort(actual), expected);
     }
 }
 

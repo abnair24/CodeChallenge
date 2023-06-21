@@ -15,6 +15,5 @@ public class ValidParenthesisTest {
 
     @Test
     public void test() throws Exception {
-        Assert.assertFalse(validParenthesis.checkValidString("(*))"));
-    }
+        Assert.assertFalse(validParenthesis.checkValidString("(*))"));}
 }

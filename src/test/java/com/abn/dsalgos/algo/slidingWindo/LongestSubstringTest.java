@@ -31,4 +31,10 @@ public class LongestSubstringTest {
     public void test5() throws Exception {
         Assert.assertEquals(str.longestSubstring("BBBBE"),"BE");
     }
+
+    @Test
+    public void test7() throws Exception {
+        Assert.assertEquals(str.longestSubstring("GEKESFORGEEKS"), "KESFORG");
+    }
+
 }
