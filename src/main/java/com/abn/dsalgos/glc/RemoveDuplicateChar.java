@@ -1,16 +1,12 @@
 package com.abn.dsalgos.glc;
 
-import org.omg.CORBA.UserException;
-
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.Stack;
 
-
 /*
-
 Case 1: Add char to stack if its empty
 Case 2: Stack peek() > char, then remove from stack top if its repeating again and then insert char
 Case 3: Stack peek() < char, add char.

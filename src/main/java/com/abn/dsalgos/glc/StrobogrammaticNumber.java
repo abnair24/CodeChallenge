@@ -1,6 +1,6 @@
 package com.abn.dsalgos.glc;
 
-import org.junit.Assert;
+import org.testng.Assert;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -7,9 +7,9 @@ import java.util.Stack;
 public class ValidParenthesis {
 
     public boolean checkValidString(String s) {
-        Stack<Character> stack = new Stack<Character>();
+        Stack<Character> stack = new Stack<>();
 
-        Map<Character, Character> openingToClosingBrackets = new HashMap<Character, Character>();
+        Map<Character, Character> openingToClosingBrackets = new HashMap<>();
         openingToClosingBrackets.put(']', '[');
         openingToClosingBrackets.put('}', '{');
         openingToClosingBrackets.put(')', '(');
@@ -24,10 +24,6 @@ public class ValidParenthesis {
                 }
             }
         }
-        if (stack.isEmpty()) {
-            return true;
-        } else {
-            return false;
-        }
+        return stack.isEmpty();
     }
 }
