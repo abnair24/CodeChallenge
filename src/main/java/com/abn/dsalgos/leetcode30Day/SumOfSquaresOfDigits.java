@@ -27,7 +27,7 @@ public class SumOfSquaresOfDigits {
         int sum = 0;
 
 
-        while (n / 10 > 0) {
+        while (n > 0 || sum > 9) {
             digit = n % 10;
             sum += digit * digit;
             n /= 10;

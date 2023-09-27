@@ -31,5 +31,9 @@ public class SmallestMissingPositiveNumber {
     public static void main(String[] args) {
         SmallestMissingPositiveNumber smallestMissingPositiveNumber = new SmallestMissingPositiveNumber();
         System.out.println(smallestMissingPositiveNumber.smallestMissing(new int[] {-3, 1, 5, 4, 2}));
+        System.out.println(smallestMissingPositiveNumber.smallestMissing(new int[] {-1, -3}));
+        System.out.println(smallestMissingPositiveNumber.smallestMissing(new int[] {1, 2, 3}));
+        System.out.println(smallestMissingPositiveNumber.smallestMissing(new int[] {1, 3, 6, 4, 8, 2}));
+
     }
 }

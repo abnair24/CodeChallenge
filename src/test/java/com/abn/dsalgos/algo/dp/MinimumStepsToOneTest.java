@@ -9,6 +9,8 @@ public class MinimumStepsToOneTest {
 
         MinimumStepsToOne minimumStepsToOne = new MinimumStepsToOne();
 
+        System.out.println(minimumStepsToOne.calcSteps(100));
+
 
 
     }

@@ -6,6 +6,7 @@ Check whether two strings are anagram of each other
  */
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Anagram {
 
@@ -17,7 +18,7 @@ public class Anagram {
             return false;
         }
 
-        HashMap<Character, Integer> map = new HashMap<>();
+        Map<Character, Integer> map = new HashMap<>();
 
         for (int i = 0; i < s1.length(); i++) {
 
