@@ -45,6 +45,14 @@ public class AnagramGrouping {
             result.get(sb.toString()).add(str);
         }
 
-        return new ArrayList(result.values());
+        return new ArrayList<>(result.values());
+    }
+
+    public static void main(String[] args) {
+
+        AnagramGrouping anagramGrouping = new AnagramGrouping();
+        String[] anagrams = {"eat", "tea", "tan", "ate", "nat", "bat"};
+
+        System.out.println(anagramGrouping.group(anagrams));
     }
 }

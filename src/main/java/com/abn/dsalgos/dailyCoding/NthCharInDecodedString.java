@@ -50,7 +50,6 @@ public class NthCharInDecodedString {
 
         for (int i = 1; i < input.length(); i = i + 2) {
             runLength = runLength + Character.getNumericValue(input.charAt(i));
-//            System.out.println(runLength);
 
             if (runLength >= pos) {
 
