@@ -1,5 +1,7 @@
 package com.abn.dsalgos.glc;
 
+import java.util.Arrays;
+
 /*
 You are given a large integer represented as an integer array digits, where each digits[i]
 is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
@@ -41,7 +43,13 @@ public class PlusOne {
     public static void main(String[] args) {
         PlusOne plus = new PlusOne();
 
-        int[] input1 = {9};
-        System.out.println(plus.plusOne(input1));
+        int[] input1 = {1, 2, 3};
+        int[] input2= {9};
+        int[] input3 = {1, 2, 9};
+
+        System.out.println(Arrays.toString(plus.plusOne(input1)));
+        System.out.println(Arrays.toString(plus.plusOne(input2)));
+        System.out.println(Arrays.toString(plus.plusOne(input3)));
+
     }
 }
