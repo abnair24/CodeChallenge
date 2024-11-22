@@ -18,8 +18,6 @@ and the queries are given as
  Approach : add value at start index and end index + 1 add -negative value to nullify post end index
  */
 
-import com.beust.ah.A;
-
 public class ArrayAfterQueriesWithStartAndEndIndex {
 
     public int[] solve(int N, int[][] B) {

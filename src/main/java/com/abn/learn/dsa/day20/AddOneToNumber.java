@@ -31,9 +31,6 @@ o/p: {1, 3, 0}
 input: {0, 1, 2}
 o/p: {1, 3}
 
-input: {0, 0, 1, 2}
-o/p: {1, 3}
-
  */
 
 public class AddOneToNumber {
