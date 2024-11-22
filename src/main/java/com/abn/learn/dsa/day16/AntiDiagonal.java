@@ -30,14 +30,8 @@ o/p:
 4 0
  */
 
-import com.beust.ah.A;
-
 import java.util.Arrays;
 
-/*
-todo
-
- */
 public class AntiDiagonal {
 
     public int[][] diagonal(int[][] matrix) {
