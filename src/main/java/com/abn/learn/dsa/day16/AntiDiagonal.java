@@ -41,25 +41,52 @@ todo
 public class AntiDiagonal {
 
     public int[][] diagonal(int[][] matrix) {
+
         int n = matrix.length;
-        int rows = 2 * n - 1;
+        int rows = matrix.length == matrix[0].length ? 2 * n - 1 : 2 * n;
         int[][] result = new int[rows][n];
 
-        for(int[] row: result) {
-            Arrays.fill(row, 0);
+        int row = 0;
+        for(int col = 0; col < matrix[0].length; col ++) {
+
+            int sr = row;
+            int sc = col;
+
+            while(sr < matrix.length && sc >= 0) {
+                result[sr+sc][sr] = matrix[sr][sc];
+                sr++;
+                sc--;
+            }
+
         }
 
-        for(int i = 0; i < n; i++) {
-            for(int j = 0; j < n; j++) {
-                result[i+j][i] = matrix[i][j];
+        int col = matrix[0].length - 1;
+        for(row = 1; row < matrix.length; row++) {
+
+            int sr = row;
+            int sc = col;
+            int j = 0;
+
+            while(sr < matrix.length && sc >= 0) {
+                result[sr + sc][j] = matrix[sr][sc];
+                sr ++;
+                sc --;
+                j++;
             }
+
         }
+
         return result;
     }
 
     public static void main(String[] args) {
 
         AntiDiagonal antiDiagonal = new AntiDiagonal();
-        antiDiagonal.diagonal(new int[][] {{1, 2}, {3, 4}});
+        System.out.println(Arrays.deepToString(antiDiagonal.diagonal(new int[][] {{1, 2}, {3, 4}})).replace("],", "]\n"));
+        System.out.println(Arrays.deepToString(antiDiagonal.diagonal(new int[][] {
+                {1, 2, 3, 4},
+                {5, 6, 7, 8},
+                {9, 10, 11, 12}
+        })).replace("],","]\n"));
     }
 }
