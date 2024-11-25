@@ -1,5 +1,7 @@
 package com.abn.dsalgos.challenges.problems;
 
+import java.util.Arrays;
+
 /*
     https://leetcode.com/problems/next-permutation/editorial/
 
@@ -48,6 +50,8 @@ public class NextPermutation {
 
         // reversing out of the if condition to satisfy the case: [3, 2, 1] ==> [1, 2, 3]
         reverse(nums, dipIndex + 1);
+        System.out.println(Arrays.toString(nums));
+
     }
 
     private void swap(int[] nums, int i, int j) {
@@ -70,5 +74,12 @@ public class NextPermutation {
             startIndex++;
             endIndex--;
         }
+    }
+
+    public static void main(String[] args) {
+        NextPermutation nextPermutation = new NextPermutation();
+        nextPermutation.nextPermutation(new int[] {5, 6, 1});
+        nextPermutation.nextPermutation(new int[] {6, 2, 8, 1, 4, 3, 2, 1});
+
     }
 }

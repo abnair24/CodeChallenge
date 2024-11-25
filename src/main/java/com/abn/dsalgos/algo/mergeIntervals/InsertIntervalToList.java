@@ -4,6 +4,7 @@ import com.abn.dsalgos.utils.Interval;
 import org.testng.Assert;
 import org.testng.collections.Lists;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -24,46 +25,74 @@ Output: [[1,4], [5,7]]
 
 public class InsertIntervalToList {
 
-    public List<Interval> insert(List<Interval> a, Interval b) {
+    public int[][] insert(int[][] A, int[] B) {
 
-        if (a == null || a.isEmpty()) {
-            return Arrays.asList(b);
-        }
-
-        List<Interval> merged = Lists.newLinkedList();
-
+        ArrayList<int[]> res = new ArrayList<>();
         int i = 0;
+        int n = A.length;
 
-        while (i < a.size() && a.get(i).end < b.start) {
-            merged.add(a.get(i));
+        while (i < n && A[i][1] < B[0]) {
+            res.add(A[i]);
             i++;
         }
 
-        // if a and b overlaps, then a.start will be less or equal to b.end
-        while (i < a.size() && a.get(i).start <= b.end) {
-            b.start = Math.min(a.get(i).start, b.start);
-            b.end = Math.max(a.get(i).end, b.end);
+        while (i < n && A[i][0] <= B[1]) {
+            B[0] = Math.min(B[0], A[i][0]);
+            B[1] = Math.max(B[1], A[i][1]);
+            i++;
+        }
+        res.add(B);
+
+        // Add all the remaining intervals
+        while (i < n) {
+            res.add(A[i]);
             i++;
         }
 
-        merged.add(b);
+        int[][] result = new int[res.size()][];
 
-        // add remaining ones to list
-        while (i < a.size()) {
-            merged.add(a.get(i++));
+        for(int j = 0; j < res.size(); j++) {
+
+            result[j] = res.get(j);
         }
 
-        return merged;
+        return result;
     }
 
     public static void main(String[] args) {
 
-        Interval inter1 = new Interval(1, 3);
-        Interval inter2 = new Interval(5, 7);
-        Interval inter3 = new Interval(8, 12);
+        InsertIntervalToList insertIntervalToList = new InsertIntervalToList();
+        System.out.println(Arrays.deepToString(insertIntervalToList.insert(new int[][] {
+                {6037774,6198243},
+                {6726550,7004541},
+                {8842554,10866536},
+                {11027721,11341296},
+                {11972532,14746848},
+                {16374805,16706396},
+                {17557262,20518214},
+                {22139780,22379559},
+                {27212352,28404611},
+                {28921768,29621583},
+                {29823256,32060921},
+                {33950165,36418956},
+                {37225039,37785557},
+                {40087908,41184444},
+                {41922814,45297414},
+                {48142402,48244133},
+                {48622983,50443163},
+                {50898369,55612831},
+                {57030757,58120901},
+                {59772759,59943999},
+                {61141939,64859907},
+                {65277782,65296274},
+                {67497842,68386607},
+                {70414085,73339545},
+                {73896106,75605861},
+                {79672668,84539434},
+                {84821550,86558001},
+                {91116470,92198054},
+                {96147808,98979097}
+        }, new int[]{36210193,61984219})));
 
-        List<Interval> input = Arrays.asList(inter1, inter2, inter3);
-
-        new InsertIntervalToList().insert(input, new Interval(4, 6));
     }
 }
