@@ -1,5 +1,13 @@
 ## Bit Manipulation
 
+```
+A & 0 = 0
+A & A = A
+
+A ^ 0 = A
+A ^ A = 0
+```
+
 For SET ith bit
 ```
 N = N | (1 << i)
