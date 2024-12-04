@@ -1,4 +1,4 @@
-package com.abn.dsalgos.algo.recursion;
+package com.abn.learn.dsa.day27;
 
 public class GCDRecursion {
 
@@ -28,6 +28,6 @@ public class GCDRecursion {
     public static void main(String[] args) {
 
         GCDRecursion gcdRecursion = new GCDRecursion();
-        System.out.println(gcdRecursion.gcd(12, 30));
+        System.out.println(gcdRecursion.gcd(6, 30));
     }
 }
