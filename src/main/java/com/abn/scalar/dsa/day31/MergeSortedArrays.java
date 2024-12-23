@@ -1,15 +1,12 @@
-package com.abn.dsalgos.algo.merge;
+package com.abn.scalar.dsa.day31;
 
-import lombok.extern.slf4j.Slf4j;
+public class MergeSortedArrays {
 
-import java.util.Arrays;
+    public int[] solve(final int[] nums1, final int[] nums2) {
 
-@Slf4j
-public class MergeTwoSortedArrays {
-
-    public int[] merge(int[] nums1, int m, int[] nums2, int n) {
-
-        int[] tempNums1 = new int[m + n];
+        int m = nums1.length;
+        int n = nums2.length;
+        int[] tempNums1 = new int[m+n];
 
         int i = 0;
         int j = 0;
@@ -39,5 +36,12 @@ public class MergeTwoSortedArrays {
         }
 
         return tempNums1;
+
+    }
+
+    public static void main(String[] args) {
+
+        MergeSortedArrays mergeSortedArrays = new MergeSortedArrays();
+        mergeSortedArrays.solve(new int[] {-4, 3}, new int[] {-2, -2});
     }
 }
