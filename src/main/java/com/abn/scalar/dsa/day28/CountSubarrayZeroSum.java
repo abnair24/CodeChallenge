@@ -4,7 +4,8 @@ package com.abn.scalar.dsa.day28;
 /*
 Given an array A of N integers.
 
-Find the count of the subarrays in the array which sums to zero. Since the answer can be very large, return the remainder on dividing the result with 109+7
+Find the count of the subarrays in the array which sums to zero. Since the answer can be very large,
+return the remainder on dividing the result with 10^9+7
 
 {1, -1, -2, 2} : 3
 {30, -30, 30, 30} : 4
