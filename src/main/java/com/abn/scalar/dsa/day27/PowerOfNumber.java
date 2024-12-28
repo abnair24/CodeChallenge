@@ -1,11 +1,5 @@
-package com.abn.scalar.dsa.day26Recursion2;
+package com.abn.scalar.dsa.day27;
 
-/*
-Given 2 integers a & n find a^n using recursion
-
-a =2, n = 3
-a^n = 2^3 = 8
- */
 public class PowerOfNumber {
 
     public long power(int base, int exponent) {
@@ -34,6 +28,8 @@ public class PowerOfNumber {
     public static void main(String[] args) {
 
         PowerOfNumber powerOfNumber = new PowerOfNumber();
-        System.out.println(powerOfNumber.power(2, 5));
+        System.out.println(powerOfNumber.power(2, 3));
+        System.out.println(powerOfNumber.power(1, -20));
+        System.out.println(powerOfNumber.power(-2, 3));
     }
 }
