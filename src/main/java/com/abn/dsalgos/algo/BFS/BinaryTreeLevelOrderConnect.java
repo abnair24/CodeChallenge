@@ -24,7 +24,6 @@ public class BinaryTreeLevelOrderConnect {
     public TreeNodeConnect connectLevels(TreeNodeConnect root) {
 
         Queue<TreeNodeConnect> queue = new LinkedList<>();
-        List<Integer> result = new ArrayList<>();
         TreeNodeConnect previous;
         int nodeCount;
 

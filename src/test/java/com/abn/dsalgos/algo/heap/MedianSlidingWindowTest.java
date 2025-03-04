@@ -17,6 +17,7 @@ public class MedianSlidingWindowTest {
 
         list.add(new Object[] {new int[] {1, 2}, 2, new double[] {1.5}});
         list.add(new Object[] {new int[] {1, 3, -1, -3, 5, 3, 6, 7}, 3, new double[] {1.0, -1.0, -1.0, 3.0, 5.0, 6.0}});
+        list.add(new Object[] {new int[] {1, 3, -1, 2, -2, -3, 5, 1, 5, 3}, 4, new double[] {1.5, 0.5, -1.5, 0.0, -0.5, 3.0, 4.0}});
 
         return list.iterator();
     }

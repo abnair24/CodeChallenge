@@ -1,53 +1,49 @@
 package com.abn.scalar.dsa.day31;
 
 /*
-Given an array with N objects colored red, white, or blue, sort them so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
-
-We will represent the colors as,
-
-red -> 0
-white -> 1
-blue -> 2
-
-Note: Using the library sort function is not allowed.
-
-Input 1 :
-    A = [0, 1, 2, 0, 1, 2]
-Input 2:
-
-    A = [0]
-
-Output 1:
-[0, 0, 1, 1, 2, 2]
-Output 2:
-[0]
-
+Given an array A. Sort this array using Count Sort Algorithm and return the sorted array.
  */
+//TO-DO
 public class CountSort {
 
     public int[] solve(int[] array) {
 
-        int[] freq = new int[3];
-        for(int i = 0; i< array.length; i++) {
+        int max = findMax(array);
+        int[] count = new int[max + 1];
 
-            freq[array[i]]++;
+        // Count occurrences of each element
+        for (int i = 0; i < array.length; i++) {
+            count[array[i]]++;
         }
 
-        int index = 0;
-        for(int i = 0; i < freq.length; i++) {
+        // Calculate cumulative counts
+        for (int i = 1; i <= max; i++) {
+            count[i] += count[i - 1];
+        }
 
-            while(freq[i] > 0) {
-                array[index++] = i;
-                freq[i] --;
-            }
+        // Build the sorted array
+        int[] output = new int[array.length];
+        for (int i = array.length - 1; i >= 0; i--) {
+            output[count[array[i]] - 1] = array[i];
+            count[array[i]]--;
+        }
+
+        // Copy sorted elements back to original array
+        for (int i = 0; i < array.length; i++) {
+            array[i] = output[i];
         }
         return array;
     }
 
-    public static void main(String[] args) {
 
-        CountSort countSort = new CountSort();
-        countSort.solve(new int[] {1, 1, 2, 1, 0, 1, 0});
+    private int findMax(int[] array) {
+
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i < array.length; i++) {
+            max = Math.max(max, array[i]);
+        }
+        return max;
     }
+
 
 }
