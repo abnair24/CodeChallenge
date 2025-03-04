@@ -1,4 +1,4 @@
-package com.abn.scalar.dsa.day9;
+package com.abn.scalar.dsa.day09;
 
 /*
 Given an array of size N, print subarray sums starting from index 3.

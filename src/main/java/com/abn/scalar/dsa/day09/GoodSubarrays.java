@@ -1,4 +1,4 @@
-package com.abn.scalar.dsa.day9;
+package com.abn.scalar.dsa.day09;
 
 /*
 Given an array of integers A, a subarray of an array is said to be good if it fulfills any one of the criteria:

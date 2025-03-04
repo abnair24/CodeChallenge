@@ -1,4 +1,4 @@
-package com.abn.scalar.dsa.day7;
+package com.abn.scalar.dsa.day07;
 
 /*
 Given an array of size N queries For every query return sum of all even indexed elements from L to R

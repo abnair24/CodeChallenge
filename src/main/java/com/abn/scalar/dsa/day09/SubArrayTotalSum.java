@@ -1,4 +1,4 @@
-package com.abn.scalar.dsa.day9;
+package com.abn.scalar.dsa.day09;
 
 /*
 Given an integer array, find the sum of all possible subarrays

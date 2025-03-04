@@ -1,4 +1,4 @@
-package com.abn.scalar.dsa.day9;
+package com.abn.scalar.dsa.day09;
 
 /*
 Given an array A of size N, find the subarray of size B with the least average.
