@@ -1,4 +1,4 @@
-package com.abn.scalar.dsa.day4;
+package com.abn.scalar.dsa.day04;
 
 /*
 You will be given an integer n. You need to return the count of prime numbers less than or equal to n.

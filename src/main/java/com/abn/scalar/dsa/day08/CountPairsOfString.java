@@ -1,4 +1,4 @@
-package com.abn.scalar.dsa.day8;
+package com.abn.scalar.dsa.day08;
 
 /*
 Given a string S, Calculate number of pairs(i, j) such that  i<j and s[i] ='a' and s[j]='g'

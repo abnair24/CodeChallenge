@@ -1,4 +1,4 @@
-package com.abn.scalar.dsa.day4;
+package com.abn.scalar.dsa.day04;
 
 /*
 You are given an integer A. You have to tell whether its perfect or not. Perfect number is a positive integer which is equal to the sum of its proper positive divisors.

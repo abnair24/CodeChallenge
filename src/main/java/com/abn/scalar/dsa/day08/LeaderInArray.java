@@ -1,4 +1,4 @@
-package com.abn.scalar.dsa.day8;
+package com.abn.scalar.dsa.day08;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package com.abn.scalar.dsa.day8;
+package com.abn.scalar.dsa.day08;
 
 public class SubArraysInRange {
 

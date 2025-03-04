@@ -1,4 +1,4 @@
-package com.abn.scalar.dsa.day4;
+package com.abn.scalar.dsa.day04;
 
 // Find all the factors of Number n in optimized way
 

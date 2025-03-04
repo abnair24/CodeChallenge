@@ -1,4 +1,4 @@
-package com.abn.scalar.dsa.day7;
+package com.abn.scalar.dsa.day07;
 
 /*
 You are given an array A of integers of size N.

@@ -1,4 +1,4 @@
-package com.abn.scalar.dsa.day8;
+package com.abn.scalar.dsa.day08;
 
 /*
 Given an array of size N, return the length of smallest subarray which contains both min and max element of the array.

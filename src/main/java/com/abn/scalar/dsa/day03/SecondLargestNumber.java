@@ -1,4 +1,4 @@
-package com.abn.scalar.dsa.day3;
+package com.abn.scalar.dsa.day03;
 
 public class SecondLargestNumber {
 
