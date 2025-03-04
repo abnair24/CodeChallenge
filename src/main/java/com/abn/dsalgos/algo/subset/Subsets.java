@@ -19,8 +19,9 @@ public class Subsets {
 
     public static void main(String[] args) {
         Subsets subsets = new Subsets();
-        subsets.findSubset(new int[] {1, 5});
-        subsets.findSubset(new int[] {1, 5, 3});
+//        subsets.findSubset(new int[] {1, 5});
+//        subsets.findSubset(new int[] {1, 5, 3});
+        subsets.findSubset(new int[] {9, 10});
     }
 
     List<List<Integer>> result = new LinkedList<>();
@@ -39,7 +40,7 @@ public class Subsets {
         for(int i = start; i < array.length; i++) {
 
             track.add(array[i]);
-            backtrack(array, track, start + 1);
+            backtrack(array, track, i + 1);
             track.removeLast();
         }
     }
