@@ -30,10 +30,7 @@ public class RottenOranges {
 
         while (!queue.isEmpty()) {
             int size = queue.size();
-
-
             while(size > 0) {
-
                 int[] visitNode = queue.remove();
 //
 //            if (visitNode[0] == -1) {
@@ -63,5 +60,15 @@ public class RottenOranges {
         } else {
             return minutes;
         }
+    }
+
+    public static void main(String[] args) {
+        RottenOranges rottenOranges = new RottenOranges();
+        int[][] grid = {
+                {2,1,1},
+                {1,1,0},
+                {0,1,1}
+        };
+        System.out.println(rottenOranges.rotten(grid));
     }
 }

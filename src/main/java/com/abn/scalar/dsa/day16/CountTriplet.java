@@ -7,8 +7,6 @@ A = [1, 2, 4, 3]
 The triplets that satisfy the conditions are [1, 2, 3] and [1, 2, 4].
  */
 
-import org.checkerframework.checker.units.qual.C;
-
 public class CountTriplet {
 
     public int solve(int[] array) {
