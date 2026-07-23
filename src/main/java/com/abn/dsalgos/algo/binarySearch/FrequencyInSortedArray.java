@@ -16,7 +16,7 @@ public class FrequencyInSortedArray {
         // Loop to find first occurance
         while (start <= end) {
 
-            mid = (start + end) / 2;
+            mid = start + (end - start) / 2;
             if (array[mid] == key) {
 
                 result = mid;
@@ -36,7 +36,7 @@ public class FrequencyInSortedArray {
         // loop to find last occurance. then diff the indexes
         while (start1 <= end1) {
 
-            mid1 = (start1 + end1) / 2;
+            mid1 = start + (end - start) / 2;
             if (array[mid1] == key) {
                 result1 = mid1;
                 start1 = mid1 + 1;

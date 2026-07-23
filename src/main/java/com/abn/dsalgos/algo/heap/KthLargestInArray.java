@@ -7,20 +7,15 @@ public class KthLargestInArray {
 
     public int findLargest(List<Integer> array, int k) {
 
-        PriorityQueue<Integer> minHeap = new PriorityQueue<>((n1, n2) -> n1 - n2);
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
 
-        for (int i = 0; i < k; i++) {
-            minHeap.add(array.get(i));
-        }
-
-        for (int i = k; i < array.size(); i++) {
-            if (array.get(i) > minHeap.peek()) {
+        for(int num: array) {
+            minHeap.add(num);
+            if(minHeap.size() > k) {
                 minHeap.poll();
-                minHeap.add(array.get(i));
             }
         }
 
         return minHeap.peek();
     }
-
 }

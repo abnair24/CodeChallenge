@@ -32,7 +32,7 @@ public class LongestSubstringKRepeatChar {
             return n;
         }
 
-        Map<Character, Integer> counts = new HashMap();
+        Map<Character, Integer> counts = new HashMap<>();
 
         for(char c: s.toCharArray()) {
             counts.put(c, counts.getOrDefault(c, 0) + 1);
@@ -62,8 +62,8 @@ public class LongestSubstringKRepeatChar {
     public static void main(String[] args) {
 
         LongestSubstringKRepeatChar longestSubstringKRepeatChar = new LongestSubstringKRepeatChar();
-        longestSubstringKRepeatChar.longestSubstring("aaabbaacccdddd", 3);
-        longestSubstringKRepeatChar.longestSubstring("ababbc", 2);
-        longestSubstringKRepeatChar.longestSubstring("aaabcbbcc", 3);
+//        longestSubstringKRepeatChar.longestSubstring("aaabbaacccdddd", 3);
+        longestSubstringKRepeatChar.longestSubstring("ababbc", 3);
+//        longestSubstringKRepeatChar.longestSubstring("aaabcbbcc", 3);
     }
 }

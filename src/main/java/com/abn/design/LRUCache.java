@@ -10,77 +10,75 @@ class Node {
     public int key;
     public int value;
 
+    Node(int key, int value) {
+        this.key = key;
+        this.value = value;
+    }
 }
 
 public class LRUCache {
 
-    private final Map<Integer, Node> hmap;
-    private Node start, end;
-    private final int size;
+    private Map<Integer, Node> map = new HashMap<>();
+    private int capacity;
+    private Node head, tail;
 
-    public LRUCache(int size) {
-        hmap = new HashMap<>();
-        this.size = size;
+    public LRUCache(int capacity) {
+        this.capacity = capacity;
+        head = new Node(0, 0);
+        tail = new Node(0, 0);
+        head.next = tail;
+        tail.previous = head;
     }
 
-    public int getNode(int key) {
-        if(hmap.containsKey(key)) {
-            Node node = hmap.get(key);
-            remove(node);
-            addAtCacheTop(node);
-            return node.value;
+    public int get(int key) {
+
+        if(!map.containsKey(key)) {
+            return -1;
         }
-
-        return -1;
+        Node node = map.get(key);
+        moveToHead(node);
+        return node.value;
     }
 
-    public void putNode(int key, int value) {
-        if(hmap.containsKey(key)) {
-            Node node = hmap.get(key);
+    public void put(int key, int value) {
+
+        if (map.containsKey(key)) {
+            Node node = map.get(key);
             node.value = value;
-            remove(node);
-            addAtCacheTop(node);
+            moveToHead(node);
         } else {
-            Node newNode = new Node();
-            newNode.previous = null;
-            newNode.next = null;
-            newNode.key = key;
-            newNode.value = value;
+            Node node = new Node(key, value);
+            map.put(key, node);
+            addToHead(node);
 
-            if(hmap.size() >= size) {
-                hmap.remove(end.key);
-                remove(end);
+            if (map.size() > capacity) {
+                Node lru = removeTailNode();
+                map.remove(lru.key);
             }
-            addAtCacheTop(newNode);
-            hmap.put(key, newNode);
         }
     }
 
-    private void addAtCacheTop(Node node) {
-        node.next = start;
-        node.previous = null;
-        if(start != null) {
-            start.previous = node;
-        }
-        start = node;
-
-        if(end == null) {
-            end = start;
-        }
+    public void removeNode(Node node){
+        node.previous.next = node.next;
+        node.next.previous = node.previous;
     }
 
-    private void remove(Node node) {
+    private void addToHead(Node node) {
+        node.next = head.next;
+        node.previous = head;
+        head.next.previous = node;
+        head.next = node;
+    }
 
-        if(node.previous != null) {
-            node.previous.next = node.next;
-        } else {
-            start = node.next;
-        }
+    private void moveToHead(Node node) {
+        removeNode(node);
+        addToHead(node);
+    }
 
-        if(node.next != null) {
-            node.next.previous = node.previous;
-        } else {
-            end = node.previous;
-        }
+    private Node removeTailNode() {
+        Node lru = tail.previous;
+        removeNode(lru);
+        return lru;
     }
 }
+

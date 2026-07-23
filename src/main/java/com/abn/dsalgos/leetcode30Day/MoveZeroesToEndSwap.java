@@ -11,20 +11,13 @@ public class MoveZeroesToEndSwap {
 
     public int[] pushZeroesToEnd(int[] arr) {
 
-        int start = 0;
-        int end = arr.length - 1;
-
-        while (start < end) {
-            if (arr[start] != 0) {
-                ++start;
-            } else if (arr[end] == 0) {
-                --end;
-            } else if (arr[start] == 0 && arr[end] != 0) {
-                int temp = arr[end];
-                arr[end] = arr[start];
-                arr[start] = temp;
-                ++start;
-                --end;
+        int slow = 0;
+        for(int fast = 0; fast < arr.length; fast ++) {
+            if(arr[fast] != 0) {
+                int temp = arr[slow];
+                arr[slow] = arr[fast];
+                arr[fast] = temp;
+                slow ++;
             }
         }
         return arr;

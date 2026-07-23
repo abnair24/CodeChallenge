@@ -8,18 +8,15 @@ package com.abn.dsalgos.leetcode30Day;
 public class MoveZeroesToBeginning {
 
     public int[] moveZero(int[] array) {
-        int readIndex = array.length - 1;
-        int writeIndex = array.length - 1;
 
-        while (readIndex >= 0) {
-            if (array[readIndex] != 0) {
-                array[writeIndex] = array[readIndex];
-                writeIndex--;
+        int slow = array.length - 1;
+        for (int fast = array.length - 1; fast >= 0; fast--) {
+            if (array[fast] != 0) {
+                int temp = array[slow];
+                array[slow] = array[fast];
+                array[fast] = temp;
+                slow--;
             }
-            readIndex--;
-        }
-        while (writeIndex >= 0) {
-            array[writeIndex--] = 0;
         }
 
         return array;
