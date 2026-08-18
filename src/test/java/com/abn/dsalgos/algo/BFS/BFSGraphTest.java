@@ -1,6 +1,6 @@
 package com.abn.dsalgos.algo.BFS;
 
-import com.abn.dsalgos.ds.graph.Graph;
+import com.abn.dsalgos.datastructure.dsImpl.graph.Graph;
 import org.testng.annotations.Test;
 
 import java.util.List;

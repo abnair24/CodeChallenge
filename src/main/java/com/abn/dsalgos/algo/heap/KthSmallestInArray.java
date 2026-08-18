@@ -7,16 +7,12 @@ public class KthSmallestInArray {
 
     public int findKthSmallest(List<Integer> array, int k) {
 
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<>((n1, n2) -> n2 - n1);
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>((n1, n2) -> Integer.compare(n2, n1));
 
-        for (int i = 0; i < k; i++) {
-            maxHeap.add(array.get(i));
-        }
-
-        for (int i = k; i < array.size(); i++) {
-            if (array.get(i) < maxHeap.peek()) {
+        for(int num: array) {
+            maxHeap.add(num);
+            if(maxHeap.size() > k) {
                 maxHeap.poll();
-                maxHeap.add(array.get(i));
             }
         }
 

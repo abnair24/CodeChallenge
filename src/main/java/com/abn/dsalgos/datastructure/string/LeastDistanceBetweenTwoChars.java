@@ -1,0 +1,9 @@
+package com.abn.dsalgos.datastructure.string;
+
+public class LeastDistanceBetweenTwoChars {
+
+    public void leastDistance(char a, char b, String str) {
+        int len = str.length();
+        int currLen = 0;
+    }
+}

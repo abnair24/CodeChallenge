@@ -1,5 +1,6 @@
 package com.abn.dsalgos.ds.NaryTree;
 
+import com.abn.dsalgos.datastructure.NaryTree.MyNaryTree;
 import org.testng.annotations.Test;
 
 public class MyNaryTreeTest {

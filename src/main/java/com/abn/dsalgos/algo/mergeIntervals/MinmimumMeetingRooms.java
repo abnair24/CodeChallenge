@@ -27,7 +27,7 @@ public class MinmimumMeetingRooms {
 
     public int minimumRooms(List<Meeting> meetings) {
 
-        if(meetings == null || meetings.size() ==0 ){
+        if(meetings == null || meetings.isEmpty()){
             return 0;
         }
 

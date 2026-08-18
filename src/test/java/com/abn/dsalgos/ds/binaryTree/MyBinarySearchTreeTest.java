@@ -1,12 +1,13 @@
 package com.abn.dsalgos.ds.binaryTree;
 
+import com.abn.dsalgos.datastructure.dsImpl.binaryTree.MyBinarySearchTree;
 import com.abn.dsalgos.utils.MyBSTNode;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class MyBinarySearchTreeTest {
 
-    MyBinarySearchTree<Integer>myBinarySearchTree = new MyBinarySearchTree<>();
+    MyBinarySearchTree<Integer> myBinarySearchTree = new MyBinarySearchTree<>();
 
     @Test
     public void test() throws Exception {

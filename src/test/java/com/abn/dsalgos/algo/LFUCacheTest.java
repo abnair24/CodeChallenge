@@ -1,6 +1,6 @@
 package com.abn.dsalgos.algo;
 
-import com.abn.design.LFUCache;
+import com.abn.design.leetcode.LFUCache;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

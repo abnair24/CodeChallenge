@@ -29,7 +29,7 @@ public class IslandCount {
 
     public int getIslandCount(int[][] matrix) {
 
-        if (matrix.length == 0 || matrix == null) {
+        if (matrix == null || matrix.length == 0 ) {
             return 0;
         }
 
@@ -41,6 +41,7 @@ public class IslandCount {
             for (int j = 0; j < cols; j++) {
                 if (matrix[i][j] == 1) {
                     count++;
+
                     getIslandCountHelper(matrix, i, j, rows, cols);
                 }
             }
@@ -50,15 +51,13 @@ public class IslandCount {
 
     private void getIslandCountHelper(int[][] matrix, int i, int j, int m, int n) {
 
-        for (int[] dir : DIRECTIONS) {
-
-            int x = dir[0] + i;
-            int y = dir[1] + j;
-
-            if (x > -1 && y > -1 && x < m && y < n && matrix[x][y] != 0) {
-                matrix[x][y] = 0;
-                getIslandCountHelper(matrix, x, y, m, n);
-            }
+        if(i < 0 || i >= matrix.length || j < 0 || j >= matrix[0].length || matrix[i][j] == 0) {
+            return;
         }
+
+        getIslandCountHelper(matrix, i + 1, j, m, n);
+        getIslandCountHelper(matrix, i - 1, j, m, n);
+        getIslandCountHelper(matrix, i, j + 1, m, n);
+        getIslandCountHelper(matrix, i, j - 1, m, n);
     }
 }

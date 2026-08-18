@@ -1,5 +1,6 @@
 package com.abn.dsalgos.ds.stack;
 
+import com.abn.dsalgos.datastructure.dsImpl.stack.StackArrays;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

@@ -1,11 +1,12 @@
 package com.abn.dsalgos.ds.binaryTree;
 
+import com.abn.dsalgos.datastructure.dsImpl.binaryTree.MyBinaryTree;
 import com.abn.dsalgos.utils.MyTreeNode;
 import org.testng.annotations.Test;
 
 public class MyBinaryTreeTest {
 
-    private MyBinaryTree<Integer>myBinaryTree = new MyBinaryTree<>();
+    private MyBinaryTree<Integer> myBinaryTree = new MyBinaryTree<>();
 
     @Test
     public void inOrdertest() {

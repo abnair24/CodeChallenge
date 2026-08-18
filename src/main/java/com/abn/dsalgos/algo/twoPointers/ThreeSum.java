@@ -11,7 +11,7 @@ and nums[i] + nums[j] + nums[k] == 0.
 
 Notice that the solution set must not contain duplicate triplets.
 
-Input: nums = [-1,0,1,2,-1,-4]
+Input: nums = [-1,0,1,2,-1,-4] => [-1, -1, 0, 1, 2, -4]
 Output: [[-1,-1,2],[-1,0,1]]
  */
 public class ThreeSum {
@@ -38,16 +38,21 @@ public class ThreeSum {
 
         while(left < right) {
             int sum = nums[i] + nums[left] + nums[right];
-
-            if(sum == 0) {
-                result.add(Arrays.asList(nums[i], nums[left++], nums[right--]));
-                while(left < right && nums[left] == nums[left -1]) {
-                    ++left;
-                }
-            } else if( sum < 0) {
-                ++ left;
+            if(sum < 0) {
+                left ++;
+            } else if(sum > 0) {
+                right --;
             } else {
-                -- right;
+                result.add(Arrays.asList(nums[i], nums[left], nums[right]));
+                while(left < right && nums[left] == nums[left + 1]) {
+                    left ++;
+                }
+
+                while(left < right && nums[right] == nums[right - 1]) {
+                    right--;
+                }
+                left ++;
+                right --;
             }
         }
     }

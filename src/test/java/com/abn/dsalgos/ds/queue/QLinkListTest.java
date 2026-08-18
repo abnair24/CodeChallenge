@@ -1,5 +1,6 @@
 package com.abn.dsalgos.ds.queue;
 
+import com.abn.dsalgos.datastructure.dsImpl.queue.QLinkList;
 import com.abn.dsalgos.exceptions.EmptyQException;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;

@@ -1,6 +1,6 @@
 package com.abn.dsalgos.algo.DFS;
 
-import com.abn.dsalgos.ds.graph.Graph;
+import com.abn.dsalgos.datastructure.dsImpl.graph.Graph;
 
 import java.util.ArrayList;
 import java.util.Iterator;

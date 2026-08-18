@@ -1,6 +1,6 @@
 package com.abn.dsalgos.algo.recursion;
 
-import com.abn.dsalgos.ds.linkedList.MyLinkedList;
+import com.abn.dsalgos.datastructure.dsImpl.linkedList.MyLinkedList;
 import com.abn.dsalgos.utils.LinkNode;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;

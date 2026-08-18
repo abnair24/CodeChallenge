@@ -1,5 +1,6 @@
 package com.abn.dsalgos.ds.binaryTree;
 
+import com.abn.dsalgos.datastructure.dsImpl.binaryTree.BinaryTreeNonRecursive;
 import com.abn.dsalgos.utils.MyTreeNode;
 import org.testng.annotations.Test;
 

@@ -1,5 +1,6 @@
 package com.abn.dsalgos.ds.heap;
 
+import com.abn.dsalgos.datastructure.heap.BinaryHeap;
 import org.testng.annotations.Test;
 
 public class BinaryHeapTest {

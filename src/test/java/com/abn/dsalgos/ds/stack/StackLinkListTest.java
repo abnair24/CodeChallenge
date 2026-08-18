@@ -1,5 +1,6 @@
 package com.abn.dsalgos.ds.stack;
 
+import com.abn.dsalgos.datastructure.dsImpl.stack.StackLinkList;
 import com.abn.dsalgos.exceptions.EmptyStackException;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
