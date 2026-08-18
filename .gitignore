@@ -8,3 +8,4 @@ target/
 .prefs
 .settings
 .java-version
+.dccache

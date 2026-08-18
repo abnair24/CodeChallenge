@@ -89,9 +89,6 @@
                         <skipITs>${skipITs}</skipITs>
                         <skipTests>${skipTests}</skipTests>
                         <argLine>${argLine}</argLine>
-                        <suiteXmlFiles>
-                            <suiteXmlFile>testSuite.xml</suiteXmlFile>
-                        </suiteXmlFiles>
                     </configuration>
                 </plugin>
             </plugins>
