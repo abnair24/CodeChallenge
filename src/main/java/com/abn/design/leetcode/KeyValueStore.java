@@ -1,4 +1,4 @@
-package com.abn.design.prodconsumer;
+package com.abn.design.leetcode;
 
 import java.util.HashMap;
 import java.util.Map;

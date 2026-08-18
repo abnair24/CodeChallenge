@@ -1,4 +1,4 @@
-# Java DSA & Interview Prep — 970+ Solved Problems
+# Java DSA & Interview Prep Problems
 
 [![Java](https://img.shields.io/badge/Java-21-orange?logo=openjdk&logoColor=white)](https://openjdk.org/)
 [![Build](https://img.shields.io/badge/build-Maven-blue?logo=apachemaven&logoColor=white)](https://maven.apache.org/)
@@ -6,24 +6,19 @@
 [![Last Commit](https://img.shields.io/github/last-commit/abnair24/CodeChallenge)](https://github.com/abnair24/CodeChallenge/commits)
 [![Repo Size](https://img.shields.io/github/repo-size/abnair24/CodeChallenge)](https://github.com/abnair24/CodeChallenge)
 
-> **970+ Java solutions** to data-structure, algorithm, and low-level-design problems — organized **by pattern** (DP, backtracking, sliding window, two pointers, …) so you can prep the way interviews actually test you. Covers **LeetCode**, **Scaler** coursework, classic DSA, and system-design / LLD exercises.
-
-**Who it's for:** anyone grinding coding interviews (FAANG / product companies), working through a DSA course, or looking for clean, idiomatic Java reference implementations.
+> **Java solutions** to data-structure, algorithm, and low-level-design problems — organized **by pattern** (DP, backtracking, sliding window, two pointers, …). Covers **LeetCode**, **Scaler** coursework, classic DSA, and system-design / LLD exercises.
 
 ### 📌 What's inside
 
 - **Algorithms by pattern** — DP, backtracking, BFS/DFS, sliding window, two pointers, greedy, heap, binary search, and more.
 - **Data-structure problems** — linked lists, trees, graphs, stacks, tries, strings, grouped by structure.
-- **From-scratch implementations** — build your own stack, queue, linked list, tree, graph, trie.
 - **Scaler DSA** — day-by-day course practice across 56 days.
 - **Low-Level Design** — notification system, library management, producer/consumer, GoF patterns.
-
-Every entry below is a **relative folder link** with a **live file count**, auto-generated from the source tree by [`scripts/gen-readme-index.sh`](scripts/gen-readme-index.sh) — so the index never goes stale (see [Keeping the index current](#keeping-the-index-current)).
 
 ## How to navigate
 
 - **Know the technique?** Jump to [Algorithms — by pattern](#algorithms--by-pattern) (DP, backtracking, sliding window, …).
-- **Know the data structure?** Use [Data-Structure Problems](#data-structure-problems) or [Core Data-Structure Implementations](#core-data-structure-implementations).
+- **Know the data structure?** Use [Data-Structure Problems](#data-structure-problems)
 - **Following the course?** See [Scaler DSA — by day](#scaler-dsa--by-day).
 - **Design practice?** See [Design](#design).
 
@@ -532,54 +527,6 @@ Every entry below is a **relative folder link** with a **live file count**, auto
 
 </details>
 
-### Core Data-Structure Implementations
-
-From-scratch implementations.
-
-<details><summary><b>Linked List</b></summary>
-
-- [My Circular Linked List](src/main/java/com/abn/dsalgos/datastructure/dsImpl/linkedList/MyCircularLinkedList.java)
-- [My Doubly Linked List](src/main/java/com/abn/dsalgos/datastructure/dsImpl/linkedList/MyDoublyLinkedList.java)
-- [My Linked List](src/main/java/com/abn/dsalgos/datastructure/dsImpl/linkedList/MyLinkedList.java)
-
-</details>
-
-<details><summary><b>Binary Tree</b></summary>
-
-- [Binary Tree Non Recursive](src/main/java/com/abn/dsalgos/datastructure/dsImpl/binaryTree/BinaryTreeNonRecursive.java)
-- [My Binary Search Tree](src/main/java/com/abn/dsalgos/datastructure/dsImpl/binaryTree/MyBinarySearchTree.java)
-- [My Binary Tree](src/main/java/com/abn/dsalgos/datastructure/dsImpl/binaryTree/MyBinaryTree.java)
-
-</details>
-
-<details><summary><b>Queue</b></summary>
-
-- [Priority Q Link List](src/main/java/com/abn/dsalgos/datastructure/dsImpl/queue/PriorityQLinkList.java)
-- [Q Arrays](src/main/java/com/abn/dsalgos/datastructure/dsImpl/queue/QArrays.java)
-- [Q Link List](src/main/java/com/abn/dsalgos/datastructure/dsImpl/queue/QLinkList.java)
-
-</details>
-
-<details><summary><b>Stack</b></summary>
-
-- [Stack Arrays](src/main/java/com/abn/dsalgos/datastructure/dsImpl/stack/StackArrays.java)
-- [Stack Link List](src/main/java/com/abn/dsalgos/datastructure/dsImpl/stack/StackLinkList.java)
-
-</details>
-
-<details><summary><b>Graph</b></summary>
-
-- [Graph](src/main/java/com/abn/dsalgos/datastructure/dsImpl/graph/Graph.java)
-- [My Graph](src/main/java/com/abn/dsalgos/datastructure/dsImpl/graph/MyGraph.java)
-
-</details>
-
-<details><summary><b>Trie</b></summary>
-
-- [My Trie](src/main/java/com/abn/dsalgos/datastructure/dsImpl/trie/MyTrie.java)
-
-</details>
-
 ### Other Practice Sets
 
 <details><summary><b>Interview Problems</b></summary>
@@ -619,20 +566,6 @@ From-scratch implementations.
 - [Unique Character In String](src/main/java/com/abn/dsalgos/problems/UniqueCharacterInString.java)
 - [Unique Occurances](src/main/java/com/abn/dsalgos/problems/UniqueOccurances.java)
 - [Valid Email](src/main/java/com/abn/dsalgos/problems/ValidEmail.java)
-
-</details>
-
-<details><summary><b>To-Do</b></summary>
-
-- [BST From Preorder](src/main/java/com/abn/dsalgos/problems/toDo/BSTFromPreorder.java)
-- [Bit Wise And Of Numbers](src/main/java/com/abn/dsalgos/problems/toDo/BitWiseAndOfNumbers.java)
-- [Contiguous Array](src/main/java/com/abn/dsalgos/problems/toDo/ContiguousArray.java)
-- [Counting Elements TODO](src/main/java/com/abn/dsalgos/problems/toDo/CountingElementsTODO.java)
-- [Maximal Square](src/main/java/com/abn/dsalgos/problems/toDo/MaximalSquare.java)
-- [Minimum Path Sum](src/main/java/com/abn/dsalgos/problems/toDo/MinimumPathSum.java)
-- [Perform String Shift](src/main/java/com/abn/dsalgos/problems/toDo/PerformStringShift.java)
-- [Show First Unique](src/main/java/com/abn/dsalgos/problems/toDo/ShowFirstUnique.java)
-- [Sub Array Sum K](src/main/java/com/abn/dsalgos/problems/toDo/SubArraySumK.java)
 
 </details>
 
@@ -1243,76 +1176,6 @@ From-scratch implementations.
 
 ### Design
 
-<details><summary><b>Notification System (LLD)</b></summary>
-
-- [Test Suite](src/main/java/com/abn/design/LLD/notification/TestSuite.java)
-- [Bench Mark Runner](src/main/java/com/abn/design/LLD/notification/benchMark/BenchMarkRunner.java)
-- [Benchmark Result](src/main/java/com/abn/design/LLD/notification/benchMark/BenchmarkResult.java)
-- [Factory](src/main/java/com/abn/design/LLD/notification/benchMark/Factory.java)
-- [I Bench Mark](src/main/java/com/abn/design/LLD/notification/benchMark/IBenchMark.java)
-- [TPCDS Benchmark](src/main/java/com/abn/design/LLD/notification/benchMark/TPCDSBenchmark.java)
-- [TPCH Benchmark](src/main/java/com/abn/design/LLD/notification/benchMark/TPCHBenchmark.java)
-- [AWS Cloud Config](src/main/java/com/abn/design/LLD/notification/cloudConfig/AWSCloudConfig.java)
-- [Azure Cloud Config](src/main/java/com/abn/design/LLD/notification/cloudConfig/AzureCloudConfig.java)
-- [Google Cloud Config](src/main/java/com/abn/design/LLD/notification/cloudConfig/GoogleCloudConfig.java)
-- [I Cloud Config](src/main/java/com/abn/design/LLD/notification/cloudConfig/ICloudConfig.java)
-- [AKS Connection Config](src/main/java/com/abn/design/LLD/notification/connectionConfig/AKSConnectionConfig.java)
-- [EKS Connection Config](src/main/java/com/abn/design/LLD/notification/connectionConfig/EKSConnectionConfig.java)
-- [GKE Connection Config](src/main/java/com/abn/design/LLD/notification/connectionConfig/GKEConnectionConfig.java)
-- [I Connection](src/main/java/com/abn/design/LLD/notification/connectionConfig/IConnection.java)
-- [Benchmark Factory](src/main/java/com/abn/design/LLD/notification/factory/BenchmarkFactory.java)
-- [Cloud Config Factory](src/main/java/com/abn/design/LLD/notification/factory/CloudConfigFactory.java)
-- [Connection Factory](src/main/java/com/abn/design/LLD/notification/factory/ConnectionFactory.java)
-- [Notifier Factory](src/main/java/com/abn/design/LLD/notification/factory/NotifierFactory.java)
-- [Email Notifier](src/main/java/com/abn/design/LLD/notification/notifiers/EmailNotifier.java)
-- [I Notifier](src/main/java/com/abn/design/LLD/notification/notifiers/INotifier.java)
-- [Pager Duty Notifier](src/main/java/com/abn/design/LLD/notification/notifiers/PagerDutyNotifier.java)
-- [Slack Notifier](src/main/java/com/abn/design/LLD/notification/notifiers/SlackNotifier.java)
-
-</details>
-
-<details><summary><b>Library Mgmt System (LLD)</b></summary>
-
-- [Address](src/main/java/com/abn/design/LLD/lbms/Address.java)
-- [Author](src/main/java/com/abn/design/LLD/lbms/Author.java)
-- [Person](src/main/java/com/abn/design/LLD/lbms/Person.java)
-- [Rack](src/main/java/com/abn/design/LLD/lbms/Rack.java)
-- [Account](src/main/java/com/abn/design/LLD/lbms/accounts/Account.java)
-- [Librarian](src/main/java/com/abn/design/LLD/lbms/accounts/Librarian.java)
-- [Member](src/main/java/com/abn/design/LLD/lbms/accounts/Member.java)
-- [Book](src/main/java/com/abn/design/LLD/lbms/book/Book.java)
-- [Book Item](src/main/java/com/abn/design/LLD/lbms/book/BookItem.java)
-- [Account Status](src/main/java/com/abn/design/LLD/lbms/enums/AccountStatus.java)
-- [Book Status](src/main/java/com/abn/design/LLD/lbms/enums/BookStatus.java)
-- [Reservation Status](src/main/java/com/abn/design/LLD/lbms/enums/ReservationStatus.java)
-- [Book Lending](src/main/java/com/abn/design/LLD/lbms/reservation/BookLending.java)
-- [Book Reservation](src/main/java/com/abn/design/LLD/lbms/reservation/BookReservation.java)
-- [Catalog](src/main/java/com/abn/design/LLD/lbms/search/Catalog.java)
-- [Search](src/main/java/com/abn/design/LLD/lbms/search/Search.java)
-
-</details>
-
-<details><summary><b>Test Runner (LLD)</b></summary>
-
-- [Retry Runner](src/main/java/com/abn/design/LLD/testRunner/RetryRunner.java)
-- [Status](src/main/java/com/abn/design/LLD/testRunner/Status.java)
-- [Test Case](src/main/java/com/abn/design/LLD/testRunner/TestCase.java)
-- [Test Result](src/main/java/com/abn/design/LLD/testRunner/TestResult.java)
-- [Test Runner](src/main/java/com/abn/design/LLD/testRunner/TestRunner.java)
-
-</details>
-
-<details><summary><b>Producer / Consumer</b></summary>
-
-- [Demos](src/main/java/com/abn/design/prodconsumer/Demos.java)
-- [File System](src/main/java/com/abn/design/prodconsumer/FileSystem.java)
-- [Key Value Store](src/main/java/com/abn/design/prodconsumer/KeyValueStore.java)
-- [Key Value Store Test](src/main/java/com/abn/design/prodconsumer/KeyValueStoreTest.java)
-- [Producer Consumer](src/main/java/com/abn/design/prodconsumer/ProducerConsumer.java)
-- [Test Thread](src/main/java/com/abn/design/prodconsumer/TestThread.java)
-
-</details>
-
 <details><summary><b>LeetCode (design)</b></summary>
 
 - [Call Counter](src/main/java/com/abn/design/leetcode/CallCounter.java)
@@ -1323,22 +1186,6 @@ From-scratch implementations.
 - [Latency Calculator](src/main/java/com/abn/design/leetcode/LatencyCalculator.java)
 - [Log Parser](src/main/java/com/abn/design/leetcode/LogParser.java)
 - [Security Policy Checker](src/main/java/com/abn/design/leetcode/SecurityPolicyChecker.java)
-
-</details>
-
-<details><summary><b>Singleton</b></summary>
-
-- [File Based Configuration Manager](src/main/java/com/abn/design/LLD/fileConfigManager/FileBasedConfigurationManager.java)
-- [File Based Configuration Manager Impl](src/main/java/com/abn/design/LLD/fileConfigManager/FileBasedConfigurationManagerImpl.java)
-- [Logger](src/main/java/com/abn/design/LLD/logManager/Logger.java)
-- [Logger Impl](src/main/java/com/abn/design/LLD/logManager/LoggerImpl.java)
-
-</details>
-
-<details><summary><b>Design Patterns</b></summary>
-
-- [Factory Pattern](src/main/java/com/abn/design/designPatterns/FactoryPattern.java)
-- [Singleton Pattern](src/main/java/com/abn/design/designPatterns/SingletonPattern.java)
 
 </details>
 
@@ -1370,12 +1217,4 @@ The topic tables between the `INDEX` markers are generated, not hand-maintained.
 
 The script only **reads** the source tree and rewrites the marker block — it never moves, renames, or deletes any files.
 
-## Contributing & feedback
 
-Found a cleaner solution, a bug, or a missing pattern? Open an issue or a PR — improvements are welcome. If this repo helped your interview prep, a ⭐ helps others find it too.
-
-## Topics
-
-`java` · `data-structures` · `algorithms` · `dsa` · `leetcode` · `leetcode-solutions` · `coding-interview` · `interview-preparation` · `competitive-programming` · `system-design` · `low-level-design` · `scaler`
-
-> Add these as repository **topics** (repo home → ⚙️ next to "About") so the project surfaces in GitHub topic pages and search.

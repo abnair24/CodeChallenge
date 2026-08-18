@@ -1,4 +1,4 @@
-package com.abn.design.prodconsumer;
+package com.abn.design.leetcode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
