@@ -27,7 +27,7 @@ public class TopKFrequentElement {
             frequencyMap.put(n, frequencyMap.getOrDefault(n, 0) + 1);
         }
 
-        PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> frequencyMap.get(a) -frequencyMap.get(b));
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
 
         for(int n : frequencyMap.keySet()) {
 

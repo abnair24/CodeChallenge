@@ -1,5 +1,6 @@
 package com.abn.dsalgos.dailyCoding;
 
+import com.abn.dsalgos.problems.SumOfLiskisK;
 import org.testng.annotations.Test;
 
 public class SumOfListisKTest {

@@ -1,5 +1,6 @@
 package com.abn.dsalgos.leetcode30Day;
 
+import com.abn.dsalgos.problems.FirstNonRepeatingCharIndex;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;

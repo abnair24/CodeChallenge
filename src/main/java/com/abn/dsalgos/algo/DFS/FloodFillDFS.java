@@ -37,7 +37,6 @@ public class FloodFillDFS {
             int y = dir[1] + c;
 
             if (x > -1 && y > -1 && x < m && y < n && image[x][y] == currentColor) {
-                image[x][y] = color;
                 dfsHelper(image, x, y, m, n, currentColor, color);
             }
         }
@@ -56,7 +55,7 @@ public class FloodFillDFS {
         floodFillDFS.floodFill(image1, 1, 1, 1);
 
         int[][] image2 = {{1, 1, 1}, {1, 1, 0}, {1, 0, 1}};
-        int[][] result = floodFillDFS.floodFill(image2, 1, 1, 2);
+        int[][] result = floodFillDFS.floodFill(image1, 1, 1, 2);
 
         for (int i = 0; i < result.length; i++) {
             for (int j = 0; j < result[0].length; j++) {

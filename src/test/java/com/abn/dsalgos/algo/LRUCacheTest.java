@@ -1,8 +1,6 @@
 package com.abn.dsalgos.algo;
 
-import com.abn.design.LRUCache;
-import org.testng.Assert;
-import org.testng.annotations.Test;
+import com.abn.design.leetcode.LRUCache;
 
 public class LRUCacheTest {
 

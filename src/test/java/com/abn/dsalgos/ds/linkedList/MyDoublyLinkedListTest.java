@@ -1,5 +1,6 @@
 package com.abn.dsalgos.ds.linkedList;
 
+import com.abn.dsalgos.datastructure.dsImpl.linkedList.MyDoublyLinkedList;
 import com.abn.dsalgos.exceptions.EmptyLinkedListException;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;

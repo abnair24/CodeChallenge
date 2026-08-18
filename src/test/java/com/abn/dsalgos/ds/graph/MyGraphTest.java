@@ -1,5 +1,6 @@
 package com.abn.dsalgos.ds.graph;
 
+import com.abn.dsalgos.datastructure.dsImpl.graph.MyGraph;
 import com.abn.dsalgos.utils.GraphNode;
 import org.testng.annotations.Test;
 

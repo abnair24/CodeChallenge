@@ -1,5 +1,6 @@
 package com.abn.dsalgos.dailyCoding;
 
+import com.abn.dsalgos.problems.Dcp1224BTSumInRange;
 import com.abn.dsalgos.utils.MyBSTNode;
 import org.testng.Assert;
 import org.testng.annotations.Test;
